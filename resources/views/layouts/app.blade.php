@@ -11,7 +11,7 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{url('front/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('front/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="{{url('front/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -91,6 +91,9 @@ hr {
 }
 .p-pop{
   font-size: 14px;
+}
+.col-xs-6 {
+    width: 50%;
 }
     </style>
   </head>

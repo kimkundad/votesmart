@@ -38,9 +38,39 @@
 
                     <p class="p-pop">เพียงกรอกข้อมูลด้านล่าง<br>
                     ทีมงานของเราจะรีบติดต่อกลับไปโดยเร็ว</p>
+
+                    <form>
+
+                    <div class="col-md-6 ">
+
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">ชื่อ</label>
+                            <input type="text" name="name" class="form-control" >
+                          </div>
+
+                        </div>
+                    <div class="col-md-6 ">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">สกุล</label>
+                        <input type="text" name="surname" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">อีเมล</label>
+                        <input type="email" name="email" class="form-control" >
+                      </div>
+                    </div>
+
                     <div class="text-center">
                       <button type="button" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
                     </div>
+                  </form>
+
+
+
+
 
                   </div>
 
