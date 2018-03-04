@@ -47,6 +47,15 @@
           display: block!important;
       }
     }
+    .navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 0rem;
+    font-size: 1.12rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
 
     </style>
   </head>
