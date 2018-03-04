@@ -41,22 +41,22 @@
 
                     <form>
 
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
 
                           <div class="form-group">
-                            <label for="exampleInputEmail1">ชื่อ</label>
+                            <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
                             <input type="text" name="name" class="form-control" >
                           </div>
 
                         </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
                         <input type="text" name="surname" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
                         <input type="email" name="email" class="form-control" >

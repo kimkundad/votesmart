@@ -92,8 +92,14 @@ hr {
 .p-pop{
   font-size: 14px;
 }
-.col-xs-6 {
-    width: 50%;
+
+label{
+  float: left;
+    font-size: 14px;
+    margin-bottom: .3rem;
+}
+.form-group {
+    margin-bottom: 0.6rem;
 }
     </style>
   </head>
