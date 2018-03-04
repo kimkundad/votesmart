@@ -65,11 +65,33 @@
     .mt-nav{
       border-top: 1px solid #ddd;
 
-      padding: 20px 10px
+      padding: 25px 12px
     }
     .mt-nav p{
     font-size: 15px;
     }
+    .modal-backdrop{
+      display: none;
+    }
+    .close {
+    font-size: 0.9rem;
+    }
+    .modal-content {
+    color:#fff;
+    background-color: #5ec8f2;
+
+}
+.close {
+    text-shadow: none;
+    opacity: 1;
+}
+hr {
+
+    border-color: #f8f9fa;
+}
+.p-pop{
+  font-size: 14px;
+}
     </style>
   </head>
 
