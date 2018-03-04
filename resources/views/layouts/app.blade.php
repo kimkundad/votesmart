@@ -46,6 +46,9 @@
       .visible-xs {
           display: block!important;
       }
+      .hidden-xs {
+          display: none!important;
+      }
     }
     .navbar-brand {
     display: inline-block;
@@ -56,7 +59,17 @@
     line-height: inherit;
     white-space: nowrap;
 }
+    .mb-3{
+      color: #08B0ED;
+    }
+    .mt-nav{
+      border-top: 1px solid #ddd;
 
+      padding: 20px 10px
+    }
+    .mt-nav p{
+    font-size: 15px;
+    }
     </style>
   </head>
 
