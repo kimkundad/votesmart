@@ -168,6 +168,7 @@ input[type="radio"] + .label-text:before{
 }
 
 input[type="radio"]:checked + .label-text:before{
+  font-size: 17px;
 	content: "\f192";
 	color: #ffffff;
 	animation: effect 250ms ease-in;
