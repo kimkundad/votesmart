@@ -63,6 +63,46 @@
                       </div>
                     </div>
 
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">อายุ</label>
+                        <input type="number" name="year_old" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group" style="height:55px;">
+
+                        <label for="exampleInputEmail1">เพศ</label>
+                        <br>
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
+                    					</label>
+                    				</div>
+
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
+                    					</label>
+                    				</div>
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
+                    					</label>
+                    				</div>
+
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">ความสนใจ</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+
                     <div class="text-center">
                       <button type="button" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
                     </div>
