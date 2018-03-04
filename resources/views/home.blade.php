@@ -10,9 +10,118 @@
     <a class="navbar-brand " href="#page-top">เลือกได้...เลือกดี</a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
+      <a data-toggle="modal" data-target="#myModal">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
+      </a>
             </div>
+
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                  <div class="modal-body text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff"><span aria-hidden="true">&times;</span> ปิด</button>
+
+                    <br><br>
+                    <h4 class="text-center">อาสา</h4>
+                    <p>ร่วมกันสร้างความเปลี่ยนแปลง</p>
+                    <hr class="my-4">
+                    <p class="p-pop">หากคุณเป็นคนๆนึงที่อยากเห็นความเปลี่ยนแปลง <br>
+                    ไม่ว่าคุณจะอายุเท่าไหร่ เพศไหน<br>
+                    หรือมีความถนัดอะไร<br>
+                    เราต้องการคุณมาร่วมเปลี่ยนแปลงไปด้วยกัน</p>
+
+                    <p class="p-pop">เพียงกรอกข้อมูลด้านล่าง<br>
+                    ทีมงานของเราจะรีบติดต่อกลับไปโดยเร็ว</p>
+
+                    <form>
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+
+                          <div class="form-group">
+                            <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
+                            <input type="text" name="name" class="form-control" >
+                          </div>
+
+                        </div>
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">สกุล</label>
+                        <input type="text" name="surname" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">อีเมล</label>
+                        <input type="email" name="email" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">อายุ</label>
+                        <input type="number" name="year_old" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group" style="height:55px;">
+
+                        <label for="exampleInputEmail1">เพศ</label>
+                        <br>
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
+                    					</label>
+                    				</div>
+
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
+                    					</label>
+                    				</div>
+                    				<div class="form-check">
+                    					<label>
+                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
+                    					</label>
+                    				</div>
+
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">ความสนใจ</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="button" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
+                    </div>
+                  </form>
+
+
+
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
