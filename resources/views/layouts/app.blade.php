@@ -11,7 +11,7 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{url('front/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('front/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="{{url('front/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -65,11 +65,165 @@
     .mt-nav{
       border-top: 1px solid #ddd;
 
-      padding: 20px 10px
+      padding: 25px 12px
     }
     .mt-nav p{
     font-size: 15px;
     }
+    .modal-backdrop{
+      display: none;
+    }
+    .close {
+    font-size: 0.9rem;
+    }
+    .modal-content {
+    color:#fff;
+    background-color: #5ec8f2;
+
+}
+.close {
+    text-shadow: none;
+    opacity: 1;
+}
+hr {
+
+    border-color: #f8f9fa;
+}
+.p-pop{
+  font-size: 14px;
+}
+
+label{
+  float: left;
+    font-size: 14px;
+    margin-bottom: .3rem;
+}
+.form-group {
+    margin-bottom: 0.6rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #5ec8f2;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input[type="checkbox"], input[type="radio"]{
+	position: absolute;
+	right: 9000px;
+}
+
+/*Check box*/
+input[type="checkbox"] + .label-text:before{
+	content: "\f096";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 2;
+	-webkit-font-smoothing:antialiased;
+	width: 2em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + .label-text:before{
+	content: "\f14a";
+	color: #2980b9;
+	animation: effect 250ms ease-in;
+}
+
+input[type="checkbox"]:disabled + .label-text{
+	color: #aaa;
+}
+
+input[type="checkbox"]:disabled + .label-text:before{
+	content: "\f0c8";
+	color: #ccc;
+}
+
+/*Radio box*/
+
+input[type="radio"] + .label-text:before{
+  font-size: 18px;
+	content: "\f10c";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+  font-size: 17px;
+	content: "\f192";
+	color: #ffffff;
+	animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+	color: #ffffff;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+	content: "\f111";
+	color: #ffffff;
+}
+
+/*Radio Toggle*/
+
+.toggle input[type="radio"] + .label-text:before{
+	content: "\f204";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 2;
+	-webkit-font-smoothing:antialiased;
+	width: 2em;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.toggle input[type="radio"]:checked + .label-text:before{
+  font-size: 18px;
+    content: "\f192";
+    color: #ffffff;
+	animation: effect 250ms ease-in;
+}
+
+.toggle input[type="radio"]:disabled + .label-text{
+	color: #aaa;
+}
+
+.toggle input[type="radio"]:disabled + .label-text:before{
+	content: "\f204";
+	color: #ffffff;
+}
+
+
+@keyframes effect{
+	0%{transform: scale(0);}
+	25%{transform: scale(1.3);}
+	75%{transform: scale(1.4);}
+	100%{transform: scale(1);}
+}
     </style>
   </head>
 
