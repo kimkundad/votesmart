@@ -153,6 +153,7 @@ input[type="checkbox"]:disabled + .label-text:before{
 /*Radio box*/
 
 input[type="radio"] + .label-text:before{
+  font-size: 18px;
 	content: "\f10c";
 	font-family: "FontAwesome";
 	speak: none;
