@@ -169,17 +169,17 @@ input[type="radio"] + .label-text:before{
 
 input[type="radio"]:checked + .label-text:before{
 	content: "\f192";
-	color: #8e44ad;
+	color: #ffffff;
 	animation: effect 250ms ease-in;
 }
 
 input[type="radio"]:disabled + .label-text{
-	color: #aaa;
+	color: #ffffff;
 }
 
 input[type="radio"]:disabled + .label-text:before{
 	content: "\f111";
-	color: #ccc;
+	color: #ffffff;
 }
 
 /*Radio Toggle*/
@@ -212,7 +212,7 @@ input[type="radio"]:disabled + .label-text:before{
 
 .toggle input[type="radio"]:disabled + .label-text:before{
 	content: "\f204";
-	color: #ccc;
+	color: #ffffff;
 }
 
 
