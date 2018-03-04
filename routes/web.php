@@ -13,16 +13,6 @@
 
 Route::auth();
 
-Route::get('/', function () {
-
-  if(Auth::check()){
-  return Redirect::to('home');
-  }else{
-    return view('auth.login');
-  }
-
-});
-
 Auth::routes();
 
 Route::get('/redirect', 'FacebookAuthController@redirect');
@@ -30,9 +20,7 @@ Route::get('/callback', 'FacebookAuthController@callback');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
 
 
 Route::group(['middleware' => 'admin'], function() {
