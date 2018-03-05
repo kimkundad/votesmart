@@ -324,6 +324,10 @@ input[type="radio"]:disabled + .label-text:before{
     height: 65px;
   }
 }
+.modal-content1 {
+    color: #999;
+    background-color: #fff;
+}
     </style>
   </head>
 

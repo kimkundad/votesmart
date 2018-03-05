@@ -10,7 +10,7 @@
     <a class="navbar-brand " href="#page-top" style="font-size: 1.5rem;">เลือกได้...เลือกดี</a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; padding: 0px 0px 10px 10px;">
+      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; ">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>
@@ -25,7 +25,7 @@
                 <div class="modal-content">
 
                   <div class="modal-body text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff"><span aria-hidden="true">&times;</span> ปิด</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
 
                     <br><br>
                     <h3 class="text-center">อาสา</h3>
@@ -191,7 +191,7 @@
 
 
       <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
-
+        <a data-toggle="modal" data-target="#myModal-1" href="#">
         <div class="parent-chart">
           <canvas id="doughnutChart" style="width: 150px; height: 86px;"></canvas>
           <div class="overlay-chart">
@@ -201,12 +201,32 @@
             <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
           </div>
         </div>
+      </a>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="border: 1px solid rgba(33, 37, 41, 0.1);">
+          <div class="modal-content1">
+
+            <div class="modal-body text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#666; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+
+              <br><br>
+              <h3 class="text-center">อาสา</h3>
+              <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       </div>
 
 
       <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
 
+        <a data-toggle="modal" data-target="#myModal-2" href="#">
         <div class="parent-chart">
           <canvas id="doughnutChart1"></canvas>
           <div class="overlay-chart">
@@ -216,6 +236,27 @@
             <p style="margin-bottom: 0px; font-size:9px;">kimkundad</p>
           </div>
         </div>
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document" style="border: 1px solid rgba(33, 37, 41, 0.1);">
+            <div class="modal-content1">
+
+              <div class="modal-body text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#666; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+
+                <br><br>
+                <h3 class="text-center">อาสา</h3>
+                <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
 
       </div>
 
