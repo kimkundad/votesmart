@@ -10,7 +10,7 @@
     <a class="navbar-brand " href="#page-top" style="font-size: 1.5rem;">เลือกได้...เลือกดี</a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px;">
+      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; padding: 0px 0px 10px 10px;">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>
