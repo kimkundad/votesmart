@@ -197,7 +197,7 @@
         <div class="parent-chart">
           <canvas id="doughnutChart" style="width: 150px; height: 86px;"></canvas>
           <div class="overlay-chart">
-
+          <img class="img-in-chart" src="{{url('assets/avatar/400x400.jpg')}}">
           </div>
           <div class="user-name">
             <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
@@ -212,7 +212,7 @@
         <div class="parent-chart">
           <canvas id="doughnutChart1"></canvas>
           <div class="overlay-chart">
-
+            <img class="img-in-chart" src="{{url('assets/avatar/400x400.jpg')}}">
           </div>
           <div class="user-name">
             <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
@@ -357,6 +357,9 @@
 @section('scripts')
 <script src="{{url('front/js/Chart.bundle.js')}}"></script>
 <script type="text/javascript">
+
+document.getElementById("doughnutChart").style.height = '128px';
+
   var ctxD = document.getElementById("doughnutChart").getContext('2d');
   var myLineChart = new Chart(ctxD, {
     type: 'doughnut',
