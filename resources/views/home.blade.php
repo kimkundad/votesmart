@@ -215,7 +215,7 @@
             <img class="img-in-chart" src="{{url('assets/avatar/400x400.jpg')}}">
           </div>
           <div class="user-name">
-            <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
+            <p style="margin-bottom: 0px; font-size:9px;">kimkundad</p>
           </div>
         </div>
 
@@ -355,7 +355,7 @@
 @endsection
 
 @section('scripts')
-<script src="{{url('front/js/Chart.bundle.js')}}"></script>
+<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
 <script type="text/javascript">
 
 document.getElementById("doughnutChart").style.height = '128px';
