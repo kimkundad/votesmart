@@ -213,17 +213,26 @@
 
               <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
 
-
-
               <br><br>
-              <h3 class="text-center">อาสา</h3>
-              <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
+              <div class="parent-chart" style="box-shadow: none; margin: auto auto 0px;">
+                <canvas id="doughnutChart2" style="width: 150px; height: 86px;"></canvas>
+                <div class="overlay-chart">
+                <img class="img-in-chart-in" src="{{url('assets/avatar/400x400.jpg')}}">
+                </div>
+
+              </div>
+              <h5 class="text-center" style="color: #0479bd; font-weight: 700;">shuvit funsok</h5>
+              <p class="p-pop">เลือกประเด็นสำคัญดังนี้</p>
 
             </div>
 
           </div>
         </div>
       </div>
+
+
+
+
 
       </div>
 
@@ -422,6 +431,25 @@ document.getElementById("doughnutChart").style.height = '128px';
   });
 
   var ctxD = document.getElementById("doughnutChart1").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+
+
+  var ctxD = document.getElementById("doughnutChart2").getContext('2d');
   var myLineChart = new Chart(ctxD, {
     type: 'doughnut',
     data: {

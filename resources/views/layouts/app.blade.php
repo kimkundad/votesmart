@@ -266,13 +266,19 @@ input[type="radio"]:disabled + .label-text:before{
   border-radius: 100%;
   margin-top: -32px;
 }
-
+.img-in-chart-in {
+  border-radius: 100%;
+  margin-top: -1px;
+  width: 80px;
+  height: 80px;
+}
 @media (min-width: 280px) {
   .img-in-chart {
     margin-top: -16px;
     width: 60px;
     height: 60px;
   }
+
 }
 
 @media (min-width: 320px) {
