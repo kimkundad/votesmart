@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1);">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
     <a class="navbar-brand " href="#page-top">เลือกได้...เลือกดี</a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal">
+      <a data-toggle="modal" data-target="#myModal" style="font-size: 13px;">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>
@@ -41,7 +41,7 @@
 
                     <form>
 
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
 
                           <div class="form-group">
                             <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
@@ -49,28 +49,28 @@
                           </div>
 
                         </div>
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
                         <input type="text" name="surname" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
                         <input type="email" name="email" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อายุ</label>
                         <input type="number" name="year_old" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group" style="height:55px;">
 
                         <label for="exampleInputEmail1">เพศ</label>
@@ -96,7 +96,7 @@
                     </div>
 
 
-                    <div class="col-md-6 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">ความสนใจ</label>
                         <textarea class="form-control" rows="3"></textarea>
@@ -160,20 +160,25 @@
 
 
 
-<section class="bg-primary" id="about">
+<section class="bg-whites " id="about" style="padding: 65px 0 8px 0;">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="section-heading text-white">We've got what you need!</h2>
-        <hr class="light my-4">
-        <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+      <div class="col-md-3 text-center">
+        <a class="quiz-title" style="color:#0479bd;">จะเลือกอะไรได้?</a>
+        <br><br>
+      </div>
+      <div class="col-md-6 text-center">
+        <p class="text-muted" style="font-size:10px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร?</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services">
+
+<section id="services" style="background: #f2f8fa;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">

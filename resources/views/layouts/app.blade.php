@@ -24,6 +24,10 @@
     <!-- Custom styles for this template -->
     <link href="{{url('front/css/creative.css')}}" rel="stylesheet">
     <style>
+    body,
+    html {
+      font-size: 0.8rem;
+    }
     .navbar-light .navbar-toggler {
     color: rgb(8, 176, 237);
     border: none !important;
@@ -152,6 +156,7 @@ input[type="checkbox"]:disabled + .label-text:before{
 
 /*Radio box*/
 
+
 input[type="radio"] + .label-text:before{
   font-size: 18px;
 	content: "\f10c";
@@ -223,6 +228,19 @@ input[type="radio"]:disabled + .label-text:before{
 	25%{transform: scale(1.3);}
 	75%{transform: scale(1.4);}
 	100%{transform: scale(1);}
+}
+.bg-whites {
+    background-color:rgba(255, 255, 255, 0.9);
+}
+.quiz-title{
+    color: #0479BD;
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    margin: 0;
+    padding: 0px 15px;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
 }
     </style>
   </head>
