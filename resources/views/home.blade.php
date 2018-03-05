@@ -192,12 +192,27 @@
     <div class="row">
 
 
-      <div class="col-6 col-md-3 text-center">
+      <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
 
         <div class="parent-chart">
-          <canvas id="doughnutChart"></canvas>
+          <canvas id="doughnutChart" style="width: 150px; height: 86px;"></canvas>
           <div class="overlay-chart">
-            <img class="img-in-chart" src="{{url('assets/avatar/400x400.jpg')}}">
+
+          </div>
+          <div class="user-name">
+            <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
+
+        <div class="parent-chart">
+          <canvas id="doughnutChart1"></canvas>
+          <div class="overlay-chart">
+
           </div>
           <div class="user-name">
             <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
