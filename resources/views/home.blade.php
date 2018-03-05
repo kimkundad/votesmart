@@ -184,15 +184,8 @@
 </section>
 
 
-<section id="services" style="background: #f2f8fa;">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">At Your Service</h2>
-        <hr class="my-4">
-      </div>
-    </div>
-  </div>
+<section id="services" style="background: #f2f8fa; padding: 1.5rem 0;">
+
   <div class="container">
     <div class="row">
 
