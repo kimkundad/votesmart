@@ -171,7 +171,12 @@
         <p class="text-muted" style="font-size:10px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร?</p>
       </div>
       <div class="col-md-3 text-center">
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
+        @if (Auth::guest())
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
+        @else
+        <img src="//{{$u->avatar}}" alt="{{$u->name}}" style="height:32px; vertical-align: middle;" class="img-circle"> {{ Auth::user()->name }}
+        @endif
+
         <br>
       </div>
     </div>
