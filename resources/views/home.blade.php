@@ -174,7 +174,7 @@
         @if (Auth::guest())
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
         @else
-        <a><img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle"> {{ Auth::user()->name }}</a>
+        <a href="{{('/')}}" style="color: #f05f40; font-weight: 700; font-size: 12px;"><img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle"> {{ Auth::user()->name }}</a>
         @endif
 
         <br>
