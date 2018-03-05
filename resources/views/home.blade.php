@@ -9,8 +9,8 @@
     </button>
     <a class="navbar-brand " href="#page-top" style="font-size: 1.5rem;">เลือกได้...เลือกดี</a>
 
-    <div class="btn-varunteer visible-sm visible-xs" data-toggle="modal" data-target="#myModal" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a  style="font-size: 14px;">
+    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
+      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px;">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>
@@ -20,7 +20,7 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
 
