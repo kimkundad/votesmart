@@ -172,6 +172,7 @@
       </div>
       <div class="col-md-3 text-center">
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
+        <br>
       </div>
     </div>
   </div>
@@ -189,34 +190,22 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-          <h3 class="mb-3">Sturdy Templates</h3>
-          <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+
+
+      <div class="col-6 col-md-3 text-center">
+
+        <div class="parent-chart">
+          <canvas id="doughnutChart"></canvas>
+          <div class="overlay-chart">
+            <img class="img-in-chart" src="{{url('assets/avatar/400x400.jpg')}}">
+          </div>
+          <div class="user-name">
+            <p style="margin-bottom: 0px; font-size:9px;">shuvit funsok</p>
+          </div>
         </div>
+
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-          <h3 class="mb-3">Ready to Ship</h3>
-          <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-          <h3 class="mb-3">Up to Date</h3>
-          <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-          <h3 class="mb-3">Made with Love</h3>
-          <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -349,3 +338,434 @@
   </div>
 </section>
 @endsection
+
+@section('scripts')
+<script src="{{url('front/js/Chart.bundle.js')}}"></script>
+<script type="text/javascript">
+  var ctxD = document.getElementById("doughnutChart").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart1").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart2").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart3").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart4").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart5").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart6").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart7").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart8").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart9").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart10").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart11").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart12").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart13").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart14").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart15").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart16").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart17").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart18").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart19").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart20").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart21").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart22").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart23").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [300, 50, 100, 40, 120],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+  var ctxD = document.getElementById("doughnutChart24").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      datasets: [{
+        data: [200, 150, 200, 240, 20],
+        backgroundColor: ["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+</script>
+@stop('scripts')

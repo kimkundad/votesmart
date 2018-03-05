@@ -242,6 +242,86 @@ input[type="radio"]:disabled + .label-text:before{
     padding: 0px 15px;
     text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
 }
+.overlay-chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent-chart {
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    margin: auto auto 30px;
+}
+.img-in-chart {
+  border: none;
+  border-radius: 100%;
+  margin-top: -32px;
+}
+
+@media (min-width: 280px) {
+  .img-in-chart {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 320px) {
+  .img-in-chart {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 375px) {
+  .img-in-chart {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 425px) {
+  .img-in-chart {
+    width: 82px;
+    height: 82px;
+  }
+}
+
+@media (min-width: 576px) {
+  .img-in-chart {
+    width: 116px;
+    height: 116px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-in-chart {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-in-chart {
+    width: 54px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-in-chart {
+    width: 65px;
+    height: 65px;
+  }
+}
     </style>
   </head>
 
@@ -263,8 +343,11 @@ input[type="radio"]:disabled + .label-text:before{
     <script src="{{url('front/vendor/scrollreveal/scrollreveal.min.js')}}"></script>
     <script src="{{url('front/vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
 
+
     <!-- Custom scripts for this template -->
     <script src="{{url('front/js/creative.min.js')}}"></script>
+
+    @yield('scripts')
 
   </body>
 
