@@ -168,7 +168,7 @@
         <br><br>
       </div>
       <div class="col-md-6 text-center">
-        <p class="text-muted" style="font-size:10px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร?</p>
+        <p class="text-muted" style="font-size:11px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร?</p>
       </div>
       <div class="col-md-3 text-center">
         @if (Auth::guest())
