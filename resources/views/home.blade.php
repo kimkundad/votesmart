@@ -7,10 +7,10 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand " href="#page-top">เลือกได้...เลือกดี</a>
+    <a class="navbar-brand " href="#page-top" style="font-size: 1.5rem;">เลือกได้...เลือกดี</a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal" style="font-size: 13px;">
+      <a data-toggle="modal" data-target="#myModal" style="font-size: 14px;">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>
@@ -28,8 +28,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff"><span aria-hidden="true">&times;</span> ปิด</button>
 
                     <br><br>
-                    <h4 class="text-center">อาสา</h4>
-                    <p>ร่วมกันสร้างความเปลี่ยนแปลง</p>
+                    <h3 class="text-center">อาสา</h3>
+                    <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
                     <hr class="my-4">
                     <p class="p-pop">หากคุณเป็นคนๆนึงที่อยากเห็นความเปลี่ยนแปลง <br>
                     ไม่ว่าคุณจะอายุเท่าไหร่ เพศไหน<br>

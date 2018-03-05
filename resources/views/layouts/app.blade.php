@@ -94,7 +94,7 @@ hr {
     border-color: #f8f9fa;
 }
 .p-pop{
-  font-size: 14px;
+  font-size: 13px;
 }
 
 label{
