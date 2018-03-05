@@ -21,7 +21,7 @@ Route::get('/callback', 'FacebookAuthController@callback');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', 'HomeController@index');
-
+Route::get('/result', 'HomeController@result');
 
 Route::group(['middleware' => 'admin'], function() {
 
