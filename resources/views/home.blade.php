@@ -129,7 +129,7 @@
           <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="#about">เลือกอะไรได้?</a>
 
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
-             <h5 class="mb-3">เลือกอะไรได้?</h5>
+             <h5 class="mb-3" style="font-weight: 700;">เลือกอะไรได้?</h5>
               <p class="text-muted mb-0">ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร? อะไรที่เราควรให้ความสำคัญ?</p>
             </div>
 
@@ -140,7 +140,7 @@
           <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="#about">เลือกใครดี?</a>
 
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
-             <h5 class="mb-3">เลือกใครดี?</h5>
+             <h5 class="mb-3" style="font-weight: 700;">เลือกใครดี?</h5>
               <p class="text-muted mb-0">รู้จักผู้แทนของคุณมากขึ้น และบอกพวกเค้าว่าอะไรที่สำคุณ?</p>
             </div>
         </li>
