@@ -328,6 +328,26 @@ input[type="radio"]:disabled + .label-text:before{
     color: #999;
     background-color: #fff;
 }
+.view-more{
+  float: right;
+}
+
+.view-more .plus-sign {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #666;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 15px;
+    text-align: center;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
     </style>
   </head>
 

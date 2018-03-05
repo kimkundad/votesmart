@@ -209,7 +209,11 @@
           <div class="modal-content1">
 
             <div class="modal-body text-center">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#666; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+
+
+              <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
+
+
 
               <br><br>
               <h3 class="text-center">อาสา</h3>
@@ -244,7 +248,7 @@
             <div class="modal-content1">
 
               <div class="modal-body text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#666; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+                <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
 
                 <br><br>
                 <h3 class="text-center">อาสา</h3>
