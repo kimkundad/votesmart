@@ -267,10 +267,10 @@ input[type="radio"]:disabled + .label-text:before{
   margin-top: -32px;
 }
 .img-in-chart-in {
-  border-radius: 100%;
-  margin-top: -1px;
-  width: 80px;
-  height: 80px;
+    border-radius: 100%;
+    margin-top: -3px;
+    width: 83px;
+    height: 83px;
 }
 @media (min-width: 280px) {
   .img-in-chart {
