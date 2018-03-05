@@ -269,15 +269,17 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 280px) {
   .img-in-chart {
-    width: 56px;
-    height: 56px;
+    margin-top: -16px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (min-width: 320px) {
   .img-in-chart {
-    width: 56px;
-    height: 56px;
+    margin-top: -18px;
+    width: 80px;
+    height: 80px;
   }
 }
 
