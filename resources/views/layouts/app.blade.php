@@ -559,7 +559,9 @@ margin: 0 5px 10px 0px;
     font-weight: 700;
 }
 
-
+.masonry{
+  margin-top: 20px;
+}
 
 .masonry .item {
 
