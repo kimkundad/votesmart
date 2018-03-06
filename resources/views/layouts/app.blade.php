@@ -632,17 +632,17 @@ a:hover{
   text-decoration: none;
 }
 .scroll-to-top {
+    border: 1px solid #08B0ED;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    background: #282d36;
-    border-radius: 7px 7px 0 0;
-    bottom: 0px;
-    color: #FFF;
+    /* transition: all 0.3s; */
+    background: #ffffff;
+    border-radius: 15px 15px 15px 15px;
+    bottom: 10px;
+    /* color: #FFF; */
     display: block;
     height: 9px;
-
-    padding: 5px 10px 25px;
+    padding: 10px 10px 25px;
     position: fixed;
     right: 10px;
     text-align: center;

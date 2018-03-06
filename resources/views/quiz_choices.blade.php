@@ -114,7 +114,7 @@
   </div>
 </section>
 
-<a class="scroll-to-top visible-sm visible-xs" href="#"><i class="fa fa-chevron-up"></i></a>
+<a class="scroll-to-top visible-sm visible-xs" href="#">(1/10)</a>
 
 
 @endsection
