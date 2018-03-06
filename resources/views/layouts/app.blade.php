@@ -278,7 +278,27 @@ input[type="radio"]:disabled + .label-text:before{
     width: 60px;
     height: 60px;
   }
+  .masonry .item {
+      font-size: 14px;
+  }
+  .item.size-1 {
 
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
+  }
 
 }
 
@@ -288,12 +308,54 @@ input[type="radio"]:disabled + .label-text:before{
     width: 80px;
     height: 80px;
   }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
+  }
+
 }
+
 
 @media (min-width: 375px) {
   .img-in-chart {
     width: 30px;
     height: 30px;
+  }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
   }
 }
 
@@ -302,12 +364,52 @@ input[type="radio"]:disabled + .label-text:before{
     width: 82px;
     height: 82px;
   }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
+  }
 }
 
 @media (min-width: 576px) {
   .img-in-chart {
     width: 116px;
     height: 116px;
+  }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
   }
 }
 
@@ -316,6 +418,26 @@ input[type="radio"]:disabled + .label-text:before{
     width: 75px;
     height: 75px;
   }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -323,12 +445,52 @@ input[type="radio"]:disabled + .label-text:before{
     width: 54px;
     height: 55px;
   }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
+  }
 }
 
 @media (min-width: 1200px) {
   .img-in-chart {
     width: 65px;
     height: 65px;
+  }
+  .masonry .item {
+      font-size: 20px;
+  }
+  .item.size-1 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .item.size-4 {
+      width: 270px;
+      height: 270px;
+  }
+  .item.size-3 {
+      width: 230px;
+      height: 230px;
+  }
+  .item.size-2 {
+      width: 190px;
+      height: 190px;
   }
 }
 .modal-content1 {
@@ -484,9 +646,7 @@ margin: 0 5px 10px 0px;
   .quiz-choices p {
     text-align: center;
   }
-  .masonry .item {
-      font-size: 14px;
-  }
+
 }
 
 @media (max-width: 320px) {
@@ -543,26 +703,11 @@ margin: 0 5px 10px 0px;
     align-items: center;
     box-shadow: 0px 2px 10px #ccc;
     color: #08B0ED;
-    font-size: 20px;
+
 
     font-family: 'Kanit', sans-serif;
 }
-.item.size-1 {
-    width: 150px;
-    height: 150px;
-}
-.item.size-4 {
-    width: 270px;
-    height: 270px;
-}
-.item.size-3 {
-    width: 230px;
-    height: 230px;
-}
-.item.size-2 {
-    width: 190px;
-    height: 190px;
-}
+
 .masonry .item.select::after {
     content: "";
     background-image: url(./true.png);
