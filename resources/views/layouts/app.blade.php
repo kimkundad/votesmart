@@ -631,6 +631,28 @@ a{
 a:hover{
   text-decoration: none;
 }
+.scroll-to-top {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #282d36;
+    border-radius: 7px 7px 0 0;
+    bottom: 0px;
+    color: #FFF;
+    display: block;
+    height: 9px;
+
+    padding: 5px 10px 25px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 39px;
+    z-index: 1040;
+}
+.scroll-to-top.visible {
+    opacity: 0.75;
+}
     </style>
 
   </head>
