@@ -39,7 +39,7 @@
 
     <div class="row">
 
-      <div class="col-6 col-md-4 text-center" style="padding-right: 6px; padding-left: 6px;">
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
 
         <div class="masonry">
           <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
@@ -47,7 +47,10 @@
 
 
       </div>
-      <div class="col-6 col-md-4 text-center" style="padding-right: 6px; padding-left: 6px;">
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ</div></div>
+        </div>
       </div>
 
     </div>
