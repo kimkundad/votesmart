@@ -40,13 +40,57 @@
     <div class="row">
 
       <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-
         <div class="masonry">
           <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
         </div>
-
-
       </div>
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry" style="max-height:200px;">
+          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ แก้ปัญหา</div></div>
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>แก้ปัญหารถติด</div></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>หนี้สินท่วมตัว ข้าวของแพงเวอร์</div></div>
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>แก้ปัญหารถติด</div></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>หนี้สินท่วมตัว ข้าวของแพงเวอร์</div></div>
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
+        </div>
+      </div>
+
       <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
         <div class="masonry">
           <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ</div></div>
