@@ -37,29 +37,22 @@
 
   <div class="container">
 
-    <div class="quiz-section container-fluid col-md-12" style="background:#F2F8FA; padding: 30px 0;">
+    <div class="row">
 
-      <div class="masonry">
-        <div class="item size-1">ปราปปรามคอร์รัปชั่น</div>
-        <div class="item size-3">ปฏิรูปรถเมล์</div>
-        <div class="item size-4">ปรัปปรุงถนนหนทาง</div>
-        <div class="item size-1">โครงการรักษาฟรี</div>
-        <div class="item size-2">พัฒนาวิชาชีพครู</div>
-        <div class="item size-4">พัฒนาโรงเรียน</div>
-        <div class="item size-3">ส่งเสริมอุตสาหกรรมบันเทิง</div>
-        <div class="item size-3">พัฒนากองทัพ</div>
-        <div class="item size-2">ลดค่าครองชีพ</div>
-        <div class="item size-1">ปราปปรามยาเสพติด</div>
-        <div class="item size-4">สร้างรถไฟฟ้าความเร็วสูง</div>
-        <div class="item size-2">เสริมอาวุธกองทัพ</div>
-        <div class="item size-3">พัฒนากองทัพ</div>
-        <div class="item size-2">ลดค่าครองชีพ</div>
-        <div class="item size-1">ปราปปรามยาเสพติด</div>
-        <div class="item size-4">สร้างรถไฟฟ้าความเร็วสูง</div>
-        <div class="item size-2">เสริมอาวุธกองทัพ</div>
+      <div class="col-6 col-md-4 text-center" style="padding-right: 6px; padding-left: 6px;">
+
+        <div class="masonry">
+          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
+        </div>
+
+
+      </div>
+      <div class="col-6 col-md-4 text-center" style="padding-right: 6px; padding-left: 6px;">
+      </div>
 
     </div>
-  </div>
+
+
 
 
   </div>
