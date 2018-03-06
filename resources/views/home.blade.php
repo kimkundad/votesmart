@@ -214,16 +214,47 @@
               <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
 
               <br><br>
-              <div class="parent-chart" style="box-shadow: none; margin: auto auto 0px;">
-                <canvas id="doughnutChart2" style="width: 150px; height: 86px;"></canvas>
-                <div class="overlay-chart">
-                <img class="img-in-chart-in" src="{{url('assets/avatar/400x400.jpg')}}">
-                </div>
-
-              </div>
+              <img class="img-in-chart-in" style="width: 100px; height: 100px;" style="vertical-align: middle;" src="{{url('assets/avatar/400x400.jpg')}}">
+              <br><br>
               <h5 class="text-center" style="color: #0479bd; font-weight: 700;">shuvit funsok</h5>
               <p class="p-pop">เลือกประเด็นสำคัญดังนี้</p>
+                                            <div class="education">
+                                                <p>
+                                                    <span>1</span>การศึกษา</p>
+                                                <ul>
+                                                    <li>พัฒนาห้องสมุด</li>
+                                                    <li>พัฒนาครู</li>
+                                                    <li>ปฏิรูปหลักสูตร</li>
+                                                    <li>เรียนฟรี</li>
+                                                    <li>เพิ่มทุนการศึกษา</li>
+                                                    <li>โรงเรียนในพื้นที่ห่างไกล</li>
+                                                    <li>พัฒนาห้องสมุด</li>
+                                                </ul>
+                                            </div>
 
+                                            <div class="economy">
+                                                <p>
+                                                    <span>2</span>เศรษฐกิจ
+                                                </p>
+                                                <ul>
+                                                    <li>สนับสนุน SME</li>
+                                                    <li>กองทุนสตาร์ทอัพ</li>
+                                                    <li>กองทุนหมู่บ้าน</li>
+                                                    <li>ส่งเสริมการส่งออก</li>
+                                                    <li>เศรษฐกิจสร้างสรรค์</li>
+                                                </ul>
+                                            </div>
+                                            <div class="public-health">
+                                                <p>
+                                                    <span>3</span>สาธารณสุข
+                                                </p>
+                                                <ul>
+                                                    <li>พัฒนาครู</li>
+                                                    <li>พัฒนาห้องสมุด</li>
+                                                    <li>เพิ่มทุนการศึกษา</li>
+                                                    <li>เรียนฟรี</li>
+                                                </ul>
+                                            </div>
             </div>
 
           </div>

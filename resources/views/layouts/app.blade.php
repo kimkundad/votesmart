@@ -354,7 +354,110 @@ input[type="radio"]:disabled + .label-text:before{
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
 }
+.education p {
+    color: #4A4A4A;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+.education ul {
+padding-left: 0;
+}
+.candidate-profile-2 ul li {
+font-family: "Kanit";
+font-size: 13px;
+padding: 5px 10px;
+}
+.education ul li {
+display: inline-block;
+list-style: none;
+background: #5EC8F2;
+border-radius: 16px;
+padding: 6px;
+color: #fff;
+margin: 0 5px 10px 0px;
+}
+.education p span {
+    border-radius: 100%;
+    background-color: #5EC8F2;
+    font-family: 'Kanit', sans-serif;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    padding: 2px 8px;
+    margin-right: 5px;
+}
+.economy p {
+    color: #4A4A4A;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+.economy p span {
+    border-radius: 100%;
+    background-color: #ED2E7D;
+    font-family: 'Kanit', sans-serif;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    padding: 2px 8px;
+    margin-right: 5px;
+}
+.economy ul {
+    padding-left: 0;
+}
+.candidate-profile-2 ul li {
+    font-family: "Kanit";
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.economy ul li {
+    display: inline-block;
+    list-style: none;
+    background: #ED2E7D;
+    border-radius: 16px;
+    padding: 6px;
+    color: #fff;
+    margin: 0 5px 10px 0px;
+}
+.public-health p {
+    color: #4A4A4A;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+.public-health p span {
+    border-radius: 100%;
+    background-color: #F5E41B;
+    font-family: 'Kanit', sans-serif;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    padding: 2px 8px;
+    margin-right: 5px;
+}
+.public-health ul {
+    padding-left: 0;
+}
+.candidate-profile-2 ul li {
+    font-family: "Kanit";
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.public-health ul li {
+    display: inline-block;
+    list-style: none;
+    background: #F5E41B;
+    border-radius: 16px;
+    padding: 6px;
+    color: #fff;
+    margin: 0 5px 10px 0px;
+}
     </style>
+
   </head>
 
   <body id="page-top">
