@@ -279,6 +279,7 @@ input[type="radio"]:disabled + .label-text:before{
     height: 60px;
   }
 
+
 }
 
 @media (min-width: 320px) {
@@ -456,13 +457,144 @@ margin: 0 5px 10px 0px;
     color: #fff;
     margin: 0 5px 10px 0px;
 }
+
+.quiz-choices h3 {
+
+    /* width: 371px; */
+    color: #0479bd;
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+.quiz-choices p {
+    /* max-width: 345px; */
+
+
+    font-size: 11px;
+    /* line-height: 30px; */
+}
+
+
+@media (max-width: 280px) {
+  .quiz-choices h3 {
+    text-align: center;
+  }
+  .quiz-choices p {
+    text-align: center;
+  }
+  .masonry .item {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .quiz-choices h3 {
+    text-align: center;
+  }
+  .quiz-choices p {
+    text-align: center;
+  }
+  .masonry .item {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .quiz-choices h3 {
+    text-align: center;
+  }
+  .quiz-choices p {
+    text-align: center;
+  }
+  .masonry .item {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  .quiz-choices h3 {
+    text-align: center;
+  }
+  .quiz-choices p {
+    text-align: center;
+  }
+  .masonry .item {
+      font-size: 14px;
+  }
+}
+.quiz-choices .col-md-4 p {
+    text-align: right;
+    color: #0479BD;
+    font-family: Prompt;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.masonry .item {
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px #ccc;
+    color: #08B0ED;
+    font-size: 20px;
+
+    font-family: 'Kanit', sans-serif;
+}
+.item.size-1 {
+    width: 150px;
+    height: 150px;
+}
+.item.size-4 {
+    width: 270px;
+    height: 270px;
+}
+.item.size-3 {
+    width: 230px;
+    height: 230px;
+}
+.item.size-2 {
+    width: 190px;
+    height: 190px;
+}
+.masonry .item.select::after {
+    content: "";
+    background-image: url(./true.png);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -11px;
+    width: 24px;
+    height: 24px;
+}
+.masonry .item.select {
+    border-radius: 50%;
+    background: #5EC8F2;
+    color: #fff;
+    position: relative;
+    box-shadow: 0px 10px 10px #ccc;
+    text-shadow: 4px 4px #0479BD;
+    font-weight: 700;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
     </style>
 
   </head>
 
   <body id="page-top">
 
-
+    @include('layouts.header')
 
 
     @yield('content')

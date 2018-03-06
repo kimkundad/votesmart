@@ -11,7 +11,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    
+
     /**
      * Show the application dashboard.
      *
@@ -22,9 +22,13 @@ class HomeController extends Controller
         return view('home');
     }
 
-    
+
     public function result()
     {
         return view('result');
+    }
+
+    public function quiz_choices(){
+        return view('quiz_choices');
     }
 }
