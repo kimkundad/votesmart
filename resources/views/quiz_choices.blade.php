@@ -47,7 +47,7 @@
 
       <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
         <div class="masonry" style="max-height:200px;">
-          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ แก้ปัญหา</div></div>
+          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ </div></div>
         </div>
       </div>
 
