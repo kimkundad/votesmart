@@ -113,8 +113,8 @@
     </div>
   </div>
 </section>
-
-<a class="scroll-to-top visible-sm visible-xs" href="#">(1/10)</a>
+<a class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</a>
+<a class="scroll-to-top visible-sm visible-xs" href="#"> 1/10 </a>
 
 
 @endsection

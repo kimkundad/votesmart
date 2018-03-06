@@ -650,6 +650,15 @@ a:hover{
     min-width: 39px;
     z-index: 1040;
 }
+.send_q {
+    position: fixed;
+    /* float: left; */
+    bottom: 12px;
+    color: #FFF;
+    display: block;
+    height: 36px;
+    right: 60px;
+}
 .scroll-to-top.visible {
     opacity: 0.75;
 }
