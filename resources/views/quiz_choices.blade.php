@@ -32,12 +32,17 @@
   </div>
 </section>
 
-
+<style>
+input:checked{
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #bdbdff;
+}
+</style>
 <section id="services" style="background: #f2f8fa; padding: 1.5rem 0;">
 
   <div class="container">
 
-    <form  method="POST" action="{{url('quiz_choices')}}">
+    <form  method="POST" id="cutproduct" action="{{url('quiz_choices')}}">
       {{ csrf_field() }}
 
 
@@ -45,7 +50,9 @@
 
         @if($objs)
            @foreach($objs as $u)
-        <div class="item size-{{$u->options}}">{{$u->name_quiz}}</div>
+        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');">{{$u->name_quiz}}
+        <input type="checkbox" class="checkbox1" name="chk1[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
+        </div>
         @endforeach
      @endif
 
@@ -79,6 +86,7 @@
 @section('scripts')
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js'></script>
 <script src="{{url('js/jquery.masonry.min.js')}}"></script>
+<script src="http://tjcrowder.github.io/simple-snippets-console/snippet.js"></script>
 <script>
   $('.masonry').masonry({
     itemSelector: '.item',
@@ -92,6 +100,11 @@
       $(this).addClass("select");
     }
   });
+
+  function check(checkboxid) {
+   document.getElementById(checkboxid).checked = "checked";
+   }
+
 </script>
 
 @stop('scripts')
