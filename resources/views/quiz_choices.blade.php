@@ -41,7 +41,7 @@
       {{ csrf_field() }}
 
 
-      <div class="masonry">
+      <div class="masonry" style="padding-left:20px;">
 
         @if($objs)
            @foreach($objs as $u)
