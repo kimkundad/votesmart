@@ -60,7 +60,7 @@ input:checked{
 
 
       <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
-      <a class="scroll-to-top visible-sm visible-xs" href="#"> 1/10 </a>
+      <a class="scroll-to-top" href="#"> 1/10 </a>
 
 
 
