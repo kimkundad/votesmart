@@ -116,7 +116,7 @@ class HomeController extends Controller
 
       foreach ($cat as $obj) {
 
-        $ran=array(2);
+        $ran=array(1, 2, 3, 4, 5);
         $randomElement = $ran[array_rand($ran, 1)];
         $obj->options = $randomElement;
 
