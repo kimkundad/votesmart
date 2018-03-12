@@ -339,16 +339,16 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 992px) {
   .img-in-chart {
-    width: 54px;
-    height: 55px;
+    width: 84px;
+    height: 85px;
   }
 
 }
 
 @media (min-width: 1200px) {
   .img-in-chart {
-    width: 65px;
-    height: 65px;
+    width: 95px;
+    height: 95px;
   }
 
 

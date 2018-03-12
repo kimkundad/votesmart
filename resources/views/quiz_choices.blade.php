@@ -37,69 +37,29 @@
 
   <div class="container">
 
+    <form  method="POST" action="{{url('quiz_choices')}}">
+      {{ csrf_field() }}
     <div class="row">
 
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
-        </div>
-      </div>
+      @if($objs)
+         @foreach($objs as $u)
 
       <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry" style="max-height:200px;">
-          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ </div></div>
+        <div class="masonry img-check">
+          <div class="item size-1 masonry-brick "> <div>{{$u->name_quiz}}</div></div>
+          <input type="checkbox" name="chk1" id="item4" value="val1"  autocomplete="off">
         </div>
       </div>
+      @endforeach
+     @endif
 
 
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>แก้ปัญหารถติด</div></div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>หนี้สินท่วมตัว ข้าวของแพงเวอร์</div></div>
-        </div>
-      </div>
-
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
-        </div>
-      </div>
-
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>แก้ปัญหารถติด</div></div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>หนี้สินท่วมตัว ข้าวของแพงเวอร์</div></div>
-        </div>
-      </div>
-
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>ปราปปรามคอร์รัปชั่น</div></div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry">
-          <div class="item size-1 masonry-brick"> <div>แก้ปัญหา ความจนให้หมดประเทศ</div></div>
-        </div>
-      </div>
+      <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
+      <a class="scroll-to-top visible-sm visible-xs" href="#"> 1/10 </a>
 
     </div>
 
-
+</form>
 
 
   </div>
@@ -113,8 +73,7 @@
     </div>
   </div>
 </section>
-<a class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</a>
-<a class="scroll-to-top visible-sm visible-xs" href="#"> 1/10 </a>
+
 
 
 @endsection
@@ -135,6 +94,12 @@
       $(this).addClass("select");
     }
   });
+
+  $(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+			});
+	});
 </script>
 
 @stop('scripts')
