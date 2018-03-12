@@ -551,80 +551,10 @@ margin: 0 5px 10px 0px;
   }
 
 }
-.quiz-choices .col-md-4 p {
-    text-align: right;
-    color: #0479BD;
-    font-family: Prompt;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.masonry{
-  margin-top: 20px;
-}
-
-.masonry .item {
-
-  width: 100%;
-    height: auto;
-      padding-bottom: 50%;
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      background: #fff;
-       color: #08B0ED;
-
-    box-shadow: 0px 2px 10px #ccc;
-
-
-
-    font-family: 'Kanit', sans-serif;
 
 
 
 
-
-
-    margin-top:-0.5em;
-    text-align:center;
-
-}
-
-.masonry .item.select::after {
-
-
-    content: "";
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    color: #fff;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-.masonry .item.select {
-    border-radius: 50%;
-    background: #5EC8F2;
-    color: #fff;
-    position: relative;
-    box-shadow: 0px 10px 10px #ccc;
-    text-shadow: 4px 4px #0479BD;
-    font-weight: 700;
-}
-.masonry .item div {
-    float:left;
-    width:100%;
-    padding-top:50%;
-    line-height:1em;
-    margin-top:-0.5em;
-    text-align:center;
-
-}
-.item.size-1 {
-
-}
 a{
   text-decoration: none;
 }
@@ -662,16 +592,86 @@ a:hover{
 .scroll-to-top.visible {
     opacity: 0.75;
 }
+.masonry .item {
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px #ccc;
+  color: #08B0ED;
+   font-size: 20px;
+   line-height: 30px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.masonry .item.select {
+  border-radius: 50%;
+  background: #5EC8F2;
+  color: #fff;
+  position: relative;
+  box-shadow: 0px 10px 10px #ccc;
+  text-shadow: 4px 4px #0479BD;
+  font-weight: 700;
+}
+
+.masonry .item.select::after {
+  content: "";
+  background-image: url('./true.png');
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -11px;
+  width: 24px;
+  height: 24px;
+}
+
+.item.size-1 {
+  width: 110px;
+  height: 110px;
+  font-size: 13px
+}
+
+.item.size-2 {
+  width: 150px;
+  height: 150px;
+  font-size: 14px
+}
+
+.item.size-3 {
+  width: 180px;
+  height: 180px;
+  font-size: 15px
+}
+
+.item.size-4 {
+  width: 220px;
+  height: 220px;
+  font-size: 16px
+}
+
+.item.size-5 {
+  width: 280px;
+  height: 280px;
+  font-size: 17px
+}
+
     </style>
 
   </head>
 
-  <body id="page-top">
-
-    @include('layouts.header')
+  <body id="page-top" style="background: #f2f8fa;">
 
 
-    @yield('content')
+      @include('layouts.header')
+
+
+      @yield('content')
+
+
+
 
 
 

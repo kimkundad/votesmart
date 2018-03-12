@@ -96,8 +96,8 @@ class HomeController extends Controller
               $data['datahead'] = "จัดการ Quiz";
 
 
-      //return view('result', $data);
-      dd($data);
+      return view('result', $data);
+      //dd($data);
       //  return view('result');
     }
 
@@ -114,6 +114,14 @@ class HomeController extends Controller
             ->leftjoin('users', 'users.id',  'quizzes.user_id')
             ->get();
 
+      foreach ($cat as $obj) {
+
+        $ran=array(1, 2, 3, 4, 5);
+        $randomElement = $ran[array_rand($ran, 1)];
+        $obj->options = $randomElement;
+
+      }
+    //  dd($randomElement);
 
               $data['objs'] = $cat;
               $data['datahead'] = "จัดการ Quiz";

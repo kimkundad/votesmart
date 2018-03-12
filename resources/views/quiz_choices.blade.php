@@ -39,25 +39,23 @@
 
     <form  method="POST" action="{{url('quiz_choices')}}">
       {{ csrf_field() }}
-    <div class="row">
 
-      @if($objs)
-         @foreach($objs as $u)
 
-      <div class="col-6 col-md-2 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <div class="masonry img-check">
-          <div class="item size-1 masonry-brick "> <div>{{$u->name_quiz}}</div></div>
-          <input type="checkbox" name="chk1" id="item4" value="val1"  autocomplete="off">
-        </div>
-      </div>
-      @endforeach
+      <div class="masonry">
+
+        @if($objs)
+           @foreach($objs as $u)
+        <div class="item size-{{$u->options}}">{{$u->name_quiz}}</div>
+        @endforeach
      @endif
+
+    </div>
 
 
       <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
       <a class="scroll-to-top visible-sm visible-xs" href="#"> 1/10 </a>
 
-    </div>
+
 
 </form>
 
@@ -94,12 +92,6 @@
       $(this).addClass("select");
     }
   });
-
-  $(document).ready(function(e){
-    		$(".img-check").click(function(){
-				$(this).toggleClass("check");
-			});
-	});
 </script>
 
 @stop('scripts')
