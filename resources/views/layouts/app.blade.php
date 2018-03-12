@@ -629,33 +629,33 @@ a:hover{
 }
 
 .item.size-1 {
-  width: 110px;
-  height: 110px;
-  font-size: 13px
+  width: 90px;
+  height: 90px;
+  font-size: 11px
 }
 
 .item.size-2 {
-  width: 150px;
-  height: 150px;
-  font-size: 14px
+  width: 110px;
+  height: 110px;
+  font-size: 12px
 }
 
 .item.size-3 {
-  width: 180px;
-  height: 180px;
-  font-size: 15px
+  width: 130px;
+  height: 130px;
+  font-size: 13px
 }
 
 .item.size-4 {
-  width: 220px;
-  height: 220px;
-  font-size: 16px
+  width: 180px;
+  height: 180px;
+  font-size: 14px
 }
 
 .item.size-5 {
-  width: 280px;
-  height: 280px;
-  font-size: 17px
+  width: 210px;
+  height: 210px;
+  font-size: 15px
 }
 
     </style>

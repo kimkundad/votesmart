@@ -82,7 +82,7 @@
 <script>
   $('.masonry').masonry({
     itemSelector: '.item',
-    columnWidth: 100
+    columnWidth: 50
   });
 
   $(document).on("click", ".masonry .item", function () {
