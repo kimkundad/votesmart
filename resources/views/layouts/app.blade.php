@@ -603,7 +603,7 @@ a:hover{
   box-shadow: 0px 2px 10px #ccc;
   color: #08B0ED;
    font-size: 20px;
-   line-height: 30px;
+   line-height: 20px;
   font-family: 'Kanit', sans-serif;
 }
 
