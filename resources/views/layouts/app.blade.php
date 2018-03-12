@@ -613,7 +613,7 @@ a:hover{
   color: #fff;
   position: relative;
   box-shadow: 0px 10px 10px #ccc;
-  text-shadow: 4px 4px #0479BD;
+
   font-weight: 700;
 }
 
