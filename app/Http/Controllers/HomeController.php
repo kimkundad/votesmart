@@ -77,6 +77,100 @@ class HomeController extends Controller
     }
 
 
+    public function add_vote(Request $request){
+      $this->validate($request, [
+       'quiz' => 'required'
+      ]);
+
+
+      $gallary = $request['quiz'];
+
+      $count_check = DB::table('votesmarts')
+          ->where('votesmarts.user_id', Auth::user()->id)
+          ->count();
+
+      if($count_check > 0){
+
+        $obj = DB::table('voteresults')
+            ->where('voteresults.user_id', Auth::user()->id)
+            ->delete();
+
+        $obj = DB::table('votesmarts')
+            ->where('votesmarts.user_id', Auth::user()->id)
+            ->delete();
+
+      }
+
+
+
+      for ($i = 0; $i < sizeof($gallary); $i++) {
+
+        $id = $gallary[$i];
+        $category_id = quiz::find($id);
+        $test_array[] = $category_id->cat_id;
+        $test_sum[] = $id;
+      }
+
+      //dd($test_array, $test_sum);
+
+
+
+      date_default_timezone_set("Asia/Bangkok");
+      $data_toview = date("Y-m-d H:i:s");
+
+
+
+
+      if (sizeof($gallary) > 1) {
+
+     for ($i = 0; $i < sizeof($gallary); $i++) {
+
+       $id = $gallary[$i];
+       $category_id = quiz::find($id);
+
+
+    //   $gallary[$i]
+
+       $admins[] = [
+           'user_id' => Auth::user()->id,
+           'quiz_id' => $gallary[$i],
+           'category_id' => $category_id->cat_id,
+           'created_at' => $data_toview,
+       ];
+
+
+     }
+     votesmart::insert($admins);
+   }
+
+
+  // rsort($test_array);
+
+  $test = array_count_values($test_array);
+  arsort($test);
+
+  foreach($test as $x=>$x_value){
+
+    $users = DB::table('votesmarts')
+    ->where('category_id', $x)
+    ->count();
+
+  //  echo "Key=" . $x . ", Value=" . $x_value;
+
+    $admin[] = [
+        'user_id' => Auth::user()->id,
+        'result_id' => $x,
+        'sort_result' => $users,
+    ];
+
+
+  }
+  voteresult::insert($admin);
+
+  return redirect(url('/'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
+    }
+
+
     public function result()
     {
 

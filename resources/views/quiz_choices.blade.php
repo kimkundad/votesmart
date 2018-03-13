@@ -56,7 +56,7 @@ input:checked{
         @if($objs)
            @foreach($objs as $u)
         <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');">{{$u->name_quiz}}
-        <input type="checkbox" class="checkbox1" name="chk1[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
+        <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
         </div>
         @endforeach
      @endif
