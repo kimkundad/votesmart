@@ -175,7 +175,8 @@ function pickColor() {
 
 </style>
 
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 

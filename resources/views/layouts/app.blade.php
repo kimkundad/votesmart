@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Votesmart - โหวตได้โหวตดี</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('front/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
