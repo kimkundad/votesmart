@@ -164,6 +164,11 @@ function pickColor() {
   @import url("http://aq1.co/votesmartweb/assets/css/style.css");
   @import url('//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css');
 
+  .share-result .btn:hover {
+    color:#fff !important;
+    background-color: #08B0ED !important;
+  }
+
 #bg-selector {
   font-size: 1em;
   font-style: italic;
@@ -227,6 +232,7 @@ function pickColor() {
     left: 70px;
     width: 360px;
     height: 360px;
+
   }
 
   #canvas > div {
@@ -319,9 +325,7 @@ function pickColor() {
   </div>
 </nav>
 
-
-
-<section class="bg-primary" id="about">
+<section class="bg-primary" id="about" style="display: none">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
@@ -400,11 +404,12 @@ function pickColor() {
 
 <style type="text/css">
   #canvas {
-    max-width: 90%;
-    width: 500px;
-    height: 500px;
+    max-width: 100%;
+    max-width: 500px;
+    max-height: 500px;
     background-color: #08B0ED;
         margin: 0px auto;
+        display: none;
 
   }
   .bg-dark {
@@ -429,7 +434,7 @@ function pickColor() {
         <input id="colorpicker" type="color" />
 
         <div id="canvas">
-          <img src="https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg" />
+          <img src="https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg" class="img-responsive" />
           <div>
              <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/> 
         เศรษฐกิจเพื่องฟู</br>

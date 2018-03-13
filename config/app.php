@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://aq1.co/votesmart'),
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +104,8 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    //'key' => 'V0NPiJ4xDaVGIb7HUeeT6On/VpBjDjpST8qEUFU3FPQ=',
+	'key' => 'base64:V0NPiJ4xDaVGIb7HUeeT6On/VpBjDjpST8qEUFU3FPQ=',
 
     'cipher' => 'AES-256-CBC',
 
