@@ -25,6 +25,15 @@ Route::get('/quiz_choices', 'HomeController@quiz_choices');
 
 Route::get('/result', 'HomeController@result');
 
+
+Route::group(['middleware' => 'auth'], function () {
+
+  Route::post('add_vote', 'HomeController@add_vote');
+
+  });
+
+
+
 Route::group(['middleware' => 'admin'], function() {
 
   Route::resource('admin/dashboard', 'DashboardController');

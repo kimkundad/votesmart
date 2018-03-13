@@ -8,7 +8,7 @@
 <section class="bg-whites " id="about" style="padding: 65px 0 8px 0;">
   <div class="container">
     <div class="row quiz-choices ">
-      <div class="col-md-12 ">
+      <div class="col-md-8 ">
         <h3 class="margin">เลือก 10 ประเด็นที่สำคัญ
         สำหรับประเทศไทย</h3>
         <br>
@@ -16,18 +16,23 @@
       <div class="col-md-8 ">
         <p class="text-muted">ทุกประเด็นก็ดูจะเป็นเรื่องที่สำคัญเหมือนกัน แต่อันไหนกันล่ะที่คุณจะเลือกทำก่อน? </p>
       </div>
-      <div class="col-md-4 text-center hidden-sm hidden-xs">
-        @if (Auth::guest())
-        <p>(1/10)</p>
-        @else
-        <!--<a href="{{('/')}}" style="color: #f05f40; font-weight: 700; font-size: 12px;">
-        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle">
-        {{ Auth::user()->name }} (1/10)
-      </a> -->
-        @endif
 
+
+
+      <div class="col-md-4 text-center hidden-sm hidden-xs">
+        <a class="btn btn-light btn-xl js-scroll-trigger" style="margin-top:-12px; background: #e5eff3; color: #0479bd;"><input type="text" id="number" value="0" style="
+    background-color: #e5eff3;
+    border:  none;
+    width: 26px;
+    font-weight: 700;
+    color: #0479bd;
+    padding-left: 10px;
+">/10</a>
         <br>
       </div>
+
+
+
     </div>
   </div>
 </section>
@@ -42,9 +47,9 @@ input:checked{
 
   <div class="container">
 
-    <form  method="POST" id="cutproduct" action="{{url('quiz_choices')}}">
+    <form  method="POST" id="cutproduct" action="{{url('add_vote')}}">
       {{ csrf_field() }}
-
+      <input type="hidden" name="user_id" value="{{ Auth::user()->id }}" class="form-control">
 
       <div class="masonry" style="padding-left:20px;">
 
@@ -60,7 +65,14 @@ input:checked{
 
 
       <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
-      <a class="scroll-to-top" href="#"> 1/10 </a>
+      <a class="scroll-to-top visible-sm visible-xs" href="#"> <input type="text" id="number1" value="0" style="
+  background-color: #ffffff;
+  border:  none;
+  width: 23px;
+  font-weight: 700;
+  color: #0479bd;
+  padding-left: 10px;
+">/10 </a>
 
 
 
@@ -96,8 +108,31 @@ input:checked{
   $(document).on("click", ".masonry .item", function () {
     if ($(this).hasClass("select")) {
       $(this).removeClass("select");
+
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value--;
+      document.getElementById('number').value = value;
+
+
+      var value = parseInt(document.getElementById('number1').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value--;
+      document.getElementById('number1').value = value;
+
     } else {
       $(this).addClass("select");
+
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value;
+
+      var value = parseInt(document.getElementById('number1').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number1').value = value;
+
     }
   });
 
