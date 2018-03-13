@@ -22,7 +22,7 @@
         @else
         <a href="" style="color: #f05f40; font-weight: 700; font-size: 12px;"><img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle"> {{ Auth::user()->name }}</a>
         @endif
-
+        
         <br>
       </div>
     </div>
@@ -118,6 +118,7 @@
 
       @endforeach
       @endif
+
 
 
 

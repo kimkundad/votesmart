@@ -7,134 +7,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
 
-<script type="text/javascript">
-  
-  $(function(){
-    nv.addGraph(theDonut(1));
-  });
-
-  function theDonut(i) {
-  var donutChart = nv.models.pieChart()
-    .x(function (d) {
-      return d.label
-    })
-    .y(function (d) {
-      return d.value
-    })
-    .showLabels(true)
-    .showLegend(false)
-    .labelThreshold(.05)
-    .labelType("key")
-    .color(["#ED2E7D", "#50E3C2", "#F8E71C", "#4A90E2", "#5EC8F2"])
-    .tooltipContent(
-      function (key, y, e, graph) { return 'Custom tooltip string' }
-    ) // This is for when I turn on tooltips
-    .tooltips(false)
-    .donut(true)
-    .donutRatio(0.55);
-
-  // Insert text into the center of the donut
-  function centerText(i) {
-    return function () {
-      var svg = d3.select("#donut-id-" + i + " svg");
-
-      var donut = svg.selectAll("g.nv-slice").filter(
-        function (d, i) {
-          return i == 0;
-        }
-      );
-
-      donut.append("svg:image")
-        .attr('x', -125)
-        .attr('y', -125)
-        .attr('z-index', -99)
-        .attr('width', 250)
-        .attr('height', 250)
-        .attr("xlink:href", "https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg")
-    }
-  }
-
-  // Put the donut pie chart together
-  d3.select("#donut-id-" + i + " svg")
-    .datum(seedData(i))
-    .transition().duration(300)
-    .call(donutChart)
-
-    .call(centerText())
-    //.call(pieSlice());
-
-    .call(centerText(i))
-  //.call(pieSlice());
 
 
-  return donutChart;
-}
-
-//theOneDonut("donut-id-1");
-//theOneDonut("donut-id-2");
-
-
-// Seed data to populate donut pie chart
-function seedData(i) {
-  if (i == 1) {
-    return [
-      {
-        "label": "",
-        "value": 0
-      },
-      {
-        "label": "",
-        "value": 25
-      },
-      {
-        "label": "",
-        "value": 25
-      },
-      {
-        "label": "",
-        "value": 25
-      },
-      {
-        "label": "",
-        "value": 25
-      },
-      {
-        "label": "",
-        "value": 25
-      }
-    ];
-  } else {
-    return [
-      {
-        "label": "",
-        "value": 0
-      },
-      {
-        "label": "",
-        "value": 30
-      },
-      {
-        "label": "",
-        "value": 20
-      },
-      {
-        "label": "",
-        "value": 15
-      },
-      {
-        "label": "",
-        "value": 35
-      },
-      {
-        "label": "",
-        "value": 25
-      }
-    ];
-  }
-
-}
-</script>
-<link rel="stylesheet" href="http://aq1.co/votesmartweb/assets/donut/css/style.css">
 
 <script type="text/javascript">
   $(function() {
@@ -143,7 +17,7 @@ function seedData(i) {
     var color = $(this).attr("data-value");
     $("#canvas").css("background-color", color);
   });
-  
+
   //add color picker if supported
   //if (Modernizr.inputtypes.color) {
     $(".picker").css("display", 'inline-block');
@@ -160,9 +34,14 @@ function pickColor() {
 }
 
 </script>
+
+
+
+
+
 <style type="text/css">
-  @import url("http://aq1.co/votesmartweb/assets/css/style.css");
-  @import url('//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css');
+
+
 
 #bg-selector {
   font-size: 1em;
@@ -270,83 +149,66 @@ function pickColor() {
     font-weight: 400;
  color: #08B0ED; font-family: 'Kanit', sans-serif;  font-size: 14px;  line-height: 21px;  text-align: center; text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);}
   }
+.head_title h3{
+      color: #0479BD;
+      font-weight: 400;
+      font-size: 20px;
+      margin: 30px auto;
+  }
+  @media (min-width: 1200px){
+    .img-in-chart {
+      margin-top: -1px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+  @media (min-width: 280px){
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+  }
+
 
 </style>
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand " href="#page-top">เลือกได้...เลือกดี</a>
-
-    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-              <i class="fa fa-hand-paper-o"></i>
-              <span>อาสา</span>
-            </div>
-
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="#about">เลือกอะไรได้?</a>
-
-          <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
-             <h5 class="mb-3">เลือกอะไรได้?</h5>
-              <p class="text-muted mb-0">ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร? อะไรที่เราควรให้ความสำคัญ?</p>
-            </div>
-
-
-        </li>
-        <li class="nav-item">
-
-          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="#about">เลือกใครดี?</a>
-
-          <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
-             <h5 class="mb-3">เลือกใครดี?</h5>
-              <p class="text-muted mb-0">รู้จักผู้แทนของคุณมากขึ้น และบอกพวกเค้าว่าอะไรที่สำคุณ?</p>
-            </div>
-        </li>
-        <li class="nav-item">
-          <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
-
-              <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
-              <br>
-              <a class="btn btn-light js-scroll-trigger" href="#services" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
-            </div>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
 
 
 
-<section class="bg-primary" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="section-heading text-white">We've got what you need!</h2>
-        <hr class="light my-4">
-        <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section id="services">
   <div class="candidate-details container">
                                 <div class="row">
+
+                                  <div class="col-md-12" >
+                                    <br>
+                                    <h3 class="text-center" style="color: #0479BD;font-weight: 400;font-size: 18px;">ถ้าต้องบริหารประเทศไทย</h3>
+                                    <h2 class="mb-4 section-heading">สมพงษ จะเลือกเรื่องเหล่านี้</h2>
+
+
+                                  </div>
+
                                     <div class="col-md-6">
-                                        <div class="candidate-charts-profile">
-                                            <div id="donut-id-1">
-                                               <svg></svg>
-                                            </div>
+
+                                      <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
+                                        <div style="margin: 20px auto; width:250px; height:250px;">
+                                          <canvas id="user-1" ></canvas>
                                         </div>
+
+                                        <div class="overlay-chart">
+                                        <img class="img-in-chart" src="//graph.facebook.com/1486242754786951/picture?width=300&height=300">
+                                        </div>
+
+                                      </div>
+
+
                                     </div>
                                     <div class="col-md-6">
                                         <div class="candidate-profile-2">
-                                            <h2><span class="the-name">สมพงษ์</span>อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
+
                                             <div class="education">
                                                 <p>
                                                     <span>1</span>การศึกษา</p>
@@ -419,7 +281,7 @@ function pickColor() {
 
      <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <div id="bg-selector"> 
+        <div id="bg-selector">
           <div class="color white" data-value="#fff"></div>
           <div class="color gray" data-value="#eaeaea"></div>
           <div class="color black" data-value="#000"></div>
@@ -431,7 +293,7 @@ function pickColor() {
         <div id="canvas">
           <img src="https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg" />
           <div>
-             <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/> 
+             <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/>
         เศรษฐกิจเพื่องฟู</br>
          สารธารณสุขดีเยี่ยม</h2>
           </div>
@@ -440,10 +302,10 @@ function pickColor() {
       </div>
      </div>
 
-        
+
   </div>
   <div class="container share-result  text-center" style="margin-top: 60px;">
-         <a class="btn btn-xl btn-primary mr-4" href="#"><i class="fa fa-download"></i>เซฟรูปนี้</a> 
+         <a class="btn btn-xl btn-primary mr-4" href="#"><i class="fa fa-download"></i>เซฟรูปนี้</a>
          <a class="btn btn-xl btn-primary" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
        </div>
 </section>
@@ -461,3 +323,50 @@ function pickColor() {
   </div>
 </section>
 @endsection
+
+
+
+
+
+@section('scripts')
+<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+<script type="text/javascript">
+
+//document.getElementById("doughnutChart").style.height = '200px';
+
+
+  var ctxD = document.getElementById("user-1").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: [
+              ],
+      datasets: [{
+        data: [
+                                  3,
+                    2,
+                    1,
+                    1,
+                    1,
+                             ],
+        backgroundColor: [
+                                  "#0088CC",
+                    "#47a447",
+                    "#5bc0de",
+                    "#2BAAB1",
+                    "#734BA9",
+                          ]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+
+
+
+</script>
+@stop('scripts')
