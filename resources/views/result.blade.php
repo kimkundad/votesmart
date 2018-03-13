@@ -303,7 +303,7 @@ function pickColor() {
         <a class="btn btn-light btn-xl save-result" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" href="#result"><i class="fa fa-download"></i> เซฟรูปนี้
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 
-        <a class="btn btn-xl btn-primary" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+        <a class="btn btn-xl btn-primary" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
 
        </div>
 </section>
