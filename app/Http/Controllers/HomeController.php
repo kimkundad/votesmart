@@ -62,16 +62,9 @@ class HomeController extends Controller
             $s++;
             }
 
-
-
             $optionsRes = $labels;
             $obj->labels = $optionsRes;
-
-
         }
-
-
-
 
 
       //  dd($objs);
@@ -213,20 +206,49 @@ class HomeController extends Controller
     public function result()
     {
 
-      $cat = DB::table('quizzes')->select(
-            'quizzes.*',
-            'quizzes.id as id_q',
-            'quizzes.created_at as create',
-            'users.*',
-            'categories.*'
-            )
-            ->leftjoin('categories', 'categories.id',  'quizzes.cat_id')
-            ->leftjoin('users', 'users.id',  'quizzes.user_id')
+      $objs = DB::table('users')
+        ->where('id', Auth::user()->id)
+        ->where('vote_status', 1)
+        ->first();
+
+
+      //  $optionsRes = [];
+
+          $labels = DB::table('voteresults')->select(
+                'voteresults.*',
+                'categories.*'
+                )
+            ->leftjoin('categories', 'categories.id',  'voteresults.result_id')
+            ->where('voteresults.user_id', $objs->id)
             ->get();
+            $s =1;
+            
+            foreach ($labels as $obj1) {
+
+            $options = DB::table('votesmarts')
+                  ->select(
+                  'votesmarts.*',
+                  'quizzes.*'
+                  )
+                  ->leftjoin('quizzes', 'quizzes.id',  'votesmarts.quiz_id')
+                  ->where('votesmarts.category_id', $obj1->result_id)
+                  ->where('votesmarts.user_id', $objs->id)
+                  ->get();
+
+            $obj1->options = $options;
+            $obj1->num_s = $s;
+            $s++;
+            }
+
+          //  $optionsRes = $labels;
+          //  $obj->labels = $optionsRes;
 
 
-              $data['objs'] = $cat;
-              $data['datahead'] = "จัดการ Quiz";
+      //  dd($labels);
+
+      $data['user'] = $objs;
+      $data['objs'] = $labels;
+      $data['datahead'] = "จัดการ Quiz";
 
 
       return view('result', $data);

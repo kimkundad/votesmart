@@ -184,9 +184,9 @@ function pickColor() {
                                 <div class="row">
 
                                   <div class="col-md-12" >
-                                    <br>
-                                    <h3 class="text-center" style="color: #0479BD;font-weight: 400;font-size: 18px;">ถ้าต้องบริหารประเทศไทย</h3>
-                                    <h2 class="mb-4 section-heading">สมพงษ จะเลือกเรื่องเหล่านี้</h2>
+
+                                    <h3 class="text-center" style="color: #0479BD;font-weight: 400;font-size: 20px;">ถ้าต้องบริหารประเทศไทย</h3>
+                                    <h2 class="mb-4 section-heading">{{$user->name}} จะเลือกเรื่องเหล่านี้</h2>
 
 
                                   </div>
@@ -199,7 +199,7 @@ function pickColor() {
                                         </div>
 
                                         <div class="overlay-chart">
-                                        <img class="img-in-chart" src="//graph.facebook.com/1486242754786951/picture?width=300&height=300">
+                                        <img class="img-in-chart" src="//{{Auth::user()->avatar}}">
                                         </div>
 
                                       </div>
@@ -209,42 +209,34 @@ function pickColor() {
                                     <div class="col-md-6">
                                         <div class="candidate-profile-2">
 
-                                            <div class="education">
-                                                <p>
-                                                    <span>1</span>การศึกษา</p>
-                                                <ul>
-                                                    <li>พัฒนาห้องสมุด</li>
-                                                    <li>พัฒนาครู</li>
-                                                    <li>ปฏิรูปหลักสูตร</li>
-                                                    <li>เรียนฟรี</li>
-                                                    <li>เพิ่มทุนการศึกษา</li>
-                                                    <li>โรงเรียนในพื้นที่ห่างไกล</li>
-                                                    <li>พัฒนาห้องสมุด</li>
-                                                </ul>
-                                            </div>
-                                            <div class="economy">
-                                                <p>
-                                                    <span>2</span>เศรษฐกิจ
-                                                </p>
-                                                <ul>
-                                                    <li>สนับสนุน SME</li>
-                                                    <li>กองทุนสตาร์ทอัพ</li>
-                                                    <li>กองทุนหมู่บ้าน</li>
-                                                    <li>ส่งเสริมการส่งออก</li>
-                                                    <li>เศรษฐกิจสร้างสรรค์</li>
-                                                </ul>
-                                            </div>
-                                            <div class="public-health">
-                                                <p>
-                                                    <span>3</span>สาธารณสุข
-                                                </p>
-                                                <ul>
-                                                    <li>พัฒนาครู</li>
-                                                    <li>พัฒนาห้องสมุด</li>
-                                                    <li>เพิ่มทุนการศึกษา</li>
-                                                    <li>เรียนฟรี</li>
-                                                </ul>
-                                            </div>
+
+
+
+                                          @if(isset($objs))
+                                              @foreach($objs as $u)
+
+
+
+                                              <div class="education">
+                                                  <p>
+                                                      <span style="background-color: {{$u->color_bg}};">{{$u->num_s}}</span>{{$u->name_cat}}</p>
+                                                  <ul>
+                                                    @if(isset($u->options))
+                                                        @foreach($u->options as $u1)
+                                                      <li style="background: {{$u->color_bg}};">{{$u1->name_quiz}}</li>
+
+                                                      @endforeach
+                                                    @endif
+
+                                                  </ul>
+                                              </div>
+
+
+
+                                              @endforeach
+                                          @endif
+
+
                                             <!-- <button class="btn btn-readmore">แสดงเพิ่ม</button> -->
                                         </div>
                                     </div>
@@ -272,6 +264,7 @@ function pickColor() {
   .bg-dark {
     background-color: #E6F1F5 !important
   }
+
 </style>
 
 <section id="result" class="bg-dark">
@@ -302,11 +295,15 @@ function pickColor() {
       </div>
      </div>
 
-
   </div>
-  <div class="container share-result  text-center" style="margin-top: 60px;">
-         <a class="btn btn-xl btn-primary mr-4" href="#"><i class="fa fa-download"></i>เซฟรูปนี้</a>
-         <a class="btn btn-xl btn-primary" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+
+  <div class="container  text-center" style="margin-top: 60px;">
+
+        <a class="btn btn-light btn-xl save-result" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" href="#result"><i class="fa fa-download"></i> เซฟรูปนี้
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+        <a class="btn btn-xl btn-primary" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+
        </div>
 </section>
 

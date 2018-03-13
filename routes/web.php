@@ -23,13 +23,14 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/', 'HomeController@index');
 
 
-Route::get('/result', 'HomeController@result');
+
 
 
 Route::group(['middleware' => 'auth'], function () {
 
   Route::post('add_vote', 'HomeController@add_vote');
   Route::get('/quiz_choices', 'HomeController@quiz_choices');
+  Route::get('/result', 'HomeController@result');
 
   });
 
