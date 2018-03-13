@@ -8,9 +8,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
 
 <script type="text/javascript">
+
+  function saveResultImage() {
+    html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
+                        onrendered: function (canvas) {                     
+                               var imgString = canvas.toDataURL("image/png");
+                               var a = document.createElement('a');
+                               a.href = imgString;
+                               a.download = "image.png";
+                               document.body.appendChild(a);
+                               a.click();
+                               document.body.removeChild(a);              
+                    }});
+  }
   
   $(function(){
     nv.addGraph(theDonut(1));
+    $('a.save-result').click( function(e) {e.preventDefault(); /*your_code_here;*/
+    saveResultImage();
+     return false; 
+   } );
   });
 
   function theDonut(i) {
@@ -50,7 +67,7 @@
         .attr('z-index', -99)
         .attr('width', 250)
         .attr('height', 250)
-        .attr("xlink:href", "https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg")
+        .attr("xlink:href", "http://devzab.com/assets/images/logged-user.jpg")
     }
   }
 
@@ -205,16 +222,16 @@ function pickColor() {
 
 
   #mainNav .navbar-brand ,h1,h2,h3,h4,h5,h6{
-    font-family: "Kanit" !important;
-    font-weight: 400;
+    //font-family: "Kanit" !important;
+    //font-weight: 400;
   }
   .nav-link {
-    font-family: "Kanit";
-    font-weight: 400;
+    //font-family: "Kanit";
+    //font-weight: 400;
   }
 
   .candidate-profile-2 ul li {
-    font-family: "Kanit";
+    //font-family: "Kanit";
     font-size: 13px;
     padding: 5px 10px;
   }
@@ -243,7 +260,7 @@ function pickColor() {
 
   h2.avatar-heading {
      color: #fff;
-    font-family: 'Kanit', sans-serif;
+    //font-family: 'Kanit', sans-serif;
     font-size: 36px;
     font-weight: 500;
     line-height: 56px;
@@ -255,7 +272,7 @@ function pickColor() {
 
   h2.section-heading {
         color: #0479BD;
-    font-family: 'Kanit', sans-serif;
+    //font-family: 'Kanit', sans-serif;
     font-size: 36px;
     font-weight: 500;
     line-height: 56px;
@@ -274,7 +291,9 @@ function pickColor() {
 
   .share-result .btn, .show-vision .btn,.candidate-link .btn {  height: 48px; width: 232px; border: 1px solid #08B0ED;  border-radius: 24px; padding:14px 24px;
     font-weight: 400;
- color: #08B0ED; font-family: 'Kanit', sans-serif;  font-size: 14px;  line-height: 21px;  text-align: center; text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);}
+ color: #08B0ED; 
+ //font-family: 'Kanit', sans-serif;  font-size: 14px;  
+ line-height: 21px;  text-align: center; text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);}
   }
 
 </style>
@@ -448,8 +467,8 @@ function pickColor() {
         
   </div>
   <div class="container share-result  text-center" style="margin-top: 60px;">
-         <a class="btn btn-xl btn-primary mr-4" href="#"><i class="fa fa-download"></i>เซฟรูปนี้</a> 
-         <a class="btn btn-xl btn-primary" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+         <a class="btn btn-xl btn-primary mr-4 save-result" href="#"><i class="fa fa-download"></i>เซฟรูปนี้</a> 
+         <a class="btn btn-xl btn-primary share-result" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
        </div>
 </section>
 
