@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\quiz;
 use Auth;
+use App\User;
 use App\votesmart;
 use App\voteresult;
 use App\Http\Requests;
@@ -169,6 +170,10 @@ class HomeController extends Controller
 
   }
   voteresult::insert($admin);
+
+  $package = User::find(Auth::user()->id);
+  $package->vote_status = 1;
+  $package->save();
 
   return redirect(url('/'));
     }
