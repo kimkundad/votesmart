@@ -168,7 +168,7 @@ class HomeController extends Controller
   }
   voteresult::insert($admin);
 
-  return redirect(url('/'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
+  return redirect(url('/'));
     }
 
 
