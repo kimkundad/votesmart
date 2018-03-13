@@ -428,7 +428,6 @@ function pickColor() {
     max-height: 500px;
     background-color: #08B0ED;
         margin: 0px auto;
-        display: none;
 
   }
   .bg-dark {
@@ -453,7 +452,7 @@ function pickColor() {
         <input id="colorpicker" type="color" />
 
         <div id="canvas">
-          <img src="https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg" class="img-responsive" />
+          <img src="http://devzab.com/assets/images/logged-user.jpg" class="img-responsive" />
           <div>
              <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/> 
         เศรษฐกิจเพื่องฟู</br>
