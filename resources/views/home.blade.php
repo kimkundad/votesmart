@@ -42,7 +42,7 @@
 
 
       <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
-        <a data-toggle="modal" data-target="#myModal-1" href="#">
+        <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" style="width: 150px; height: 86px;"></canvas>
           <div class="overlay-chart">
@@ -55,7 +55,7 @@
       </a>
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="myModal-{{$j->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document" style="border: 1px solid rgba(33, 37, 41, 0.1);">
           <div class="modal-content1">
 
