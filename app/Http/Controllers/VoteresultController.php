@@ -128,7 +128,10 @@ class VoteresultController extends Controller
           $id = $gallary[$i];
           $category_id = quiz::find($id);
           $test_array[] = $category_id->cat_id;
+          $test_sum[] = $id;
         }
+
+        //dd($test_array, $test_sum);
 
 
 
@@ -174,11 +177,17 @@ class VoteresultController extends Controller
     arsort($test);
 
     foreach($test as $x=>$x_value){
+
+      $users = DB::table('votesmarts')
+      ->where('category_id', $x)
+      ->count();
+
     //  echo "Key=" . $x . ", Value=" . $x_value;
 
       $admin[] = [
           'user_id' => Auth::user()->id,
           'result_id' => $x,
+          'sort_result' => $users,
       ];
 
 
