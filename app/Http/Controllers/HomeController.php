@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\quiz;
 use Auth;
+use App\votesmart;
+use App\voteresult;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
