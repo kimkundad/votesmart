@@ -572,7 +572,7 @@ a:hover{
     /* color: #FFF; */
     display: block;
     height: 9px;
-    padding: 10px 10px 25px;
+    padding: 10px 10px 25px 0px;
     position: fixed;
     right: 10px;
     text-align: center;
@@ -587,7 +587,7 @@ a:hover{
     color: #FFF;
     display: block;
     height: 36px;
-    right: 60px;
+    right: 66px;
 }
 .scroll-to-top.visible {
     opacity: 0.75;
