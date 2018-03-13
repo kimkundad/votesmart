@@ -53,6 +53,7 @@ class HomeController extends Controller
                   )
                   ->leftjoin('quizzes', 'quizzes.id',  'votesmarts.quiz_id')
                   ->where('votesmarts.category_id', $obj1->result_id)
+                  ->where('votesmarts.user_id', $obj->id)
                   ->get();
 
             $obj1->options = $options;
