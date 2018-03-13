@@ -112,12 +112,8 @@ class HomeController extends Controller
 
       //dd($test_array, $test_sum);
 
-
-
       date_default_timezone_set("Asia/Bangkok");
       $data_toview = date("Y-m-d H:i:s");
-
-
 
 
       if (sizeof($gallary) > 1) {
@@ -169,7 +165,7 @@ class HomeController extends Controller
   //url_image
 
 
-  $fid="1486242754786951";
+  $fid=Auth::user()->id;
 
   /*Facebook user image width*/
   $width="300";
@@ -180,7 +176,7 @@ class HomeController extends Controller
   /*This is the actual url of the Facebook users image*/
   $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height";
 
-  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/votesmart/public/assets/image/avatar/'.$fid.'.jpg';
+  $img_save_location = url('/assets/image/avatar/'.$fid);
   /*Path to the location to save the image on your server*/
   $image_file = $fid.'.jpg';
 
@@ -222,7 +218,7 @@ class HomeController extends Controller
             ->where('voteresults.user_id', $objs->id)
             ->get();
             $s =1;
-            
+
             foreach ($labels as $obj1) {
 
             $options = DB::table('votesmarts')
