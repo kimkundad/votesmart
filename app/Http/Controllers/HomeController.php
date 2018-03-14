@@ -170,37 +170,73 @@ class HomeController extends Controller
         )
     ->leftjoin('facebook_login', 'facebook_login.user_id',  'users.id')
     ->where('users.id', Auth::user()->id)
-    ->where('vote_status', 1)
+    ->where('users.vote_status', 1)
     ->first();
 
 
 
 
-    $fid='1486242754786951';
 
-    /*Facebook user image width*/
-    $width="300";
-
-    /*Facebook user image height*/
-    $height="300";
-
-    /*This is the actual url of the Facebook users image*/
-    $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
-
-    $image_file = $fid.'.jpg';
-
-    $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
-    /*Path to the location to save the image on your server*/
+    if($user->provider == 'facebook'){
 
 
-    /*Use file_put_contents to get and save image*/
-    file_put_contents($img_save_location, file_get_contents($fb_url));
+
+      $fid=$user->provider_user_id;
+
+      /*Facebook user image width*/
+      $width="300";
+
+      /*Facebook user image height*/
+      $height="300";
+
+      /*This is the actual url of the Facebook users image*/
+      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
+
+      $image_file = $fid.'.jpg';
+
+      $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
+      /*Path to the location to save the image on your server*/
 
 
-    $package = User::find(Auth::user()->id);
-    $package->vote_status = 1;
-    $package->url_image = $image_file;
-    $package->save();
+      /*Use file_put_contents to get and save image*/
+      file_put_contents($img_save_location, file_get_contents($fb_url));
+
+
+      $package = User::find(Auth::user()->id);
+      $package->vote_status = 1;
+      $package->url_image = $image_file;
+      $package->save();
+
+
+    }else{
+
+      $fid=$user->id;
+
+      /*Facebook user image width*/
+
+
+      /*This is the actual url of the Facebook users image*/
+      $fb_url  = url('assets/images/avatar/'.$user->avatar);
+
+      $image_file = $fid.'.jpg';
+
+    //  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
+      $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/votesmart/public/assets/image/avatar/'.$image_file;
+      /*Path to the location to save the image on your server*/
+
+
+      /*Use file_put_contents to get and save image*/
+      file_put_contents($img_save_location, file_get_contents($fb_url));
+
+
+      $package = User::find(Auth::user()->id);
+      $package->vote_status = 1;
+      $package->url_image = $image_file;
+      $package->save();
+
+    }
+
+
 
 
 

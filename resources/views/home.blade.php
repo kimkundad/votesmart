@@ -20,9 +20,23 @@
         @if (Auth::guest())
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
         @else
-        <a href="" style="color: #f05f40; font-weight: 700; font-size: 12px;"><img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle"> {{ Auth::user()->name }}</a>
+        <a href="" style="color: #f05f40; font-weight: 700; font-size: 12px;">
+
+                        @if(Auth::user()->provider == 'email')
+
+                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle">
+                        {{ Auth::user()->name }}
+                        @else
+
+                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle">
+                        {{ Auth::user()->name }}
+                        @endif
+
+
+
+        </a>
         @endif
-        
+
         <br>
       </div>
     </div>
@@ -46,7 +60,18 @@
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" style="width: 150px; height: 86px;"></canvas>
           <div class="overlay-chart">
-          <img class="img-in-chart" src="//{{$j->avatar}}">
+
+            @if($j->provider == 'email')
+            <img class="img-in-chart" src="{{url('assets/images/avatar/'.$j->avatar)}}">
+
+            @else
+
+            <img class="img-in-chart" src="//{{$j->avatar}}">
+
+            @endif
+
+
+
           </div>
           <div class="user-name">
             <p style="margin-bottom: 0px; font-size:9px;">{{$j->name}}</p>
@@ -68,7 +93,19 @@
               <div class="parent-chart" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0);">
                 <canvas id="users-{{$j->id}}" style="width: 150px; height: 86px;"></canvas>
                 <div class="overlay-chart">
-                <img class="img-in-chart-in" src="//{{$j->avatar}}">
+
+                  @if($j->provider == 'email')
+                  <img class="img-in-chart-in" src="{{url('assets/images/avatar/'.$j->avatar)}}">
+
+                  @else
+
+                  <img class="img-in-chart-in" src="//{{$j->avatar}}">
+
+                  @endif
+
+
+
+
                 </div>
 
               </div>

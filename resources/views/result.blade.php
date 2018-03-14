@@ -33,6 +33,9 @@ function pickColor() {
   $("#colorpicker").click();
 }
 
+
+
+
 </script>
 
 
@@ -200,7 +203,20 @@ function pickColor() {
                                         </div>
 
                                         <div class="overlay-chart">
-                                        <img class="img-in-chart" src="//{{Auth::user()->avatar}}">
+
+
+                                          @if(Auth::user()->provider == 'email')
+                                          <img class="img-in-chart" src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}">
+
+                                          @else
+
+                                          <img class="img-in-chart" src="//{{Auth::user()->avatar}}">
+
+                                          @endif
+
+
+
+
                                         </div>
 
                                       </div>
@@ -285,7 +301,7 @@ function pickColor() {
         <input id="colorpicker" type="color" />
 
         <div id="canvas">
-          <img src="https://pbs.twimg.com/profile_images/924674977458036736/hl1N4mbT_400x400.jpg" />
+          <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
              <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/>
         เศรษฐกิจเพื่องฟู</br>
@@ -300,7 +316,7 @@ function pickColor() {
 
   <div class="container  text-center" style="margin-top: 60px;">
 
-        <a class="btn btn-light btn-xl save-result" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" href="#result"><i class="fa fa-download"></i> เซฟรูปนี้
+        <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" ><i class="fa fa-download"></i> เซฟรูปนี้
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 
         <a class="btn btn-xl btn-primary" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
@@ -329,7 +345,12 @@ function pickColor() {
 @section('scripts')
 <script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
 <script type="text/javascript">
+$(".save-result").click(function(){
 
+  var canvas = document.getElementById("mycanvas");
+  var img    = canvas.toDataURL("image/png");
+  document.write('<img src="'+img+'"/>');
+});
 //document.getElementById("doughnutChart").style.height = '200px';
 
 
@@ -363,6 +384,29 @@ function pickColor() {
       responsive: true
     }
   });
+
+
+
+
+
+
+                    document.getElementById('colormycanvas').addEventListener('click', function() {
+
+
+                      html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
+                                            onrendered: function (canvas) {
+                                                   var imgString = canvas.toDataURL("image/png");
+                    console.log(imgString);
+                                                   var a = document.createElement('a');
+                                                   a.href = imgString;
+                                                   a.download = "image.png";
+                                                   document.body.appendChild(a);
+                                                   a.click();
+                                                   document.body.removeChild(a);
+                                        }});
+
+}, false);
+
 
 
 
