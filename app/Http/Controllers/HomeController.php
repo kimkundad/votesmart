@@ -163,30 +163,64 @@ class HomeController extends Controller
 
   //url_image
 
-  $fid=Auth::user()->id;
 
-  /*Facebook user image width*/
-  $width="300";
-
-  /*Facebook user image height*/
-  $height="300";
-
-  /*This is the actual url of the Facebook users image*/
-  $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
-
-  $img_save_location = 'http://devzab.com/assets/image/avatar/'.$fid;
-  /*Path to the location to save the image on your server*/
-  $image_file = $fid.'.jpg';
-
-  /*Use file_put_contents to get and save image*/
-  file_put_contents($img_save_location, file_get_contents($fb_url));
+  $user = DB::table('users')->select(
+        'users.*',
+        'facebook_login.*'
+        )
+    ->leftjoin('facebook_login', 'facebook_login.user_id',  'users.id')
+    ->where('users.id', Auth::user()->id)
+    ->where('vote_status', 1)
+    ->first();
 
 
+  if($user->provider == 'facebook'){
 
-  $package = User::find(Auth::user()->id);
-  $package->vote_status = 1;
-  $package->url_image = $image_file;
-  $package->save();
+    $fid=$user->provider_user_id;
+
+    /*Facebook user image width*/
+    $width="300";
+
+    /*Facebook user image height*/
+    $height="300";
+
+    /*This is the actual url of the Facebook users image*/
+    $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
+
+    $img_save_location = 'http://devzab.com/assets/image/avatar/'.$fid;
+    /*Path to the location to save the image on your server*/
+    $image_file = $fid.'.jpg';
+
+    /*Use file_put_contents to get and save image*/
+    file_put_contents($img_save_location, file_get_contents($fb_url));
+
+
+    $package = User::find(Auth::user()->id);
+    $package->vote_status = 1;
+    $package->url_image = $image_file;
+    $package->save();
+
+  }else{
+
+    $package = User::find(Auth::user()->id);
+    $package->vote_status = 1;
+    $package->save();
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return redirect(url('/result'));
     }
