@@ -157,13 +157,11 @@ class HomeController extends Controller
         'result_id' => $x,
         'sort_result' => $users,
     ];
-
-
   }
+
   voteresult::insert($admin);
 
   //url_image
-
 
   $fid=Auth::user()->id;
 
@@ -176,17 +174,12 @@ class HomeController extends Controller
   /*This is the actual url of the Facebook users image*/
   $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height";
 
-  $img_save_location = url('/assets/image/avatar/'.$fid);
+  $img_save_location = 'http://devzab.com/assets/image/avatar/'.$fid;
   /*Path to the location to save the image on your server*/
   $image_file = $fid.'.jpg';
 
   /*Use file_put_contents to get and save image*/
   file_put_contents($img_save_location, file_get_contents($fb_url));
-
-
-
-
-
 
 
 
