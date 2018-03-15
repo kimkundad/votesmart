@@ -381,7 +381,7 @@ function pickColor() {
                                           if(json.status == 1000) {
 
 
-                                              window.location.replace("{{url('shared_quiz/'.Auth::user()->id)}}");
+                                              window.location.replace("https://www.facebook.com/sharer/sharer.php?u={{url('shared_quiz/'.Auth::user()->id)}}", '_blank');
 
 
                                            } else {

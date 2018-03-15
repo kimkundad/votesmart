@@ -3,11 +3,11 @@
   <title>ถ้าต้องบริหารประเทศไทย</title>
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://devzab.com/shared_quiz/1" />
+  <meta property="og:url"           content="http://devzab.com/shared_quiz/{{$user->id}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="ถ้าต้องบริหารประเทศไทย" />
-  <meta property="og:description"   content="Shuvit Funsok จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
-  <meta property="og:image"         content="http://devzab.com/assets/image/shared/1.jpg" />
+  <meta property="og:description"   content="{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
+  <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}" />
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 
   <!-- Your share button code -->
   <div class="fb-share-button"
-    data-href="https://devzab.com/shared_quiz/1"
+    data-href="http://devzab.com/shared_quiz/{{$user->id}}"
     data-layout="button_count">
   </div>
 
