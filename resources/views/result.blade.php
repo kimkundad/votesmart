@@ -310,8 +310,10 @@ function pickColor() {
 
 
 
-
+                  @if($u->options->result_name != null)
                   {{$u->options->result_name}}<br>
+                  @endif
+
 
 
 
