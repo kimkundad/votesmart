@@ -13,7 +13,13 @@
 
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+
+  setTimeout(function(){
+    window.location = "{{url('/')}}";
+  }, 500);
+
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
@@ -22,9 +28,7 @@
   }(document, 'script', 'facebook-jssdk'));
 
 
-setTimeout(function(){
-  window.open('{{url('/')}}');
-}, 500);
+
 
 </script>
 
