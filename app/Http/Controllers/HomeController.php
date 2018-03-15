@@ -259,7 +259,8 @@ class HomeController extends Controller
       $image_file = $fid.'.jpg';
 
     //  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
-      $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/votesmart/public/assets/image/shared/'.$image_file;
+      $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/shared/'.$image_file;
+    //  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/votesmart/public/assets/image/shared/'.$image_file;
       /*Path to the location to save the image on your server*/
 
 
