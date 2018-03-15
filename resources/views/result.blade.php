@@ -112,17 +112,18 @@ function pickColor() {
   }
 
   #canvas > div {
+    width: 450px;
         position: relative;
     top: -60px;
-    left: 40px;
+    left: 27px;
   }
 
   h2.avatar-heading {
      color: #fff;
     font-family: 'Kanit', sans-serif;
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 56px;
+    line-height: 32px;
     text-align: left;
 
     margin-bottom: 24px;
@@ -310,8 +311,8 @@ function pickColor() {
 
 
 
-                  @if($u->options->result_name != null)
-                  {{$u->options->result_name}}<br>
+                  @if($u->options != null)
+                  #{{$u->options->result_name}}<br>
                   @endif
 
 
