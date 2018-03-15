@@ -6,7 +6,7 @@
 <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 
@@ -319,7 +319,7 @@ function pickColor() {
         <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" ><i class="fa fa-download"></i> เซฟรูปนี้
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 
-        <a class="btn btn-xl btn-primary" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+        <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
 
        </div>
 </section>
@@ -344,6 +344,80 @@ function pickColor() {
 
 @section('scripts')
 <script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+
+
+
+<script type="text/javascript">
+
+
+    document.getElementById('shared').addEventListener('click', function() {
+        //  var username = $('form#cutproduct input[name=id]').val();
+
+        html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
+                              onrendered: function (canvas) {
+                                     var imgString = canvas.toDataURL("image/png");
+                                     console.log(imgString);
+
+
+
+                                    // imgString = "4521225"
+                                     if(imgString){
+
+                                       $.ajaxSetup({
+                                          headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                          }
+                                        });
+
+
+                                       $.ajax({
+                                         type: "POST",
+                                         url: '{{url('save_image')}}',
+                                         data:{
+                                            image: imgString
+                                          },
+                                         dataType: "json",
+                                      success: function(json){
+                                          if(json.status == 1000) {
+
+
+                                              window.location.replace("{{url('shared_quiz/'.Auth::user()->id)}}");
+
+
+                                           } else {
+
+                                             alert('no');
+                                           }
+                                         },
+                                         failure: function(errMsg) {
+
+                                         }
+                                       });
+                                     }else{
+
+
+
+
+                                     }
+
+
+
+                                    // alert(imgString);
+                          }});
+
+
+
+        });
+
+
+
+
+
+
+</script>
+
+
+
 <script type="text/javascript">
 $(".save-result").click(function(){
 
@@ -390,13 +464,18 @@ $(".save-result").click(function(){
 
 
 
+
+
+
+
                     document.getElementById('colormycanvas').addEventListener('click', function() {
 
 
                       html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
                                             onrendered: function (canvas) {
                                                    var imgString = canvas.toDataURL("image/png");
-                    console.log(imgString);
+                                                   console.log(imgString);
+
                                                    var a = document.createElement('a');
                                                    a.href = imgString;
                                                    a.download = "image.png";

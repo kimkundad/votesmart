@@ -241,20 +241,55 @@ class HomeController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   return redirect(url('/result'));
+    }
+
+
+
+
+    public function save_image(Request $request){
+      $image = $request['image'];
+
+      $fid=Auth::user()->id;
+
+      $fb_url  = $image;
+
+    //  dd($fb_url);
+
+      $image_file = $fid.'.jpg';
+
+    //  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
+      $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/votesmart/public/assets/image/shared/'.$image_file;
+      /*Path to the location to save the image on your server*/
+
+
+      /*Use file_put_contents to get and save image*/
+      file_put_contents($img_save_location, file_get_contents($fb_url));
+
+      //shared
+
+      $package = User::find(Auth::user()->id);
+      $package->image_shared = $image_file;
+      //$package->save();
+      if($package->save()){
+        $arr['status'] = 1000;
+        return json_encode($arr);
+      }else{
+        $arr['status'] = 1001;
+        return json_encode($arr);
+      }
+
+
+
+      //return redirect(url('/result'));
+
+    }
+
+
+
+    public function shared_quiz(){
+
+      return view('shared_quiz');
     }
 
 
@@ -310,6 +345,9 @@ class HomeController extends Controller
       //dd($data);
       //  return view('result');
     }
+
+
+
 
     public function quiz_choices(){
 
