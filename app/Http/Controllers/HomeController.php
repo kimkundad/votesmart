@@ -342,6 +342,40 @@ class HomeController extends Controller
           //  $obj->labels = $optionsRes;
 
 
+
+          $result = DB::table('voteresults')
+            ->where('user_id', Auth::user()->id)
+            ->take(3)
+            ->get();
+
+
+
+            foreach ($result as $obj) {
+
+            $optionsRes = [];
+
+            $options = DB::table('results')
+                  ->select(
+                  'results.result_name'
+                  )
+                  ->where('results.category_id', $obj->result_id)
+                  ->where('user_id', Auth::user()->id)
+                  ->inRandomOrder()
+                  ->first();
+
+            $optionsRes = $options;
+
+            $obj->options = $optionsRes;
+            }
+
+
+
+          // dd($result);
+
+
+        $data['result'] = $result;
+
+
       //  dd($labels);
 
       $data['user'] = $objs;

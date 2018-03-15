@@ -303,9 +303,22 @@ function pickColor() {
         <div id="canvas">
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
-             <h2 class="avatar-heading text-left">ระบบการศึกษาแข็งแกร่ง<br/>
-        เศรษฐกิจเพื่องฟู</br>
-         สารธารณสุขดีเยี่ยม</h2>
+             <h2 class="avatar-heading text-left">
+
+               @if($result)
+                  @foreach($result as $u)
+
+
+
+
+                  {{$u->options->result_name}}<br>
+
+
+
+                  @endforeach
+               @endif
+
+              </h2>
           </div>
         </div>
 
