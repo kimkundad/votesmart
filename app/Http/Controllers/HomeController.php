@@ -288,10 +288,10 @@ class HomeController extends Controller
 
 
 
-    public function shared_quiz(){
+    public function shared_quiz($id){
 
       $objs = DB::table('users')
-        ->where('id', Auth::user()->id)
+        ->where('id', $ids)
         ->where('vote_status', 1)
         ->first();
 
