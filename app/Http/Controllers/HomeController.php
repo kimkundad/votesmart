@@ -370,7 +370,7 @@ class HomeController extends Controller
 
 
 
-          // dd($result);
+           dd($result);
 
 
         $data['result'] = $result;
