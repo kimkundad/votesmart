@@ -94,8 +94,11 @@
 
 
 
-
+           @if($u->options != null)
            #{{$u->options->result_name}}<br>
+           @endif
+
+          
 
 
 

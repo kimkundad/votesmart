@@ -359,7 +359,6 @@ class HomeController extends Controller
                   'results.result_name'
                   )
                   ->where('results.category_id', $obj->result_id)
-                  ->where('user_id', Auth::user()->id)
                   ->inRandomOrder()
                   ->first();
 
