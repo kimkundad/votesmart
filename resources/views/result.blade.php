@@ -433,21 +433,26 @@ $(".save-result").click(function(){
     type: 'doughnut',
     data: {
       labels: [
+        @if(isset($objs))
+            @foreach($objs as $u)
+          "{{$u->name_cat}}",
+          @endforeach
+        @endif
               ],
       datasets: [{
         data: [
-                                  3,
-                    2,
-                    1,
-                    1,
-                    1,
+          @if(isset($objs))
+              @foreach($objs as $u)
+            "{{$u->sort_result}}",
+            @endforeach
+          @endif
                              ],
         backgroundColor: [
-                                  "#0088CC",
-                    "#47a447",
-                    "#5bc0de",
-                    "#2BAAB1",
-                    "#734BA9",
+          @if(isset($objs))
+              @foreach($objs as $u)
+            "{{$u->color_bg}}",
+            @endforeach
+          @endif
                           ]
       }]
     },
