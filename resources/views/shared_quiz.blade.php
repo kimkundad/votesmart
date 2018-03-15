@@ -22,6 +22,10 @@
   }(document, 'script', 'facebook-jssdk'));
 
 
+setTimeout(function(){
+  window.open('{{url('/')}}');
+}, 500);
+
 </script>
 
   <!-- Your share button code -->
