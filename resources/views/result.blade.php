@@ -240,7 +240,7 @@ h2.avatar-heading {
     #canvas {
     max-width: 100%;
     width: 500px;
-    height: 370px;
+    height: 320px;
     background-color: #08B0ED;
     margin: 0px auto;
 }
@@ -264,7 +264,7 @@ h2.avatar-heading {
 h2.avatar-heading {
     color: #fff;
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 100;
     line-height: 25px;
     text-align: left;
@@ -311,7 +311,7 @@ h2.avatar-heading {
 h2.avatar-heading {
     color: #fff;
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 100;
     line-height: 25px;
     text-align: left;
