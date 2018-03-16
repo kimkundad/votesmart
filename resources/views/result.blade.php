@@ -590,7 +590,7 @@ h2.avatar-heading {
 
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="candidate-profile-2 text-center">
+                                        <div class="candidate-profile-2 ">
 
 
 
