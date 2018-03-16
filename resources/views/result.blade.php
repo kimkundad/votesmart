@@ -103,43 +103,7 @@ function pickColor() {
       margin: 30px auto;
   }
 
-  #canvas > img {
-    position: relative;
-    text-align: right;
-    left: 70px;
-    width: 360px;
-    height: 360px;
-  }
 
-  #canvas > div {
-    width: 450px;
-        position: relative;
-    top: -60px;
-    left: 27px;
-  }
-
-  h2.avatar-heading {
-     color: #fff;
-    font-family: 'Kanit', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 32px;
-    text-align: left;
-
-    margin-bottom: 24px;
-    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
-  }
-
-  h2.section-heading {
-        color: #0479BD;
-    font-family: 'Kanit', sans-serif;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 56px;
-    text-align: center;
-    margin-bottom: 24px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
-  }
 
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     background-color: #fff;
@@ -165,8 +129,60 @@ function pickColor() {
       width: 140px;
       height: 140px;
     }
+    #canvas {
+      max-width: 90%;
+      width: 500px;
+      height: 450px;
+      background-color: #08B0ED;
+          margin: 0px auto;
+
+    }
+
+    #canvas > img {
+      position: relative;
+      text-align: right;
+      left: 55px;
+      width: 300px;
+      height: 300px;
+    }
+
+    #canvas > div {
+      width: 450px;
+          position: relative;
+          padding-right: 10px;
+          padding-left: 10px;
+      top: -60px;
+      left: 12px;
+    }
+
+    h2.avatar-heading {
+       color: #fff;
+      font-family: 'Kanit', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      text-align: left;
+
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+    }
+
+    h2.section-heading {
+          color: #0479BD;
+      font-family: 'Kanit', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 56px;
+      text-align: center;
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
+    }
+
+
   }
-  @media (min-width: 280px){
+
+
+  @media (max-width: 280px){
 
     .img-in-chart {
         margin-top: -1px;
@@ -174,9 +190,327 @@ function pickColor() {
         height: 140px;
     }
 
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 370px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
   }
 
 
+
+  @media (min-width: 320px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 370px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+
+
+  @media (min-width: 375px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+
+
+  @media (min-width: 425px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+
+
+  @media (min-width: 576px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+
+  @media (min-width: 768px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+
+
+  @media (min-width: 992px) {
+
+    .img-in-chart {
+        margin-top: -1px;
+        width: 140px;
+        height: 140px;
+    }
+
+    #canvas {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    background-color: #08B0ED;
+    margin: 0px auto;
+}
+
+#canvas > img {
+    float: right;
+    /* position: relative; */
+    /* text-align: right; */
+    /* left: 70px; */
+    width: 50%;
+    /* height: 50%; */
+}
+#canvas > div {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    /* left: 5px; */
+}
+h2.avatar-heading {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: left;
+    /* margin-bottom: 24px; */
+    text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+}
+
+  }
+
+  .bg-dark {
+    background-color: #E6F1F5 !important
+  }
 </style>
 
 <<<<<<< HEAD
@@ -270,20 +604,7 @@ function pickColor() {
   </div>
 </section>
 
-<style type="text/css">
-  #canvas {
-    max-width: 90%;
-    width: 500px;
-    height: 500px;
-    background-color: #08B0ED;
-        margin: 0px auto;
 
-  }
-  .bg-dark {
-    background-color: #E6F1F5 !important
-  }
-
-</style>
 
 <section id="result" class="bg-dark">
   <div class="container share-vision text-center">
@@ -301,7 +622,8 @@ function pickColor() {
         </div>
         <input id="colorpicker" type="color" />
 
-        <div id="canvas">
+        <div id="canvas" class="canvass">
+          <img src="{{url('assets/image/cross-icon.png')}}" style="float:left; width:90px; height:90px; left: 10px;top: 10px;"/>
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
              <h2 class="avatar-heading text-left">
