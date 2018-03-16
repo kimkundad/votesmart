@@ -123,63 +123,34 @@ function pickColor() {
       font-size: 20px;
       margin: 30px auto;
   }
-  @media (min-width: 1200px){
-    .img-in-chart {
-      margin-top: -1px;
-      width: 140px;
-      height: 140px;
-    }
-    #canvas {
-      max-width: 90%;
-      width: 500px;
-      height: 450px;
-      background-color: #08B0ED;
-          margin: 0px auto;
 
-    }
 
-    #canvas > img {
-      position: relative;
-      text-align: right;
-      left: 55px;
-      width: 300px;
-      height: 300px;
-    }
+  #heading_b{
+    color: #0479BD;
+font-family: 'Kanit', sans-serif;
+font-size: 36px;
+font-weight: 500;
+line-height: 56px;
+text-align: center;
+margin-bottom: 24px;
+text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
 
-    #canvas > div {
-      width: 450px;
-          position: relative;
-          padding-right: 10px;
-          padding-left: 10px;
-      top: -60px;
-      left: 12px;
-    }
+  }
 
-    h2.avatar-heading {
-       color: #fff;
-      font-family: 'Kanit', sans-serif;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 32px;
-      text-align: left;
+  #heading-t{
 
-      margin-bottom: 24px;
-      text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
-    }
-
-    h2.section-heading {
-          color: #0479BD;
-      font-family: 'Kanit', sans-serif;
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 56px;
-      text-align: center;
-      margin-bottom: 24px;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
-    }
+    color: #0479BD;
+font-family: 'Kanit', sans-serif;
+font-size: 22px;
+font-weight: 500;
+line-height: 26px;
+text-align: center;
+margin-bottom: 24px;
+text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
 
 
   }
+
 
 
   @media (max-width: 280px){
@@ -508,6 +479,66 @@ h2.avatar-heading {
 
   }
 
+
+
+  @media (min-width: 1200px){
+    .img-in-chart {
+      margin-top: -1px;
+      width: 140px;
+      height: 140px;
+    }
+    #canvas {
+      max-width: 90%;
+      width: 500px;
+      height: 450px;
+      background-color: #08B0ED;
+          margin: 0px auto;
+
+    }
+
+    #canvas > img {
+      position: relative;
+      text-align: right;
+
+      width: 300px;
+      height: 300px;
+    }
+
+    #canvas > div {
+      width: 450px;
+          position: absolute;
+          padding-right: 10px;
+          padding-left: 10px;
+      top: 320px;
+      left: 140px;
+    }
+
+    h2.avatar-heading {
+       color: #fff;
+      font-family: 'Kanit', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      text-align: left;
+
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+    }
+
+    h2.section-heading {
+          color: #0479BD;
+      font-family: 'Kanit', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 56px;
+      text-align: center;
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
+    }
+
+
+  }
+
   .bg-dark {
     background-color: #E6F1F5 !important
   }
@@ -518,14 +549,14 @@ h2.avatar-heading {
 
 
 
-<section id="services">
+<section id="services" style="padding: 6rem 0;">
   <div class="candidate-details container">
                                 <div class="row">
 
                                   <div class="col-md-12" >
 
                                     <h3 class="text-center" style="color: #0479BD;font-weight: 400;font-size: 20px;">ถ้าต้องบริหารประเทศไทย</h3>
-                                    <h2 class="mb-4 section-heading">{{$user->name}} จะเลือกเรื่องเหล่านี้</h2>
+                                    <h2 id="heading-t" class="mb-4 section-heading">{{$user->name}} จะเลือกเรื่องเหล่านี้</h2>
 
 
                                   </div>
@@ -559,7 +590,7 @@ h2.avatar-heading {
 
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="candidate-profile-2">
+                                        <div class="candidate-profile-2 text-center">
 
 
 
@@ -652,7 +683,7 @@ h2.avatar-heading {
 
   </div>
 
-  <div class="container  text-center" style="margin-top: 60px;">
+  <div class="container  text-center" style="margin-top: 40px;">
 
         <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" ><i class="fa fa-download"></i> เซฟรูปนี้
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
@@ -666,7 +697,7 @@ h2.avatar-heading {
   <div class="container candidate-link">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <h2 class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ<br/>
+        <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ<br/>
 แต่เรื่องสำคัญที่คุณเลือก</br>
 จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
         <a class="btn btn-light btn-xl js-scroll-trigger" href="#result">จะเลือกใครดี <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
