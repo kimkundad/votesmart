@@ -161,6 +161,99 @@
 
 
 
+<style>
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+      <div class="content_leena panel-content" id="">
+
+
+        <div id="content-home1" class="content-home">
+          <div class="real-content" style="padding-top: 70px;">
+            <div class="mask-content">
+              <!-- First Container -->
+              <div class="welcome-section text-center">
+                <div id="front-page" class="front-content">
+                  <div class="panel-text-asking">
+                    <h3 class="margin">จะเลือกอะไรได้?</h3>
+                    <div class="text-asking">
+                      <p>ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร?<br>
+                      การศึกษา, เศรษฐกิจ, สิทธิมนุษยชน <br> หรืออีกหลายประเด็นอื่นๆ<br>
+                      ประเทศไทยควรเดินไปทางไหน<br> อะไรที่เราควรให้ความสำคัญ?</p>
+                    </div>
+                  </div>
+                  <div class="panel-fa panel-fa-right" style="color: #08c1f4; font-size: 65px;">
+                    <div class="btn-click btn-home" data-target="2">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="welcome-footer">
+                  <a class="scroll-down btn hometo1" style="    color: #08c1f4;">
+                    <i class="fa fa-angle-double-down"></i>
+                    <span>เลื่อนลง</span>
+                  </a>
+                </div>
+                <div class="padding-bottom-footer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content-home2" class="content-home">
+          <div class="real-content" style="padding-top: 70px;">
+
+
+            <div class="mask-content">
+              <!-- First Container -->
+              <div class="welcome-section text-center">
+                <div id="front-page" class="front-content">
+                  <div class="panel-fa panel-fa-left">
+                    <div class="btn-click btn-home" data-target="1">
+                      <i class="fa fa-angle-left" ></i>
+                    </div>
+                  </div>
+                  <div class="panel-text-asking">
+                    <h3 class="margin">จะเลือกใครดี??</h3>
+                    <div class="text-asking">
+                      <p>ทำความรู้จักผู้แทนของคุณให้มากขึ้น<br>
+                      และบอกพวกเขาว่าอะไรที่สำคัญสำหรับคุณ</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="welcome-footer">
+                  <a class="scroll-down btn hometo2" style="    color: #08c1f4;">
+                    <i class="fa fa-angle-double-down"></i>
+                    <span>เลื่อนลง</span>
+                  </a>
+                </div>
+                <div class="padding-bottom-footer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
 
 
     </div>
@@ -260,5 +353,40 @@
   @endif
 
 
+</script>
+
+
+<script>
+  $(document).ready(function () {
+    $('#content-home1').show();
+    $(document).on('click', '.btn-home', (el) => {
+      const dataTarget = $(el.currentTarget).data('target');
+      console.log('dataTarget', dataTarget);
+
+      if (dataTarget === 1) {
+        $('#content-home1').show();
+        $('#content-home2').hide();
+        $('#btn_home1').parent().addClass('active');
+        $('#btn_home2').parent().removeClass('active');
+      } else {
+        $('#content-home2').show();
+        $('#content-home1').hide();
+        $('#btn_home2').parent().addClass('active');
+        $('#btn_home1').parent().removeClass('active');
+      }
+    });
+
+
+    $(document).on('click', '.hometo1', (el) => {
+
+
+      $('.content_leena').hide();
+
+    });
+
+
+
+
+  });
 </script>
 @stop('scripts')
