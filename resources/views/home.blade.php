@@ -178,7 +178,7 @@
 
 
 
-      <div class="content_leena panel-content" id="">
+      <div class="content_leena panel-content" style="position: fixed;">
 
 
         <div id="content-home1" class="content-home">
