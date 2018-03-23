@@ -364,10 +364,10 @@
 
   $(document).ready(function () {
     $('#content-home1').show();
+  
 
-
-  //  $(document).on('click', '.btn-home', (el) => {
-    $('.btn-home').on('scroll', function() {
+    $(document).on('click', '.btn-home', (el) => {
+  //  $('.content_leena').on('scroll', function() {
 
       const dataTarget = $(el.currentTarget).data('target');
       console.log('dataTarget', dataTarget);
@@ -376,6 +376,8 @@
         $('#content-home1').show();
         $('#content-home2').hide();
         $('#btn_home1').parent().addClass('active');
+        //a-head
+
         $('#btn_home2').parent().removeClass('active');
       } else {
         $('#content-home2').show();

@@ -123,7 +123,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }}  js-scroll-trigger hidden-sm hidden-xs" style="font-size: 16px; padding: 14px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
+          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }}  js-scroll-trigger hidden-sm hidden-xs" id="a-head-set" style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
 
           <a href="{{url('/')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
@@ -133,9 +133,9 @@
           </a>
 
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="margin-right: 30px;">
 
-          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" style="font-size: 16px; padding: 14px 25px 10px; " href="{{url('/')}}">เลือกใครดี?</a>
+          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกใครดี?</a>
 
           <a href="{{url('/')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
@@ -147,10 +147,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-
-
           <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#result" style="background-color: #ffffff; margin-top: 5px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
-
         </li>
 
 
