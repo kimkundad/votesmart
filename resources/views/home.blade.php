@@ -168,76 +168,88 @@
 
 
 
+@if (Auth::guest())
 
-      <div class="content_leena panel-content" style="position: fixed;">
 
 
-        <div id="content-home1" class="content-home">
-          <div class="real-content" style="padding-top: 70px;">
-            <div class="mask-content">
-              <!-- First Container -->
-              <div class="welcome-section text-center">
-                <div id="front-page" class="front-content">
-                  <div class="panel-text-asking">
-                    <h3 class="margin">จะเลือกอะไรได้?</h3>
-                    <div class="text-asking">
-                      <p>ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร?<br>
-                      การศึกษา, เศรษฐกิจ, สิทธิมนุษยชน <br> หรืออีกหลายประเด็นอื่นๆ<br>
-                      ประเทศไทยควรเดินไปทางไหน<br> อะไรที่เราควรให้ความสำคัญ?</p>
-                    </div>
-                  </div>
-                  <div class="panel-fa panel-fa-right" style="color: #08c1f4; font-size: 65px; width: 80px;">
-                    <div class="btn-click btn-home" data-target="2">
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="welcome-footer">
-                  <a class="scroll-down btn hometo1" style="    color: #08c1f4;">
-                    <i class="fa fa-angle-double-down"></i>
-                    <span>เลื่อนลง</span>
-                  </a>
-                </div>
-                <div class="padding-bottom-footer"></div>
+<div class="content_leena panel-content" style="position: fixed;">
+
+
+  <div id="content-home1" class="content-home">
+    <div class="real-content" style="padding-top: 70px;">
+      <div class="mask-content">
+        <!-- First Container -->
+        <div class="welcome-section text-center">
+          <div id="front-page" class="front-content">
+            <div class="panel-text-asking">
+              <h3 class="margin">จะเลือกอะไรได้?</h3>
+              <div class="text-asking">
+                <p>ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร?<br>
+                การศึกษา, เศรษฐกิจ, สิทธิมนุษยชน <br> หรืออีกหลายประเด็นอื่นๆ<br>
+                ประเทศไทยควรเดินไปทางไหน<br> อะไรที่เราควรให้ความสำคัญ?</p>
+              </div>
+            </div>
+            <div class="panel-fa panel-fa-right" style="color: #08c1f4; font-size: 65px; width: 80px;">
+              <div class="btn-click btn-home" data-target="2">
+                <i class="fa fa-angle-right"></i>
               </div>
             </div>
           </div>
-        </div>
-
-        <div id="content-home2" class="content-home">
-          <div class="real-content" style="padding-top: 70px;">
-
-
-            <div class="mask-content">
-              <!-- First Container -->
-              <div class="welcome-section text-center">
-                <div id="front-page" class="front-content">
-                  <div class="panel-fa panel-fa-left" style="color: #08c1f4; font-size: 65px; width: 80px;">
-                    <div class="btn-click btn-home" data-target="1">
-                      <i class="fa fa-angle-left" ></i>
-                    </div>
-                  </div>
-                  <div class="panel-text-asking">
-                    <h3 class="margin">จะเลือกใครดี??</h3>
-                    <div class="text-asking">
-                      <p>ทำความรู้จักผู้แทนของคุณให้มากขึ้น<br>
-                      และบอกพวกเขาว่าอะไรที่สำคัญสำหรับคุณ</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="welcome-footer">
-                  <a class="scroll-down btn hometo2" style="    color: #08c1f4;">
-                    <i class="fa fa-angle-double-down"></i>
-                    <span>เลื่อนลง</span>
-                  </a>
-                </div>
-                <div class="padding-bottom-footer"></div>
-              </div>
-            </div>
+          <div class="welcome-footer">
+            <a class="scroll-down btn hometo1" style="    color: #08c1f4;">
+              <i class="fa fa-angle-double-down"></i>
+              <span>เลื่อนลง</span>
+            </a>
           </div>
+          <div class="padding-bottom-footer"></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div id="content-home2" class="content-home">
+    <div class="real-content" style="padding-top: 70px;">
+
+
+      <div class="mask-content">
+        <!-- First Container -->
+        <div class="welcome-section text-center">
+          <div id="front-page" class="front-content">
+            <div class="panel-fa panel-fa-left" style="color: #08c1f4; font-size: 65px; width: 80px;">
+              <div class="btn-click btn-home" data-target="1">
+                <i class="fa fa-angle-left" ></i>
+              </div>
+            </div>
+            <div class="panel-text-asking">
+              <h3 class="margin">จะเลือกใครดี??</h3>
+              <div class="text-asking">
+                <p>ทำความรู้จักผู้แทนของคุณให้มากขึ้น<br>
+                และบอกพวกเขาว่าอะไรที่สำคัญสำหรับคุณ</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="welcome-footer">
+            <a class="scroll-down btn hometo2" style="    color: #08c1f4;">
+              <i class="fa fa-angle-double-down"></i>
+              <span>เลื่อนลง</span>
+            </a>
+          </div>
+          <div class="padding-bottom-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@else
+
+
+
+
+
+@endif
+
 
 
 
