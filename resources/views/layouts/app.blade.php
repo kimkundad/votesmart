@@ -1077,19 +1077,22 @@ padding-bottom: 5px;
       });
 
 
-      $(function(){
+
+
     $('.info').click(function(){
         window.location = $('#SHOW_HELP').attr('href');
     });
-});
+    $('.info2').click(function(){
+      window.location = $('#SHOW_HELP2').attr('href');
+    });
+    $('.info-3').click(function(){
+      window.location = $('#SHOW_HELP-3').attr('href');
+      console.log(obj);
+    });
 
 
 
-$(function(){
-$('.info2').click(function(){
-  window.location = $('#SHOW_HELP2').attr('href');
-});
-});
+
 
     </script>
 

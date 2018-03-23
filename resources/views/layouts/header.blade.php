@@ -202,7 +202,7 @@
                             class="img-circle"> {{Auth::user()->name}}
                           </a></li>
                           <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                          <li><a href="{{url('logout')}}"><i class="fa fa-btn fa-sign-out"></i> ออกจากระบบ</a></li>
+                          <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
                         </ul>
 
                         @else
@@ -216,7 +216,7 @@
                             class="img-circle"> {{Auth::user()->name}}
                           </a></li>
                           <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                          <li><a href="{{url('logout')}}"><i class="fa fa-btn fa-sign-out"></i> ออกจากระบบ</a></li>
+                          <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
                         </ul>
 
                         @endif
