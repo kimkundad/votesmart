@@ -24,6 +24,8 @@
 
 
       <div class="col-md-3 text-center">
+
+
         @if (Auth::guest())
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
         @else
@@ -404,4 +406,9 @@
 
 
 </script>
+
+
+
+
+
 @stop('scripts')

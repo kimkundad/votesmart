@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{url('front/css/creative.css')}}" rel="stylesheet">
+    <link href="{{url('front/css/css/style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <style>
 
@@ -1006,6 +1007,7 @@ a:hover{
 padding-bottom: 5px;
 }
 
+
     </style>
 
   </head>
@@ -1035,6 +1037,53 @@ padding-bottom: 5px;
 
     <!-- Custom scripts for this template -->
     <script src="{{url('front/js/creative.min.js')}}"></script>
+
+
+    <script type="text/javascript">
+
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            console.log(obj);
+
+            return false;
+          });
+
+
+        },
+
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+      });
+
+
+      $(function(){
+    $('.info').click(function(){
+        window.location = $('#SHOW_HELP').attr('href');
+    });
+});
+
+    </script>
 
     @yield('scripts')
 

@@ -151,7 +151,14 @@
         </li>
 
 
-        <li class="nav-item">
+
+
+
+
+
+
+
+        <li class="nav-item dropdown open">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
 
               <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
@@ -161,6 +168,57 @@
         </li>
 
       </ul>
+
+
+
+
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+
+      <li class="nav-item hidden-sm hidden-xs">
+
+
+
+
+
+
+
+
+        @if (Auth::guest())
+
+        @else
+        <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+
+                        @if(Auth::user()->provider == 'email')
+
+                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                        style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                        class="img-circle">
+
+                        @else
+
+                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
+
+                        @endif
+      @endif
+                          </a>
+
+                          <ul class="dropdown" style="width: 200px;">
+                            <li><a href="{{url('/')}}" class="info" id="SHOW_HELP" style="font-size: 12px;">
+                              <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                              style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                              class="img-circle"> {{Auth::user()->name}}
+                            </a></li>
+                            <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
+                            <li><a href="{{url('logout')}}"><i class="fa fa-btn fa-sign-out"></i> ออกจากระบบ</a></li>
+                          </ul>
+                          </div>
+      </li>
+
+      </ul>
+
+
+
+
     </div>
   </div>
 </nav>
