@@ -1083,6 +1083,14 @@ padding-bottom: 5px;
     });
 });
 
+
+
+$(function(){
+$('.info2').click(function(){
+  window.location = $('#SHOW_HELP2').attr('href');
+});
+});
+
     </script>
 
     @yield('scripts')
