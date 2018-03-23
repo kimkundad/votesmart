@@ -6,16 +6,23 @@
 
 
 
-<section class="bg-whites " id="about" style="padding: 65px 0 8px 0;">
+<section class="bg-whites " id="about" style="padding: 105px 0 8px 0;">
   <div class="container">
     <div class="row">
       <div class="col-md-3 text-center">
         <a class="quiz-title" style="color:#0479bd;">จะเลือกอะไรได้?</a>
         <br><br>
       </div>
-      <div class="col-md-6 text-center">
+
+      <div class="col-md-6 text-center hidden-sm hidden-xs">
+        <p class="text-muted" style="font-size:14px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
+      </div>
+
+      <div class="col-md-6 text-center visible-sm visible-xs">
         <p class="text-muted" style="font-size:11px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
       </div>
+
+
       <div class="col-md-3 text-center">
         @if (Auth::guest())
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
@@ -170,10 +177,6 @@
 
 
 </style>
-
-
-
-
 
 
 
@@ -357,9 +360,15 @@
 
 
 <script>
+
+
   $(document).ready(function () {
     $('#content-home1').show();
-    $(document).on('click', '.btn-home', (el) => {
+
+
+  //  $(document).on('click', '.btn-home', (el) => {
+    $('.btn-home').on('scroll', function() {
+
       const dataTarget = $(el.currentTarget).data('target');
       console.log('dataTarget', dataTarget);
 
@@ -388,5 +397,9 @@
 
 
   });
+
+
+
+
 </script>
 @stop('scripts')

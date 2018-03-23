@@ -23,10 +23,21 @@
 
     <!-- Custom styles for this template -->
     <link href="{{url('front/css/creative.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <style>
+
     body,
     html {
       font-size: 0.8rem;
+      font-family: 'Kanit', sans-serif;
+    }
+    #mainNav .navbar-brand ,h1,h2,h3,h4,h5,h6{
+      font-family: "Kanit" !important;
+      font-weight: 400;
+    }
+    .nav-link {
+      font-family: "Kanit";
+      font-weight: 400;
     }
     .navbar-light .navbar-toggler {
     color: rgb(8, 176, 237);
@@ -962,6 +973,37 @@ a:hover{
   width: 210px;
   height: 210px;
   font-size: 15px
+}
+.btn-asa{
+
+    border: 1px solid #08B0ED;
+    border-radius: 24px;
+    padding: 12px 34px;
+    font-weight: 400;
+    color: #08B0ED;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);
+}
+.navbar{
+  padding: 1.2rem 1rem;
+}
+
+.a-head {
+  color: #08b0ed !important
+
+}
+
+  .a-head::after {
+    color: #08b0ed;
+ display: block;
+   content: '';
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 3px solid #08b0ed;
+padding-bottom: 5px;
 }
 
     </style>

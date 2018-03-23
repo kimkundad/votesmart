@@ -4,7 +4,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand " href="#page-top" style="font-size: 1.5rem;">เลือกได้...เลือกดี</a>
+    <a class="navbar-brand " href="#page-top" style="font-size: 1.8rem; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
       <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; ">
@@ -123,7 +123,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="{{url('/')}}">เลือกอะไรได้?</a>
+          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }}  js-scroll-trigger hidden-sm hidden-xs" style="font-size: 16px; padding: 14px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
 
           <a href="{{url('/')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
@@ -135,7 +135,7 @@
         </li>
         <li class="nav-item">
 
-          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" href="{{url('/')}}">เลือกใครดี?</a>
+          <a class="nav-link js-scroll-trigger hidden-sm hidden-xs" style="font-size: 16px; padding: 14px 25px 10px; " href="{{url('/')}}">เลือกใครดี?</a>
 
           <a href="{{url('/')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
@@ -145,6 +145,15 @@
           </a>
 
         </li>
+
+        <li class="nav-item hidden-sm hidden-xs">
+
+
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#result" style="background-color: #ffffff; margin-top: 5px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+
+        </li>
+
+
         <li class="nav-item">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
 
