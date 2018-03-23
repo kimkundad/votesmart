@@ -31,11 +31,11 @@
 
                         @if(Auth::user()->provider == 'email')
 
-                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle">
+                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px; border-radius: 50%;" class="img-circle">
                         {{ Auth::user()->name }}
                         @else
 
-                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px;" class="img-circle">
+                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px; border-radius: 50%;" class="img-circle">
                         {{ Auth::user()->name }}
                         @endif
 
@@ -198,7 +198,7 @@
                       ประเทศไทยควรเดินไปทางไหน<br> อะไรที่เราควรให้ความสำคัญ?</p>
                     </div>
                   </div>
-                  <div class="panel-fa panel-fa-right" style="color: #08c1f4; font-size: 65px;">
+                  <div class="panel-fa panel-fa-right" style="color: #08c1f4; font-size: 65px; width: 80px;">
                     <div class="btn-click btn-home" data-target="2">
                       <i class="fa fa-angle-right"></i>
                     </div>
@@ -224,7 +224,7 @@
               <!-- First Container -->
               <div class="welcome-section text-center">
                 <div id="front-page" class="front-content">
-                  <div class="panel-fa panel-fa-left">
+                  <div class="panel-fa panel-fa-left" style="color: #08c1f4; font-size: 65px; width: 80px;">
                     <div class="btn-click btn-home" data-target="1">
                       <i class="fa fa-angle-left" ></i>
                     </div>
@@ -364,7 +364,7 @@
 
   $(document).ready(function () {
     $('#content-home1').show();
-  
+
 
     $(document).on('click', '.btn-home', (el) => {
   //  $('.content_leena').on('scroll', function() {
