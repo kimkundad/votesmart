@@ -27,7 +27,7 @@
                     <br><br>
                     <h3 class="text-center">อาสา</h3>
                     <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
-                    <hr class="my-4">
+                    <hr class="my-4" style="margin: 0 auto;">
                     <p class="p-pop">หากคุณเป็นคนๆนึงที่อยากเห็นความเปลี่ยนแปลง <br>
                     ไม่ว่าคุณจะอายุเท่าไหร่ เพศไหน<br>
                     หรือมีความถนัดอะไร<br>
@@ -147,7 +147,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#result" style="background-color: #ffffff; margin-top: 5px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal" style="background-color: #ffffff; margin-top: 5px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
 
 
@@ -163,7 +163,7 @@
 
               <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
               <br>
-              <a class="btn btn-light js-scroll-trigger" href="#services" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
             </div>
         </li>
 
