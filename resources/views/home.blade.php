@@ -6,7 +6,7 @@
 
 
 
-<section class="bg-whites " id="about" style="padding: 105px 0 8px 0;">
+<section class="bg-whites " id="about" style="padding: 125px 0 8px 0;">
   <div class="container">
     <div class="row">
       <div class="col-md-3 text-center">
@@ -29,21 +29,7 @@
         @if (Auth::guest())
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/redirect')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
         @else
-        <a href="" style="color: #f05f40; font-weight: 700; font-size: 12px;">
-
-                        @if(Auth::user()->provider == 'email')
-
-                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px; border-radius: 50%;" class="img-circle">
-                        {{ Auth::user()->name }}
-                        @else
-
-                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="height:32px; vertical-align: middle; margin-right:7px; border-radius: 50%;" class="img-circle">
-                        {{ Auth::user()->name }}
-                        @endif
-
-
-
-        </a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{url('/quiz_choices')}}" style="padding: 0.9rem 2rem;font-weight: 500;"><i class="fa fa-facebook-official"></i> เลือกเรื่องสำคัญของคุณ</a>
         @endif
 
         <br>
