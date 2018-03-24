@@ -16,6 +16,7 @@
   $(".color").click(function(){
     var color = $(this).attr("data-value");
     $("#canvas").css("background-color", color);
+    $("#canvas2").css("background-color", color);
   });
 
   //add color picker if supported
@@ -26,6 +27,7 @@
       //d.innerHTML = c.value;
       var color = c.value;
       $("#canvas").css("background-color", color);
+      $("#canvas2").css("background-color", color);
     }, false);
   //}
 });
@@ -753,20 +755,45 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
                     @if($result)
                        @foreach($result as $u)
 
-
-
                        @if($u->options != null)
                        #{{$u->options->result_name}}<br>
                        @endif
-
-
-
 
                        @endforeach
                     @endif
 
                    </h2>
 
+          </div>
+
+        </div>
+
+
+
+        <div id="canvas2" class="canvass2" style="width: 526px; height: 296px; margin: 0px auto; display: none; background-color: #08B0ED;">
+
+          <div style="width: 510px;  ">
+
+                  <h2 class="avatar-heading text-left"  style=" z-index: 1; position: absolute; padding-left: 10px; padding-right: 10px; width: 520px; text-align: left; font-size: 18px;">
+
+                    @if($result)
+                       @foreach($result as $u)
+
+                       @if($u->options != null)
+                       #{{$u->options->result_name}}<br>
+                       @endif
+
+                       @endforeach
+                    @endif
+
+                   </h2>
+
+          </div>
+
+
+          <div style="position: absolute;bottom: 1px;width: 526px;">
+          <img src="{{url('assets/image/cross-icon.png')}}" style="position: absolute; float: left; width: 90px; left: 0px; height: 90px; bottom: 0px;"/>
+          <img src="{{url('assets/image/avatar/'.$user->url_image)}}" style=" text-align: right;   width: 200px;  height: 200px; float: right;"/>
           </div>
 
         </div>
@@ -823,7 +850,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 
-        html2canvas($('#canvas'),{allowTaint : true,
+        html2canvas($('#canvas2'),{allowTaint : true,
                               onrendered: function (canvas) {
                                      var imgString = canvas.toDataURL("image/png");
                                      console.log(imgString);
@@ -947,7 +974,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 
-                      html2canvas($('#canvas'),{allowTaint : true,
+                      html2canvas($('#canvas'),{ allowTaint : true,
                                             onrendered: function (canvas) {
                                                    var imgString = canvas.toDataURL("image/png");
                                                    console.log(imgString);

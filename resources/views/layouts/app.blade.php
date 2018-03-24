@@ -989,7 +989,7 @@ a:hover{
     text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);
 }
 .navbar{
-  padding: 1.2rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .a-head {

@@ -5,7 +5,9 @@
 
 
 
-<section class="bg-whites " id="about" style="padding: 125px 0 20px 0;">
+<section class="bg-whites " id="about" style="padding: 90px 0 20px 0;">
+
+
   <div class="container">
     <div class="row quiz-choices ">
 
@@ -17,7 +19,7 @@
         <br>
       </div>
       <div class="col-md-8 visible-sm visible-xs">
-        <p class="text-muted">ทุกประเด็นก็ดูจะเป็นเรื่องที่สำคัญเหมือนกัน แต่อันไหนกันล่ะที่คุณจะเลือกทำก่อน? </p>
+        <p class="text-muted" style="font-size: 13px;">ทุกประเด็นก็ดูจะเป็นเรื่องที่สำคัญเหมือนกัน แต่อันไหนกันล่ะที่คุณจะเลือกทำก่อน? </p>
       </div>
 
 
