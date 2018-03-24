@@ -18,9 +18,9 @@
   <div id="fb-root"></div>
   <script>
 
-  /*setTimeout(function(){
+  setTimeout(function(){
     window.location = "{{url('/')}}";
-  }, 500);*/
+  }, 500);
 
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
