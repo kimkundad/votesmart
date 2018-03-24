@@ -767,7 +767,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
           </div>
 
         </div>
-
+<br><br>
 
 
         <div id="canvas2" class="canvass2" style="width: 526px; height: 296px; margin: 0px auto;  background-color: #08B0ED;">
