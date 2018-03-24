@@ -405,13 +405,23 @@ class HomeController extends Controller
 
       foreach ($cat as $obj) {
 
-        $ran=array(1, 2, 3, 4, 5);
-        $randomElement = $ran[array_rand($ran, 1)];
-        $obj->options = $randomElement;
+      //  $ran=array(1, 2, 3, 4, 5);
+      //  $randomElement = $ran[array_rand($ran, 1)];
+      //  $obj->options = $randomElement;
+        $obj->length = strlen($obj->name_quiz);
+        if($obj->length >= 170){
+          $obj->options = 4;
+        }else if($obj->length >= 150){
+          $obj->options = 3;
+        }else if($obj->length >= 120){
+          $obj->options = 2;
+        }else{
+          $obj->options = 1;
+        }
 
       }
     //  dd($randomElement);
-
+    //  dd($cat);
               $data['objs'] = $cat;
               $data['datahead'] = "จัดการ Quiz";
 

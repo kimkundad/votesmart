@@ -8,13 +8,27 @@
 <section class="bg-whites " id="about" style="padding: 125px 0 20px 0;">
   <div class="container">
     <div class="row quiz-choices ">
-      <div class="col-md-8 ">
+
+
+
+      <div class="col-md-8 visible-sm visible-xs">
         <h3 class="margin">เลือก 10 ประเด็นที่สำคัญ
         สำหรับประเทศไทย</h3>
         <br>
       </div>
-      <div class="col-md-8 ">
+      <div class="col-md-8 visible-sm visible-xs">
         <p class="text-muted">ทุกประเด็นก็ดูจะเป็นเรื่องที่สำคัญเหมือนกัน แต่อันไหนกันล่ะที่คุณจะเลือกทำก่อน? </p>
+      </div>
+
+
+
+      <div class="col-md-8 hidden-sm hidden-xs">
+        <h3 class="margin" style="font-size:28px;">เลือก 10 ประเด็นที่สำคัญ
+        สำหรับประเทศไทย</h3>
+        <br>
+      </div>
+      <div class="col-md-8 hidden-sm hidden-xs">
+        <h4 style="color: #087bbe;">ทุกประเด็นก็ดูจะเป็นเรื่องที่สำคัญเหมือนกัน แต่อันไหนกันล่ะที่คุณจะเลือกทำก่อน? </h4>
       </div>
 
 
@@ -48,7 +62,7 @@ input:checked{
 
         @if($objs)
            @foreach($objs as $u)
-        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');">{{$u->name_quiz}}
+        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="padding: 5px;">{{$u->name_quiz}}
         <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
         </div>
         @endforeach
