@@ -9,6 +9,7 @@ use App\User;
 use App\votesmart;
 use App\voteresult;
 use App\Http\Requests;
+use File;
 use Illuminate\Support\Facades\DB;
 use Storage;
 
@@ -248,15 +249,33 @@ class HomeController extends Controller
 
 
     public function save_image(Request $request){
+
+
       $image = $request['image'];
 
       $fid=Auth::user()->id;
 
       $fb_url  = $image;
 
+
+
     //  dd($fb_url);
 
       $image_file = $fid.'.jpg';
+
+      $user = DB::table('users')->select(
+            'users.*'
+            )
+        ->where('users.id', Auth::user()->id)
+        ->first();
+
+      if($user->image_shared != null){
+
+        $destinationPath = '/assets/image/shared/'.$user->image_shared;
+        File::delete($destinationPath);
+
+      }
+
 
     //  $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/shared/'.$image_file;
