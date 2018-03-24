@@ -6,7 +6,7 @@
   <?php
     $time_fb = time();
    ?>
-  <meta property="og:url"           content="http://devzab.com/shared_quiz/{{$user->id}}?v={{$time_fb}}" />
+  <meta property="og:url"           content="http://devzab.com/shared_quiz/{{$user->id}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="ถ้าต้องบริหารประเทศไทย" />
   <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
