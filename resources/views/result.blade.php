@@ -176,7 +176,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 h2.avatar-heading {
     color: #fff;
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 100;
     line-height: 25px;
     text-align: left;
@@ -820,7 +820,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
     document.getElementById('shared').addEventListener('click', function() {
         //  var username = $('form#cutproduct input[name=id]').val();
 
-      
+
 
 
         html2canvas($('#canvas'),{
