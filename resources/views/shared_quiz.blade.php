@@ -14,19 +14,28 @@
   <meta property="og:image:height" content="314" />
   <meta property="fb:app_id" content="148045139197033">
   <meta property="fb:admins" content="100002037238809">
-  <meta property="og:image"         content="https://www.sirispace.com/assets/blog/1519354828.jpg" />
+  <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
 </head>
 <body>
 
   <!-- Load Facebook SDK for JavaScript -->
 
+  <div class="col-md-8">
+               <h3>ถ้าต้องบริหารประเทศไทย</h3>
+               <p>{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ</p>
+               <hr>
+               <img src="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" class="img-responsive">
 
+
+
+
+             </div>
 
 <div id="fb-root"></div>
 <script>
 setTimeout(function(){
   window.location = "{{url('/')}}";
-}, 100900);
+}, 100);
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
