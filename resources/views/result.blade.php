@@ -741,29 +741,34 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
         </div>
         <input id="colorpicker" type="color" />
 
+
         <div id="canvas" class="canvass">
+
           <img src="{{url('assets/image/cross-icon.png')}}" style="float:left; width:90px; height:90px; left: 10px;top: 10px;"/>
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
-             <h2 class="avatar-heading text-left">
 
-               @if($result)
-                  @foreach($result as $u)
+                  <h2 class="avatar-heading text-left"  style="text-align: left">
 
-
-
-                  @if($u->options != null)
-                  #{{$u->options->result_name}}<br>
-                  @endif
+                    @if($result)
+                       @foreach($result as $u)
 
 
 
+                       @if($u->options != null)
+                       #{{$u->options->result_name}}<br>
+                       @endif
 
-                  @endforeach
-               @endif
 
-              </h2>
+
+
+                       @endforeach
+                    @endif
+
+                   </h2>
+
           </div>
+
         </div>
 
 
@@ -802,6 +807,9 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 @section('scripts')
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 <script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
 
 
@@ -812,7 +820,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
     document.getElementById('shared').addEventListener('click', function() {
         //  var username = $('form#cutproduct input[name=id]').val();
 
-        html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
+      
+
+
+        html2canvas($('#canvas'),{
                               onrendered: function (canvas) {
                                      var imgString = canvas.toDataURL("image/png");
                                      console.log(imgString);
@@ -882,12 +893,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 <script type="text/javascript">
-$(".save-result").click(function(){
 
-  var canvas = document.getElementById("mycanvas");
-  var img    = canvas.toDataURL("image/png");
-  document.write('<img src="'+img+'"/>');
-});
 //document.getElementById("doughnutChart").style.height = '200px';
 
 
@@ -939,6 +945,8 @@ $(".save-result").click(function(){
                     document.getElementById('colormycanvas').addEventListener('click', function() {
 
 
+
+
                       html2canvas($('#canvas'),{letterRendering: 1, allowTaint : true,
                                             onrendered: function (canvas) {
                                                    var imgString = canvas.toDataURL("image/png");
@@ -950,7 +958,9 @@ $(".save-result").click(function(){
                                                    document.body.appendChild(a);
                                                    a.click();
                                                    document.body.removeChild(a);
-                                        }});
+                                        }
+
+                                      });
 
 }, false);
 
