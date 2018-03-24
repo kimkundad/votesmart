@@ -10,6 +10,8 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="ถ้าต้องบริหารประเทศไทย" />
   <meta property="og:description"   content="{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="314" />
   <meta property="fb:app_id" content="148045139197033">
   <meta property="fb:admins" content="100002037238809">
   <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
