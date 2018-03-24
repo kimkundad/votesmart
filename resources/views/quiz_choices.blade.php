@@ -5,7 +5,7 @@
 
 
 
-<section class="bg-whites " id="about" style="padding: 65px 0 8px 0;">
+<section class="bg-whites " id="about" style="padding: 125px 0 20px 0;">
   <div class="container">
     <div class="row quiz-choices ">
       <div class="col-md-8 ">
@@ -20,14 +20,7 @@
 
 
       <div class="col-md-4 text-center hidden-sm hidden-xs">
-        <a class="btn btn-light btn-xl js-scroll-trigger" style="margin-top:-12px; background: #e5eff3; color: #0479bd;"><input type="text" id="number" value="0" style="
-    background-color: #e5eff3;
-    border:  none;
-    width: 26px;
-    font-weight: 700;
-    color: #0479bd;
-    padding-left: 10px;
-">/10</a>
+        <a class="btn btn-light btn-xl js-scroll-trigger" style="margin-top:-18px; background: #e5eff3; color: #0479bd;"><input type="text" id="number" value="0" style="background-color: #e5eff3;  border:  none; width: 26px; font-weight: 700; color: #0479bd; padding-left: 10px;">/10</a>
         <br>
       </div>
 
@@ -65,14 +58,7 @@ input:checked{
 
 
       <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
-      <a class="scroll-to-top visible-sm visible-xs" href="#"> <input type="text" id="number1" value="0" style="
-  background-color: #ffffff;
-  border:  none;
-  width: 23px;
-  font-weight: 700;
-  color: #0479bd;
-  padding-left: 10px;
-">/10 </a>
+      <a class="scroll-to-top visible-sm visible-xs" href="#"> <input type="text" id="number1" value="0" style="background-color: #ffffff; border:  none; width: 23px; font-weight: 700; color: #0479bd; padding-left: 10px; ">/10 </a>
 
 
 

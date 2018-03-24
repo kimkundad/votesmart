@@ -637,7 +637,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 
-<section id="services" style="padding: 6rem 0;">
+<section id="services" style="padding: 125px 0 50px 0;">
   <div class="candidate-details container">
                                 <div class="row">
 
