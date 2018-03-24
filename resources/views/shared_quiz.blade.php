@@ -9,6 +9,7 @@
   <meta property="og:description"   content="{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
   <meta property="og:image:width" content="500" />
   <meta property="og:image:height" content="330" />
+  <meta property="fb:admins" content="100002037238809">
   <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{time()}}" />
 </head>
 <body>
