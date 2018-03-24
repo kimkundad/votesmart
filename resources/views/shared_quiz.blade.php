@@ -7,7 +7,7 @@
     $time_fb = time();
    ?>
   <meta property="og:url"           content="http://devzab.com/shared_quiz/{{$user->id}}?v={{$time_fb}}" />
-  <meta property="og:type"          content="website" />
+  <meta property="og:type"          content="article" />
   <meta property="og:title"         content="ถ้าต้องบริหารประเทศไทย" />
   <meta property="og:description"   content="{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
   <meta property="og:image:width" content="500" />
