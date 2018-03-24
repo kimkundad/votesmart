@@ -15,8 +15,6 @@
 
     <!-- Custom fonts for this template -->
     <link href="{{url('front/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="{{url('front/vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
@@ -26,6 +24,18 @@
     <link href="{{url('front/css/css/style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <style>
+
+.quiz-title {
+font-size:24px;
+}
+
+.education ul li {
+font-size:14px !important;
+}
+
+.user-name p {
+font-size:18px !important;
+}
 
     body,
     html {
@@ -326,7 +336,7 @@ input[type="radio"]:disabled + .label-text:before{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.95);
   }
   .welcome-section {
       height: 100%;
