@@ -770,7 +770,37 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 <br><br>
 
 
-        <div id="canvas2" class="canvass2" style="width: 526px; height: 296px; margin: 0px auto;  background-color: #08B0ED;">
+
+
+
+
+      </div>
+     </div>
+
+  </div>
+
+  <div class="container  text-center" style="margin-top: 40px;">
+
+        <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" ><i class="fa fa-download"></i> เซฟรูปนี้
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+        <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+
+       </div>
+</section>
+
+<section id="contact">
+  <div class="container candidate-link">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center" style="height: 280px; overflow: hidden;">
+        <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ<br/>
+แต่เรื่องสำคัญที่คุณเลือก</br>
+จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
+        <a class="btn btn-light btn-xl js-scroll-trigger" href="#result">จะเลือกใครดี <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+
+
+        <div id="canvas2" class="canvass2" style="width: 526px; height: 296px; position: relative; margin: 0px auto;  background-color: #08B0ED; bottom:-500px">
 
           <div style="width: 510px;  ">
 
@@ -800,29 +830,6 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 
-      </div>
-     </div>
-
-  </div>
-
-  <div class="container  text-center" style="margin-top: 40px;">
-
-        <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;" ><i class="fa fa-download"></i> เซฟรูปนี้
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-
-        <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px;" href="#"><i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
-
-       </div>
-</section>
-
-<section id="contact">
-  <div class="container candidate-link">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ<br/>
-แต่เรื่องสำคัญที่คุณเลือก</br>
-จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
-        <a class="btn btn-light btn-xl js-scroll-trigger" href="#result">จะเลือกใครดี <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>
