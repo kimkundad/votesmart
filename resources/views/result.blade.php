@@ -774,7 +774,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
           <div style="width: 510px;  ">
 
-                  <h2 class="avatar-heading text-left"  style=" z-index: 1; position: absolute; padding-left: 10px; padding-right: 10px; width: 520px; text-align: left; font-size: 18px;">
+                  <h2 class="avatar-heading text-left"  style=" z-index: 1; position: absolute; padding-left: 10px; padding-top: 12px; width: 520px; text-align: left; font-size: 18px;">
 
                     @if($result)
                        @foreach($result as $u)
