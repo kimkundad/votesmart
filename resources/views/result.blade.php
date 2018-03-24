@@ -566,7 +566,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
     #canvas {
       max-width: 90%;
       width: 500px;
-      height: 350px;
+      height: 450px;
       background-color: #08B0ED;
           margin: 0px auto;
 
@@ -576,8 +576,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
       position: relative;
       text-align: right;
 
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
     }
 
     #canvas > div {
@@ -585,14 +585,14 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
           position: absolute;
           padding-right: 10px;
           padding-left: 10px;
-      top: 250px;
+      top: 320px;
       left: 140px;
     }
 
     h2.avatar-heading {
        color: #fff;
       font-family: 'Kanit', sans-serif;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 500;
       line-height: 32px;
       text-align: left;
