@@ -410,7 +410,7 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 320px) {
   .img-in-chart {
-    margin-top: -18px;
+    margin-top: -30px;
     width: 80px;
     height: 80px;
   }
