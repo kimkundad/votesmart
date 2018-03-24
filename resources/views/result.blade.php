@@ -579,7 +579,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
     }
 
     #canvas > div {
-      width: 450px;
+      width: 480px;
           position: absolute;
           padding-right: 10px;
           padding-left: 10px;
