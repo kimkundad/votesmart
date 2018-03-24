@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="314" />
   <meta property="fb:app_id" content="148045139197033">
   <meta property="fb:admins" content="100002037238809">
-  <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
+  <meta property="og:image"         content="https://www.sirispace.com/assets/blog/1519354828.jpg" />
 </head>
 <body>
 
