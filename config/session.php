@@ -30,7 +30,7 @@ return [
     */
 
     'lifetime' => 1 * (60 * 24 * 365),
-    'expired-session-redirect' => url('/'),
+    //'expired-session-redirect' => url('/'),
 
     'expire_on_close' => false,
 

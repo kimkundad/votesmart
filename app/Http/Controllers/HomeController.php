@@ -171,10 +171,9 @@ class HomeController extends Controller
         )
     ->leftjoin('facebook_login', 'facebook_login.user_id',  'users.id')
     ->where('users.id', Auth::user()->id)
-    ->where('users.vote_status', 1)
     ->first();
 
-
+  //  dd(Auth::user()->id);
 
 
 

@@ -21,13 +21,14 @@ class CreateUsersTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('email')->unique();
             $table->string('password')->unique();
-            $table->boolean('is_admin');
-            $table->string('provider');
-            $table->string('avatar');
+            $table->boolean('is_admin')->nullable();
+            $table->string('provider')->nullable();
+            $table->string('avatar')->nullable();
             $table->string('phone')->nullable();
             $table->text('bio')->nullable();
             $table->integer('user_lock')->default('0');
             $table->integer('vote_status')->default('0');
+            $table->string('url_image')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

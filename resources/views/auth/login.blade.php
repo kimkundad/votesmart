@@ -37,8 +37,8 @@
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                    <span class="help-block text-danger">
+                                        <strong style="padding-left: 10px;">*อีเมลของคุณไม่ถูกต้อง</strong>
                                     </span>
                                 @endif
                                     <span class="input-group-addon">
@@ -74,16 +74,24 @@
                                     <div class="checkbox-custom ">
                                         <input  name="rememberme" id="remember" value=""  type="checkbox">
 
-                                        <label for="RememberMe">Remember Me</label>
+                                        <label for="RememberMe">จดจำฉันไว้ในระบบ</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 text-right">
 
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                                    <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
                                 </div>
                             </div>
 
+                            <span class="mt-lg mb-lg line-thru text-center text-uppercase">
+              									<span>หรือ</span>
+              							</span>
 
+
+                            <div class="mb-xs text-center">
+                								<a class="btn btn-facebook mb-md ml-xs mr-xs" href="{{url('register')}}">สร้างบัญชีผู้ใช้งาน</a>
+
+                							</div>
 
                         </form>
                     </div>
