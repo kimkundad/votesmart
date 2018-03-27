@@ -210,7 +210,7 @@ class HomeController extends Controller
 
     //  dd($result);
 
-      $save = fopen($img_save_location); //this is name of new file that i save
+      $save = fopen($img_save_location, "w"); //this is name of new file that i save
       fwrite($save, $result);
       fclose($save);
 
