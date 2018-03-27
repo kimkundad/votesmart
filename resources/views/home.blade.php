@@ -61,7 +61,7 @@
 
             @else
 
-            <img class="img-in-chart" src="http://{{$j->avatar}}">
+            <img class="img-in-chart" src="//{{$j->avatar}}">
 
             @endif
 
