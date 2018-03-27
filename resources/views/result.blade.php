@@ -747,8 +747,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
         <div id="canvas" class="canvass">
 
           <img src="{{url('assets/image/cross-icon.png')}}" style="float:left; width:90px; height:90px; left: 10px;top: 10px;"/>
-          <iframe src="//graph.facebook.com/1556099071134652/picture?width=300&height=300" width="300" height="300"></iframe>
-        <!--  <img src="{{url('assets/image/avatar/'.$user->url_image)}}" /> -->
+          <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
 
                   <h2 class="avatar-heading text-left"  style="text-align: left">
