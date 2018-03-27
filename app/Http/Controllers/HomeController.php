@@ -190,7 +190,8 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height&redirect=false";
+      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
+
 
       $image_file = $fid.'.jpg';
 
@@ -199,8 +200,8 @@ class HomeController extends Controller
 
 
       /*Use file_put_contents to get and save image*/
-      file_put_contents($img_save_location, file_get_contents($fb_url));
-
+      //file_put_contents($img_save_location, file_get_contents($fb_url));
+      copy($fb_url,$img_save_location);
 
       $package = User::find(Auth::user()->id);
       $package->vote_status = 1;
