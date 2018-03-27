@@ -199,22 +199,6 @@ class HomeController extends Controller
       /*Path to the location to save the image on your server*/
 
 
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_POST, 0);
-      curl_setopt($ch, CURLOPT_URL, $fb_url);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      # ADDED LINE:
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-      $result = curl_exec($ch);
-      curl_close($ch);
-
-      echo $result;
-
-      $save = fopen($img_save_location, "w"); //this is name of new file that i save
-      fwrite($save, $result);
-      fclose($save);
-
-
       /*Use file_put_contents to get and save image*/
       //file_put_contents($img_save_location, file_get_contents($fb_url));
     //  copy($fb_url,$img_save_location);
@@ -258,7 +242,7 @@ class HomeController extends Controller
 
 
 
-  //return redirect(url('/result'));
+  return redirect(url('/result'));
     }
 
 
