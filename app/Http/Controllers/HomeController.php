@@ -199,7 +199,7 @@ class HomeController extends Controller
 
 
       /*Use file_put_contents to get and save image*/
-      file_put_contents($img_save_location, file_get_contents($fb_url));
+      file_put_contents($img_save_location, file_get_contents('https://graph.facebook.com/1556099071134652'));
 
 
       $package = User::find(Auth::user()->id);
