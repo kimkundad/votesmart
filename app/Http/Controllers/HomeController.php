@@ -192,7 +192,7 @@ class HomeController extends Controller
       /*This is the actual url of the Facebook users image*/
       $fb_url  = "https://graph.facebook.com/1556099071134652/picture?width=500&height=500";
 
-      $image_file = $fid.'.jpg';
+      $image_file = $fid.'++++++.jpg';
 
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
       /*Path to the location to save the image on your server*/
