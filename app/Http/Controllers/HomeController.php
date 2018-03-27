@@ -190,7 +190,7 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
+      $fb_url  = "http://graph.facebook.com/1556099071134652/picture?width=500&height=500";
 
       $image_file = $fid.'.jpg';
 
