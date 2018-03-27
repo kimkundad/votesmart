@@ -208,7 +208,7 @@ class HomeController extends Controller
       $result = curl_exec($ch);
       curl_close($ch);
 
-    //  dd($result);
+      echo $result;
 
       $save = fopen($img_save_location, "w"); //this is name of new file that i save
       fwrite($save, $result);
@@ -258,7 +258,7 @@ class HomeController extends Controller
 
 
 
-  return redirect(url('/result'));
+  //return redirect(url('/result'));
     }
 
 
