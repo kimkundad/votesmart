@@ -197,7 +197,7 @@ class HomeController extends Controller
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
       /*Path to the location to save the image on your server*/
 
-      dd($img_save_location);
+      //dd($img_save_location);
       /*Use file_put_contents to get and save image*/
       file_put_contents($img_save_location, file_get_contents($fb_url));
 
