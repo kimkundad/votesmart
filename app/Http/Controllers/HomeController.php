@@ -199,9 +199,21 @@ class HomeController extends Controller
       /*Path to the location to save the image on your server*/
 
 
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_POST, 0);
+      curl_setopt($ch, CURLOPT_URL, $fb_url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      # ADDED LINE:
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+      $result = curl_exec($ch);
+      curl_close($ch);
+
+      dd($result);
+
+
       /*Use file_put_contents to get and save image*/
       //file_put_contents($img_save_location, file_get_contents($fb_url));
-      copy($fb_url,$img_save_location);
+    //  copy($fb_url,$img_save_location);
 
       $package = User::find(Auth::user()->id);
       $package->vote_status = 1;
