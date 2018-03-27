@@ -208,7 +208,11 @@ class HomeController extends Controller
       $result = curl_exec($ch);
       curl_close($ch);
 
-      dd($result);
+    //  dd($result);
+
+      $save = fopen($img_save_location); //this is name of new file that i save
+      fwrite($save, $result);
+      fclose($save);
 
 
       /*Use file_put_contents to get and save image*/
