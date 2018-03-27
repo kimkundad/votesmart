@@ -190,14 +190,14 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "https://graph.facebook.com/1556099071134652/picture?width=500&height=500";
+      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
 
-      $image_file = $fid.'++++++.jpg';
+      $image_file = $fid.'.jpg';
 
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
       /*Path to the location to save the image on your server*/
 
-      //dd($img_save_location);
+
       /*Use file_put_contents to get and save image*/
       file_put_contents($img_save_location, file_get_contents($fb_url));
 
