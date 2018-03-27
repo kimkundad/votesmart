@@ -976,7 +976,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
                       html2canvas($('#canvas'),{ allowTaint : true,
                                             onrendered: function (canvas) {
+                                                   var context=canvas.getContext("2d");
                                                    var imgString = canvas.toDataURL("image/png");
+                                                   img.src= "//graph.facebook.com/1556099071134652/picture?width=300&height=300"; // specifies the location of the image
+                                                   context.drawImage(img,0,50);
                                                    console.log(imgString);
 
                                                    var a = document.createElement('a');
