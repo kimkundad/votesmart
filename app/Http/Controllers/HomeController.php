@@ -246,6 +246,21 @@ class HomeController extends Controller
     }
 
 
+    public function get_avatar(){
+
+      $user = DB::table('users')->select(
+            'users.*',
+            'facebook_login.*'
+            )
+        ->leftjoin('facebook_login', 'facebook_login.user_id',  'users.id')
+        ->where('users.id', Auth::user()->id)
+        ->first();
+
+        $data['objs'] = $user;
+        return view('getavatar', $data);
+
+    }
+
 
 
     public function save_image(Request $request){
