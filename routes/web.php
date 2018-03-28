@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('result', 'HomeController@result');
 
   Route::post('save_image', 'HomeController@save_image');
-
+  Route::get('get_avatar', 'HomeController@get_avatar');
   });
 
 
@@ -47,5 +47,5 @@ Route::group(['middleware' => 'admin'], function() {
   Route::post('api/quiz_status', 'QuizController@quiz_status');
   Route::resource('admin/result', 'ResultController');
   Route::resource('admin/votesmart', 'VoteresultController');
-  Route::get('get_avatar', 'HomeController@get_avatar');
+
 });
