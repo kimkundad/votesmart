@@ -338,12 +338,17 @@ class HomeController extends Controller
     public function result()
     {
 
+
+
+
       $objs = DB::table('users')
         ->where('id', Auth::user()->id)
         ->where('vote_status', 1)
         ->first();
 
-        dd($objs);
+        if($objs == null){
+            return redirect(url('quiz_choices'));
+        }
       //  $optionsRes = [];
 
           $labels = DB::table('voteresults')->select(
