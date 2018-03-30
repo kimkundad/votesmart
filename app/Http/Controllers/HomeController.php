@@ -343,7 +343,7 @@ class HomeController extends Controller
         ->where('vote_status', 1)
         ->first();
 
-
+        dd($objs);
       //  $optionsRes = [];
 
           $labels = DB::table('voteresults')->select(
