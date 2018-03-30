@@ -46,7 +46,7 @@ class SocialAccountService
                           $user
                              ->roles()
                              ->attach(Role::where('name', 'employee')->first());
-                          return $user;
+
           		}else{
 
                       		$user = User::create([
@@ -59,7 +59,7 @@ class SocialAccountService
                           $user
                              ->roles()
                              ->attach(Role::where('name', 'employee')->first());
-                          return $user;
+
 
           }
 
