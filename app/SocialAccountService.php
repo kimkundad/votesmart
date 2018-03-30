@@ -3,6 +3,7 @@
 namespace App;
 use App\SocialFacebookAccount;
 use App\User;
+use App\Role;
 
 use Laravel\Socialite\Contracts\User as ProviderUser;
 
@@ -42,6 +43,10 @@ class SocialAccountService
                               'provider' => 'facebook',
                               'is_admin' => 0
                           ]);
+                          $user
+                             ->roles()
+                             ->attach(Role::where('name', 'employee')->first());
+                          return $user;
           		}else{
 
                       		$user = User::create([
@@ -51,6 +56,10 @@ class SocialAccountService
                               'provider' => 'facebook',
                               'is_admin' => 0
                           ]);
+                          $user
+                             ->roles()
+                             ->attach(Role::where('name', 'employee')->first());
+                          return $user;
 
           }
 

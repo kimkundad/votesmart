@@ -41,6 +41,12 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 											<span>รายชื่อสมาชิก</span>
 										</a>
 									</li>
+                  <li {{ (Request::is('admin/representatives*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('admin/representatives/')}}"  >
+											<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+											<span>สภาผู้แทนราษฎร</span>
+										</a>
+									</li>
 
                   <li {{ (Request::is('admin/category*') ? 'class=nav-expanded' : '') }} >
 										<a href="{{url('admin/category/')}}"  >

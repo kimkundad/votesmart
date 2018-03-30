@@ -42,6 +42,7 @@ Route::group(['middleware' => 'admin'], function() {
 
   Route::resource('admin/dashboard', 'DashboardController');
   Route::resource('admin/user', 'StudentController');
+  Route::resource('admin/representatives', 'representatives');
   Route::resource('admin/category', 'CategoryController');
   Route::resource('admin/quiz', 'QuizController');
   Route::post('api/quiz_status', 'QuizController@quiz_status');

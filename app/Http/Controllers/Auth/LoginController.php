@@ -26,8 +26,12 @@ class LoginController extends Controller
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
-        if ($request->user()->is_admin == 1) {
+        if ($request->user()->is_admin == 1 && $request->user()->user_lock == 0) {
           return redirect('admin/dashboard');
+        }else if($request->user()->is_admin == 0 && $request->user()->user_lock == 1){
+          return redirect('representatives/dashboard');
+        }else{
+          return redirect('/');
         }
         return $this->authenticated($request, $this->guard()->user())
                 ?: redirect()->intended($this->redirectPath());
@@ -39,6 +43,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
+
 
     /**
      * Create a new controller instance.

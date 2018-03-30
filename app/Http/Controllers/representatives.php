@@ -9,7 +9,7 @@ use App\Http\Requests;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 
-class StudentController extends Controller
+class representatives extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,13 +22,12 @@ class StudentController extends Controller
         ->select(
         'users.*'
         )
-        ->where('user_lock', 0)
-        ->where('is_admin', 0)
+        ->where('user_lock', '!=', 0)
         ->get();
 
       $data['objs'] = $objs;
       $data['datahead'] = "รายชื่อสมาชิก";
-      return view('admin.user.index', $data);
+      return view('admin.representatives.index', $data);
     }
 
     /**

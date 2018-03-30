@@ -66,6 +66,8 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
+      $this->redirectTo = '/representatives/dashboard';
+
       $ran = array("1483537975.png","1483556517.png","1483556686.png");
       $user = User::create([
         'name' => $data['name'],
@@ -74,11 +76,12 @@ class RegisterController extends Controller
         'is_admin' => false,
         'provider' => 'email',
         'avatar' => $ran[array_rand($ran, 1)],
-        'user_lock' => 1
+        'phone' => $data['phone'],
+        'user_lock' => 1,
       ]);
       $user
          ->roles()
-         ->attach(Role::where('name', 'employee')->first());
+         ->attach(Role::where('name', 'manager')->first());
       return $user;
     }
 }
