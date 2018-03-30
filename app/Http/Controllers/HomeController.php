@@ -173,7 +173,7 @@ class HomeController extends Controller
     ->where('users.id', Auth::user()->id)
     ->first();
 
-  //  dd(Auth::user()->id);
+    dd($user->provider);
 
 
 
@@ -190,12 +190,12 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "http://graph.facebook.com/$fid/picture?width=$width&height=$height";
+      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height";
 
       $image_file = $fid.'.jpg';
 
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
-      
+
       /*Path to the location to save the image on your server*/
 
       //dd(file_get_contents($fb_url));
