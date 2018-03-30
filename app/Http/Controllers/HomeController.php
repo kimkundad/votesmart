@@ -173,7 +173,7 @@ class HomeController extends Controller
     ->where('users.id', Auth::user()->id)
     ->first();
 
-    dd(Auth::user()->id);
+    dd($user);
 
 
 
