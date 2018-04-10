@@ -24,6 +24,9 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('shared_quiz/{id}', 'HomeController@shared_quiz');
+Route::get('representatives_all', 'HomeController@representatives_all');
+Route::post('reps_list', 'HomeController@reps_list');
+Route::get('search/data', 'HomeController@search_data');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -34,6 +37,23 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::post('save_image', 'HomeController@save_image');
   Route::get('get_avatar', 'HomeController@get_avatar');
+  Route::get('representatives/dashboard', 'RepresentDashController@index');
+  Route::resource('representatives/profile', 'RepresentProController');
+  Route::post('image-crop', 'RepresentProController@imageCropPost');
+  Route::post('add_about', 'RepresentProController@add_about');
+  Route::post('del_about', 'RepresentProController@del_about');
+  Route::resource('representatives/exper', 'ExperController');
+  Route::resource('representatives/education', 'EducationController');
+  Route::resource('representatives/timeline', 'TimelineController');
+  Route::resource('representatives/gallery', 'GalleryController');
+  Route::post('representatives/gallery', 'GalleryController@add_gallery');
+  Route::post('representatives/property_image_del', 'GalleryController@property_image_del');
+
+
+  Route::post('amphoe', 'RepresentProController@amphoe');
+
+  Route::post('district', 'RepresentProController@district');
+
   });
 
 

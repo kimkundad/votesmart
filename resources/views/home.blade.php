@@ -230,7 +230,7 @@
             </div>
           </div>
           <div class="welcome-footer">
-            <a class="scroll-down btn hometo2" style="    color: #08c1f4;">
+            <a class="scroll-down btn hometo2" href="{{url('representatives_all')}}" style="    color: #08c1f4;">
               <i class="fa fa-angle-double-down"></i>
               <span>เลื่อนลง</span>
             </a>
