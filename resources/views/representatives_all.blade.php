@@ -243,7 +243,7 @@ document.getElementById('form1').submit();
         minChars: 1,
         source: function(term, response){
 
-            xhr = $.getJSON('{{url('/search/data/')}}', { field2: term }, function(data){
+            xhr = $.getJSON('{{secure_url('/search/data/')}}', { field2: term }, function(data){
 
               response(data.data);
             });
