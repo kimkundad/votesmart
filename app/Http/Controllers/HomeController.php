@@ -590,6 +590,8 @@ class HomeController extends Controller
 
       $image_file = $fid.'.jpg';
 
+	$_SERVER['DOCUMENT_ROOT'] = "/var/www/aq1/votesmart/public";
+
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
 
       /*Path to the location to save the image on your server*/
