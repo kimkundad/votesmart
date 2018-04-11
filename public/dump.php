@@ -15,7 +15,7 @@ CREATE TABLE `table`(`column1` varchar(50) NOT NULL,`column2` varchar(10) NOT NU
 
 function connectDB_heroku()
 {
-	$url = parse_url(env("CLEARDB_DATABASE_URL"));
+	$url = parse_url("mysql://b631ae272af226:029be58b@us-cdbr-iron-east-05.cleardb.net/heroku_f0d989455534342?reconnect=true");
 
 	$server = $url["host"];
 	$username = $url["user"];
