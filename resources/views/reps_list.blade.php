@@ -101,6 +101,30 @@ input:-webkit-autofill {
 .rectangle-copy-6 a.active {
     color: #08B0ED;
 }
+.candidate-box .candidate-image img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.candidate-box {
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.candidate-box .candidate-info h3 {
+    color: #0479BD;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #F2F8FA;
+    margin: 0;
+}
 </style>
 
 
@@ -108,25 +132,26 @@ input:-webkit-autofill {
   <div class="container">
     <div class="row">
       <div class="reps-map-search">
-          <form class="form-style-9 pure-form" onsubmit="return false;">
-              <ul>
-                  <li>
-                      <select name="cars" class="fieldf-select  align-right">
-                          <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
-                          <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
-                          <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
-                          <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
-                      </select>
-                      <input id="hero-demo" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
-                      <input type="submit" value="&#xf002;" class="stylish " />
+        <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+          {{ csrf_field() }}
+            <ul>
+                <li>
+                    <select name="cars" class="fieldf-select  align-right">
+                        <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
+                        <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
+                        <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
+                        <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+                    </select>
+                    <input id="hero-demo" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                    <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
 
-                      <div class="rectangle-copy-6">
-                          <a href="#" class=""><i class="fa fa-map"></i></a>
-                          <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
-                      </div>
-                  </li>
-              </ul>
-              </form>
+                    <div class="rectangle-copy-6">
+                        <a href="#" class=""><i class="fa fa-map"></i></a>
+                        <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                    </div>
+                </li>
+            </ul>
+            </form>
       </div>
     </div>
   </div>
@@ -146,6 +171,30 @@ input:-webkit-autofill {
 <div class="col-md-12">
   <br>
   <h4 style="color: #0591c3;">ผลการค้นหาของคุณ " {{$search}} "</h4>
+ <br>
+
+  <div class="candidate-container text-center">
+      <div class="row">
+
+        @if($objs)
+           @foreach($objs as $u)
+        <div class="col-md-3 col-sm-6">
+            <div class="candidate-box">
+                <div class="candidate-image">
+                    <img class="img-circle" src="{{url('assets/images/avatar/'.$u->avatar)}}" />
+                </div>
+                <div class="candidate-info">
+                    <h3>{{$u->name}}</h3>
+                    <p style="font-size: 13px;">{{$u->sub_title}}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    @endif
+
+
+      </div>
+  </div>
 
 </div>
 
@@ -177,7 +226,9 @@ input:-webkit-autofill {
 
 
 <script>
-
+function eatFood() {
+document.getElementById('form1').submit();
+}
 
     var xhr;
     new autoComplete({

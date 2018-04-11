@@ -72,6 +72,13 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 										</a>
 									</li>
 
+                  <li {{ (Request::is('representatives/votesmart*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('representatives/votesmart')}}"  >
+											<i class="fa fa-child" aria-hidden="true"></i>
+											<span>Vote_Smart</span>
+										</a>
+									</li>
+
 
 
 

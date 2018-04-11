@@ -304,7 +304,7 @@ class HomeController extends Controller
 
           $get_user = DB::table('users')
               ->select(
-              'users.name'
+              'users.*'
               )
               ->where('users.user_lock', 1)
               ->where('users.is_admin', 0)
@@ -318,6 +318,141 @@ class HomeController extends Controller
 
         }else{
 
+
+
+          $get_count_provinces = DB::table('provinces')
+              ->select(
+              'provinces.name_in_thai'
+              )
+              ->Where('provinces.name_in_thai', $field2)
+              ->count();
+
+              if($get_count_provinces > 0){
+
+                $get_provinces = DB::table('provinces')
+                    ->select(
+                    'provinces.*'
+                    )
+                    ->Where('provinces.name_in_thai', $field2)
+                    ->first();
+                  //  dd($get_provinces);
+
+                  $get_user = DB::table('users')
+                      ->select(
+                      'users.*'
+                      )
+                      ->where('users.user_lock', 1)
+                      ->where('users.is_admin', 0)
+                      ->where('users.province_id', $get_provinces->id)
+                      ->get();
+
+                      $data['objs'] = $get_user;
+                      $data['search'] = $field2;
+
+                      return view('reps_list', $data);
+
+
+              }else{
+
+
+
+                $get_count_districts = DB::table('districts')
+                    ->select(
+                    'districts.name_in_thai'
+                    )
+                    ->Where('districts.name_in_thai',$field2)
+                    ->count();
+
+
+                    if($get_count_districts > 0){
+
+                      $get_districts = DB::table('districts')
+                          ->select(
+                          'districts.*'
+                          )
+                          ->Where('districts.name_in_thai', $field2)
+                          ->first();
+                        //  dd($get_provinces);
+
+                        $get_user = DB::table('users')
+                            ->select(
+                            'users.*'
+                            )
+                            ->where('users.user_lock', 1)
+                            ->where('users.is_admin', 0)
+                            ->where('users.amphur_id', $get_districts->id)
+                            ->get();
+
+                            $data['objs'] = $get_user;
+                            $data['search'] = $field2;
+
+                            return view('reps_list', $data);
+
+
+                    }else{
+
+
+                      $get_count_subdistricts = DB::table('subdistricts')
+                          ->select(
+                          'subdistricts.*'
+                          )
+                          ->Where('subdistricts.name_in_thai', $field2)
+                          ->count();
+
+
+                          if($get_count_subdistricts > 0){
+
+                            $get_subdistricts = DB::table('subdistricts')
+                                ->select(
+                                'subdistricts.*'
+                                )
+                                ->Where('subdistricts.name_in_thai', $field2)
+                                ->first();
+                              //  dd($get_provinces);
+
+                              $get_user = DB::table('users')
+                                  ->select(
+                                  'users.*'
+                                  )
+                                  ->where('users.user_lock', 1)
+                                  ->where('users.is_admin', 0)
+                                  ->where('users.district_id', $get_subdistricts->id)
+                                  ->get();
+
+                                  $data['objs'] = $get_user;
+                                  $data['search'] = $field2;
+
+                                  return view('reps_list', $data);
+
+
+                          }else{
+
+                          }
+
+
+
+
+                    }
+
+
+
+
+
+
+
+              }
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
     }
@@ -326,12 +461,13 @@ class HomeController extends Controller
 
       $objs = DB::table('users')
         ->select(
-        'users.name'
+        'users.*'
         )
         ->where('user_lock', 1)
         ->where('is_admin', 0)
+        ->where('province_id', 1)
         ->get();
-
+        //dd($objs);
       $data['objs'] = $objs;
       $data['datahead'] = "รายชื่อสมาชิก";
 
@@ -592,6 +728,66 @@ class HomeController extends Controller
         $data['user'] = $objs;
 
       return view('shared_quiz', $data);
+    }
+
+
+    public function reps_result($id){
+
+    //  dd($id);
+
+      $objs = DB::table('users')->select(
+            'users.*',
+            'users.id as id_user'
+            )
+        ->where('id', $id)
+        ->first();
+
+        if($objs == null){
+            return redirect(url('quiz_choices'));
+        }
+      //  $optionsRes = [];
+
+          $labels = DB::table('voteresults')->select(
+                'voteresults.*',
+                'categories.*'
+                )
+            ->leftjoin('categories', 'categories.id',  'voteresults.result_id')
+            ->where('voteresults.user_id', $objs->id)
+            ->get();
+            $s =1;
+
+            foreach ($labels as $obj1) {
+
+            $options = DB::table('votesmarts')
+                  ->select(
+                  'votesmarts.*',
+                  'quizzes.*'
+                  )
+                  ->leftjoin('quizzes', 'quizzes.id',  'votesmarts.quiz_id')
+                  ->where('votesmarts.category_id', $obj1->result_id)
+                  ->where('votesmarts.user_id', $objs->id)
+                  ->get();
+
+            $obj1->options = $options;
+            $obj1->num_s = $s;
+            $s++;
+            }
+
+          //  $optionsRes = $labels;
+          //  $obj->labels = $optionsRes;
+
+
+      //  dd($labels);
+
+      $data['user'] = $objs;
+      $data['objs'] = $labels;
+      $data['datahead'] = "จัดการ Quiz";
+
+
+      return view('reps_detail', $data);
+
+
+
     }
 
 

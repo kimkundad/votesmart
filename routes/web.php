@@ -27,13 +27,15 @@ Route::get('shared_quiz/{id}', 'HomeController@shared_quiz');
 Route::get('representatives_all', 'HomeController@representatives_all');
 Route::post('reps_list', 'HomeController@reps_list');
 Route::get('search/data', 'HomeController@search_data');
-
+Route::get('reps_result/{id}', 'HomeController@reps_result');
 
 Route::group(['middleware' => 'auth'], function () {
 
   Route::post('add_vote', 'HomeController@add_vote');
   Route::get('quiz_choices', 'HomeController@quiz_choices');
   Route::get('result', 'HomeController@result');
+
+
 
   Route::post('save_image', 'HomeController@save_image');
   Route::get('get_avatar', 'HomeController@get_avatar');
@@ -53,7 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::post('amphoe', 'RepresentProController@amphoe');
 
   Route::post('district', 'RepresentProController@district');
-
+  Route::resource('representatives/votesmart', 'ResvoteController');
   });
 
 

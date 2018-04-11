@@ -206,7 +206,7 @@ input:-webkit-autofill {
 function eatFood() {
 document.getElementById('form1').submit();
 }
-	var map = L.map('map').setView([13.7464779, 100.5325729], 14);
+	var map = L.map('map').setView([13.7464779, 100.5325729], 10);
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -223,14 +223,22 @@ document.getElementById('form1').submit();
 		}
 	});
 
-	var greenIcon = new LeafIcon({iconUrl: '//graph.facebook.com/1556099071134652/picture?width=80&height=80'}),
+     @if(isset($objs))
+        @foreach($objs as $u)
+
+        var  greenIcon{{$u->id}} = new LeafIcon({iconUrl: '{{url("assets/images/avatar/".$u->avatar)}}'});
+        L.marker([{{$u->lat}}, {{$u->lng}}], {icon: greenIcon{{$u->id}}}).bindPopup('<div style="text-align: center;"><a href="{{url('reps_result/'.$u->id)}}"><img src="{{url("assets/images/avatar/".$u->avatar)}}" style="width:80px"></a></div><div class="candidate-info"><a href="{{url('reps_result/'.$u->id)}}"><h3>{{$u->name}}</h3></a><p>{{$u->sub_title}}</p></div>').addTo(map);
+        @endforeach
+    @endif
+
+/*	var greenIcon = new LeafIcon({iconUrl: '//graph.facebook.com/1556099071134652/picture?width=80&height=80'}),
 		redIcon = new LeafIcon({iconUrl: '//graph.facebook.com/10156358433350625/picture?width=80&height=80'}),
 		orangeIcon = new LeafIcon({iconUrl: '//graph.facebook.com/1556099071134652/picture?width=80&height=80'});
 
 	L.marker([13.7464779, 100.5325729], {icon: greenIcon}).bindPopup('<div style="text-align: center;"><img src="//graph.facebook.com/1556099071134652/picture?width=100&height=100"></div><div class="candidate-info"><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>').addTo(map);
 	L.marker([13.751565, 100.5204733], {icon: redIcon}).bindPopup('<div style="text-align: center;"><img src="//graph.facebook.com/1556099071134652/picture?width=100&height=100"></div><div class="candidate-info"><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>').addTo(map);
 	L.marker([13.7559235, 100.5535695], {icon: orangeIcon}).bindPopup('<div style="text-align: center;"><img src="//graph.facebook.com/1556099071134652/picture?width=100&height=100"></div><div class="candidate-info"><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>').addTo(map);
-
+*/
 </script>
 
 
@@ -243,8 +251,8 @@ document.getElementById('form1').submit();
         minChars: 1,
         source: function(term, response){
 
-            xhr = $.getJSON('{{secure_url('/search/data/')}}', { field2: term }, function(data){
-
+            xhr = $.getJSON('{{url('/search/data/')}}', { field2: term }, function(data){
+              //secure_url
               response(data.data);
             });
         }
