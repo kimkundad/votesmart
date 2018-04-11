@@ -36,9 +36,9 @@ return [
     ],
 
     'facebook' => [
-    'client_id' => env('FACEBOOK_CLIENT_ID'),
-    'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-    'redirect' => env('FACEBOOK_REDIRECT_URI'),
+    'client_id' => '812207955571269',
+    'client_secret' => '7b024358ac126926363f83e05dc31c83',
+    'redirect' => 'http://thevotesmart.herokuapp.com/callback',
     ],
 
 ];
