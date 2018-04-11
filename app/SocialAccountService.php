@@ -41,7 +41,7 @@ class SocialAccountService
                               'name' => $providerUser->getName(),
                               'avatar' => 'graph.facebook.com/'.$providerUser->getId().'/picture?width=300&height=300',
                               'provider' => 'facebook',
-				'password' => '1212312121'
+				'password' => '1212312121',
                               'is_admin' => 0
                           ]);
                           $user
