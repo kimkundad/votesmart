@@ -586,7 +586,7 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACEdEose0cBABK7XPCZCiZCZCCnCWZBDZAEkbiSfPwureSvzLAUS0ZAZAsm7ZAiTWGtoTvBQWNtbvkl0jk44DnjIH0USzM1qyokv6ZCHxuXBO6xHFRFMnVKYtaTUR3SD1Gq7eTZBZBzdXf58cw2THW8ZCMOm1jBYZAbMMPS2UBsDeO3ubqZCduTIBX0snuGu0JlDY2YkZD";
+      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACEdEose0cBAGd8DZCcmpeYUvQHpgrKgk63eZCIWbpLnYcTqZAEVAP9L8TjxCxO8xeIbdZC5WNdEsMcqSV1XlVMyiMJmm76eZAcdvnuNmmqZAU4mqeRgLQZAj38OUp4CXs7nlEzHoi6gmuWysMUHzUw4PKZCxNVevOfezf3GxWhpIuZCNmHRh1YBjOXVdsgFssQZD";
 
       $image_file = $fid.'.jpg';
 
@@ -779,9 +779,52 @@ class HomeController extends Controller
 
       //  dd($labels);
 
+      $abouts = DB::table('abouts')->select(
+            'abouts.*'
+            )
+        ->where('user_id', $id)
+        ->get();
+
+        $exper = DB::table('experiences')->select(
+              'experiences.*'
+              )
+          ->where('user_id', $id)
+          ->get();
+
+
+          $education = DB::table('education')->select(
+                'education.*'
+                )
+            ->where('user_id', $id)
+            ->get();
+
+            $timelines = DB::table('timelines')->select(
+                  'timelines.*'
+                  )
+              ->where('user_id', $id)
+              ->get();
+
+              $galleries = DB::table('galleries')->select(
+                    'galleries.*'
+                    )
+                ->where('user_id', $id)
+                ->get();
+
+                $galleries_count = DB::table('galleries')->select(
+                      'galleries.*'
+                      )
+                  ->where('user_id', $id)
+                  ->count();
+
+
+      $data['galleries_count'] = $galleries_count;
+      $data['galleries'] = $galleries;
+      $data['timelines'] = $timelines;
+      $data['education'] = $education;
+      $data['exper'] = $exper;
       $data['user'] = $objs;
       $data['objs'] = $labels;
-      $data['datahead'] = "จัดการ Quiz";
+      $data['abouts'] = $abouts;
 
 
       return view('reps_detail', $data);

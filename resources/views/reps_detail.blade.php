@@ -5,7 +5,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <link href="{{url('social-feed-gh-pages/css/jquery.socialfeed.css')}}" rel="stylesheet">
-
+<link rel="stylesheet" href="{{url('assets/magnific-popup/magnific-popup.css')}}">
 
 
 
@@ -1015,7 +1015,7 @@ blockquote {
                                     </div>
                                     <div class="col-md-6">
                                         <div class="candidate-profile-2 ">
-                                          <h2>สมพงษ์อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
+                                          <h2>{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
                                           <br><br>
 
 
@@ -1141,13 +1141,13 @@ h3.candidate-title {
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-about">
-                                            <h3 class="candidate-title">เกี่ยวกับสมพงษ​์</h3>
+                                            <h3 class="candidate-title">เกี่ยวกับ {{$user->name}}</h3>
                                             <ul class="list-circle">
-                                                <li>ชอบฟังเพลง Rock เป็นชีวิตจิตใจ</li>
-                                                <li>ไข่เจียวคืออาหารโปรด</li>
-                                                <li>อภิสิทธิ์ชอบรับโทรศัพท์ด้วยตนเอง</li>
-                                                <li>เป็นส.ส.ครั้งแรกตอนอายุ 27 ปี</li>
-                                                <li>นิวคาสเซิ่ลคือทีมฟุตบอลทีมโปรด</li>
+                                              @if(isset($abouts))
+                                                  @foreach($abouts as $u)
+                                                <li>{{$u->about}}</li>
+                                                @endforeach
+                                            @endif
                                             </ul>
                                         </div>
                                     </div>
@@ -1177,78 +1177,55 @@ h3.candidate-title {
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-experience">
                                             <h3 class="candidate-title">ประสบการณ์</h3>
+
+
+                                            @if(isset($exper))
+                                                @foreach($exper as $u)
+
                                             <div class="experience">
                                                 <div class="row">
                                                     <div class="experience-time col-3 col-md-3">
-                                                        <p>ปัจจุบัน</p>
+                                                        <p>{{$u->end_year}}</p>
                                                         <p>|</p>
-                                                        <p>2540</p>
+                                                        <p>{{$u->start_year}}</p>
                                                     </div>
                                                     <div class="experience-description col-9 col-md-9 tm-body">
-                                                        <h4>หัวหน้าพรรคประชาธิปัตย์</h4>
-                                                        <h5 clss="party" style="padding-left: 27px;">พรรคประชาธิปัตย์</h5>
-                                                        <p style="padding-left: 27px;">รีวิวโหงวไกด์อพาร์ตเมนท์ซีน แฟรนไชส์คอนแท็คอิ่มแปร้ สกรัมสคริปต์ สะกอมโชห่วยบัตเตอร์
-                                                            อันตรกิริยาแคปปิกอัพ ปิยมิตรแคร์เช็งเม้ง คอลัมน์ แอ็กชั่นสกรัมซามูไรไอติม
-                                                            โชห่วยมหาอุปราชางี้ แรลลี
+                                                        <h4>{{$u->head}}</h4>
+                                                        <h5 clss="party" style="padding-left: 27px;">{{$u->sub_head}}</h5>
+                                                        <p style="padding-left: 27px;">{{$u->detail}}
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="experience">
-                                                <div class="row">
-                                                    <div class="experience-time col-3 col-md-3">
-                                                        <p>2540</p>
-                                                        <p>|</p>
-                                                        <p>2535</p>
-                                                    </div>
-                                                    <div class="experience-description col-9 col-md-9 tm-body">
-                                                        <h4>อาจารย์พิเศษ</h4>
-                                                        <h5 clss="party" style="padding-left: 27px;">คณะรัฐศาสตร์ sมหาวิทยาลัยธรรมศาสตร์</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="experience">
-                                                <div class="row">
-                                                    <div class="experience-time col-3 col-md-3">
-                                                        <p>2537</p>
-                                                        <p>|</p>
-                                                        <p>2534</p>
-                                                    </div>
-                                                    <div class="experience-description col-9 col-md-9">
-                                                        <h4>ส.ส. กรุงเทพฯ เขต 1</h4>
-                                                        <h5 clss="party">พรรคประชาธิปัตย์</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                                            @endforeach
+                                        @endif
+
+
                                         </div>
                                         <div class="candidate-history-education">
                                             <h3 class="candidate-title">การศึกษา</h3>
+
+                                            @if(isset($education))
+                                                @foreach($education as $u)
                                             <div class="experience">
                                                 <div class="row">
                                                     <div class="experience-time col-3 col-md-3">
-                                                        <p>2540</p>
+                                                        <p>{{$u->end_year}}</p>
                                                         <p>|</p>
-                                                        <p>2534</p>
+                                                        <p>{{$u->start_year}}</p>
                                                     </div>
-                                                    <div class="experience-description col-9 col-md-9">
-                                                        <h4>ปริญญาเอกรัฐศาสตร์</h4>
-                                                        <h5 clss="party">มหาวิทยาลัยสมมุติ</h5>
+                                                    <div class="experience-description col-9 col-md-9 tm-body">
+                                                        <h4 >{{$u->head}}</h4>
+                                                        <h5 clss="party" style="padding-left: 27px;">{{$u->detail}}</h5>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="experience">
-                                                <div class="row">
-                                                    <div class="experience-time col-3 col-md-3">
-                                                        <p>2537</p>
-                                                        <p>|</p>
-                                                        <p>2534</p>
-                                                    </div>
-                                                    <div class="experience-description col-9 col-md-9">
-                                                        <h4>ปริญญาโทบริหารธุรกิจ</h4>
-                                                        <h5 clss="party">สถาบันการศึกษา</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <br>
+                                            @endforeach
+                                        @endif
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -1279,6 +1256,13 @@ h3.candidate-title {
 .img-responsive{
   width: 100%
 }
+.img_container img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-backface-visibility: hidden;
+}
 </style>
 
 
@@ -1290,23 +1274,30 @@ h3.candidate-title {
                                         <div class="row">
                                             <h3 class="candidate-title">รูปภาพ</h3>
                                             <div class="gallery-image">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-4 gallery">
-                                                        <img class=" img-responsive" src="{{url('assets/image/vote-avatar-13.png')}}" >
+                                                <div class="row magnific-gallery">
 
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 gallery">
-                                                        <img class=" img-responsive" src="{{url('assets/image/vote-avatar-13.png')}}" >
 
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 gallery">
-                                                        <img class=" img-responsive" src="{{url('assets/image/vote-avatar-13.png')}}" >
-                                                    </div>
+
+
+                                                  @if(isset($galleries))
+                                                      @foreach($galleries as $u)
+                                                      <div class="col-md-4 col-sm-4 gallery">
+                                                        <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                                                          <a class="example-image-link" href="{{url('assets/images/all_image/'.$u->image)}}">
+                                                          <img class=" img-responsive" src="{{url('assets/images/all_image/'.$u->image)}}" >
+                                                        </a>
+                                                        </div>
+                                                      </div>
+                                                  @endforeach
+                                                  @endif
+
+
+
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 text-center">
+                                        <!--    <div class="col-md-12 text-center">
                                             <button class="btn btn-readmore ">เเสดงเพิ่ม</button>
-                                              </div>
+                                          </div> -->
                                         </div>
 
                                     </div>
@@ -1382,6 +1373,21 @@ h3.candidate-title {
     margin-top: 28px;
 }
 </style>
+
+<?php
+function DateThai($strDate)
+{
+$strYear = date("Y",strtotime($strDate))+543;
+$strMonth= date("n",strtotime($strDate));
+$strDay= date("j",strtotime($strDate));
+$strHour= date("H",strtotime($strDate));
+$strMinute= date("i",strtotime($strDate));
+$strSeconds= date("s",strtotime($strDate));
+$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
+$strMonthThai=$strMonthCut[$strMonth];
+return "$strDay $strMonthThai $strYear";
+}
+ ?>
                             <div class="candidate-schedule container">
                                 <div class="row">
                                   <div class="col-md-12">
@@ -1389,46 +1395,31 @@ h3.candidate-title {
                                     </div>
                                     <div class="col-md-6 col-sm-6 center">
                                         <div class="col-md-12">
-                                            <div class="schedule">
-                                                <div class="row">
-                                                    <div class="col-3 col-md-3 schedule-date">
-                                                        <p>12 มกราคม</p>
-                                                    </div>
-                                                    <div class="col-9 col-md-9 schedule-description">
-                                                        <p>ร่วมเสวนา “เศรษฐกิจไทย 4.0” สถาบันบัณฑิตพัฒนบริหารศาสตร์</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="schedule">
-                                                <div class="row">
-                                                    <div class="col-3 col-md-3 schedule-date">
-                                                        <p>12 มกราคม</p>
-                                                    </div>
-                                                    <div class="col-9 col-md-9 schedule-description">
-                                                        <p>ร่วมเสวนา “เศรษฐกิจไทย 4.0” สถาบันบัณฑิตพัฒนบริหารศาสตร์</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="schedule">
-                                                <div class="row">
-                                                    <div class="col-3 col-md-3 schedule-date">
-                                                        <p>12 มกราคม</p>
-                                                    </div>
-                                                    <div class="col-9 scol-md-9 schedule-description">
-                                                        <p>ร่วมเสวนา “เศรษฐกิจไทย 4.0” สถาบันบัณฑิตพัฒนบริหารศาสตร์</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="schedule">
-                                                <div class="row">
-                                                    <div class="col-3 col-md-3 schedule-date">
-                                                        <p>12 มกราคม</p>
-                                                    </div>
-                                                    <div class="col-9 scol-md-9 schedule-description">
-                                                        <p>ร่วมเสวนา “เศรษฐกิจไทย 4.0” สถาบันบัณฑิตพัฒนบริหารศาสตร์</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                                          @if(isset($timelines))
+                                              @foreach($timelines as $u)
+
+
+                                              <div class="schedule">
+                                                  <div class="row">
+                                                      <div class="col-3 col-md-3 schedule-date">
+                                                          <p><?php echo DateThai($u->day_start); ?></p>
+                                                      </div>
+                                                      <div class="col-9 col-md-9 schedule-description">
+                                                          <p>{{$u->detail}}</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+
+                                          @endforeach
+                                      @endif
+
+
+
+
+
+
                                         </div>
                                     </div>
 
@@ -1470,7 +1461,7 @@ h3.candidate-title {
 
 
 
-<input type="hidden" class="input field-left" value="@littlereveurs" id="query">
+<input type="hidden" class="input field-left" value="@spotify, #spotify" id="query">
 
 @endsection
 
@@ -1479,6 +1470,7 @@ h3.candidate-title {
 
 
 @section('scripts')
+
 <script src="{{url('js/freelancer.min.js')}}"></script>
 <script src="{{url('social-feed-gh-pages/js/jquery.min.js')}}"></script>
 <script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
@@ -1492,17 +1484,13 @@ h3.candidate-title {
 
 
 
-
 <script>
-
-
-
 
     $(document).ready(function() {
 
-        var updateFeed = function() {
-
+            var updateFeed = function() {
             var initialQuery = $('#query').val();
+            console.log(initialQuery)
             initialQuery = initialQuery.replace(" ", "");
             var queryTags = initialQuery.split(",");
             $('.social-feed-container').socialfeed({
@@ -1512,6 +1500,7 @@ h3.candidate-title {
                     limit: 10,
                     access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c',
                 },
+
 
                 // Twitter
             /*    twitter: {
@@ -1529,6 +1518,8 @@ h3.candidate-title {
                 },*/
 
                 // GENERAL SETTINGS
+                //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
+
                 length: 200,
                 show_media: true,
                 template : "{{url('social-feed-gh-pages/template.html')}}",
@@ -1653,5 +1644,20 @@ h3.candidate-title {
 
 
 
+</script>
+
+
+
+<script src="{{url('assets/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+<script>
+$(document).ready(function() {
+  $('.magnific-gallery').each(function() {
+$(this).magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{enabled:true}
+});
+});
+});
 </script>
 @stop('scripts')

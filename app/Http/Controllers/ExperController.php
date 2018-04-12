@@ -43,6 +43,7 @@ class ExperController extends Controller
             ->count();
 
             $s = 1;
+            $data['method'] = "put";
             $data['objs'] = $experiences;
             $data['count'] = $count_experiences;
             $data['s'] = $s;
@@ -74,11 +75,13 @@ class ExperController extends Controller
             return redirect(url('representatives/exper'))->with('error','คุณทำการแก้ไขอสังหา สำเร็จ');
           }
 
+
           $package = new experience;
           $package->user_id = Auth::user()->id;
           $package->start_year = $request['start_year'];
           $package->end_year = $request['end_year'];
           $package->head = $request['headname'];
+          $package->sub_head = $request['sub_headname'];
           $package->detail = $request['detail'];
           $package->save();
 
@@ -117,6 +120,21 @@ class ExperController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //dd('5555');
+        if($request['start_year'] == null && $request['end_year'] == null && $request['headname'] == null && $request['detail'] == null){
+          return redirect(url('representatives/exper'))->with('error','คุณทำการแก้ไขอสังหา สำเร็จ');
+        }
+
+        $package = experience::find($id);
+        $package->user_id = Auth::user()->id;
+        $package->start_year = $request['start_year'];
+        $package->end_year = $request['end_year'];
+        $package->head = $request['headname'];
+        $package->sub_head = $request['sub_headname'];
+        $package->detail = $request['detail'];
+        $package->save();
+
+       return redirect(url('representatives/exper'))->with('add_success','คุณทำการแก้ไขอสังหา สำเร็จ');
     }
 
     /**
