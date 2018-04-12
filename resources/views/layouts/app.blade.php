@@ -130,7 +130,7 @@ label{
 .form-control {
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
+    padding: 0.6rem 0.75rem;
     font-size: 0.8rem;
     line-height: 1.5;
     color: #fff;

@@ -135,7 +135,7 @@
         </li>
         <li class="nav-item" style="margin-right: 30px;">
 
-          <a class="nav-link {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
+          <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
           {{ (Request::is('reps_list') ? 'id="a-head-set"' : '') }} style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/representatives_all')}}">เลือกใครดี?</a>
 
           <a href="{{url('/')}}">
@@ -148,7 +148,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal" style="background-color: #ffffff; margin-top: 5px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal" style="background-color: #ffffff; margin-top: 5px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
 
 
@@ -164,7 +164,7 @@
 
               <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
               <br>
-              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px;"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
             </div>
         </li>
 
