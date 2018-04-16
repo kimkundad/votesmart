@@ -1279,6 +1279,9 @@ h3.candidate-title {
 
 
 
+
+
+
                                                   @if(isset($galleries))
                                                       @foreach($galleries as $u)
                                                       <div class="col-md-4 col-sm-4 gallery">
@@ -1461,7 +1464,7 @@ return "$strDay $strMonthThai $strYear";
 
 
 
-<input type="hidden" class="input field-left" value="@spotify, #spotify" id="query">
+<input type="hidden" class="input field-left" value="@{{$user->fb}}" id="query">
 
 @endsection
 
@@ -1489,7 +1492,7 @@ return "$strDay $strMonthThai $strYear";
     $(document).ready(function() {
 
             var updateFeed = function() {
-            var initialQuery = $('#query').val();
+            var initialQuery = '{{'@'.$user->fb}}, #CherpangBNK48';
             console.log(initialQuery)
             initialQuery = initialQuery.replace(" ", "");
             var queryTags = initialQuery.split(",");
@@ -1503,19 +1506,19 @@ return "$strDay $strMonthThai $strYear";
 
 
                 // Twitter
-            /*    twitter: {
+             twitter: {
                     accounts: queryTags,
-                    limit: 2,
-                    consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',
-                    consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O',
+                    limit: 10,
+                    consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
+                    consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
                 },
 
-                instagram: {
+                 instagram: {
                     accounts: queryTags,
-                    limit: 2,
-                    client_id: '88b4730e0e2c4b2f8a09a6184af2e218',
-                    access_token: ''
-                },*/
+                    limit: 10,
+                    client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
+                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
+                },
 
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
