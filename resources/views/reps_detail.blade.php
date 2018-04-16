@@ -1284,7 +1284,7 @@ h3.candidate-title {
 
                                                   @if(isset($galleries))
 
-                                                  @if($galleries_count > 4)
+                                                  @if($galleries_count > 3)
 
                                                   @foreach($galleries as $u)
                                                   <div class="col-md-4 col-sm-4 gallery">
