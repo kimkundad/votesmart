@@ -1283,15 +1283,37 @@ h3.candidate-title {
 
 
                                                   @if(isset($galleries))
-                                                      @foreach($galleries as $u)
-                                                      <div class="col-md-4 col-sm-4 gallery">
-                                                        <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
-                                                          <a class="example-image-link" href="{{url('assets/images/all_image/'.$u->image)}}">
-                                                          <img class=" img-responsive" src="{{url('assets/images/all_image/'.$u->image)}}" >
-                                                        </a>
-                                                        </div>
-                                                      </div>
+
+                                                  @if($galleries_count > 4)
+
+                                                  @foreach($galleries as $u)
+                                                  <div class="col-md-4 col-sm-4 gallery">
+                                                    <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                                                      <a class="example-image-link" href="{{url('assets/images/all_image/'.$u->image)}}">
+                                                      <img class=" img-responsive" src="{{url('assets/images/all_image/'.$u->image)}}" >
+                                                    </a>
+                                                    </div>
+                                                  </div>
                                                   @endforeach
+
+                                                  @else
+
+
+                                                  <div class="col-md-4 col-sm-4 gallery">
+                                                  <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                                                    <a class="example-image-link" href="{{url('assets/images/all_image/'.$galleries[0]->image)}}">
+                                                    <img class=" img-responsive" src="{{url('assets/images/all_image/'.$galleries[0]->image)}}" >
+                                                  </a>
+                                                  </div>
+                                                  </div>
+
+
+                                                  @endif
+
+
+
+
+
                                                   @endif
 
 
