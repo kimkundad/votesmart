@@ -586,7 +586,7 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBAMmyobP3jtZATfIfvhQqZBzjZBDJZC1hPuAdS1jjiW3ty9bVc618kZAMPm9GG0L4fZAkKPbXNajlz1lDPxdWFeTWx4KZCVin2wYtevEHfim9qURBghwOQ1xyDuZAvmphxNd8LZAJmZAuXT9fXx4rUZA1YwPo7nZC6SrM3kc66yX1mvYo";
+      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBAPWHn6WWIy08caznBteA6emhAEEZC0on6ZAZBPvOYZAtdF4FvpfUEJlji13iAX7Cs4r8ILyivodOydorgfZBaUKMRD1nk27Hz2VxZCXaxwM34eUl48mMoEM535Naer8nyUZBxvZALagVOWSdz5lKftJawLmkqG6qAhZCrGhbAmunFhcxSZBNZAk5HgZD";
 
       $image_file = $fid.'.jpg';
 
