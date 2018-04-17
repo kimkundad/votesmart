@@ -869,7 +869,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
                                        $.ajax({
                                          type: "POST",
-                                         url: '{{url('save_image')}}',
+                                         url: '{{secure_urls('save_image')}}',
                                          data:{
                                             image: imgString
                                           },
