@@ -187,7 +187,7 @@
         @if (Auth::guest())
 
         @else
-        <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+        <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="padding: 0px;">
 
                         @if(Auth::user()->provider == 'email')
 
