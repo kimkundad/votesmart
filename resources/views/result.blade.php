@@ -882,7 +882,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
                                               };
 
 
-                                              window.open('https://www.facebook.com/sharer/sharer.php?u={{url('shared_quiz/'.Auth::user()->id)}}', '_blank');
+                                              window.open('https://www.facebook.com/sharer/sharer.php?u={{secure_url('shared_quiz/'.Auth::user()->id)}}', '_blank');
 
 
                                            } else {
