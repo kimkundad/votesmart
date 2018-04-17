@@ -6,10 +6,10 @@
   <?php
     $time_fb = time();
    ?>
-  <meta property="og:url"           content="http://devzab.com/shared_quiz/{{$user->id}}" />
+  <meta property="og:url"           content="https://votesmart.me/shared_quiz/{{$user->id}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="ถ้าต้องบริหารประเทศไทย" />
-  <meta property="og:image"         content="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
+  <meta property="og:image"         content="https://votesmart.me/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" />
   <meta property="og:description"   content="{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ" />
   <meta property="og:image:width" content="600" />
   <meta property="og:image:height" content="314" />
@@ -27,7 +27,7 @@
                <h3>ถ้าต้องบริหารประเทศไทย</h3>
                <p>{{$user->name}} จะเลือกเรื่องเหล่านี้ วิสัยทัศน์ดีแบบนี้ เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ</p>
                <hr>
-               <img src="http://devzab.com/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" class="img-responsive">
+               <img src="https://votesmart.me/assets/image/shared/{{$user->image_shared}}?v={{$time_fb}}" class="img-responsive">
 
 
 
@@ -50,7 +50,7 @@ setTimeout(function(){
 
   <!-- Your share button code -->
   <div class="fb-share-button"
-    data-href="http://devzab.com/shared_quiz/{{$user->id}}?v={{$time_fb}}"
+    data-href="https://votesmart.me/shared_quiz/{{$user->id}}?v={{$time_fb}}"
     data-layout="button_count">
   </div>
 
