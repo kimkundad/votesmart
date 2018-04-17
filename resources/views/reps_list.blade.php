@@ -179,6 +179,7 @@ input:-webkit-autofill {
         @if($objs)
            @foreach($objs as $u)
         <div class="col-md-3 col-sm-6">
+          <a href="{{url('reps_result/'.$u->id)}}">
             <div class="candidate-box">
                 <div class="candidate-image">
                     <img class="img-circle" src="{{url('assets/images/avatar/'.$u->avatar)}}" />
@@ -188,6 +189,7 @@ input:-webkit-autofill {
                     <p style="font-size: 13px;">{{$u->sub_title}}</p>
                 </div>
             </div>
+          </a>
         </div>
         @endforeach
     @endif
