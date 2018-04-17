@@ -11,6 +11,8 @@ use App\voteresult;
 use App\Http\Requests;
 use Response;
 use File;
+use Helper;
+use App\gallery;
 use Illuminate\Support\Facades\DB;
 use Storage;
 
@@ -808,6 +810,8 @@ class HomeController extends Controller
                     'galleries.*'
                     )
                 ->where('user_id', $id)
+                ->orderBy('id','DESC')
+                ->limit(6)
                 ->get();
 
                 $galleries_count = DB::table('galleries')->select(
@@ -815,8 +819,8 @@ class HomeController extends Controller
                       )
                   ->where('user_id', $id)
                   ->count();
-
-
+      $s = 0;
+      $data['s'] = $s;
       $data['galleries_count'] = $galleries_count;
       $data['galleries'] = $galleries;
       $data['timelines'] = $timelines;
@@ -831,6 +835,41 @@ class HomeController extends Controller
 
 
 
+    }
+
+
+
+    public function loadDataAjax(Request $request)
+    {
+        $output = '';
+        $url = url('assets/images/all_image');
+        $id = $request->id;
+        $id_reps = $request->user_id;
+
+        $posts = gallery::where('id','<',$id)->where('user_id', $id_reps)->orderBy('id','DESC')->limit(6)->get();
+        //echo $id_reps;
+        if(!$posts->isEmpty())
+        {
+            foreach($posts as $post)
+            {
+
+              $output .= '<div class="col-md-4 col-sm-4 gallery" data-ids="'.$post->id.'">
+                <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                  <a class="example-image-link" href="'.$url.'/'.$post->image.'">
+                  <img class=" img-responsive" src="'.$url.'/'.$post->image.'" >
+                </a>
+                </div>
+              </div>';
+
+
+            }
+
+            $output .= '<div class="col-md-12 text-center" id="remove-row">
+                            <button class="btn btn-readmore " id="btn-more" data-id="'.$post->id.'" data-user_id="'.$post->user_id.'">เเสดงเพิ่ม</button>
+                        </div>';
+
+            echo $output;
+        }
     }
 
 

@@ -7,7 +7,7 @@
 <link href="{{url('social-feed-gh-pages/css/jquery.socialfeed.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{url('assets/magnific-popup/magnific-popup.css')}}">
 
-
+<div id="about"></div>
 
 <style type="text/css">
 
@@ -600,7 +600,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 </style>
 
 
-<section class="bg-whites hidden-sm hidden-xs" id="about" style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
+<section class="bg-whites hidden-sm hidden-xs"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
   <div class="container">
     <div class="row">
       <div class="col-md-4 text-center">
@@ -694,8 +694,8 @@ figure {
 
       </style>
 
-      <div class="col-md-4" id="mainNav">
-        <div class="navbar-collapse"  id="navbarResponsive">
+      <div class="col-md-4 m1 menu" id="mainNav">
+        <div class="navbar-collapse menu-center"  id="navbarResponsive">
           <ul class="navbar-expand-lg navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#about">ภาพรวม</a>
@@ -892,7 +892,7 @@ blockquote {
 
 
 
-<section id="about" style="    padding: 200px 0 50px 0;" >
+<section  style="    padding: 200px 0 50px 0;" >
 
 <style>
 .candidate-profile {
@@ -976,6 +976,7 @@ blockquote {
     text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
 }
 </style>
+
   <div class="candidate-details container">
                                 <div class="row">
 
@@ -1013,6 +1014,7 @@ blockquote {
 
 
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="candidate-profile-2 ">
                                           <h2>{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
@@ -1048,8 +1050,12 @@ blockquote {
                                             <!-- <button class="btn btn-readmore">แสดงเพิ่ม</button> -->
                                         </div>
                                     </div>
+
+
+
                                 </div>
                             </div>
+
 
 
 
@@ -1135,9 +1141,9 @@ h3.candidate-title {
 }
 </style>
 
+<div id="portfolio"></div>
 
-
-                            <div class="candidate-history container" id="portfolio">
+                            <div class="candidate-history container" >
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-about">
@@ -1274,7 +1280,7 @@ h3.candidate-title {
                                         <div class="row">
                                             <h3 class="candidate-title">รูปภาพ</h3>
                                             <div class="gallery-image">
-                                                <div class="row magnific-gallery">
+                                                <div class="row magnific-gallery" id="load-data">
 
 
 
@@ -1284,31 +1290,28 @@ h3.candidate-title {
 
                                                   @if(isset($galleries))
 
-                                                  @if($galleries_count > 3)
+
 
                                                   @foreach($galleries as $u)
-                                                  <div class="col-md-4 col-sm-4 gallery">
+
+
+
+                                                  <div class="col-md-4 col-sm-4 gallery" data-ids="{{ $u->id }}">
                                                     <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
                                                       <a class="example-image-link" href="{{url('assets/images/all_image/'.$u->image)}}">
                                                       <img class=" img-responsive" src="{{url('assets/images/all_image/'.$u->image)}}" >
                                                     </a>
                                                     </div>
                                                   </div>
+
+
+
+
                                                   @endforeach
 
-                                                  @else
 
 
-                                                  <div class="col-md-4 col-sm-4 gallery">
-                                                  <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
-                                                    <a class="example-image-link" href="{{url('assets/images/all_image/'.$galleries[0]->image)}}">
-                                                    <img class=" img-responsive" src="{{url('assets/images/all_image/'.$galleries[0]->image)}}" >
-                                                  </a>
-                                                  </div>
-                                                  </div>
 
-
-                                                  @endif
 
 
 
@@ -1320,9 +1323,9 @@ h3.candidate-title {
 
                                                 </div>
                                             </div>
-                                        <!--    <div class="col-md-12 text-center">
-                                            <button class="btn btn-readmore ">เเสดงเพิ่ม</button>
-                                          </div> -->
+                                            <div class="col-md-12 text-center" id="remove-row">
+                                            <button class="btn btn-readmore " id="btn-more" data-id="{{ $u->id }}" data-user_id="{{ $user->id }}">เเสดงเพิ่ม</button>
+                                          </div>
                                         </div>
 
                                     </div>
@@ -1413,7 +1416,7 @@ $strMonthThai=$strMonthCut[$strMonth];
 return "$strDay $strMonthThai $strYear";
 }
  ?>
-                            <div class="candidate-schedule container">
+                            <div class="candidate-schedule container" id="contact">
                                 <div class="row">
                                   <div class="col-md-12">
                                     <h3 class="candidate-title">กำหนดการ</h3>
@@ -1496,7 +1499,7 @@ return "$strDay $strMonthThai $strYear";
 
 @section('scripts')
 
-<script src="{{url('js/freelancer.min.js')}}"></script>
+
 <script src="{{url('social-feed-gh-pages/js/jquery.min.js')}}"></script>
 <script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
 
@@ -1506,7 +1509,76 @@ return "$strDay $strMonthThai $strYear";
 <script src="{{url('social-feed-gh-pages/js/moment.min.js')}}"></script>
 <script src="{{url('social-feed-gh-pages/js/jquery.socialfeed.js')}}"></script>
 
+<script>
 
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
+
+$(document).ready(function(){
+   $(document).on('click','#btn-more',function(){
+       var id = $(this).data('id');
+       var user_id = $(this).data('user_id');
+       $("#btn-more").html("Loading....");
+       $.ajax({
+           url : '{{ url("demos/loaddata") }}',
+           method : "POST",
+           data : {id:id, user_id:user_id, _token:"{{csrf_token()}}"},
+           dataType : "text",
+           success : function (data)
+           {
+              if(data != '')
+              {
+                  $('#remove-row').remove();
+                  $('#load-data').append(data);
+              }
+              else
+              {
+                  $('#btn-more').html("No Data");
+              }
+           }
+       });
+   });
+});
+</script>
 
 
 <script>
@@ -1514,7 +1586,7 @@ return "$strDay $strMonthThai $strYear";
     $(document).ready(function() {
 
             var updateFeed = function() {
-            var initialQuery = '{{'@'.$user->fb}}, #CherpangBNK48';
+            var initialQuery = '{{$user->fb}}, {{$user->tw}}';
             console.log(initialQuery)
             initialQuery = initialQuery.replace(" ", "");
             var queryTags = initialQuery.split(",");

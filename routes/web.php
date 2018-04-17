@@ -28,6 +28,7 @@ Route::get('representatives_all', 'HomeController@representatives_all');
 Route::post('reps_list', 'HomeController@reps_list');
 Route::get('search/data', 'HomeController@search_data');
 Route::get('reps_result/{id}', 'HomeController@reps_result');
+Route::post('demos/loaddata','HomeController@loadDataAjax' );
 
 Route::group(['middleware' => 'auth'], function () {
 
