@@ -461,6 +461,11 @@ class HomeController extends Controller
 
     public function representatives_all(){
 
+
+
+
+
+
       $objs = DB::table('users')
         ->select(
         'users.*'
@@ -575,6 +580,8 @@ class HomeController extends Controller
 
 
 
+
+
     if($user->provider == 'facebook'){
 
 
@@ -588,7 +595,7 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBAPWHn6WWIy08caznBteA6emhAEEZC0on6ZAZBPvOYZAtdF4FvpfUEJlji13iAX7Cs4r8ILyivodOydorgfZBaUKMRD1nk27Hz2VxZCXaxwM34eUl48mMoEM535Naer8nyUZBxvZALagVOWSdz5lKftJawLmkqG6qAhZCrGhbAmunFhcxSZBNZAk5HgZD";
+      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4";
 
       $image_file = $fid.'.jpg';
 
