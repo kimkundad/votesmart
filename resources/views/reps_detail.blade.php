@@ -1559,7 +1559,7 @@ $(document).ready(function(){
        var user_id = $(this).data('user_id');
        $("#btn-more").html("Loading....");
        $.ajax({
-           url : '{{ url("demos/loaddata") }}',
+           url : '{{ secure_url("demos/loaddata") }}',
            method : "POST",
            data : {id:id, user_id:user_id, _token:"{{csrf_token()}}"},
            dataType : "text",
