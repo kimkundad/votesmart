@@ -136,8 +136,7 @@ return "$strDay $strMonthThai $strYear $strHour:$strMinute น.";
 
                         {{$u->name}} {{$u->surname}}</td>
                       <td>{{$u->email}}</td>
-                      <td>{{$u->year_old}}</td>
-                      <td>{{$u->radio}}</td>
+
                       <td>
 
                         <div class="btn-group flex-wrap">
@@ -180,12 +179,8 @@ return "$strDay $strMonthThai $strYear $strHour:$strMinute น.";
                             <tr>
                             <td><b>อีเมล์ :</b> {{$u->email}}</td>
                             </tr>
-                            <tr>
-                            <td><b>อายุ :</b> {{$u->year_old}}</td>
-                            </tr>
-                            <tr>
-                            <td><b>เพศ :</b> {{$u->radio}}</td>
-													  </tr>
+
+
                             <tr>
                             <td><b>IP Address :</b> {{$u->ip_address}}</td>
 													  </tr>
@@ -242,7 +237,7 @@ function reply_click(clicked_id){
 
     $.ajax({
             type:'POST',
-            url:'{{secure_url('api/post_read')}}',
+            url:'{{secure_url('representatives/post_read')}}',
             headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
             data: { "user_id" : clicked_id },
             success: function(data){
