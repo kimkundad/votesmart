@@ -285,11 +285,11 @@
 
                         @else
 
-                        <img src="//{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
+                        <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
 
                         <ul class="dropdown" style="width: 200px;">
                           <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                            <img src="{{url('//'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                            <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
                             style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
                             class="img-circle"> {{Auth::user()->name}}
                           </a></li>
