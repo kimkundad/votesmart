@@ -351,7 +351,7 @@
           						</div>
 
 
-                    
+
 
 
 
@@ -494,7 +494,7 @@ $('.upload-result').on('click', function (ev) {
 		size: 'viewport'
 	}).then(function (resp) {
 		$.ajax({
-			url: "{{url('image-crop')}}",
+			url: "{{secure_url('image-crop')}}",
 			type: "POST",
 			data: {"image":resp},
 			success: function (data) {
