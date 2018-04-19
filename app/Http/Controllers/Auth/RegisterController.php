@@ -66,7 +66,7 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
-      $this->redirectTo = '/representatives/dashboard';
+      $this->redirectTo = '/representatives/profile';
 
       $ran = array("1483537975.png","1483556517.png","1483556686.png");
       $user = User::create([

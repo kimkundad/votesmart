@@ -541,7 +541,7 @@ headers: {
 });
 
 $uploadCrop = $('#upload-demo').croppie({
-    url: '{{url('./assets/images/avatar/'.Auth::user()->avatar)}}',
+    url: '{{secure_url('./assets/images/avatar/'.Auth::user()->avatar)}}',
     enableExif: true,
     viewport: {
         width: 250,
@@ -577,7 +577,7 @@ $('.upload-result').on('click', function (ev) {
 		size: 'viewport'
 	}).then(function (resp) {
 		$.ajax({
-			url: "{{url('image-crop')}}",
+			url: "{{secure_url('image-crop')}}",
 			type: "POST",
 			data: {"image":resp},
 			success: function (data) {
