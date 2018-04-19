@@ -125,9 +125,9 @@ return "$strDay $strMonthThai $strYear $strHour:$strMinute น.";
                     <tr>
                       <td>
                         @if($u->status == null || $u->status == 0)
-                        <i class="fa fa-star ap-questions-featured"></i>
+                        <i id="ap-questions-{{$u->id}}" class="fa fa-star ap-questions-featured"></i>
                         @else
-                        <i class="fa fa-star ap-questions-featured2"></i>
+                        <i id="ap-questions-{{$u->id}}" class="fa fa-star ap-questions-featured2"></i>
                         @endif
                          <?php echo DateThai($u->created_at); ?>
                       </td>
@@ -249,9 +249,9 @@ function reply_click(clicked_id){
               if(data.data.success){
 
 
-                $('.ap-questions-featured').addClass('ap-questions-featured2');
+                $('#ap-questions-'+clicked_id+'').addClass('ap-questions-featured2');
 
-                $('.ap-questions-featured2').removeClass('ap-questions-featured');
+                $('#ap-questions-'+clicked_id+'').removeClass('ap-questions-featured');
 
 
 
