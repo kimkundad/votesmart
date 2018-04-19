@@ -48,6 +48,13 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 										</a>
 									</li>
 
+                  <li {{ (Request::is('admin/representatives_new*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('admin/representatives_new/')}}"  >
+											<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+											<span>สภาผู้แทนราษฎร ใหม่</span>
+										</a>
+									</li>
+
                   <li {{ (Request::is('admin/category*') ? 'class=nav-expanded' : '') }} >
 										<a href="{{url('admin/category/')}}"  >
 											<i class="fa fa-tasks" aria-hidden="true"></i>
@@ -73,6 +80,13 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 										<a href="{{url('admin/votesmart/')}}"  >
 											<i class="fa fa-child" aria-hidden="true"></i>
 											<span>Vote_Smart</span>
+										</a>
+									</li>
+
+                  <li {{ (Request::is('admin/contact*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('admin/contact/')}}"  >
+											<i class="fa fa-comment-o" aria-hidden="true"></i>
+											<span>จัดการข้อความ</span>
 										</a>
 									</li>
 

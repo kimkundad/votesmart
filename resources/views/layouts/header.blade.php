@@ -28,42 +28,45 @@
                     <h3 class="text-center">อาสา</h3>
                     <p class="p-pop">ร่วมกันสร้างความเปลี่ยนแปลง</p>
                     <hr class="my-4" style="margin: 0 auto;">
-                    <p class="p-pop">หากคุณเป็นคนๆนึงที่อยากเห็นความเปลี่ยนแปลง <br>
+                    <p class="p-pop" id="text2">หากคุณเป็นคนๆนึงที่อยากเห็นความเปลี่ยนแปลง <br>
                     ไม่ว่าคุณจะอายุเท่าไหร่ เพศไหน<br>
                     หรือมีความถนัดอะไร<br>
                     เราต้องการคุณมาร่วมเปลี่ยนแปลงไปด้วยกัน</p>
 
-                    <p class="p-pop">เพียงกรอกข้อมูลด้านล่าง<br>
+                    <p class="p-pop" id="text2">เพียงกรอกข้อมูลด้านล่าง<br>
                     ทีมงานของเราจะรีบติดต่อกลับไปโดยเร็ว</p>
 
-                    <form>
+                    <h3 id="head1"></h3>
+                    <h3 id="head2" style="color:red"></h3>
 
+                    <form action="{{url('/contact')}}" id="form" method="post" enctype="multipart/form-data">
+                      {{ csrf_field() }}
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
 
                           <div class="form-group">
                             <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
-                            <input type="text" name="name" class="form-control" >
+                            <input type="text" name="name" id="name" class="form-control" >
                           </div>
 
                         </div>
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
-                        <input type="text" name="surname" class="form-control" >
+                        <input type="text" name="surname" id="surname" class="form-control" >
                       </div>
                     </div>
 
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
-                        <input type="email" name="email" class="form-control" >
+                        <input type="email" name="email" id="email" class="form-control" >
                       </div>
                     </div>
 
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อายุ</label>
-                        <input type="number" name="year_old" class="form-control" >
+                        <input type="number" name="year_old" id="year_old" class="form-control" >
                       </div>
                     </div>
 
@@ -74,18 +77,18 @@
                         <br>
                     				<div class="form-check">
                     					<label>
-                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
+                    						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
                     					</label>
                     				</div>
 
                     				<div class="form-check">
                     					<label>
-                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
+                    						<input type="radio" name="radio" id="radio" value="หญิง"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
                     					</label>
                     				</div>
                     				<div class="form-check">
                     					<label>
-                    						<input type="radio" name="radio"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
+                    						<input type="radio" name="radio" id="radio" value="ไม่ระบุ"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
                     					</label>
                     				</div>
 
@@ -96,12 +99,12 @@
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">ความสนใจ</label>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" name="detail" rows="3" id="detail"></textarea>
                       </div>
                     </div>
 
                     <div class="text-center">
-                      <button type="button" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
+                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
                     </div>
                   </form>
 
@@ -116,7 +119,81 @@
             </div>
 
 
+            @if(Request::is('reps_result*'))
+            <!-- Modal -->
+            <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
 
+                  <div class="modal-body text-center" style="padding-right: 50px; padding-left: 50px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px; margin-right: -30px;"><span aria-hidden="true">&times;</span> ปิด</button>
+
+                    <br><br>
+                    <h3 class="text-center">พูดคุย</h3>
+
+
+
+
+                    <p class="p-pop">มีเรื่องอยากคุย มีปัญหาให้ช่วยแก้</p>
+                    <hr class="my-4" style="margin: 0 auto;">
+                    <p class="p-pop">บอกให้ผู้สมัครของเราได้รู้ ให้เราได้เข้าใจและทำงาน<br>ได้ดีขึ้น อย่ารั้งรอ พูดคุยกับเราได้ทางช่องทางเหล่านี้</p>
+                    <button class="button-z" id="btn-line"><img src="{{url('assets/image/Line_icon-icons.com_66976.png')}}" style="height:20px;"> LINE to {{$user->line_id}}</button>
+                    <button class="button-z" id="btn-mail"><i class="fa fa-envelope" style="font-size:18px"></i> {{$user->email}}</button>
+                    <p class="p-pop" id="textreps2">หรือส่งข้อความ</p>
+
+
+                    <h3 id="headreps1"></h3>
+                    <h3 id="headreps2" style="color:red"></h3>
+
+                    <form action="{{url('/contact_to_reps')}}" id="contact-to-reps" method="post" enctype="multipart/form-data">
+
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+
+                          <div class="form-group">
+                            <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
+                            <input type="text" name="name" id="namereps" class="form-control" >
+                          </div>
+
+                        </div>
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">สกุล</label>
+                        <input type="text" name="surname" id="surnamereps" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">อีเมล</label>
+                        <input type="email" name="email" id="emailreps" class="form-control" >
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">ข้อความ</label>
+                        <textarea class="form-control" id="detailreps" name="detail" rows="3"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED; padding: 12px;">ส่งข้อความ</button>
+                    </div>
+                  </form>
+
+
+
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            @endif
 
 
 

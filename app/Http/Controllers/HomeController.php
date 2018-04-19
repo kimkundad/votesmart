@@ -8,6 +8,8 @@ use Auth;
 use App\User;
 use App\votesmart;
 use App\voteresult;
+use App\contact;
+use App\contacttoreps;
 use App\Http\Requests;
 use Response;
 use File;
@@ -459,6 +461,109 @@ class HomeController extends Controller
 
     }
 
+
+
+    public function contact(Request $request){
+
+    $resp = array();
+    $name = $request->name;
+    $surname = $request->surname;
+    $email = $request->email;
+    $year_old = $request->year_old;
+    $detail = $request->detail;
+    $radio = $request->radio;
+
+    if($name == null && $surname == null && $email == null && $year_old == null && $detail == null && $radio == null){
+      $resp["status"] = 1001;
+    }else{
+
+
+      function getUserIpAddr(){
+          if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+              //ip from share internet
+              $ip = $_SERVER['HTTP_CLIENT_IP'];
+          }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+              //ip pass from proxy
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+          }else{
+              $ip = $_SERVER['REMOTE_ADDR'];
+          }
+          return $ip;
+      }
+
+
+
+
+      $package = new contact();
+      $package->name = $name;
+      $package->surname = $surname;
+      $package->email = $email;
+      $package->year_old = $year_old;
+      $package->radio = $radio;
+      $package->detail = $detail;
+      $package->ip_address = getUserIpAddr();
+      $package->save();
+      $resp["status"] = 1000;
+    }
+
+
+    return Response::json($resp);
+
+    }
+
+
+    public function contact_to_reps(Request $request){
+
+    $resp = array();
+    $name = $request->name;
+    $surname = $request->surname;
+    $email = $request->email;
+    $detail = $request->detail;
+    $id_reps = $request->id_reps;
+
+    if($name == null && $surname == null && $email == null && $detail == null ){
+      $resp["status"] = 1001;
+    }else{
+
+
+      function getUserIpAddr(){
+          if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+              //ip from share internet
+              $ip = $_SERVER['HTTP_CLIENT_IP'];
+          }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+              //ip pass from proxy
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+          }else{
+              $ip = $_SERVER['REMOTE_ADDR'];
+          }
+          return $ip;
+      }
+
+
+
+
+      $package = new contacttoreps();
+      $package->id_reps = $id_reps;
+      $package->name = $name;
+      $package->surname = $surname;
+      $package->email = $email;
+      $package->detail = $detail;
+      $package->ip_address = getUserIpAddr();
+      $package->save();
+      $resp["status"] = 1000;
+    }
+
+
+    return Response::json($resp);
+
+    }
+
+
+
+
+
+
+
     public function representatives_all(){
 
 
@@ -471,6 +576,7 @@ class HomeController extends Controller
         'users.*'
         )
         ->where('user_lock', 1)
+        ->where('reps_con', 1)
         ->where('is_admin', 0)
         ->where('province_id', 1)
         ->get();

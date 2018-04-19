@@ -28,12 +28,7 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 								<ul class="nav nav-main">
 
 
-									<li {{ (Request::is('representatives/dashboard*') ? 'class=nav-expanded' : '') }} >
-										<a href="{{url('representatives/dashboard/')}}"  >
-											<i class="fa fa-home" aria-hidden="true"></i>
-											<span>ส่วนควบคุม</span>
-										</a>
-									</li>
+									
 
                   <li {{ (Request::is('representatives/profile*') ? 'class=nav-expanded' : '') }} >
 										<a href="{{url('representatives/profile/')}}"  >

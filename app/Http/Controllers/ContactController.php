@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Auth;
-use App\User;
-use App\Http\Requests;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\contact;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class StudentController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,6 +16,7 @@ class StudentController extends Controller
      */
     public function index()
     {
+
       $count_contact = DB::table('contacts')->select(
             'contacts.*'
             )
@@ -30,18 +29,17 @@ class StudentController extends Controller
         ->where('reps_con', 0)
         ->count();
       $data['count_users'] = $count_users;
-      
-      $objs = DB::table('users')
-        ->select(
-        'users.*'
-        )
-        ->where('user_lock', 0)
-        ->where('is_admin', 0)
-        ->get();
+        //
+        $cat = DB::table('contacts')->select(
+              'contacts.*'
+              )
+              ->orderBy('id', 'desc')
+              ->get();
 
-      $data['objs'] = $objs;
-      $data['datahead'] = "รายชื่อสมาชิก";
-      return view('admin.user.index', $data);
+
+                $data['objs'] = $cat;
+                $data['datahead'] = "จัดการข้อความ";
+        return view('admin.contact.index', $data);
     }
 
     /**
@@ -60,6 +58,19 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function post_read(Request $request){
+
+      $user = contact::findOrFail($request->user_id);
+      $user->status = 1;
+
+        return response()->json([
+        'data' => [
+          'success' => $user->save(),
+        ]
+      ]);
+
+    }
     public function store(Request $request)
     {
         //
@@ -108,5 +119,11 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
+        $obj = contact::find($id);
+        $obj->delete();
+
+      //  echo $objs->image;;
+        return redirect(url('admin/contact'))
+        ->with('delete_envelope','ทำการลบ ข้อความ สำเร็จ');
     }
 }

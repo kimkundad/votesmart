@@ -82,6 +82,7 @@ return "$strDay $strMonthThai $strYear";
                 <table class="table table-responsive-lg table-striped table-sm mb-0" id="datatable-default">
                   <thead>
                     <tr>
+
                       <th>ชื่อผู้ใช้งาน</th>
                       <th>จังหวัด</th>
                       <th>อีเมล</th>
@@ -94,6 +95,7 @@ return "$strDay $strMonthThai $strYear";
              @if($objs)
                 @foreach($objs as $u)
                     <tr id="{{$u->idu}}">
+
                       <td>
                         @if($u->provider == 'email')
                         <img src="{{url('assets/images/avatar/'.$u->avatar)}}" alt="{{$u->name}}" style="height:32px;" class="img-circle">

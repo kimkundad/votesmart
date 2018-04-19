@@ -670,10 +670,10 @@ figure {
         font-size: 18px;
         color:#ACACAC;
       }
-      .active {
+      .actives {
         color:#666!important;
       }
-      .active::after {
+      .actives::after {
     color: #08b0ed;
     display: block;
     content: '';
@@ -682,12 +682,7 @@ figure {
     border-bottom: 3px solid #08b0ed;
     padding-bottom: 5px;
 }
-      .navbar-expand-lg .navbar-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-}
+
 .ml-lg-1, .mx-lg-1 {
     margin-left: .25rem!important;
 }
@@ -788,75 +783,7 @@ figure {
 }
 </style>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
 
-      <div class="modal-body text-center" style="padding-right: 50px; padding-left: 50px;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px; margin-right: -30px;"><span aria-hidden="true">&times;</span> ปิด</button>
-
-        <br><br>
-        <h3 class="text-center">พูดคุย</h3>
-
-
-
-
-        <p class="p-pop">มีเรื่องอยากคุย มีปัญหาให้ช่วยแก้</p>
-        <hr class="my-4" style="margin: 0 auto;">
-        <p class="p-pop">บอกให้ผู้สมัครของเราได้รู้ ให้เราได้เข้าใจและทำงาน<br>ได้ดีขึ้น อย่ารั้งรอ พูดคุยกับเราได้ทางช่องทางเหล่านี้</p>
-        <button class="button-z"><img src="{{url('assets/image/Line_icon-icons.com_66976.png')}}" style="height:20px;"> LINE to @Abhisit_DP</button>
-        <button class="button-z"><i class="fa fa-envelope" style="font-size:18px"></i> abhisit.dem@gmail.com</button>
-        <p class="p-pop">หรือส่งข้อความ</p>
-
-        <form>
-
-        <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
-
-              <div class="form-group">
-                <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
-                <input type="text" name="name" class="form-control" >
-              </div>
-
-            </div>
-        <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
-          <div class="form-group">
-            <label for="exampleInputEmail1">สกุล</label>
-            <input type="text" name="surname" class="form-control" >
-          </div>
-        </div>
-
-        <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
-          <div class="form-group">
-            <label for="exampleInputEmail1">อีเมล</label>
-            <input type="email" name="email" class="form-control" >
-          </div>
-        </div>
-
-
-
-
-        <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
-          <div class="form-group">
-            <label for="exampleInputEmail1">ข้อความ</label>
-            <textarea class="form-control" rows="3"></textarea>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <button type="button" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED; padding: 12px;">ส่งข้อความ</button>
-        </div>
-      </form>
-
-
-
-
-
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 
@@ -1742,6 +1669,53 @@ $(document).ready(function(){
 
 
 </script>
+
+
+<script>
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+$(document).ready(function(){
+    $('#contact-to-reps').submit(function (e) {
+        e.preventDefault(); //**** to prevent normal form submission and page reload {{$user->name}}
+
+        $.ajax({
+            type : 'POST',
+            url : '{{url('contact_to_reps')}}',
+            data : {
+                id_reps: {{$user->id}},
+                name: $("input#namereps").val(),
+                surname: $("input#surnamereps").val(),
+                email: $("input#emailreps").val(),
+                detail: $("textarea#detailreps").val(),
+            },
+            success: function(result){
+                console.log(result);
+                if(result.status == 1000){
+                  $('#headreps1').text('ส่งข้อความสำเร็จ! ขอบคุณที่ร่วมกิจกรรมของเรา');
+                  $('#headreps2').hide();
+                  $('#textreps2').hide();
+                  $('#btn-line').hide();
+                  $('#btn-mail').hide();
+                }else{
+                  $('#headreps2').text('เกิดข้อผิดพลาด กรุณาใส่ข้อมูลให้ครบ');
+                }
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                //alert(xhr.status);
+                //alert(thrownError);
+            }
+        });
+    });
+});
+
+</script>
+
 
 
 

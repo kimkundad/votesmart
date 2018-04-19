@@ -131,7 +131,7 @@ label{
     display: block;
     width: 100%;
     padding: 0.6rem 0.75rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #fff;
     background-color: #5ec8f2;
@@ -1105,6 +1105,52 @@ padding-bottom: 5px;
 
 
     </script>
+
+
+
+  <script>
+
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+
+  $(document).ready(function(){
+      $('#form').submit(function (e) {
+          e.preventDefault(); //**** to prevent normal form submission and page reload
+
+          $.ajax({
+              type : 'POST',
+              url : '{{url('contact')}}',
+              data : {
+                  name: $("input#name").val(),
+                  surname: $("input#surname").val(),
+                  email: $("input#email").val(),
+                  year_old: $("input#year_old").val(),
+                  radio: $("input#radio").val(),
+                  detail: $("textarea#detail").val(),
+              },
+              success: function(result){
+                  console.log(result);
+                  if(result.status == 1000){
+                    $('#head1').text('ส่งข้อความสำเร็จ! ขอบคุณที่ร่วมกิจกรรมของเรา');
+                    $('#head2').hide();
+                    $('#text2').hide();
+                  }else{
+                    $('#head2').text('เกิดข้อผิดพลาด กรุณาใส่ข้อมูลให้ครบ');
+                  }
+
+              },
+              error: function (xhr, ajaxOptions, thrownError) {
+                  //alert(xhr.status);
+                  //alert(thrownError);
+              }
+          });
+      });
+  });
+
+</script>
 
     @yield('scripts')
 
