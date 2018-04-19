@@ -162,7 +162,7 @@ $(document).ready(function(){
 
     $.ajax({
             type:'POST',
-            url:'{{asset('api/quiz_status')}}',
+            url:'{{secure_url('api/quiz_status')}}',
             headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
             data: { "product_id" : product_id },
             success: function(data){

@@ -242,7 +242,7 @@ function reply_click(clicked_id){
 
     $.ajax({
             type:'POST',
-            url:'{{url('api/post_read')}}',
+            url:'{{secure_url('api/post_read')}}',
             headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
             data: { "user_id" : clicked_id },
             success: function(data){

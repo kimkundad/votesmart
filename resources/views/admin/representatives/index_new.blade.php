@@ -161,7 +161,7 @@ $(document).ready(function(){
 
     $.ajax({
             type:'POST',
-            url:'{{url('api/post_status')}}',
+            url:'{{secure_url('api/post_status')}}',
             headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
             data: { "user_id" : user_id },
             success: function(data){
