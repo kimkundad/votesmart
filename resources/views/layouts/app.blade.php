@@ -1122,7 +1122,7 @@ padding-bottom: 5px;
 
           $.ajax({
               type : 'POST',
-              url : '{{url('contact')}}',
+              url : '{{secure_url('contact')}}',
               data : {
                   name: $("input#name").val(),
                   surname: $("input#surname").val(),

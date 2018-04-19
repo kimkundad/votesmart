@@ -1685,7 +1685,7 @@ $(document).ready(function(){
 
         $.ajax({
             type : 'POST',
-            url : '{{url('contact_to_reps')}}',
+            url : '{{secure_url('contact_to_reps')}}',
             data : {
                 id_reps: {{$user->id}},
                 name: $("input#namereps").val(),
