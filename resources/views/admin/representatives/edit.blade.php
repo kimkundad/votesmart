@@ -458,7 +458,7 @@ headers: {
 });
 
 $uploadCrop = $('#upload-demo').croppie({
-    url: '{{secure_url('./assets/images/avatar/'.Auth::user()->avatar)}}',
+    url: '{{secure_url('./assets/images/avatar/'.$objs->avatar)}}',
     enableExif: true,
     viewport: {
         width: 250,
