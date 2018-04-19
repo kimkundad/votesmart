@@ -200,7 +200,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }} {{ (Request::is('/quiz_choices') ? 'a-head' : '') }} {{ (Request::is('/result') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('/') ? 'id="a-head-set"' : '') }}  style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
+          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }} {{ (Request::is('quiz_choices') ? 'a-head' : '') }} {{ (Request::is('result') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('/') ? 'id="a-head-set"' : '') }}  style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
 
           <a href="{{url('/')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
