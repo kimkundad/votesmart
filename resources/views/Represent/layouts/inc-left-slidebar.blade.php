@@ -28,7 +28,7 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 								<ul class="nav nav-main">
 
 
-									
+
 
                   <li {{ (Request::is('representatives/profile*') ? 'class=nav-expanded' : '') }} >
 										<a href="{{url('representatives/profile/')}}"  >
@@ -71,6 +71,13 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 										<a href="{{url('representatives/votesmart')}}"  >
 											<i class="fa fa-child" aria-hidden="true"></i>
 											<span>Vote_Smart</span>
+										</a>
+									</li>
+
+                  <li {{ (Request::is('representatives/contact*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('representatives/contact/')}}"  >
+											<i class="fa fa-comment-o" aria-hidden="true"></i>
+											<span>จัดการข้อความ</span>
 										</a>
 									</li>
 

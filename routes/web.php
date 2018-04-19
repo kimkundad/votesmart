@@ -61,6 +61,9 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::post('district', 'RepresentProController@district');
   Route::resource('representatives/votesmart', 'ResvoteController');
+  Route::resource('representatives/contact', 'ContacttorepsController');
+  Route::post('representatives/post_read', 'ContacttorepsController@representatives_post_read');
+
   });
 
 
@@ -80,6 +83,8 @@ Route::group(['middleware' => 'admin'], function() {
   Route::post('api/post_read', 'ContactController@post_read');
 
   Route::resource('admin/contact', 'ContactController');
+
+
 
 
 
