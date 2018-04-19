@@ -299,7 +299,7 @@
                                                 <label>คำแนะนำ</label>
 
 
-                                                  <textarea class="form-control" name="bio" placeholder="( อดีตรัฐมนตรีกระทรวงศึกษาธิการ, รัฐมนตรีว่าการกระทรวงธรรมการ (พ.ศ. 2475 - พ.ศ. 2485))" rows="4"  id="textareaAutosize" data-plugin-textarea-autosize >{{old('bio', $objs->bio)}}</textarea>
+                                                  <textarea class="form-control" name="bio" placeholder="( อดีตรัฐมนตรีกระทรวงศึกษาธิการ, รัฐมนตรีว่าการกระทรวงธรรมการ (พ.ศ. 2475 - พ.ศ. 2485))" rows="6"  id="textareaAutosize" data-plugin-textarea-autosize >{{old('bio', $objs->bio)}}</textarea>
 
                                                     @if ($errors->has('bio'))
                                                         <span class="help-block">
