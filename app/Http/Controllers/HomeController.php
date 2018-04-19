@@ -578,9 +578,8 @@ class HomeController extends Controller
         ->where('user_lock', 1)
         ->where('reps_con', 1)
         ->where('is_admin', 0)
-        ->where('province_id', 1)
         ->get();
-        //dd($objs);
+        //dd($objs); ->where('province_id', 1)
       $data['objs'] = $objs;
       $data['datahead'] = "รายชื่อสมาชิก";
 
