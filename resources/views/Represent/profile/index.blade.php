@@ -477,7 +477,7 @@
         $(document).on('change','#province',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{url('amphoe/')}}',
+                'url':'{{secure_url('amphoe/')}}',
                 'cache':false,
                 'data':{province:jQuery(this).val()},
                 'success':function(html){
@@ -489,7 +489,7 @@
          $(document).on('change','#amphoe',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{url('district/')}}',
+                'url':'{{secure_url('district/')}}',
                 'cache':false,
                 'data':{amphoe:jQuery(this).val()},
                 'success':function(html){
