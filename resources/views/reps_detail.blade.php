@@ -1546,7 +1546,7 @@ $(document).ready(function(){
 
                 length: 200,
                 show_media: true,
-                template : "{{url('social-feed-gh-pages/template.html')}}",
+                template : "{{secure_url('social-feed-gh-pages/template.html')}}",
                 // Moderation function - if returns false, template will have class hidden
                 moderation: function(content) {
                     return (content.text) ? content.text.indexOf('porn') == -1 : true;
