@@ -362,8 +362,8 @@ document.getElementById('form1').submit();
      @if(isset($objs))
         @foreach($objs as $u)
 
-        var  greenIcon{{$u->id}} = new LeafIcon({iconUrl: '{{url("assets/images/avatar/".$u->avatar)}}'});
-        L.marker([{{$u->lat}}, {{$u->lng}}], {icon: greenIcon{{$u->id}}}).bindPopup('<div style="text-align: center;"><a href="{{url('reps_result/'.$u->id)}}"><img src="{{url("assets/images/avatar/".$u->avatar)}}" style="width:80px"></a></div><div class="candidate-info"><a href="{{url('reps_result/'.$u->id)}}"><h3>{{$u->name}}</h3></a><p>{{$u->sub_title}}</p></div>').addTo(map);
+        var  greenIcon{{$u->id}} = new LeafIcon({iconUrl: '{{secure_url("assets/images/avatar/".$u->avatar)}}'});
+        L.marker([{{$u->lat}}, {{$u->lng}}], {icon: greenIcon{{$u->id}}}).bindPopup('<div style="text-align: center;"><a href="{{url('reps_result/'.$u->id)}}"><img src="{{secure_url("assets/images/avatar/".$u->avatar)}}" style="width:80px"></a></div><div class="candidate-info"><a href="{{url('reps_result/'.$u->id)}}"><h3>{{$u->name}}</h3></a><p>{{$u->sub_title}}</p></div>').addTo(map);
         @endforeach
     @endif
 
