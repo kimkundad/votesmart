@@ -170,6 +170,10 @@ input:-webkit-autofill {
     line-height: 0px;
     text-align: center;
     }
+    .gmnoprint{
+      width: 80px;
+      height: 80px;
+    }
       </style>
 
 <div class="col-md-12">
@@ -201,16 +205,148 @@ input:-webkit-autofill {
 <script src="{{url('autoComplete/auto-complete.js')}}"></script>
 
 
+<!--
+<script>
+  var map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: new google.maps.LatLng(13.7464779, 100.5325729),
+      mapTypeId: 'roadmap'
+    });
+
+    var iconBase = '{{url('assets/images/avatar/')}}';
+    var icons = {
+
+      parking: {
+        icon: {
+          url: '{{url('assets/images/avatar/1483556517.png')}}',
+          scaledSize: new google.maps.Size(50, 50)
+        },
+
+      },
+      library: {
+        icon: {
+          url: '{{url('assets/images/avatar/1483537975.png')}}',
+          scaledSize: new google.maps.Size(50, 50)
+        },
+
+      },
+      info: {
+        icon: iconBase + 'info-i_maps.png'
+      }
+
+    };
+
+    var shadowImage = new google.maps.MarkerImage(
+    'http://votesmart.me/front/img/pin-rep.svg',
+        	      new google.maps.Size(80, 80),
+        	      new google.maps.Point(80,80),
+        	      new google.maps.Point(80, 32)
+);
+
+    var features = [{
+      position: new google.maps.LatLng(13.7464779, 100.5325729),
+      type: 'parking',
+      content: "<div style='text-align: center;'><img src='//graph.facebook.com/1556099071134652/picture?width=100&height=100'></div><div class='candidate-info'><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>"
+    }, {
+      position: new google.maps.LatLng(13.747056, 100.532612),
+      type: 'library'
+    }, {
+      position: new google.maps.LatLng(40.713664, -74.007819),
+      type: 'info'
+    }];
+
+
+
+
+
+    function addInfoWindow(marker, message) {
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: message
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
+
+
+
+
+    // Create markers.
+    features.forEach(function(feature) {
+    /*  var marker = new google.maps.Marker({
+        position: feature.position,
+        icon: icons[feature.type].icon,
+        map: map
+      }); */
+
+    //  var iconBase = '{{url('front/img/')}}';
+      var marker = new google.maps.Marker({
+      position: feature.position,
+      map: map,
+      title: feature.content,
+      icon: icons[feature.type].icon,
+      shadow: shadowImage,
+      animation: google.maps.Animation.DROP
+    });
+
+
+
+
+      marker.addListener('click', function() {
+      // infowindow.open(map, marker);
+      console.log(marker)
+
+      addInfoWindow(marker, marker.title)
+
+      });
+
+
+
+    });
+
+
+
+
+
+  }
+
+</script>-->
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvkk7wNQcIYXZ7S8XNG8cG-elq0QE2v3k&callback=initMap">  -->
+
+
+</script>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
 <script>
 
 function eatFood() {
 document.getElementById('form1').submit();
 }
+
+
 	var map = L.map('map').setView([13.7464779, 100.5325729], 10);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+/*	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
+	}).addTo(map); */
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/kimkundad/cjg7yspo916gv2rrpcww4g6kk/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2lta3VuZGFkIiwiYSI6ImNqZnMxNXlyYjBneG4yeHA2ODE0c2IxbXIifQ.89YSTeu4fE1KaNtWYXa3KQ', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 11,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1Ijoia2lta3VuZGFkIiwiYSI6ImNqZnMxNXlyYjBneG4yeHA2ODE0c2IxbXIifQ.89YSTeu4fE1KaNtWYXa3KQ'
+}).addTo(map);
+
+
+
 
 	var LeafIcon = L.Icon.extend({
 		options: {
@@ -239,6 +375,9 @@ document.getElementById('form1').submit();
 	L.marker([13.751565, 100.5204733], {icon: redIcon}).bindPopup('<div style="text-align: center;"><img src="//graph.facebook.com/1556099071134652/picture?width=100&height=100"></div><div class="candidate-info"><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>').addTo(map);
 	L.marker([13.7559235, 100.5535695], {icon: orangeIcon}).bindPopup('<div style="text-align: center;"><img src="//graph.facebook.com/1556099071134652/picture?width=100&height=100"></div><div class="candidate-info"><h3>Landon Black</h3><p>ผู้สมัคร ส.ส เขต 1</p></div>').addTo(map);
 */
+
+
+
 </script>
 
 
