@@ -529,6 +529,19 @@ input[type="radio"]:disabled + .label-text:before{
 
 }
 
+@media (min-width: 350px) {
+
+  .panel-content-set{
+    width: 350px;
+  }
+}
+@media (min-width: 360px) {
+
+  .panel-content-set{
+    width: 360px;
+  }
+}
+
 
 @media (min-width: 375px) {
 
