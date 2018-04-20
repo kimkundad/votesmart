@@ -350,7 +350,7 @@ document.getElementById('form1').submit();
 
 	var LeafIcon = L.Icon.extend({
 		options: {
-			shadowUrl: '{{url('front/img/pin-rep.svg')}}',
+			shadowUrl: '{{secure_url('front/img/pin-rep.svg')}}',
 			iconSize:     [40, 40],
 			shadowSize:   [80, 108],
 			iconAnchor:   [-16, 40],
