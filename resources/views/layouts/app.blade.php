@@ -304,9 +304,13 @@ input[type="radio"]:disabled + .label-text:before{
       font-size: 14px;
   }
 
+  .panel-content-set{
+    width: 280px;
+  }
+
 
   .panel-content{
-    position: absolute;
+  /*  position: absolute; */
     top: 0;
     width: 100%;
     height: 100vh;
@@ -419,10 +423,12 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
 
-
+  .panel-content-set{
+    width: 320px;
+  }
 
   .panel-content{
-    position: absolute;
+  /*  position: absolute; */
     top: 0;
     width: 100%;
     height: 100vh;
@@ -525,6 +531,12 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+
+  .panel-content-set{
+    width: 370px;
+  }
+
+
   .img-in-chart {
     width: 30px;
     height: 30px;
@@ -535,6 +547,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+  .panel-content-set{
+    width: 425px;
+  }
   .img-in-chart {
     width: 82px;
     height: 82px;
@@ -545,6 +560,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+  .panel-content-set{
+    width: 576px;
+  }
   .img-in-chart {
     width: 116px;
     height: 116px;
@@ -555,6 +573,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+  .panel-content-set{
+    width: 768px;
+  }
   .img-in-chart {
     width: 75px;
     height: 75px;
@@ -565,6 +586,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .panel-content-set{
+    width: 950px;
+  }
   .img-in-chart {
     width: 84px;
     height: 85px;
@@ -578,11 +602,14 @@ input[type="radio"]:disabled + .label-text:before{
     height: 95px;
   }
 
+  .panel-content-set{
+    width: 1140px;
+  }
 
 
 
   .panel-content{
-    position: absolute;
+  /*  position: absolute; */
     top: 0;
     width: 100%;
     height: 100vh;
