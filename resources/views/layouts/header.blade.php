@@ -1,5 +1,42 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1); padding-top:5px; padding-bottom:5px;">
+<!-- Navigation fixed-top-->
+<style>
+.page-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transition: top 0.6s;
+  -moz-transition: top 0.6s;
+  transition: top 0.6s;
+  z-index: 9999;
+}
+.page-header.off-canvas { top: -89px; }
+.page-header.fixed {
+  top: 0;
+  z-index: 9999;
+}
+
+
+.page-header-sub {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transition: top 0.6s;
+  -moz-transition: top 0.6s;
+  transition: top 0.6s;
+  z-index: 9999;
+}
+.page-header-sub.off-canvas { top: -59px; }
+.page-header-sub.fixed {
+  top: 0;
+  z-index: 9999;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light page-header" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1); padding-top:5px; padding-bottom:5px;">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

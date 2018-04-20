@@ -1051,6 +1051,34 @@ padding-bottom: 5px;
 
     <script type="text/javascript">
 
+    (function($){
+  $(function(){
+    var scroll = $(document).scrollTop();
+    var headerHeight = $('.page-header').outerHeight();
+
+    $(window).scroll(function() {
+      var scrolled = $(document).scrollTop();
+      if (scrolled > headerHeight){
+        $('.page-header').addClass('off-canvas');
+        $('.page-header-sub').addClass('off-canvas');
+      } else {
+        $('.page-header').removeClass('off-canvas');
+        $('.page-header-sub').removeClass('off-canvas');
+      }
+
+        if (scrolled > scroll){
+         $('.page-header').removeClass('fixed');
+         $('.page-header-sub').removeClass('fixed');
+        } else {
+        $('.page-header').addClass('fixed');
+        $('.page-header-sub').addClass('fixed');
+        }
+      scroll = $(document).scrollTop();
+     });
+
+   });
+})(jQuery);
+
       function DropDown(el) {
         this.dd = el;
         this.placeholder = this.dd.children('span');

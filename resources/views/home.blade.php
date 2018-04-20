@@ -362,7 +362,14 @@
 <script>
 
 
-  $(document).ready(function () {
+$(function() {
+  $('#content-home1').show();
+      
+    }
+);
+
+
+  /*$(document).ready(function () {
     $('#content-home1').show();
 
 
@@ -398,7 +405,7 @@
 
 
 
-  });
+  }); */
 
 
 

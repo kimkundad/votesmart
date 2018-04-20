@@ -104,7 +104,7 @@ input:-webkit-autofill {
 </style>
 
 
-<section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
+<section class="bg-whites page-header-sub" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
       <div class="reps-map-search">
@@ -136,7 +136,7 @@ input:-webkit-autofill {
 
 
 
-<section id="services" style="background: #f2f8fa; padding: 0px 10px 10px 10px; ">
+<section id="services" style="background: #f2f8fa; padding: 180px 10px 10px 10px; ">
 
   <div class="container">
     <div class="row">

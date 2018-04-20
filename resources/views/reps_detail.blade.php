@@ -600,7 +600,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 </style>
 
 
-<section class="bg-whites hidden-sm hidden-xs"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
+<section class="bg-whites hidden-sm hidden-xs page-header-sub"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
   <div class="container">
     <div class="row">
       <div class="col-md-4 text-center">
@@ -800,6 +800,13 @@ figure {
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
 
 <style>
 blockquote.primary {
