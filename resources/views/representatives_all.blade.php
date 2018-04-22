@@ -101,10 +101,38 @@ input:-webkit-autofill {
 .rectangle-copy-6 a.active {
     color: #08B0ED;
 }
+
 </style>
 
 
-<section class="bg-whites page-header-sub" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
+<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 70px 0 8px 0; z-index: 9998; position: fixed;">
+  <div class="container">
+    <div class="row">
+      <div class="reps-map-search">
+          <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+            {{ csrf_field() }}
+              <ul>
+                  <li>
+                      <select name="cars" class="fieldf-select  align-right">
+                          <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
+                          <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
+                          <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
+                          <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+                      </select>
+                      <input id="hero-demo" autofocus type="text" name="field2" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
+
+
+                  </li>
+              </ul>
+              </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
       <div class="reps-map-search">
@@ -136,7 +164,7 @@ input:-webkit-autofill {
 
 
 
-<section id="services" style="background: #f2f8fa; padding: 180px 10px 10px 10px; ">
+<section id="services" class="representatives_all" style="background: #f2f8fa; ">
 
   <div class="container">
     <div class="row">

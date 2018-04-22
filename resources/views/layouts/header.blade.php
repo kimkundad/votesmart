@@ -252,7 +252,7 @@
           <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
           {{ (Request::is('reps_list') ? 'id="a-head-set"' : '') }} style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/representatives_all')}}">เลือกใครดี?</a>
 
-          <a href="{{url('/')}}">
+          <a href="{{url('/representatives_all')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
              <h5 class="mb-3" style="font-weight: 700;">เลือกใครดี?</h5>
               <p class="text-muted mb-0">รู้จักผู้แทนของคุณมากขึ้น และบอกพวกเค้าว่าอะไรที่สำคุณ?</p>

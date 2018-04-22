@@ -413,6 +413,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
+
   .img-in-chart {
     margin-top: -30px;
     width: 80px;
@@ -545,6 +549,10 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 375px) {
 
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
+
   .panel-content-set{
     width: 370px;
   }
@@ -560,6 +568,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
   .panel-content-set{
     width: 425px;
   }
@@ -573,6 +585,11 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
+
   .panel-content-set{
     width: 576px;
   }
@@ -586,6 +603,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
   .panel-content-set{
     width: 768px;
   }
@@ -599,6 +620,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .representatives_all{
+        padding: 120px 10px 10px 10px;
+  }
   .panel-content-set{
     width: 950px;
   }
@@ -610,6 +634,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .representatives_all{
+        padding: 180px 10px 10px 10px;
+  }
   .img-in-chart {
     width: 95px;
     height: 95px;
@@ -878,6 +905,7 @@ margin: 0 5px 10px 0px;
   .masonry .item{
     font-size: 11px;
   }
+
 
 }
 
