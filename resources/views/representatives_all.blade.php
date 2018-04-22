@@ -108,11 +108,11 @@ input:-webkit-autofill {
 <section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 70px 0 8px 0; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
-      <div class="reps-map-search">
+      <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
             {{ csrf_field() }}
               <ul>
-                  <li>
+                  <li style="margin-bottom: 5px;">
                       <select name="cars" class="fieldf-select  align-right">
                           <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
                           <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
