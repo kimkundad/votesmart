@@ -101,7 +101,28 @@ input:-webkit-autofill {
 .rectangle-copy-6 a.active {
     color: #08B0ED;
 }
-
+.form-style-9 ul li .fieldf-select2 {
+    border-radius: 2px;
+    background-color: #5EC8F2;
+    height: 48px;
+    width: 74%;
+    color: #FFFFFF;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    border: 0;
+    margin-right: 0px;
+    padding: 0 16px;
+}
+.rectangle-copy-5 {
+    height: 49px;
+    width: 23%;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 15px 10px;
+    float: right;
+}
 </style>
 
 
@@ -113,12 +134,16 @@ input:-webkit-autofill {
             {{ csrf_field() }}
               <ul>
                   <li style="margin-bottom: 5px;">
-                      <select name="cars" class="fieldf-select  align-right">
+                      <select name="cars" class="fieldf-select2  align-right" style="width:73%">
                           <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
                           <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
                           <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
                           <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
                       </select>
+                      <div class="rectangle-copy-6" style="width: 24%; padding: 15px 10px; margin-right: 6px;    height: 47px;">
+                          <a href="#" class=""><i class="fa fa-map"></i></a>
+                          <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                      </div>
                       <input id="hero-demo" autofocus type="text" name="field2" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
                       <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
 
