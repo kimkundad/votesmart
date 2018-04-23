@@ -83,9 +83,8 @@ Route::group(['middleware' => 'admin'], function() {
   Route::post('api/post_read', 'ContactController@post_read');
 
   Route::resource('admin/contact', 'ContactController');
-
-
-
+  Route::resource('admin/constituency', 'ConstituencyController');
+  Route::post('admin/del_constituency', 'ConstituencyController@del_constituency');
 
 
 });

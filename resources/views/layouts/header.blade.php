@@ -44,7 +44,7 @@
     <a class="navbar-brand " href="{{url('/')}}" style="font-size: 1.8rem; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; ">
+      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; color: #08B0ED; ">
               <i class="fa fa-hand-paper-o"></i>
               <span>อาสา</span>
       </a>

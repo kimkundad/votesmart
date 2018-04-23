@@ -89,6 +89,12 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 											<span>จัดการข้อความ</span>
 										</a>
 									</li>
+                  <li {{ (Request::is('admin/constituency*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('admin/constituency/')}}"  >
+											<i class="fa fa-bug" aria-hidden="true"></i>
+											<span>เขตเลือกตั้ง</span>
+										</a>
+									</li>
 
 
 
