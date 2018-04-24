@@ -452,7 +452,7 @@
     <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right;"></i></label>
     <div class="toggle-content" >
 
-      <ul class="zoom-menu" style="">
+      <ul class="zoom-menu visible-sm visible-xs" style="">
 
       <!--  <li>
           <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
@@ -463,7 +463,40 @@
         @if(isset($cat))
             @foreach($cat as $u)
 
-        <li>
+        <li >
+          <a class="zoom-fab zoom-btn-sm  scale-transition scale-out" style="background: #fff;">
+            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
+          </a>
+        </li>
+
+
+          @endforeach
+        @endif
+
+
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
+            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
+          </a>
+        </li> -->
+
+      </ul>
+
+
+
+      <ul class="zoom-menu hidden-sm hidden-xs" style="">
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
+          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
+          </a>
+        </li> -->
+
+        @if(isset($cat))
+            @foreach($cat as $u)
+
+        <li >
           <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;">
             <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
           </a>
