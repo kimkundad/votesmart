@@ -490,7 +490,9 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+.scale-out{
+  display: none;
+}
 
 .scale-transition { transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important; }
 
