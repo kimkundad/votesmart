@@ -39,7 +39,81 @@
   </div>
 </section>
 
+<div class="toggle toggle-primary toggle-sm" style="z-index: 1;">
+  <div class="toggle active zoom">
+    <label id="zoomBtn" class="zoom-fab zoom-btn-large"
+    style="border-radius: 5px 5px 5px 5px; padding: 10px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
+    <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right;"></i></label>
+    <div class="toggle-content" >
 
+      <ul class="zoom-menu visible-sm visible-xs" style="">
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
+          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
+          </a>
+        </li> -->
+
+        @if(isset($cat))
+            @foreach($cat as $u)
+
+        <li >
+          <a class="zoom-fab zoom-btn-sm  scale-transition scale-out" style="background: #fff;">
+            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
+          </a>
+        </li>
+
+
+          @endforeach
+        @endif
+
+
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
+            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
+          </a>
+        </li> -->
+
+      </ul>
+
+
+
+      <ul class="zoom-menu hidden-sm hidden-xs" style="">
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
+          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
+          </a>
+        </li> -->
+
+        @if(isset($cat))
+            @foreach($cat as $u)
+
+        <li >
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;">
+            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
+          </a>
+        </li>
+
+
+          @endforeach
+        @endif
+
+
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
+            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
+          </a>
+        </li> -->
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>
 
 
 <section id="services" style="background: #f2f8fa; padding: 1.5rem 0;">
@@ -445,81 +519,7 @@
 
 
 
-<div class="toggle toggle-primary toggle-sm" style="z-index: 1;">
-  <div class="toggle active zoom">
-    <label id="zoomBtn" class="zoom-fab zoom-btn-large"
-    style="border-radius: 5px 5px 5px 5px; padding: 10px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
-    <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right;"></i></label>
-    <div class="toggle-content" >
 
-      <ul class="zoom-menu visible-sm visible-xs" style="">
-
-      <!--  <li>
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
-          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
-          </a>
-        </li> -->
-
-        @if(isset($cat))
-            @foreach($cat as $u)
-
-        <li >
-          <a class="zoom-fab zoom-btn-sm  scale-transition scale-out" style="background: #fff;">
-            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
-          </a>
-        </li>
-
-
-          @endforeach
-        @endif
-
-
-
-      <!--  <li>
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
-            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
-          </a>
-        </li> -->
-
-      </ul>
-
-
-
-      <ul class="zoom-menu hidden-sm hidden-xs" style="">
-
-      <!--  <li>
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
-          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
-          </a>
-        </li> -->
-
-        @if(isset($cat))
-            @foreach($cat as $u)
-
-        <li >
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;">
-            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
-          </a>
-        </li>
-
-
-          @endforeach
-        @endif
-
-
-
-      <!--  <li>
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
-            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
-          </a>
-        </li> -->
-
-      </ul>
-
-    </div>
-  </div>
-
-</div>
 
 
 @endsection
