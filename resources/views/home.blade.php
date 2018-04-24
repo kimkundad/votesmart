@@ -525,7 +525,7 @@
 @endsection
 
 @section('scripts')
-<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+<script src="{{url('front/js/Chart.bundle.js?v2')}}"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script type="text/javascript">
