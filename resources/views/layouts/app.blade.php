@@ -418,7 +418,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .img-in-chart {
-    margin-top: -30px;
+    position: absolute;
+    margin-top: -12px;
     width: 80px;
     height: 80px;
   }
@@ -534,12 +535,25 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+  .img-in-chart {
+    position: absolute;
+    margin-top: -12px;
+    width: 85px;
+    height: 85px;
+  }
 
   .panel-content-set{
     width: 350px;
   }
 }
 @media (min-width: 360px) {
+
+  .img-in-chart {
+    position: absolute;
+    margin-top: -12px;
+    width: 85px;
+    height: 85px;
+  }
 
   .panel-content-set{
     width: 360px;
@@ -559,8 +573,10 @@ input[type="radio"]:disabled + .label-text:before{
 
 
   .img-in-chart {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    margin-top: -12px;
+    width: 95px;
+    height: 95px;
   }
   .masonry .item {
       font-size: 14px;
@@ -576,8 +592,10 @@ input[type="radio"]:disabled + .label-text:before{
     width: 425px;
   }
   .img-in-chart {
-    width: 82px;
-    height: 82px;
+    position: absolute;
+    margin-top: -12px;
+    width: 100px;
+    height: 100px;
   }
   .masonry .item {
       font-size: 14px;
