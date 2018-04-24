@@ -221,7 +221,7 @@
     @if (Auth::guest())
 
 
-    <div class="panel-content-set" style="top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px;">
+    <div class="panel-content-set" style="top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 3;">
     <div class=" content_leena panel-content" >
       <div class="swiper-container">
       <div class="swiper-wrapper">
