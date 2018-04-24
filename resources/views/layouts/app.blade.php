@@ -296,7 +296,7 @@ input[type="radio"]:disabled + .label-text:before{
 }
 @media (min-width: 280px) {
   .img-in-chart {
-    margin-top: -16px;
+    top: 75px;
     width: 60px;
     height: 60px;
   }
@@ -419,7 +419,7 @@ input[type="radio"]:disabled + .label-text:before{
 
   .img-in-chart {
     position: absolute;
-    margin-top: -12px;
+    top: 75px;
     width: 80px;
     height: 80px;
   }
@@ -537,7 +537,7 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 350px) {
   .img-in-chart {
     position: absolute;
-    margin-top: -12px;
+    top: 75px;
     width: 85px;
     height: 85px;
   }
@@ -550,7 +550,7 @@ input[type="radio"]:disabled + .label-text:before{
 
   .img-in-chart {
     position: absolute;
-    margin-top: -12px;
+    top: 75px;
     width: 85px;
     height: 85px;
   }
@@ -574,7 +574,7 @@ input[type="radio"]:disabled + .label-text:before{
 
   .img-in-chart {
     position: absolute;
-    margin-top: -12px;
+    top: 75px;
     width: 95px;
     height: 95px;
   }
@@ -593,7 +593,7 @@ input[type="radio"]:disabled + .label-text:before{
   }
   .img-in-chart {
     position: absolute;
-    margin-top: -12px;
+    top: 75px;
     width: 100px;
     height: 100px;
   }
