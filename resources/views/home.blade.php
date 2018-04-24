@@ -444,11 +444,11 @@
     <div class="toggle-content" >
 
       <ul class="zoom-menu" style="">
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-user"></i> คมนาคม</a></li>
+        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;"><i class="fa fa-user"></i> คมนาคม</a></li>
         <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-book"></i></a></li>
         <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-dashboard"></i></a></li>
         <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-edit"></i></a></li>
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-bell"></i></a></li>
+        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;"><i class="fa fa-bell"></i></a></li>
       </ul>
 
     </div>
