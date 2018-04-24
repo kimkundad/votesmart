@@ -534,6 +534,7 @@
 $(document).ready(function () {
 
   $('#zoomBtn').click(function() {
+    $('.toggle-content').toggleClass('hidden');
     $('.zoom-btn-sm').toggleClass('scale-out');
     if (!$('.zoom-card').hasClass('scale-out')) {
       $('.zoom-card').toggleClass('scale-out');
