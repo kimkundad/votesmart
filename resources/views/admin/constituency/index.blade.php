@@ -137,7 +137,7 @@ return "$strDay $strMonthThai $strYear $strHour:$strMinute น.";
      												<div class="dropdown-menu" role="menu">
 
      													<a class="dropdown-item text-1" href="{{url('admin/constituency/'.$u->id.'/edit')}}">แก้ไข</a>
-     													<a class="dropdown-item text-1 text-danger" href="">ลบ</a>
+     												
 
      												</div>
      											</div>
