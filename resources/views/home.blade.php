@@ -51,7 +51,7 @@
          @foreach($objs as $u => $j)
 
 
-      <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px;">
+      <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px; z-index: 2;">
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
@@ -445,7 +445,7 @@
 
 
 
-<div class="toggle toggle-primary toggle-sm" >
+<div class="toggle toggle-primary toggle-sm" style="z-index: 1;">
   <div class="toggle active zoom">
     <label id="zoomBtn" class="zoom-fab zoom-btn-large"
     style="border-radius: 5px 5px 5px 5px; padding: 10px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
