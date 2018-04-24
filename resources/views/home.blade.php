@@ -318,7 +318,7 @@
   position: fixed;
   bottom: 45px;
   right: 24px;
-  height: 60px;
+  height: 20px;
 }
 
 .zoom-fab {
@@ -371,7 +371,7 @@
     position: absolute;
     right: 142px;
     left: auto;
-    top: -310%;
+        top: -1040%;
     transform: translateY(-50%);
     height: 100%;
     width: 0px;
