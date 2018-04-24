@@ -75,7 +75,12 @@ class HomeController extends Controller
 
       //  dd($objs);
 
+      $cat = DB::table('categories')->select(
+            'categories.*'
+            )
+            ->get();
 
+    $data['cat'] = $cat;
       $data['objs'] = $objs;
 
         return view('home', $data);

@@ -324,13 +324,14 @@
 .zoom-fab {
   display: inline-block;
   width: 140px;
-  height: 40px;
-  line-height: 40px;
+  height: 22px;
+  line-height: 22px;
 
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
   vertical-align: middle;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
+  padding-left: 8px;
   transition: 0.2s ease-out;
 
   cursor: pointer;
@@ -371,7 +372,7 @@
     position: absolute;
     right: 142px;
     left: auto;
-        top: -1040%;
+        top: -1380%;
     transform: translateY(-50%);
     height: 100%;
     width: 0px;
@@ -383,6 +384,14 @@
 
   display: inline-block;
   margin-right: 10px;
+}
+
+.zoom-menu i {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  padding: 3px;
 }
 
 .zoom-card {
@@ -444,11 +453,34 @@
     <div class="toggle-content" >
 
       <ul class="zoom-menu" style="">
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;"><i class="fa fa-user"></i> คมนาคม</a></li>
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-book"></i></a></li>
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-dashboard"></i></a></li>
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;"><i class="fa fa-edit"></i></a></li>
-        <li><a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;"><i class="fa fa-bell"></i></a></li>
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
+          <i class="fa fa-user" style="background-color: #F44336; color:#F44336;"></i><span > เศรษฐกิจ</span>
+          </a>
+        </li> -->
+
+        @if(isset($cat))
+            @foreach($cat as $u)
+
+        <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;">
+            <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
+          </a>
+        </li>
+
+
+          @endforeach
+        @endif
+
+
+
+      <!--  <li>
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 0px 0px 5px 5px;">
+            <i class="fa fa-user" style="background-color: #9c27b0; color:#9c27b0;"></i> คมนาคม
+          </a>
+        </li> -->
+
       </ul>
 
     </div>
