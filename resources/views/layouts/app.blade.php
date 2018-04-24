@@ -291,8 +291,8 @@ input[type="radio"]:disabled + .label-text:before{
 .img-in-chart-in {
     border-radius: 100%;
     margin-top: -3px;
-    width: 83px;
-    height: 83px;
+    width: 95px;
+    height: 95px;
 }
 @media (min-width: 280px) {
   .img-in-chart {
@@ -537,9 +537,9 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 350px) {
   .img-in-chart {
     position: absolute;
-    top: 75px;
-    width: 85px;
-    height: 85px;
+    top: 90px;
+    width: 80px;
+    height: 80px;
   }
 
   .panel-content-set{
@@ -550,9 +550,9 @@ input[type="radio"]:disabled + .label-text:before{
 
   .img-in-chart {
     position: absolute;
-    top: 75px;
-    width: 85px;
-    height: 85px;
+    top: 90px;
+    width: 80px;
+    height: 80px;
   }
 
   .panel-content-set{
