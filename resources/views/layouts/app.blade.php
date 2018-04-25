@@ -295,6 +295,10 @@ input[type="radio"]:disabled + .label-text:before{
     height: 95px;
 }
 @media (min-width: 280px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
   .img-in-chart {
     top: 75px;
     width: 60px;
@@ -413,6 +417,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
   .representatives_all{
         padding: 120px 10px 10px 10px;
   }
@@ -535,6 +543,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
   .img-in-chart {
     position: absolute;
     top: 90px;
@@ -547,6 +559,10 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   .img-in-chart {
     position: absolute;
@@ -562,6 +578,10 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   .representatives_all{
         padding: 120px 10px 10px 10px;
@@ -584,6 +604,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   .representatives_all{
         padding: 120px 10px 10px 10px;
@@ -603,6 +627,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   .representatives_all{
         padding: 120px 10px 10px 10px;
@@ -621,6 +649,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   .representatives_all{
         padding: 120px 10px 10px 10px;
@@ -640,6 +672,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .padding-fix{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
   .representatives_all{
         padding: 120px 10px 10px 10px;
   }
@@ -656,6 +692,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .padding-fix{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
   .representatives_all{
         padding: 180px 10px 10px 10px;
   }

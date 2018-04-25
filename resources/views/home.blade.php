@@ -125,7 +125,7 @@
          @foreach($objs as $u => $j)
 
 
-      <div class="col-6 col-md-3 text-center" style="padding-right: 6px; padding-left: 6px; ">
+      <div class="col-6 col-md-3 text-center padding-fix" >
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
