@@ -106,25 +106,24 @@
 
 
       <div class="col-md-3 text-center hidden-sm hidden-xs">
-        <a class="zoom-btn-large js-scroll-trigger" style="margin-top:-28px; color: #fff; line-height: 30px; background: #08b0ed;">
 
+
+        <a class="submit-to-add zoom-btn-large js-scroll-trigger" href="#" onclick="myFunction1()" style="margin-top:-28px; color: #fff; line-height: 30px; background: #08b0ed;">
           <span style="font-size: 22px;">
-
             <i class="fa fa-arrow-right" style="margin-top:20px;"></i><br>
             ดูผลลัพธ์
-
         </span></a>
 
 
 
 
-    <!--    <div class="zoom-btn-large">
+        <div class="check-to-add zoom-btn-large">
         <div class=" chart" data-percent="0" id="easy-pie-chart">
           <strong style="font-size:16px;">ต้องเลือกอีก</strong>
 
             <input type="text" id="number" value="10" class="number-set percent" >
         </div>
-      </div> -->
+      </div>
 
 
          </div>
@@ -193,7 +192,11 @@ input:checked{
 <script src="{{url('js/jquery.masonry.min.js')}}"></script>
 <script src="http://tjcrowder.github.io/simple-snippets-console/snippet.js"></script>
 
-
+<script>
+function myFunction1() {
+    document.getElementById("cutproduct").submit();
+}
+</script>
 
 <script>
 
@@ -531,6 +534,13 @@ $('#easy-pie-chart .percent').css({
     columnWidth: 50
   });
   var myValue = 0;
+
+
+  if(myValue < 100){
+    $('.check-to-add').show();
+    $('.submit-to-add').hide();
+  }
+
   $(document).on("click", ".masonry .item", function () {
     if ($(this).hasClass("select")) {
       $(this).removeClass("select");
@@ -544,10 +554,18 @@ $('#easy-pie-chart .percent').css({
 
       $('#easy-pie-chart').data('easyPieChart').update(
         Math.round(myValue-=10)
-
         );
 
+
+
+
+
         console.log(myValue);
+
+        if(myValue < 100){
+          $('.check-to-add').show();
+          $('.submit-to-add').hide();
+        }
 
       var value = parseInt(document.getElementById('number1').value, 0);
       value = isNaN(value) ? 10 : value;
@@ -555,20 +573,54 @@ $('#easy-pie-chart .percent').css({
       document.getElementById('number1').value = value;
 
     } else {
-      $(this).addClass("select");
-
-      var value = parseInt(document.getElementById('number').value, 0);
-      value = isNaN(value) ? 10 : value;
-      value--;
-      document.getElementById('number').value = value;
 
 
-      $('#easy-pie-chart').data('easyPieChart').update(
-        Math.round(myValue+=10)
 
-        );
 
-        console.log(myValue);
+
+
+
+
+
+
+      if(myValue < 100 ){
+
+        var value = parseInt(document.getElementById('number').value, 0);
+        value = isNaN(value) ? 10 : value;
+        value--;
+        document.getElementById('number').value = value;
+
+        
+        $(this).addClass("select");
+        $('#easy-pie-chart').data('easyPieChart').update(
+          Math.round(myValue+=10)
+
+          );
+        }
+
+
+
+          console.log(value);
+
+
+
+          if(myValue >= 100 ){
+
+
+
+            $('.check-to-add').hide();
+            $('.submit-to-add').show();
+            myValue = 100;
+          }else{
+            $(this).addClass("select");
+
+
+          }
+
+
+
+
+
 
       var value = parseInt(document.getElementById('number1').value, 0);
       value = isNaN(value) ? 10 : value;
@@ -576,6 +628,8 @@ $('#easy-pie-chart .percent').css({
       document.getElementById('number1').value = value;
 
     }
+
+
   });
 
   function check(checkboxid) {
