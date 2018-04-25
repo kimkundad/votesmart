@@ -87,6 +87,213 @@ class HomeController extends Controller
     }
 
 
+
+    public function search_data2(Request $request){
+
+      $this->validate($request, [
+       'field2' => 'required'
+      ]);
+
+      $field2= $request['field2'];
+
+    //  $admin = [];
+
+
+      $get_user_count = DB::table('users')
+          ->select(
+          'users.name'
+          )
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->where('users.name', 'LIKE', '%'.$field2.'%')
+          ->count();
+
+        if($get_user_count > 0){
+
+          $get_user = DB::table('users')
+              ->select(
+              'users.name'
+              )
+              ->where('users.user_lock', 1)
+              ->where('users.is_admin', 0)
+              ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->get();
+
+              foreach($get_user as $x){
+                $admin[] =
+                    $x->name
+                ;
+              }
+
+        } else{
+
+
+
+          $get_count_provinces = DB::table('provinces')
+              ->select(
+              'provinces.name_in_thai'
+              )
+              ->Where('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+              ->count();
+
+              if($get_count_provinces > 0){
+
+                $get_provinces = DB::table('provinces')
+                    ->select(
+                    'provinces.name_in_thai'
+                    )
+                    ->Where('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+                    ->get();
+                  //  dd($get_provinces);
+                    foreach($get_provinces as $x){
+                      $admin[] =
+                          $x->name_in_thai
+                      ;
+                    }
+
+              }else{
+
+
+
+                $get_count_districts = DB::table('districts')
+                    ->select(
+                    'districts.name_in_thai'
+                    )
+                    ->Where('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                    ->count();
+
+
+                    if($get_count_districts > 0){
+
+                      $get_districts = DB::table('districts')
+                          ->select(
+                          'districts.name_in_thai'
+                          )
+                          ->Where('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                          ->get();
+                        //  dd($get_provinces);
+                          foreach($get_districts as $x){
+                            $admin[] =
+                                $x->name_in_thai
+                            ;
+                          }
+
+                    }else{
+
+
+                      $get_count_subdistricts = DB::table('subdistricts')
+                          ->select(
+                          'subdistricts.name_in_thai'
+                          )
+                          ->Where('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                          ->count();
+
+
+                          if($get_count_subdistricts > 0){
+
+                            $get_subdistricts = DB::table('subdistricts')
+                                ->select(
+                                'subdistricts.name_in_thai'
+                                )
+                                ->Where('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                                ->get();
+                              //  dd($get_provinces);
+                                foreach($get_subdistricts as $x){
+                                  $admin[] =
+                                      $x->name_in_thai
+                                  ;
+                                }
+
+                          }else{
+
+                            $admin = null;
+
+                          }
+
+
+
+                    }
+
+                //$admin = null;
+
+              }
+
+
+
+
+
+
+        }
+
+
+    /*  $get_count = DB::table('users')
+        ->select(
+        'users.name',
+        'districts.name_in_thai as name_in_thai_d',
+        'subdistricts.name_in_thai as name_in_thai_s',
+        'provinces.name_in_thai as name_in_thai_p'
+        )
+        ->leftjoin('districts', 'districts.id', '=', 'users.amphur_id')
+        ->leftjoin('subdistricts', 'subdistricts.id', '=', 'users.district_id')
+        ->leftjoin('provinces', 'provinces.id', '=', 'users.province_id')
+        ->where('users.user_lock', 1)
+        ->where('users.is_admin', 0)
+        ->orwhere('users.name', 'LIKE', '%'.$field2.'%')
+        ->orWhere('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->orWhere('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->orWhere('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->count();
+
+
+        if($get_count > 0){
+
+          $objs = DB::table('users')
+          ->select(
+          'users.name',
+          'districts.name_in_thai as name_in_thai_d',
+          'subdistricts.name_in_thai as name_in_thai_s',
+          'provinces.name_in_thai as name_in_thai_p'
+          )
+          ->leftjoin('districts', 'districts.id', '=', 'users.amphur_id')
+          ->leftjoin('subdistricts', 'subdistricts.id', '=', 'users.district_id')
+          ->leftjoin('provinces', 'provinces.id', '=', 'users.province_id')
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->orwhere('users.name', 'LIKE', '%'.$field2.'%')
+          ->orWhere('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+          ->orWhere('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+          ->orWhere('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+            ->get();
+
+          //  $admin = ['ActionScript', 'AppleScript', 'Asp', 'Assembly', 'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL', 'ColdFusion', 'Erlang', 'Fortran', 'Groovy', 'Haskell', 'HTML', 'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'PowerShell', 'Python', 'Ruby', 'Scala', 'Scheme', 'SQL', 'TeX', 'XML'];
+
+
+            foreach($objs as $x){
+
+
+
+            //  echo "Key=" . $x . ", Value=" . $x_value;
+
+              $admin = [
+                  $x->name,
+              ];
+            }
+
+        }else{
+          $admin = null;
+        }
+
+        */
+
+
+
+
+
+        return Response::json(['data' => $admin]);
+
+    }
+
+
     public function search_data(Request $request){
 
       $this->validate($request, [

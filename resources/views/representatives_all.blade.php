@@ -144,7 +144,7 @@ input:-webkit-autofill {
                           <a href="#" class=""><i class="fa fa-map"></i></a>
                           <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
                       </div>
-                      <input id="hero-demo" autofocus type="text" name="field2" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <input id="hero-demo2" autofocus type="text" name="field3" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
                       <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
 
 
@@ -444,6 +444,26 @@ document.getElementById('form1').submit();
         source: function(term, response){
 
             xhr = $.getJSON('{{secure_url('/search/data/')}}', { field2: term }, function(data){
+              //secure_url
+              response(data.data);
+            });
+        }
+    });
+
+
+</script>
+
+
+<script>
+
+
+    var xhr3;
+    new autoComplete({
+        selector: 'input[name="field3"]',
+        minChars: 1,
+        source: function(term, response){
+
+            xhr3 = $.getJSON('{{secure_url('/search/data2/')}}', { field: term }, function(data){
               //secure_url
               response(data.data);
             });
