@@ -295,6 +295,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 95px;
 }
 @media (min-width: 280px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -417,6 +420,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -543,6 +549,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -559,6 +568,9 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -578,6 +590,9 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -604,6 +619,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -627,6 +645,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -649,6 +670,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+  .quiz_choices{
+    padding: 60px 0 0px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -672,6 +696,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .quiz_choices{
+    padding: 95px 0 20px 0;
+  }
   .padding-fix{
     padding-right: 6px;
     padding-left: 6px;
@@ -692,6 +719,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .quiz_choices{
+    padding: 95px 0 20px 0;
+  }
   .padding-fix{
     padding-right: 25px;
     padding-left: 25px;

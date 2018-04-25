@@ -2,10 +2,14 @@
 
 @section('content')
 
+<style>
+
+
+</style>
 
 
 
-<section class="bg-whites page-header-sub " id="about" style="padding: 95px 0 20px 0; z-index: 9998; ">
+  <section class="bg-whites page-header-sub quiz_choices " id="about" style=" z-index: 9998; ">
 
 
   <div class="container">
@@ -102,22 +106,27 @@
 
 
       <div class="col-md-3 text-center hidden-sm hidden-xs">
-      <!--  <a class="zoom-btn-large js-scroll-trigger" style="margin-top:-28px; color: #0479bd;">
-          <span style="font-size: 16px;">
-            ต้องเลือกอีก
-          <input type="text" id="number" value="10" class="number-set" >
-        </span></a> -->
+        <a class="zoom-btn-large js-scroll-trigger" style="margin-top:-28px; color: #fff; line-height: 30px; background: #08b0ed;">
+
+          <span style="font-size: 22px;">
+
+            <i class="fa fa-arrow-right" style="margin-top:20px;"></i><br>
+            ดูผลลัพธ์
+
+        </span></a>
 
 
 
 
-        <div class="zoom-btn-large">
+    <!--    <div class="zoom-btn-large">
         <div class=" chart" data-percent="0" id="easy-pie-chart">
           <strong style="font-size:16px;">ต้องเลือกอีก</strong>
 
             <input type="text" id="number" value="10" class="number-set percent" >
         </div>
-      </div>
+      </div> -->
+
+
          </div>
 
       </div>
