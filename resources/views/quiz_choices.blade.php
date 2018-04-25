@@ -547,11 +547,15 @@ $('#easy-pie-chart .percent').css({
       $(this).removeClass("select");
 
       var value = parseInt(document.getElementById('number').value, 0);
-
       value = isNaN(value) ? 10 : value;
       value++;
 
       document.getElementById('number').value = value;
+
+      var value = parseInt(document.getElementById('number1').value, 0);
+      value = isNaN(value) ? 10 : value;
+      value++;
+      document.getElementById('number1').value = value;
 
       $('#easy-pie-chart').data('easyPieChart').update(
         Math.round(myValue-=10)
@@ -570,10 +574,7 @@ $('#easy-pie-chart .percent').css({
 
         }
 
-      var value = parseInt(document.getElementById('number1').value, 0);
-      value = isNaN(value) ? 10 : value;
-      value++;
-      document.getElementById('number1').value = value;
+
 
     } else {
 
@@ -592,6 +593,11 @@ $('#easy-pie-chart .percent').css({
         value = isNaN(value) ? 10 : value;
         value--;
         document.getElementById('number').value = value;
+
+        var value = parseInt(document.getElementById('number1').value, 0);
+        value = isNaN(value) ? 10 : value;
+        value--;
+        document.getElementById('number1').value = value;
 
 
         $(this).addClass("select");
@@ -627,10 +633,7 @@ $('#easy-pie-chart .percent').css({
 
 
 
-      var value = parseInt(document.getElementById('number1').value, 0);
-      value = isNaN(value) ? 10 : value;
-      value--;
-      document.getElementById('number1').value = value;
+
 
     }
 

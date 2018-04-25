@@ -696,6 +696,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .visible-xs {
+      display: none;
+  }
   .quiz_choices{
     padding: 95px 0 20px 0;
   }
@@ -719,6 +722,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .visible-xs {
+      display: none;
+  }
   .quiz_choices{
     padding: 95px 0 20px 0;
   }
@@ -1060,7 +1066,7 @@ a:hover{
     border-radius: 15px 15px 15px 15px;
     bottom: 10px;
     /* color: #FFF; */
-    display: block;
+    
     height: 9px;
     padding: 10px 10px 25px 10px;
     position: fixed;
