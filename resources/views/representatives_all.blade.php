@@ -130,7 +130,7 @@ input:-webkit-autofill {
   <div class="container">
     <div class="row">
       <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
-          <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+          <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
             {{ csrf_field() }}
               <ul>
                   <li style="margin-bottom: 5px;">

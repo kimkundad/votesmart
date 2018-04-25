@@ -499,6 +499,181 @@ class HomeController extends Controller
 
     }
 
+
+    public function reps_list2(Request $request){
+
+
+      $field2= $request['field3'];
+
+    //  $admin = [];
+
+
+      $get_user_count = DB::table('users')
+          ->select(
+          'users.name'
+          )
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->where('users.name', 'LIKE', '%'.$field2.'%')
+          ->count();
+
+        if($get_user_count > 0){
+
+          $get_user = DB::table('users')
+              ->select(
+              'users.*'
+              )
+              ->where('users.user_lock', 1)
+              ->where('users.is_admin', 0)
+              ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->get();
+
+              $data['objs'] = $get_user;
+              $data['search'] = $field2;
+
+              return view('reps_list', $data);
+
+        }else{
+
+
+
+          $get_count_provinces = DB::table('provinces')
+              ->select(
+              'provinces.name_in_thai'
+              )
+              ->Where('provinces.name_in_thai', $field2)
+              ->count();
+
+              if($get_count_provinces > 0){
+
+                $get_provinces = DB::table('provinces')
+                    ->select(
+                    'provinces.*'
+                    )
+                    ->Where('provinces.name_in_thai', $field2)
+                    ->first();
+                  //  dd($get_provinces);
+
+                  $get_user = DB::table('users')
+                      ->select(
+                      'users.*'
+                      )
+                      ->where('users.user_lock', 1)
+                      ->where('users.is_admin', 0)
+                      ->where('users.province_id', $get_provinces->id)
+                      ->get();
+
+                      $data['objs'] = $get_user;
+                      $data['search'] = $field2;
+
+                      return view('reps_list', $data);
+
+
+              }else{
+
+
+
+                $get_count_districts = DB::table('districts')
+                    ->select(
+                    'districts.name_in_thai'
+                    )
+                    ->Where('districts.name_in_thai',$field2)
+                    ->count();
+
+
+                    if($get_count_districts > 0){
+
+                      $get_districts = DB::table('districts')
+                          ->select(
+                          'districts.*'
+                          )
+                          ->Where('districts.name_in_thai', $field2)
+                          ->first();
+                        //  dd($get_provinces);
+
+                        $get_user = DB::table('users')
+                            ->select(
+                            'users.*'
+                            )
+                            ->where('users.user_lock', 1)
+                            ->where('users.is_admin', 0)
+                            ->where('users.amphur_id', $get_districts->id)
+                            ->get();
+
+                            $data['objs'] = $get_user;
+                            $data['search'] = $field2;
+
+                            return view('reps_list', $data);
+
+
+                    }else{
+
+
+                      $get_count_subdistricts = DB::table('subdistricts')
+                          ->select(
+                          'subdistricts.*'
+                          )
+                          ->Where('subdistricts.name_in_thai', $field2)
+                          ->count();
+
+
+                          if($get_count_subdistricts > 0){
+
+                            $get_subdistricts = DB::table('subdistricts')
+                                ->select(
+                                'subdistricts.*'
+                                )
+                                ->Where('subdistricts.name_in_thai', $field2)
+                                ->first();
+                              //  dd($get_provinces);
+
+                              $get_user = DB::table('users')
+                                  ->select(
+                                  'users.*'
+                                  )
+                                  ->where('users.user_lock', 1)
+                                  ->where('users.is_admin', 0)
+                                  ->where('users.district_id', $get_subdistricts->id)
+                                  ->get();
+
+                                  $data['objs'] = $get_user;
+                                  $data['search'] = $field2;
+
+                                  return view('reps_list', $data);
+
+
+                          }else{
+
+                          }
+
+
+
+
+                    }
+
+
+
+
+
+
+
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+
     public function reps_list(Request $request){
 
 
