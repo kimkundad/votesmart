@@ -397,7 +397,7 @@ var EasyPieChart = function(el, opts) {
 		lineWidth: 1,
 		size: 110,
 		rotate: 0,
-		animate: 1000,
+		animate: 500,
 		easing: function (x, t, b, c, d) { // more can be found here: http://gsgd.co.uk/sandbox/jquery/easing/
 			t = t / (d/2);
 			if (t < 1) {
@@ -501,7 +501,7 @@ $.fn.easyPieChart = function(options) {
 var chartSize = '120';
 
 $('#easy-pie-chart').easyPieChart({
-    animate: 2000,
+    animate: 500,
     scaleColor: false,
     lineWidth: 6,
     lineCap: 'square',
