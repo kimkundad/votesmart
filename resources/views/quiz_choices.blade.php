@@ -163,8 +163,8 @@ input:checked{
     </div>
 
 
-      <button type="submit" class="btn btn-primary send_q btn-xl js-scroll-trigger visible-sm visible-xs" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
-      <a class="scroll-to-top visible-sm visible-xs" href="#"> <input type="text" id="number1" value="0" style="background-color: #ffffff; border:  none; width: 23px; font-weight: 700; color: #0479bd; padding-left: 10px; ">/10 </a>
+      <button type="submit" class="send_q btn btn-primary btn-xl js-scroll-trigger visible-sm visible-xs" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
+      <a class="scroll-to-top visible-sm visible-xs" href="#">ต้องเลือกอีก <input type="text" id="number1" value="10" style="background-color: #ffffff; border:  none; width: 23px; font-weight: 700; color: #0479bd; padding-left: 10px; "> </a>
 
 
 
@@ -539,6 +539,7 @@ $('#easy-pie-chart .percent').css({
   if(myValue < 100){
     $('.check-to-add').show();
     $('.submit-to-add').hide();
+    $('.send_q').hide();
   }
 
   $(document).on("click", ".masonry .item", function () {
@@ -565,6 +566,8 @@ $('#easy-pie-chart .percent').css({
         if(myValue < 100){
           $('.check-to-add').show();
           $('.submit-to-add').hide();
+          $('.send_q').hide();
+
         }
 
       var value = parseInt(document.getElementById('number1').value, 0);
@@ -590,7 +593,7 @@ $('#easy-pie-chart .percent').css({
         value--;
         document.getElementById('number').value = value;
 
-        
+
         $(this).addClass("select");
         $('#easy-pie-chart').data('easyPieChart').update(
           Math.round(myValue+=10)
@@ -610,6 +613,8 @@ $('#easy-pie-chart .percent').css({
 
             $('.check-to-add').hide();
             $('.submit-to-add').show();
+            $('.send_q').show();
+
             myValue = 100;
           }else{
             $(this).addClass("select");

@@ -65,12 +65,12 @@ font-size:18px !important;
       font-weight: 600;
     }
     .visible-sm, .visible-xs {
-        display: none!important;
+        display: none;
     }
     @media (max-width: 767px)
     {
       .visible-xs {
-          display: block!important;
+          display: block;
       }
       .hidden-xs {
           display: none!important;
@@ -1062,12 +1062,12 @@ a:hover{
     /* color: #FFF; */
     display: block;
     height: 9px;
-    padding: 10px 10px 25px 0px;
+    padding: 10px 10px 25px 10px;
     position: fixed;
     right: 10px;
     text-align: center;
     text-decoration: none;
-    min-width: 39px;
+    min-width: 49px;
     z-index: 1040;
 }
 .send_q {
@@ -1077,7 +1077,7 @@ a:hover{
     color: #FFF;
     display: block;
     height: 36px;
-    right: 66px;
+    right: 116px;
 }
 .scroll-to-top.visible {
     opacity: 0.75;
