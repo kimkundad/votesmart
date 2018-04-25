@@ -91,7 +91,7 @@ class HomeController extends Controller
     public function search_data2(Request $request){
 
       $this->validate($request, [
-       'field2' => 'required'
+       'field3' => 'required'
       ]);
 
       $field2= $request['field2'];
