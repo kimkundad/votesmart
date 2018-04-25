@@ -463,7 +463,7 @@ document.getElementById('form1').submit();
         minChars: 1,
         source: function(term, response){
 
-            xhr3 = $.getJSON('{{secure_url('/search/data2/')}}', { field: term }, function(data){
+            xhr3 = $.getJSON('{{secure_url('/search/data2/')}}', { field3: term }, function(data){
               //secure_url
               response(data.data);
             });

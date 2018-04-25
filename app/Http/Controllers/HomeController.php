@@ -94,7 +94,7 @@ class HomeController extends Controller
        'field3' => 'required'
       ]);
 
-      $field2= $request['field2'];
+      $field2= $request['field3'];
 
     //  $admin = [];
 
