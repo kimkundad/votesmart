@@ -38,6 +38,8 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-light page-header" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1); padding-top:5px; padding-bottom:5px;">
   <div class="container">
+
+
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -236,7 +238,7 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item {{ (Request::is('/') ? 'action-nav' : '') }}">
           <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }} {{ (Request::is('quiz_choices') ? 'a-head' : '') }} {{ (Request::is('result') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('/') ? 'id="a-head-set"' : '') }}  style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
 
           <a href="{{url('/')}}">
@@ -247,7 +249,7 @@
           </a>
 
         </li>
-        <li class="nav-item" style="margin-right: 30px;">
+        <li class="nav-item {{ (Request::is('representatives_all*') ? 'action-nav' : '') }} {{ (Request::is('reps_list*') ? 'action-nav' : '') }}" style="margin-right: 30px;">
 
           <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
           {{ (Request::is('reps_list') ? 'id="a-head-set"' : '') }} style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/representatives_all')}}">เลือกใครดี?</a>
@@ -262,7 +264,9 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal" style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal"
+          style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
+          <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
 
 
@@ -278,9 +282,76 @@
 
               <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
               <br>
-              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="font-weight: 400;padding: 10px 40px; color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
             </div>
         </li>
+
+        @if (Auth::guest())
+
+        @else
+        <li class="nav-item dropdown open visible-sm visible-xs" style="border-top: 1px solid #ddd;">
+        <style>
+
+        .userbox {
+            display: inline-block;
+            margin: 3px 17px 10px 0;
+            position: relative;
+            vertical-align: middle;
+        }
+        .userbox > a {
+    display: inline-block;
+    text-decoration: none;
+}
+.userbox .profile-info, .userbox .profile-picture {
+    display: inline-block;
+    vertical-align: middle;
+}
+figure {
+    margin: 0;
+}
+.userbox .profile-picture img {
+    width: 45px;
+    color: transparent;
+}
+.userbox .profile-info {
+    margin: 0 25px 0 10px;
+}
+.userbox .profile-info, .userbox .profile-picture {
+    display: inline-block;
+    vertical-align: middle;
+}
+.userbox .name {
+    color: #000011;
+    font-size: 1.3rem;
+    line-height: 1.2em;
+}
+.userbox .role {
+    color: #ACACAC;
+    font-size: 1.1rem;
+    line-height: 1.5em;
+}
+        </style>
+
+        <div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="http://localhost/votesmart/public/assets/images/avatar/1522428463.png" alt="ปริญญา เขื่อนควบ" class="img-circle">
+							</figure>
+							<div class="profile-info" style="text-align:left; margin: 15px 17px 10px 10px;">
+								<span class="name" style="color: #0591c3; padding-bottom:8px;">ปริญญา เขื่อนควบ</span><div style="height:10px;"></div>
+								<a href="{{url('result')}}" class="info" style="font-size: 13px;" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a>
+                <a href="{{url('logout')}}" class="info" style="font-size: 13px;" id="SHOW_HELP"><i class="fa fa-sign-out"></i> ออกจากระบบ</a>
+
+							</div>
+
+
+						</a>
+
+
+
+					</div>
+          </li>
+        @endif
 
       </ul>
 

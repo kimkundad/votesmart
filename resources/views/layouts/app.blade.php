@@ -295,6 +295,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 95px;
 }
 @media (min-width: 280px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -420,6 +423,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -549,6 +555,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -568,6 +577,9 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -590,6 +602,9 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -619,6 +634,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -645,6 +663,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -670,6 +691,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+  .action-nav{
+        border-left: 3px solid #08b0ed;
+  }
   .quiz_choices{
     padding: 60px 0 0px 0;
   }
@@ -696,6 +720,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+  .action-nav{
+      border-left: 3px solid #fff;
+}
   .visible-xs {
       display: none;
   }
@@ -722,6 +749,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+
+  .action-nav{
+      border-left: 3px solid #fff;
+}
   .visible-xs {
       display: none;
   }
@@ -1066,7 +1097,7 @@ a:hover{
     border-radius: 15px 15px 15px 15px;
     bottom: 10px;
     /* color: #FFF; */
-    
+
     height: 9px;
     padding: 10px 10px 25px 10px;
     position: fixed;
