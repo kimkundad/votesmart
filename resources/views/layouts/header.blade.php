@@ -335,7 +335,12 @@ figure {
         <div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<figure class="profile-picture">
-								<img src="http://localhost/votesmart/public/assets/images/avatar/1522428463.png" alt="ปริญญา เขื่อนควบ" class="img-circle">
+                @if(Auth::user()->provider == 'email')
+                <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{url('Auth::user()->name')}}" class="img-circle">
+                @else
+                <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{url('Auth::user()->name')}}" class="img-circle">
+                @endif
+
 							</figure>
 							<div class="profile-info" style="text-align:left; margin: 15px 17px 10px 10px;">
 								<span class="name" style="color: #0591c3; padding-bottom:8px;">ปริญญา เขื่อนควบ</span><div style="height:10px;"></div>
