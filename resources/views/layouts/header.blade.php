@@ -349,8 +349,8 @@ figure {
 							</figure>
 							<div class="profile-info" style="text-align:left; margin: 15px 17px 10px 10px;">
 								<span class="name" style="color: #0591c3; padding-bottom:8px;">ปริญญา เขื่อนควบ</span><div style="height:10px;"></div>
-								<a href="{{url('result')}}" class="info" style="font-size: 13px; color:#ddd" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a>
-                <a href="{{url('logout')}}" class="info" style="font-size: 13px; color:#ddd" id="SHOW_HELP"><i class="fa fa-sign-out"></i> ออกจากระบบ</a>
+								<a href="{{url('result')}}" class="info" style="font-size: 13px; color:#999" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a>
+                <a href="{{url('logout')}}" class="info" style="font-size: 13px; color:#999" id="SHOW_HELP"><i class="fa fa-sign-out"></i> ออกจากระบบ</a>
 
 							</div>
 
