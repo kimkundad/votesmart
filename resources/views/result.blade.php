@@ -837,7 +837,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+<script src="{{url('front/js/Chart.bundlev2.js?v0')}}"></script>
 
 
 

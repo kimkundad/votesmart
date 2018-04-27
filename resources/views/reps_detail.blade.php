@@ -864,25 +864,44 @@ blockquote {
 
     margin: auto auto 24px;
 }
+.set-rotate{
+  left: 200px;
+    top: 170px;
+    position: fixed;
+}
+.set-rotate2{
+  left: -60px;
+    top: 690px;
+}
 </style>
 
   <div class="candidate-details container">
       <div class="row">
 
-          <div class="col-md-6 width50 text-center" style="padding-right: 6px; padding-left: 6px;">
-            <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
-              <div style="margin: 20px auto; width:250px; height:250px;">
-                <canvas id="user-2" ></canvas>
-              </div>
+        <div class="col-md-6">
 
-              <div class="overlay-chart">
+          <div class="parent-chart set-rotate" id="btn_home2" style="background-color: #f2f8fa; box-shadow: none">
+            <div style="margin: 20px auto; width:250px; height:250px;" >
+              <canvas id="user-1" class="icon-rotate"></canvas>
+            </div>
 
-                <img class="img-in-chart" src="{{url('assets/images/avatar/'.$user->avatar)}}" style="width:220px; height:220px;">
+            <div class="overlay-chart">
 
-              </div>
+
+
+              <img class="img-in-chart" src="{{url('assets/images/avatar/'.$user->avatar)}}" id="myavatar" style="max-width:220px; max-height:220px; width:220px; height:220px; margin-top: -40px;">
+
+
+
+
+
 
             </div>
+
           </div>
+
+
+        </div>
           <div class="col-md-6 width50 text-center" style="padding-right: 6px; padding-left: 6px;">
               <div class="candidate-profile">
                   <h2>{{$user->name}}</h2>
@@ -926,25 +945,7 @@ blockquote {
 
                                     <div class="col-md-6">
 
-                                      <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
-                                        <div style="margin: 20px auto; width:250px; height:250px;">
-                                          <canvas id="user-1" ></canvas>
-                                        </div>
 
-                                        <div class="overlay-chart">
-
-
-
-                                          <img class="img-in-chart" src="{{url('assets/images/avatar/'.$user->avatar)}}">
-
-
-
-
-
-
-                                        </div>
-
-                                      </div>
 
 
                                     </div>
@@ -1435,7 +1436,7 @@ return "$strDay $strMonthThai $strYear";
 
 
 <script src="{{url('social-feed-gh-pages/js/jquery.min.js')}}"></script>
-<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+<script src="{{url('front/js/Chart.bundlev2.js?v1')}}"></script>
 
 
 <script src="{{url('social-feed-gh-pages/js/codebird.js')}}"></script>
@@ -1447,6 +1448,11 @@ return "$strDay $strMonthThai $strYear";
 
 
 $(document).ready(function () {
+
+
+
+
+
     $(document).on("scroll", onScroll);
 
     //smoothscroll
@@ -1576,60 +1582,116 @@ $(document).ready(function(){
 
 
 
+
+
+
 <script type="text/javascript">
+
+$('html, body').animate({ scrollTop: 0 }, 'fast');
+
 
 //document.getElementById("doughnutChart").style.height = '200px';
 
+var iconRotate = $('.icon-rotate');
+var havatar = 220;
+if (iconRotate.length != 0) {
+	$(window).scroll(function () {
+		var scroll = $(window).scrollTop(),
+		maxScroll = $(document).height()-$(window).height();
+		iconRotate.css({transform: 'rotate(-' + (360 * scroll/maxScroll) + 'deg)'});
+    var set = 0.7;
+    var set_num = (360 * scroll/maxScroll);
 
-  var ctxD = document.getElementById("user-2").getContext('2d');
-  var myLineChart = new Chart(ctxD, {
-    type: 'doughnut',
-    data: {
-      labels: [
-        @if(isset($objs))
-            @foreach($objs as $u)
-          "{{$u->name_cat}}",
-          @endforeach
-        @endif
-              ],
-      datasets: [{
-        data: [
-          @if(isset($objs))
-              @foreach($objs as $u)
-            "{{$u->sort_result}}",
-            @endforeach
-          @endif
-                             ],
-        backgroundColor: [
-          @if(isset($objs))
-              @foreach($objs as $u)
-            "{{$u->color_bg}}",
-            @endforeach
-          @endif
-                          ]
-      }]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      responsive: true
+
+
+
+    if(set_num > 90){
+    //  alert('555555'); myavatar
+
+      $('#btn_home2').removeClass('set-rotate');
+      $('#btn_home2').addClass('set-rotate2');
+
+    }else{
+
+      logoSize = function () {
+    // Get the real width of the logo image
+    var theLogo = $("#myavatar");
+    var newImage = new Image();
+    newImage.src = theLogo.attr("src");
+    var imgWidth = newImage.width;
+
+    // distance over which zoom effect takes place
+    var maxScrollDistance = 100;
+
+    // set to window height if larger
+    maxScrollDistance = Math.min(maxScrollDistance, $(window).height());
+
+    // width at maximum zoom out (i.e. when window has scrolled maxScrollDistance)
+    var widthAtMax = 220;
+
+    // calculate diff and how many pixels to zoom per pixel scrolled
+    var widthDiff = imgWidth + widthAtMax;
+    var pixelsPerScroll =(widthDiff / maxScrollDistance);
+
+    $(window).scroll(function () {
+        // the currently scrolled-to position - max-out at maxScrollDistance
+        var scrollTopPos = Math.min($(document).scrollTop(), maxScrollDistance);
+
+        // how many pixels to adjust by
+        var scrollChangePx =  Math.floor(scrollTopPos + pixelsPerScroll);
+
+        // calculate the new width
+        var zoomedWidth = imgWidth - scrollChangePx;
+
+        // set the width
+        $('.img-in-chart').css('width', zoomedWidth);
+        $('.img-in-chart').css('height', zoomedWidth);
+        console.log(set_num);
+
+        if(zoomedWidth == 247){
+          $('.img-in-chart').css('top', 85);
+        }else if(zoomedWidth >= 240 && zoomedWidth < 250){
+          $('.img-in-chart').css('top', 85);
+        }else if(zoomedWidth > 220 && zoomedWidth < 239){
+          $('.img-in-chart').css('top', 88);
+        }else if(zoomedWidth > 200 && zoomedWidth < 219){
+          $('.img-in-chart').css('top', 88);
+        }else if(zoomedWidth > 195 && zoomedWidth < 200){
+          $('.img-in-chart').css('top', 95);
+        }else if(zoomedWidth > 177 && zoomedWidth < 195){
+          $('.img-in-chart').css('top', 105);
+        }else if(zoomedWidth > 149 && zoomedWidth < 164){
+          $('.img-in-chart').css('top', 120);
+        }else if(zoomedWidth > 129 && zoomedWidth < 149){
+          $('.img-in-chart').css('top', 120);
+        }else if(zoomedWidth == 127){
+          $('.img-in-chart').css('top', 131);
+        }else if(zoomedWidth == 123){
+          $('.img-in-chart').css('top', 133);
+        }else if(zoomedWidth == 118){
+          $('.img-in-chart').css('top', 136);
+        }else if(zoomedWidth == 117){
+          $('.img-in-chart').css('top', 136);
+        }else{
+
+        }
+
+
+    });
+}
+
+
+
+logoSize();
+
+      $('#btn_home2').removeClass('set-rotate2');
+      $('#btn_home2').addClass('set-rotate');
     }
-  });
 
 
+	});
+}
 
-
-
-
-
-
-</script>
-
-
-<script type="text/javascript">
-
-//document.getElementById("doughnutChart").style.height = '200px';
 
 
   var ctxD = document.getElementById("user-1").getContext('2d');
