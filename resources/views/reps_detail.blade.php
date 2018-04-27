@@ -871,7 +871,7 @@ blockquote {
 }
 .set-rotate2{
     position: absolute;
-    top: 690px;
+    top: 620px;
 }
 </style>
 
