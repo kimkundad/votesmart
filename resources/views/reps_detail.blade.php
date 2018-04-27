@@ -1594,14 +1594,15 @@ $('html, body').animate({ scrollTop: 0 }, 'fast');
 
 var iconRotate = $('.icon-rotate');
 var havatar = 220;
+var height_win = 3395;
 if (iconRotate.length != 0) {
 	$(window).scroll(function () {
 		var scroll = $(window).scrollTop(),
-		maxScroll = $(document).height()-$(window).height();
+		maxScroll = height_win-$(window).height();
 		iconRotate.css({transform: 'rotate(-' + (360 * scroll/maxScroll) + 'deg)'});
     var set = 0.7;
     var set_num = (360 * scroll/maxScroll);
-    console.log($(window).height());
+    console.log($(document).height());
 
 
 
