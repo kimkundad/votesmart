@@ -1601,7 +1601,7 @@ if (iconRotate.length != 0) {
 		iconRotate.css({transform: 'rotate(-' + (360 * scroll/maxScroll) + 'deg)'});
     var set = 0.7;
     var set_num = (360 * scroll/maxScroll);
-
+    console.log($(window).height());
 
 
 
