@@ -865,12 +865,12 @@ blockquote {
     margin: auto auto 24px;
 }
 .set-rotate{
-  left: 200px;
+
     top: 170px;
     position: fixed;
 }
 .set-rotate2{
-  left: -60px;
+    position: absolute;
     top: 690px;
 }
 </style>
