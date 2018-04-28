@@ -1672,6 +1672,19 @@ return "$strDay $strMonthThai";
                                         </section>
 
                                         <section class="feed visible-sm visible-xs" style="    padding: 2rem 0;">
+
+                                          <style>
+                                          .social-feed-element, .social-feed-element .media-body {
+                                              overflow: initial;
+                                              zoom: 1;
+                                          }
+                                          .social-feed-element .media-body div {
+                                            margin-top: 40px;
+                                            width: 100%;
+                                              color: #666;
+                                              line-height: 20px;
+                                          }
+                                          </style>
                                             <div class="container" id="container">
                                                 <div class="social-feed-container col-md-12" id="images">
 
