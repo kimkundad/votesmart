@@ -1035,6 +1035,13 @@ background-color: #FFFFFF;
                                     <br>
                                   </div>
 
+                                  <div class="col-md-6">
+
+
+
+
+                                  </div>
+
 
                                   <div class="col-md-6 hidden-sm hidden-xs">
                                     <blockquote class="primary" style="height:64px;margin-left: -40px;">
@@ -1674,7 +1681,7 @@ return "$strDay $strMonthThai";
                                         <section class="feed visible-sm visible-xs" style="    padding: 2rem 0;">
 
                                           <style>
-                                          
+
                                           .social-feed-element .media-body div {
                                             margin-top: 40px;
                                             width: 100%;
