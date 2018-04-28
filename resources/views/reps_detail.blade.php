@@ -875,10 +875,10 @@ blockquote {
 }
 </style>
 
-  <div class="candidate-details container">
+  <div class="candidate-details container hidden-sm hidden-xs">
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 100px;">
 
           <div class="parent-chart set-rotate" id="btn_home2" style="background-color: #f2f8fa; box-shadow: none">
             <div style="margin: 20px auto; width:250px; height:250px;" >
@@ -916,6 +916,9 @@ blockquote {
   </div>
 
 
+
+
+
 <style>
 .candidate-profile-2 h2 {
     width: 345px;
@@ -946,11 +949,11 @@ blockquote {
 }
 
 .read-more-state ~ .read-more-trigger:before {
-  content: 'Show more';
+  content: 'แสดงเพิ่ม';
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
-  content: 'Show less';
+  content: 'แสดงลดลง';
 }
 
 .read-more-trigger {
@@ -998,7 +1001,8 @@ background-color: #FFFFFF;
                                     <div class="col-md-6">
                                       <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
                                         <div class="candidate-profile-2 read-more-wrap" >
-                                          <h2>{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
+                                          <h2 class="hidden-sm hidden-xs">{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
+                                          <h2 class="text-center visible-sm visible-xs">ประเด็นสำคัญ</h2>
                                           <br><br>
 
 
