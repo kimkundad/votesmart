@@ -1002,7 +1002,7 @@ background-color: #FFFFFF;
                                       <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
                                         <div class="candidate-profile-2 read-more-wrap" >
                                           <h2 class="hidden-sm hidden-xs">{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
-                                          <h2 class="text-center visible-sm visible-xs">ประเด็นสำคัญ</h2>
+                                          <h2 class="text-center visible-sm visible-xs" style="font-size: 28px;">ประเด็นสำคัญ</h2>
                                           <br><br>
 
 
