@@ -826,7 +826,7 @@ blockquote {
 
 
 
-<section style="padding: 200px 0 50px 0; width:95%" >
+<section style="padding: 200px 0 50px 0; margin: 0 auto;width:95%" >
 
 <style>
 .candidate-profile {
@@ -873,6 +873,11 @@ blockquote {
     position: absolute;
     top: 620px;
 }
+.img-in-chart-in2{
+  margin-top: -3px;
+  width: 220px;
+  height: 220px;
+}
 </style>
 
   <div class="candidate-details container hidden-sm hidden-xs">
@@ -914,6 +919,46 @@ blockquote {
           </div>
       </div>
   </div>
+
+
+  <div class="candidate-details container visible-sm visible-xs" style="margin-top: -50px;">
+      <div class="row">
+        <div class="col-md-6 width50 text-center">
+            <div class="candidate-profile">
+                <h2 style="font-size: 30px; line-height: 20px;">{{$user->name}}</h2>
+                <p>{{$user->sub_title}}</p>
+                <br>
+
+            </div>
+        </div>
+
+        <div class="col-md-6" >
+
+          <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
+            <div style="margin: 0px auto; width:250px; height:250px;">
+              <canvas id="user-2" ></canvas>
+            </div>
+
+            <div class="overlay-chart">
+
+
+
+              <img class="img-in-chart-in2" src="{{url('assets/images/avatar/'.$user->avatar)}}">
+
+
+
+
+
+
+            </div>
+
+          </div>
+          <p class="position text-center">{{$user->bio}}</p>
+
+        </div>
+        </div>
+        </div>
+
 
 
 
@@ -981,10 +1026,17 @@ background-color: #FFFFFF;
   <div class="candidate-details container">
                                 <div class="row">
 
-                                  <div class="col-md-6">
-
+                                  <br>
+                                  <div class="col visible-sm visible-xs" style=" height:10px;">
+                                    &nbsp
                                   </div>
-                                  <div class="col-md-6">
+                                  <div class="col visible-sm visible-xs" style="border-left:2px solid #5ec8f2;; height:45px;">
+                                    <br>
+                                    <br>
+                                  </div>
+
+
+                                  <div class="col-md-6 hidden-sm hidden-xs">
                                     <blockquote class="primary" style="height:64px;margin-left: -40px;">
 
                 										</blockquote>
@@ -1137,11 +1189,109 @@ h3.candidate-title {
     font-weight: 300;
     line-height: 21px;
 }
+.tm-body:after {
+background: #a05b5b;
+background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #08b0ed), color-stop(100%, #5ec8f2));
+background: -webkit-linear-gradient(top, rgba(37, 75, 212, 0) 0%, #5ec8f2 8%, #5ec8f2 92%, rgba(27, 135, 212, 0) 100%);
+background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
+background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
+background: linear, to bottom, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%;
+content: '';
+display: block;
+height: 100%;
+left: 22px;
+margin-left: -2px;
+position: absolute;
+top: 25px;
+width: 3px;
+z-index: 1;
+filter: alpha(opacity=35);
+opacity: 0.5;
+height: 90%;
+}
 </style>
 
 <div id="portfolio"></div>
 
-                            <div class="candidate-history container" >
+
+<div class="candidate-history container visible-sm visible-xs" style="padding: 40px 15px 30px;">
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="candidate-about">
+                <h3 class="candidate-title" style="text-align: center; font-size: 22px;">เกี่ยวกับ {{$user->name}}</h3>
+                <ul class="list-circle">
+                  @if(isset($abouts))
+                      @foreach($abouts as $u)
+                    <li style="font-size: 16px;">{{$u->about}}</li>
+                    @endforeach
+                @endif
+                </ul>
+            </div>
+        </div>
+        <style>
+
+        </style>
+        <div class="col-md-6 col-sm-6">
+            <div class="candidate-experience">
+                <h3 class="candidate-title" style="text-align: center; font-size: 22px;">ประสบการณ์</h3>
+
+
+                @if(isset($exper))
+                    @foreach($exper as $u)
+
+                <div class="experience">
+                    <div class="row">
+                        <div class="experience-time col-3 col-md-3" style="font-size: 16px;">
+                            <p style="font-size: 14px;">{{$u->end_year}}</p>
+                            <p>|</p>
+                            <p style="font-size: 14px;">{{$u->start_year}}</p>
+                        </div>
+                        <div class="experience-description col-9 col-md-9 tm-body">
+                            <h4 style="font-size: 14px;">{{$u->head}}</h4>
+                            <h5 clss="party" style="padding-left: 27px;font-size: 14px;">{{$u->sub_head}}</h5>
+                            <p style="padding-left: 27px;">{{$u->detail}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                @endforeach
+            @endif
+
+
+            </div>
+            <div class="candidate-history-education">
+                <h3 class="candidate-title" style="text-align: center; font-size: 22px;">การศึกษา</h3>
+
+                @if(isset($education))
+                    @foreach($education as $u)
+                <div class="experience">
+                    <div class="row">
+                        <div class="experience-time col-3 col-md-3">
+                            <p style="font-size: 14px;">{{$u->end_year}}</p>
+                            <p>|</p>
+                            <p style="font-size: 14px;">{{$u->start_year}}</p>
+                        </div>
+                        <div class="experience-description col-9 col-md-9 tm-body">
+                            <h4 style="font-size: 14px;">{{$u->head}}</h4>
+                            <h5 clss="party" style="padding-left: 27px; font-size: 14px;">{{$u->detail}}</h5>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                @endforeach
+            @endif
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                            <div class="candidate-history container hidden-sm hidden-xs" >
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-about">
@@ -1156,27 +1306,7 @@ h3.candidate-title {
                                         </div>
                                     </div>
                                     <style>
-                                    .tm-body:after {
-      background: #a05b5b;
-      background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #08b0ed), color-stop(100%, #5ec8f2));
-      background: -webkit-linear-gradient(top, rgba(37, 75, 212, 0) 0%, #5ec8f2 8%, #5ec8f2 92%, rgba(27, 135, 212, 0) 100%);
-      background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
-      background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%);
-      background: linear, to bottom, rgba(80, 80, 80, 0) 0%, #505050 8%, #505050 92%, rgba(80, 80, 80, 0) 100%;
-      content: '';
-      display: block;
-      height: 100%;
-      left: 22px;
-      margin-left: -2px;
-      position: absolute;
-      top: 25px;
-      width: 3px;
-      z-index: 1;
-      filter: alpha(opacity=35);
-      opacity: 0.5;
-      height: 90%;
-  }
+
                                     </style>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-experience">
@@ -1272,7 +1402,69 @@ h3.candidate-title {
 
 
 
-                            <div class="candidate-gallery container">
+                            <div class="candidate-gallery container visible-sm visible-xs" style="padding: 30px 15px 30px;">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <h3 class="candidate-title" style="text-align: center; font-size: 22px;">รูปภาพ</h3>
+                                        <div class="row">
+
+                                            <div class="gallery-image">
+                                                <div class="row magnific-gallery" id="load-data" style="padding: 15px;">
+
+
+
+
+
+
+
+                                                  @if(isset($galleries))
+
+
+
+                                                  @foreach($galleries as $u)
+
+
+
+                                                  <div class="col-6 gallery" data-ids="{{ $u->id }}" style="    padding-right: 5px; padding-left: 5px;">
+                                                    <div class="img_container" style="max-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                                                      <a class="example-image-link" href="{{url('assets/images/all_image/'.$u->image)}}">
+                                                      <img class=" img-responsive" src="{{url('assets/images/all_image/'.$u->image)}}" >
+                                                    </a>
+                                                    </div>
+                                                  </div>
+
+
+
+
+                                                  @endforeach
+
+
+
+
+
+
+
+
+
+                                                  @endif
+
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 text-center" id="remove-row">
+                                            <button class="btn btn-readmore " id="btn-more" data-id="{{ $u->id }}" data-user_id="{{ $user->id }}">เเสดงเพิ่ม</button>
+                                          </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="candidate-gallery container hidden-sm hidden-xs">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="row">
@@ -1411,13 +1603,14 @@ $strMinute= date("i",strtotime($strDate));
 $strSeconds= date("s",strtotime($strDate));
 $strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
 $strMonthThai=$strMonthCut[$strMonth];
-return "$strDay $strMonthThai $strYear";
+return "$strDay $strMonthThai";
 }
  ?>
                             <div class="candidate-schedule container" id="contact">
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <h3 class="candidate-title">กำหนดการ</h3>
+                                    <h3 class="candidate-title hidden-sm hidden-xs" >กำหนดการ</h3>
+                                    <h3 class="candidate-title visible-sm visible-xs" style="font-size: 22px;">กำหนดการ</h3>
                                     </div>
                                     <div class="col-md-6 col-sm-6 center">
                                         <div class="col-md-12">
@@ -1462,20 +1655,30 @@ return "$strDay $strMonthThai $strYear";
                             <div class="candidate-social-feed container">
                             <div class="row">
                               <div class="col-md-12">
-                                <h3 class="candidate-title text-center">Social Feed</h3>
+                                <h3 class="candidate-title text-center hidden-sm hidden-xs">Social Feed</h3>
+                                <h3 class="candidate-title text-center visible-sm visible-xs" style="font-size: 22px;">Social Feed</h3>
                                 </div>
 
 
                                 <div class="col-md-12">
                                     <div class="row">
 
-                                        <section class="feed" style="    padding: 2rem 0;">
+                                        <section class="feed hidden-sm hidden-xs" style="    padding: 2rem 0;">
                                             <div class="container" id="container">
                                                 <div class="social-feed-container col-md-12" id="images">
 
                                                 </div>
                                             </div>
                                         </section>
+
+                                        <section class="feed visible-sm visible-xs" style="    padding: 2rem 0;">
+                                            <div class="container" id="container">
+                                                <div class="social-feed-container col-md-12" id="images">
+
+                                                </div>
+                                            </div>
+                                        </section>
+
                                     </div>
                                 </div>
 
@@ -1759,6 +1962,44 @@ logoSize();
 
 
   var ctxD = document.getElementById("user-1").getContext('2d');
+  var myLineChart = new Chart(ctxD, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        @if(isset($objs))
+            @foreach($objs as $u)
+          "{{$u->name_cat}}",
+          @endforeach
+        @endif
+              ],
+      datasets: [{
+        data: [
+          @if(isset($objs))
+              @foreach($objs as $u)
+            "{{$u->sort_result}}",
+            @endforeach
+          @endif
+                             ],
+        backgroundColor: [
+          @if(isset($objs))
+              @foreach($objs as $u)
+            "{{$u->color_bg}}",
+            @endforeach
+          @endif
+                          ]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      responsive: true
+    }
+  });
+
+
+
+  var ctxD = document.getElementById("user-2").getContext('2d');
   var myLineChart = new Chart(ctxD, {
     type: 'doughnut',
     data: {
