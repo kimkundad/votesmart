@@ -295,11 +295,7 @@ input[type="radio"]:disabled + .label-text:before{
     height: 95px;
 }
 @media (min-width: 280px) {
-  .social-feed-element, .social-feed-element .media-body {
-      overflow: initial;
-      zoom: 1;
-      width: 100%
-  }
+
   .action-nav{
         border-left: 3px solid #08b0ed;
   }
@@ -428,11 +424,7 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
-  .social-feed-element, .social-feed-element .media-body {
-      overflow: initial;
-      zoom: 1;
-      width: 100%
-  }
+
   .action-nav{
         border-left: 3px solid #08b0ed;
   }

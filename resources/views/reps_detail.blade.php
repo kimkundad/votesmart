@@ -1665,7 +1665,7 @@ return "$strDay $strMonthThai";
   }
 }
 @media (min-width: 320px) {
-  .social-feed-element, .social-feed-element y {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
