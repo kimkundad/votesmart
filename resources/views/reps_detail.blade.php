@@ -826,7 +826,7 @@ blockquote {
 
 
 
-<section  style="    padding: 200px 0 50px 0;" >
+<section style="padding: 200px 0 50px 0; width:95%" >
 
 <style>
 .candidate-profile {
@@ -921,7 +921,7 @@ blockquote {
 
 <style>
 .candidate-profile-2 h2 {
-    width: 345px;
+
     color: #0479BD;
     font-family: 'Kanit', sans-serif;
     font-size: 36px;
