@@ -1658,70 +1658,70 @@ return "$strDay $strMonthThai";
 
 <style>
 @media (min-width: 280px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 320px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element y {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 350px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 360px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 375px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 425px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 576px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 768px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 100%
   }
 }
 @media (min-width: 992px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 50%
   }
 }
 @media (min-width: 1200px) {
-  .social-feed-element, .social-feed-element .media-body {
+  .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 31%
