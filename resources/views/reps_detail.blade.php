@@ -1719,12 +1719,18 @@ return "$strDay $strMonthThai";
       zoom: 1;
       width: 50%
   }
+  .media-body{
+    width: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .social-feed-element, .social-feed-element  {
       overflow: initial;
       zoom: 1;
       width: 31%
+  }
+  .media-body{
+    width: 79%;
   }
 }
 </style>
