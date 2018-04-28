@@ -1686,7 +1686,7 @@ return "$strDay $strMonthThai";
                                           }
                                           </style>
                                             <div class="container" id="container">
-                                                <div class="social-feed-container col-md-12" id="images">
+                                                <div class="social-feed-container col-md-12" id="images" style="width: 100%;">
 
                                                 </div>
                                             </div>
