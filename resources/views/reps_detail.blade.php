@@ -1677,6 +1677,7 @@ return "$strDay $strMonthThai";
                                           .social-feed-element, .social-feed-element .media-body {
                                               overflow: initial;
                                               zoom: 1;
+                                              width: 100%
                                           }
                                           .social-feed-element .media-body div {
                                             margin-top: 40px;
@@ -1684,6 +1685,7 @@ return "$strDay $strMonthThai";
                                               color: #666;
                                               line-height: 20px;
                                           }
+
                                           </style>
                                             <div class="container" id="container">
                                                 <div class="social-feed-container col-md-12" id="images" style="width: 100%;">
