@@ -739,11 +739,11 @@ line-height: 20px;
 <section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 65px 0 0px 0;  width: 100%; z-index: 1; position: fixed;">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 " style="border-bottom: 1px solid #f3f0f0;     height: 55px;">
+      <div class="col-md-12 " style="border-bottom: 1px solid #f3f0f0;     height: 65px;">
 
 
 
-        <div id="userbox" class="userbox" style="left: -5px;  width: 300px;  margin: 10px 1px 10px 10px;">
+        <div id="userbox" class="userbox" style="left: -5px;  width: 300px;  margin: 10px 1px 10px 10px; padding-bottom:10px;">
 						<a href="#" data-toggle="dropdown">
 							<figure class="profile-picture">
 								<img src="{{url('assets/images/avatar/'.$user->avatar)}}" alt="{{$user->name}}" class="img-circle" >
