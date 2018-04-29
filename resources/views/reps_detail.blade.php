@@ -736,7 +736,7 @@ line-height: 20px;
 
 
 
-<section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 65px 0 0px 0;  width: 100%; z-index: 1; position: fixed;">
+<section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 75px 0 0px 0;  width: 100%; z-index: 1; position: fixed;">
   <div class="container">
     <div class="row">
       <div class="col-md-12 " style="border-bottom: 1px solid #f3f0f0;     height: 55px;">
