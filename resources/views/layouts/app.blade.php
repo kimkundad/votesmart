@@ -1250,7 +1250,7 @@ padding-bottom: 5px;
 
 
     <!-- Custom scripts for this template -->
-    <script src="{{url('front/js/creative.min.js')}}"></script>
+    <script src="{{url('front/js/creative.js')}}"></script>
 
 
     <script type="text/javascript">
