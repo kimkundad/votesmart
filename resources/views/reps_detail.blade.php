@@ -713,18 +713,37 @@ color: #08B0ED;
 font-size: 20px;
 line-height: 20px;
 }
+.navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+    color: #495057 !important;
+    background-color: transparent;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+}
 </style>
 
 
 
-<section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
+<section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 65px 0 0px 0;  width: 100%; z-index: 1; position: fixed;">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 ">
+      <div class="col-md-12 " style="border-bottom: 1px solid #f3f0f0;     height: 55px;">
 
 
 
-        <div id="userbox" class="userbox" style="left: -5px;    margin: 3px 1px 10px 10px;">
+        <div id="userbox" class="userbox" style="left: -5px;  width: 300px;  margin: 3px 1px 10px 10px;">
 						<a href="#" data-toggle="dropdown">
 							<figure class="profile-picture">
 								<img src="{{url('assets/images/avatar/'.$user->avatar)}}" alt="{{$user->name}}" class="img-circle" >
@@ -739,7 +758,7 @@ line-height: 20px;
 					</div>
 
 
-          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;    padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
+          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;  top: -60px; position: relative;  padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
               <i class="fa fa-comment-o"></i> พูดคุย</button>
 
 
@@ -750,39 +769,43 @@ line-height: 20px;
 
 
 
-      <div class="col-md-4 m1 menu" id="mainNav">
+      <div class="col-6 m1 menu" id="mainNav" style="background-color:rgba(255, 255, 255, 0.1); border: none;">
         <div class="navbar-collapse menu-center"  id="navbarResponsive">
           <ul class="navbar-expand-lg navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#about">ภาพรวม</a>
+            <li class="nav-item mx-0 mx-lg-1" style="padding-left: 2px !important; padding-right: 2px !important;">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px;" href="#about">ภาพรวม</a>
             </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#portfolio">ประวัติ</a>
+            <li class="nav-item mx-0 mx-lg-1" style="padding-left: 2px !important; padding-right: 2px !important;">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px;" href="#portfolio">ประวัติ</a>
             </li>
 
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#contact">กิจกรรม</a>
+            <li class="nav-item mx-0 mx-lg-1" style="padding-left: 2px !important; padding-right: 2px !important;">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px;" href="#contact">กิจกรรม</a>
             </li>
           </ul>
         </div>
+
+
       </div>
 
-      <div class="col-md-4">
+
+
+      <div class="col-6">
 
         <div class="row" style="padding-top: 5px;">
-                                      <ul class="candidate-social">
-                                          <li class="twitter" >
-                                              <a href="#">
+                                      <ul class="candidate-social" style="padding-top: 10px; right: 0;   position: absolute;">
+                                          <li class="twitter" style="padding-left: 0;">
+                                              <a href="#" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-twitter"></i>
                                               </a>
                                           </li>
                                           <li class="facebook">
-                                              <a href="#">
+                                              <a href="#" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-facebook-official"></i>
                                               </a>
                                           </li>
                                           <li class="instagram" >
-                                              <a href="#">
+                                              <a href="#" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-instagram"></i>
                                               </a>
                                           </li>
@@ -993,12 +1016,12 @@ blockquote {
   </div>
 
 
-  <div class="candidate-details container visible-sm visible-xs" style="margin-top: -50px;">
+  <div class="candidate-details container visible-sm visible-xs" style="margin-top: -5px;">
       <div class="row">
         <div class="col-md-6 width50 text-center">
             <div class="candidate-profile">
                 <h2 style="font-size: 30px; line-height: 20px;">{{$user->name}}</h2>
-                <p>{{$user->sub_title}}</p>
+                <p style="font-size: 16px;    margin-bottom: 0rem;">{{$user->sub_title}}</p>
                 <br>
 
             </div>
