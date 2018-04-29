@@ -751,6 +751,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .send_q{
+    display: none!important;
+  }
 
   .action-nav{
       border-left: 3px solid #fff;
@@ -1114,7 +1117,7 @@ a:hover{
     /* float: left; */
     bottom: 12px;
     color: #FFF;
-    display: block;
+
     height: 36px;
     right: 116px;
 }
