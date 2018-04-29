@@ -758,7 +758,7 @@ line-height: 20px;
 					</div>
 
 
-          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;  top: -60px; position: relative;  padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
+          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;  right: 0; top: 8px; position: absolute;;  padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
               <i class="fa fa-comment-o"></i> พูดคุย</button>
 
 
