@@ -600,156 +600,70 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 </style>
 
 
-<section class="bg-whites hidden-sm hidden-xs page-header-sub"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 text-center">
+<style>
 
-        <style>
-
-        .userbox {
-            display: inline-block;
-            margin: 3px 17px 10px 0;
-            position: relative;
-            vertical-align: middle;
-        }
-        .userbox > a {
+.userbox {
     display: inline-block;
-    text-decoration: none;
+    margin: 3px 17px 10px 0;
+    position: relative;
+    vertical-align: middle;
+}
+.userbox > a {
+display: inline-block;
+text-decoration: none;
 }
 .userbox .profile-info, .userbox .profile-picture {
-    display: inline-block;
-    vertical-align: middle;
+display: inline-block;
+vertical-align: middle;
 }
 figure {
-    margin: 0;
+margin: 0;
 }
 .userbox .profile-picture img {
-    width: 45px;
-    color: transparent;
+width: 45px;
+color: transparent;
 }
 .userbox .profile-info {
-    margin: 0 25px 0 10px;
+margin: 0 25px 0 10px;
 }
 .userbox .profile-info, .userbox .profile-picture {
-    display: inline-block;
-    vertical-align: middle;
+display: inline-block;
+vertical-align: middle;
 }
 .userbox .name {
-    color: #000011;
-    font-size: 1.3rem;
-    line-height: 1.2em;
+color: #000011;
+font-size: 1.3rem;
+line-height: 1.2em;
 }
 .userbox .role {
-    color: #ACACAC;
-    font-size: 1.1rem;
-    line-height: 1.5em;
+color: #ACACAC;
+font-size: 1.1rem;
+line-height: 1.5em;
 }
-        </style>
-
-        <div id="userbox" class="userbox">
-						<a href="#" data-toggle="dropdown">
-							<figure class="profile-picture">
-								<img src="{{url('assets/images/avatar/'.$user->avatar)}}" alt="{{$user->name}}" class="img-circle" >
-							</figure>
-							<div class="profile-info" style="text-align:left">
-								<span class="name" style="color: #0591c3; padding-bottom:8px;">{{$user->name}}</span><br>
-								<span class="role">{{$user->sub_title}}</span>
-							</div>
-
-
-						</a>
-
-
-
-					</div>
-      </div>
-
-      <style>
-      .navbar-expand-lg a{
-        font-size: 18px;
-        color:#ACACAC;
-      }
-      .actives {
-        color:#666!important;
-      }
-      .actives::after {
-    color: #08b0ed;
-    display: block;
-    content: '';
-    width: 60%;
-    margin: 0 auto;
-    border-bottom: 3px solid #08b0ed;
-    padding-bottom: 5px;
+</style>
+<style>
+.navbar-expand-lg a{
+  font-size: 18px;
+  color:#ACACAC;
+}
+.actives {
+  color:#666!important;
+}
+.actives::after {
+color: #08b0ed;
+display: block;
+content: '';
+width: 60%;
+margin: 0 auto;
+border-bottom: 3px solid #08b0ed;
+padding-bottom: 5px;
 }
 
 .ml-lg-1, .mx-lg-1 {
-    margin-left: .25rem!important;
+margin-left: .25rem!important;
 }
 
-      </style>
-
-      <div class="col-md-4 m1 menu" id="mainNav">
-        <div class="navbar-collapse menu-center"  id="navbarResponsive">
-          <ul class="navbar-expand-lg navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#about">ภาพรวม</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#portfolio">ประวัติ</a>
-            </li>
-
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#contact">กิจกรรม</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-      <style>
-      .candidate-social {
-      padding-top: 12px;
-      /* padding: 0; */
-      float: right;
-  }
-.candidate-social li {
-  padding-top: 8px;
-    list-style: none;
-    display: inline-block;
-    padding: 0 10px;
-}
-.candidate-social li a {
-    color: #08B0ED;
-    font-size: 20px;
-    line-height: 20px;
-}
-      </style>
-
-      <div class="col-md-4">
-
-        <div class="row" style="padding-top: 5px;">
-                                      <ul class="candidate-social">
-                                          <li class="twitter" >
-                                              <a href="#">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                          <li class="facebook">
-                                              <a href="#">
-                                                  <i class="fa fa-facebook-official"></i>
-                                              </a>
-                                          </li>
-                                          <li class="instagram" >
-                                              <a href="#">
-                                                  <i class="fa fa-instagram"></i>
-                                              </a>
-                                          </li>
-
-                                      </ul>
-                                      <button type="button" class="btn btn-primary center" style="height: 45px;margin-left:13px;padding: 2px 28px;" data-toggle="modal" data-target="#myModal-2">
-                                          <i class="fa fa-comment-o"></i> พูดคุย</button>
-
+</style>
 <style>
 .modal-body .button-z {
     border-radius: 2px;
@@ -782,9 +696,98 @@ figure {
     text-shadow: 0 1px 2px rgba(35, 31, 32, 0.24);
 }
 </style>
+<style>
+.candidate-social {
+padding-top: 12px;
+/* padding: 0; */
+float: right;
+}
+.candidate-social li {
+padding-top: 8px;
+list-style: none;
+display: inline-block;
+padding: 0 10px;
+}
+.candidate-social li a {
+color: #08B0ED;
+font-size: 20px;
+line-height: 20px;
+}
+</style>
 
 
 
+<section class="bg-whites visible-sm visible-xs page-header-sub"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+
+
+
+        <div id="userbox" class="userbox" style="left: -5px;    margin: 3px 1px 10px 10px;">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="{{url('assets/images/avatar/'.$user->avatar)}}" alt="{{$user->name}}" class="img-circle" >
+							</figure>
+							<div class="profile-info" style="text-align:left">
+								<span class="name" style="color: #0591c3; padding-bottom:8px;">{{$user->name}}</span><br>
+								<span class="role">{{$user->sub_title}}</span>
+							</div>
+
+
+						</a>
+					</div>
+
+
+          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;    padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
+              <i class="fa fa-comment-o"></i> พูดคุย</button>
+
+
+
+      </div>
+
+
+
+
+
+      <div class="col-md-4 m1 menu" id="mainNav">
+        <div class="navbar-collapse menu-center"  id="navbarResponsive">
+          <ul class="navbar-expand-lg navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#about">ภาพรวม</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#portfolio">ประวัติ</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#contact">กิจกรรม</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="row" style="padding-top: 5px;">
+                                      <ul class="candidate-social">
+                                          <li class="twitter" >
+                                              <a href="#">
+                                                  <i class="fa fa-twitter"></i>
+                                              </a>
+                                          </li>
+                                          <li class="facebook">
+                                              <a href="#">
+                                                  <i class="fa fa-facebook-official"></i>
+                                              </a>
+                                          </li>
+                                          <li class="instagram" >
+                                              <a href="#">
+                                                  <i class="fa fa-instagram"></i>
+                                              </a>
+                                          </li>
+
+                                      </ul>
 
 
                                   </div>
@@ -792,9 +795,78 @@ figure {
                                 </div>
 
 
+    </div>
+  </div>
+</section>
+
+<section class="bg-whites hidden-sm hidden-xs page-header-sub"  style="padding: 80px 0 8px 0;  width: 100%; z-index: 1; position: fixed;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
 
 
 
+        <div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="{{url('assets/images/avatar/'.$user->avatar)}}" alt="{{$user->name}}" class="img-circle" >
+							</figure>
+							<div class="profile-info" style="text-align:left">
+								<span class="name" style="color: #0591c3; padding-bottom:8px;">{{$user->name}}</span><br>
+								<span class="role">{{$user->sub_title}}</span>
+							</div>
+
+
+						</a>
+					</div>
+      </div>
+
+
+
+      <div class="col-md-4 m1 menu" id="mainNav">
+        <div class="navbar-collapse menu-center"  id="navbarResponsive">
+          <ul class="navbar-expand-lg navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#about">ภาพรวม</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#portfolio">ประวัติ</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 18px;" href="#contact">กิจกรรม</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="row" style="padding-top: 5px;">
+                                      <ul class="candidate-social">
+                                          <li class="twitter" >
+                                              <a href="#">
+                                                  <i class="fa fa-twitter"></i>
+                                              </a>
+                                          </li>
+                                          <li class="facebook">
+                                              <a href="#">
+                                                  <i class="fa fa-facebook-official"></i>
+                                              </a>
+                                          </li>
+                                          <li class="instagram" >
+                                              <a href="#">
+                                                  <i class="fa fa-instagram"></i>
+                                              </a>
+                                          </li>
+
+                                      </ul>
+                                      <button type="button" class="btn btn-primary center" style="height: 45px;margin-left:13px;padding: 2px 28px;" data-toggle="modal" data-target="#myModal-2">
+                                          <i class="fa fa-comment-o"></i> พูดคุย</button>
+
+                                  </div>
+
+                                </div>
 
 
     </div>
