@@ -773,7 +773,7 @@ line-height: 20px;
         <div class="navbar-collapse menu-center"  id="navbarResponsive">
           <ul class="navbar-expand-lg navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1" style="padding-left: 2px !important; padding-right: 2px !important;">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px;" href="#about">ภาพรวม</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px; width: 45px;" href="#about">ภาพรวม</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1" style="padding-left: 2px !important; padding-right: 2px !important;">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="font-size: 12px;" href="#portfolio">ประวัติ</a>
