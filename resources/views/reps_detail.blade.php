@@ -1336,23 +1336,28 @@ height: 90%;
         </style>
         <div class="col-md-6 col-sm-6">
             <div class="candidate-experience">
-                <h3 class="candidate-title" style="text-align: center; font-size: 22px;">ประสบการณ์</h3>
+                <h3 class="candidate-title" id="{{$b=0}}" style="text-align: center; font-size: 22px;">ประสบการณ์</h3>
 
 
                 @if(isset($exper))
                     @foreach($exper as $u)
 
-                <div class="experience">
+                <div class="experience" >
                     <div class="row">
                         <div class="experience-time col-3 col-md-3" style="font-size: 16px;">
                             <p style="font-size: 14px;">{{$u->end_year}}</p>
                             <p>|</p>
                             <p style="font-size: 14px;">{{$u->start_year}}</p>
                         </div>
-                        <div class="experience-description col-9 col-md-9 tm-body">
+                        <div class="experience-description col-9 col-md-9
+                        @if($b == 0)
+                        tm-body
+                        @endif
+
+                        ">
                             <h4 style="font-size: 14px;">{{$u->head}}</h4>
                             <h5 clss="party" style="padding-left: 27px;font-size: 14px;">{{$u->sub_head}}</h5>
-                            <p style="padding-left: 27px;">{{$u->detail}}
+                            <p id="{{$b++}}" style="padding-left: 27px;">{{$u->detail}}
                             </p>
                         </div>
                     </div>
@@ -1364,7 +1369,7 @@ height: 90%;
 
             </div>
             <div class="candidate-history-education">
-                <h3 class="candidate-title" style="text-align: center; font-size: 22px;">การศึกษา</h3>
+                <h3 class="candidate-title" id="{{$a=0}}" style="text-align: center; font-size: 22px;">การศึกษา</h3>
 
                 @if(isset($education))
                     @foreach($education as $u)
@@ -1375,9 +1380,11 @@ height: 90%;
                             <p>|</p>
                             <p style="font-size: 14px;">{{$u->start_year}}</p>
                         </div>
-                        <div class="experience-description col-9 col-md-9 tm-body">
+                        <div class="experience-description col-9 col-md-9 @if($a == 0)
+                        tm-body
+                        @endif">
                             <h4 style="font-size: 14px;">{{$u->head}}</h4>
-                            <h5 clss="party" style="padding-left: 27px; font-size: 14px;">{{$u->detail}}</h5>
+                            <h5 clss="party" id="{{$a++}}" style="padding-left: 27px; font-size: 14px;">{{$u->detail}}</h5>
                         </div>
                     </div>
                 </div>
@@ -1412,23 +1419,25 @@ height: 90%;
                                     </style>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="candidate-experience">
-                                            <h3 class="candidate-title">ประสบการณ์</h3>
+                                            <h3 class="candidate-title" id="{{$j=0}}">ประสบการณ์</h3>
 
 
                                             @if(isset($exper))
                                                 @foreach($exper as $u)
 
-                                            <div class="experience">
+                                            <div class="experience" >
                                                 <div class="row">
                                                     <div class="experience-time col-3 col-md-3">
                                                         <p>{{$u->end_year}}</p>
                                                         <p>|</p>
                                                         <p>{{$u->start_year}}</p>
                                                     </div>
-                                                    <div class="experience-description col-9 col-md-9 tm-body">
+                                                    <div class="experience-description col-9 col-md-9 @if($j == 0)
+                                                    tm-body
+                                                    @endif">
                                                         <h4>{{$u->head}}</h4>
                                                         <h5 clss="party" style="padding-left: 27px;">{{$u->sub_head}}</h5>
-                                                        <p style="padding-left: 27px;">{{$u->detail}}
+                                                        <p id="{{$j++}}" style="padding-left: 27px;">{{$u->detail}}
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1440,7 +1449,7 @@ height: 90%;
 
                                         </div>
                                         <div class="candidate-history-education">
-                                            <h3 class="candidate-title">การศึกษา</h3>
+                                            <h3 class="candidate-title" id="{{$k=0}}">การศึกษา</h3>
 
                                             @if(isset($education))
                                                 @foreach($education as $u)
@@ -1451,9 +1460,11 @@ height: 90%;
                                                         <p>|</p>
                                                         <p>{{$u->start_year}}</p>
                                                     </div>
-                                                    <div class="experience-description col-9 col-md-9 tm-body">
+                                                    <div class="experience-description col-9 col-md-9 @if($k == 0)
+                                                    tm-body
+                                                    @endif">
                                                         <h4 >{{$u->head}}</h4>
-                                                        <h5 clss="party" style="padding-left: 27px;">{{$u->detail}}</h5>
+                                                        <h5 clss="party" id="{{$k++}}" style="padding-left: 27px;">{{$u->detail}}</h5>
                                                     </div>
                                                 </div>
                                             </div>

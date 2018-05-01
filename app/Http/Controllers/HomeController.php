@@ -1292,6 +1292,12 @@ class HomeController extends Controller
           ->where('user_id', $id)
           ->get();
 
+          $exper_count = DB::table('experiences')->select(
+                'experiences.*'
+                )
+            ->where('user_id', $id)
+            ->count();
+
 
           $education = DB::table('education')->select(
                 'education.*'
@@ -1325,6 +1331,8 @@ class HomeController extends Controller
       $data['timelines'] = $timelines;
       $data['education'] = $education;
       $data['exper'] = $exper;
+      $data['exper_count'] = $exper_count;
+
       $data['user'] = $objs;
       $data['objs'] = $labels;
       $data['abouts'] = $abouts;

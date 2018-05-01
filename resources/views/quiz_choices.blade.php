@@ -9,7 +9,7 @@
 
 
 
-  <section class="bg-whites page-header-sub quiz_choices " id="about" style=" z-index: 9998; ">
+  <section class="bg-whites page-header-sub quiz_choices " id="about" style=" z-index: 1000; ">
 
 
   <div class="container">
@@ -154,7 +154,7 @@ input:checked{
 
         @if($objs)
            @foreach($objs as $u)
-        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="padding: 5px;">{{$u->name_quiz}}
+        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="cursor: pointer; padding: 5px;">{{$u->name_quiz}}
         <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
         </div>
         @endforeach
@@ -171,6 +171,56 @@ input:checked{
 </form>
 
 
+
+
+<div class="panel-content-set" style="top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 1001;">
+<div class=" content_leena panel-content" >
+  <div class="swiper-container">
+  <div class="swiper-wrapper">
+
+  <div id="content-home1" style="display:block" class="content-home swiper-slide">
+    <div class="real-content" style="padding-top: 70px;">
+      <div class="mask-content">
+        <!-- First Container -->
+        <div class="welcome-section text-center">
+          <div id="front-page" class="front-content">
+            <div class="panel-text-asking">
+              <h3 class="margin">เลือก 10 ประเด็นสำคัญ</h3>
+              <br>
+              <div class="text-asking">
+                <p style="font-size:18px;">ทุกประเด็นก็ดูจะสำคัญเหมือนกันหมด<br>
+                แต่เรื่องไหนกันหล่ะ ที่คุณเลือกทำก่อน?<br>
+                ถ้าคุณเลือกได้แค่ 10 เรื่องเท่านั้น</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="welcome-footer">
+
+
+            <a class="hometo1 btn btn-primary btn-xl js-scroll-trigger"
+            style="padding: 0.9rem 4rem;font-weight: 500; color:#fff; font-size:16px;">
+             เริ่มเลือก</a>
+          </div>
+          <div class="padding-bottom-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  </div>
+
+
+  </div>
+</div>
+</div>
+
+
   </div>
 </section>
 
@@ -185,6 +235,12 @@ input:checked{
 
 
 
+
+
+
+
+
+
 @endsection
 
 @section('scripts')
@@ -196,6 +252,10 @@ input:checked{
 function myFunction1() {
     document.getElementById("cutproduct").submit();
 }
+
+$(".hometo1").click(function(){
+    $(".content_leena").slideUp();
+});
 </script>
 
 <script>
