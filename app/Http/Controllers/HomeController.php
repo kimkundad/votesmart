@@ -1507,6 +1507,8 @@ class HomeController extends Controller
       }
     //  dd($randomElement);
     //  dd($cat);
+              $s = 1;
+              $data['s'] = $s;
               $data['objs'] = $cat;
               $data['datahead'] = "จัดการ Quiz";
 

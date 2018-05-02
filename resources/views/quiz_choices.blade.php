@@ -141,6 +141,9 @@ input:checked{
   transform: scale(0.9);
   box-shadow: 0 0 5px #bdbdff;
 }
+.delz-3, .delz-7, .delz-11, .delz-15, .delz-19, .delz-23, .delz-27, .delz-31, .delz-35, .delz-39, .delz-43{
+  margin-left: 35px !important;
+}
 </style>
 <section id="services" style="background: #f2f8fa; padding: 3rem 0; padding-top:230px;">
 
@@ -164,13 +167,13 @@ input:checked{
 
 
 
-    <div class="masonry visible-sm visible-xs" >
+    <div class="masonry2 visible-sm visible-xs" style="padding-left:5px;">
 
       @if($objs)
          @foreach($objs as $u)
-      <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 3px;cursor: pointer; padding: 5px;">{{$u->name_quiz}}
+      <div class="item itemch-z delz-{{$s}} size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 3px;cursor: pointer; padding: 5px;">{{$u->name_quiz}}
       <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
-      </div>
+    </div id="{{$s++}}">
       @endforeach
    @endif
 
@@ -606,6 +609,10 @@ $('#easy-pie-chart .percent').css({
   $('.masonry').masonry({
     itemSelector: '.item',
     columnWidth: 50
+  });
+  $('.masonry2').masonry({
+    itemSelector: '.item',
+    columnWidth: 25
   });
   var myValue = 0;
 
