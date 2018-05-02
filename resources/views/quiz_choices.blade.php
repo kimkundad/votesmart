@@ -608,7 +608,7 @@ $('#easy-pie-chart .percent').css({
 
   $('.masonry').masonry({
     itemSelector: '.item',
-    columnWidth: 50
+    columnWidth: 40
   });
   $('.masonry2').masonry({
     itemSelector: '.item',

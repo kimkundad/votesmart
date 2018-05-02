@@ -948,13 +948,13 @@ input[type="radio"]:disabled + .label-text:before{
     width: 160px;
     margin-left: 30px;
     height: 160px;
-    font-size: 12px
+    font-size: 16px
   }
 
   .item.size-3 {
     width: 120px;
     height: 120px;
-    font-size: 13px
+    font-size: 16px
   }
 
 /*  .item.size-4 {
