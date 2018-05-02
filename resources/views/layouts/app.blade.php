@@ -442,7 +442,8 @@ input[type="radio"]:disabled + .label-text:before{
   .item.size-3 {
     width: 150px;
     height: 150px;
-    margin-left: 20px;
+    margin-left: 80px !important;
+    margin-top: 15px !important;
     font-size: 13px
   }
 
