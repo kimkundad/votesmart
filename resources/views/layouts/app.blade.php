@@ -302,6 +302,9 @@ input[type="radio"]:disabled + .label-text:before{
     margin-top: 10px;
     font-size: 16px
   }
+  .set-ma{
+    padding-left:5px;
+  }
 
   .item.size-2 {
     width: 110px;
@@ -449,6 +452,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 110px;
     margin-top: 10px;
     font-size: 16px
+  }
+  .set-ma{
+    padding-left:30px;
   }
 
   .item.size-2 {
@@ -602,6 +608,10 @@ input[type="radio"]:disabled + .label-text:before{
     font-size: 16px
   }
 
+  .set-ma{
+    padding-left:35px;
+  }
+
   .item.size-2 {
     width: 110px;
     height: 110px;
@@ -640,6 +650,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 110px;
     margin-top: 10px;
     font-size: 16px
+  }
+  .set-ma{
+    padding-left:35px;
   }
 
   .item.size-2 {
@@ -683,6 +696,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 110px;
     margin-top: 10px;
     font-size: 16px
+  }
+  .set-ma{
+    padding-left:35px;
   }
 
   .item.size-2 {
@@ -734,6 +750,9 @@ input[type="radio"]:disabled + .label-text:before{
     margin-top: 10px;
     font-size: 16px
   }
+  .set-ma{
+    padding-left:35px;
+  }
 
   .item.size-2 {
     width: 110px;
@@ -780,6 +799,9 @@ input[type="radio"]:disabled + .label-text:before{
     height: 110px;
     margin-top: 10px;
     font-size: 16px
+  }
+  .set-ma{
+    padding-left:35px;
   }
 
   .item.size-2 {

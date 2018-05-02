@@ -167,7 +167,7 @@ input:checked{
 
 
 
-    <div class="masonry2 visible-sm visible-xs" style="padding-left:5px;">
+    <div class="masonry2 visible-sm visible-xs set-ma" style="">
 
       @if($objs)
          @foreach($objs as $u)
