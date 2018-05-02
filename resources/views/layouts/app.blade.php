@@ -938,8 +938,8 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 1200px) {
   .item.size-1 {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     margin-left: 10px;
     font-size: 16px
   }
@@ -952,8 +952,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .item.size-3 {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     font-size: 16px
   }
 
