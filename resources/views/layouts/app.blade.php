@@ -425,6 +425,27 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 320px) {
 
+  .item.size-1 {
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    font-size: 16px
+  }
+
+  .item.size-2 {
+    width: 120px;
+    height: 120px;
+
+    font-size: 12px
+  }
+
+  .item.size-3 {
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    font-size: 13px
+  }
+
   .action-nav{
         border-left: 3px solid #08b0ed;
   }
@@ -751,6 +772,37 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .item.size-1 {
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    font-size: 16px
+  }
+
+  .item.size-2 {
+    width: 160px;
+    margin-left: 30px;
+    height: 160px;
+    font-size: 12px
+  }
+
+  .item.size-3 {
+    width: 120px;
+    height: 120px;
+    font-size: 13px
+  }
+
+/*  .item.size-4 {
+    width: 180px;
+    height: 180px;
+    font-size: 14px
+  }
+
+  .item.size-5 {
+    width: 210px;
+    height: 210px;
+    font-size: 15px
+  } */
   .send_q{
     display: none!important;
   }
@@ -1134,7 +1186,7 @@ a:hover{
   align-items: center;
   box-shadow: 0px 2px 10px #ccc;
   color: #08B0ED;
-   font-size: 20px;
+
    line-height: 20px;
   font-family: 'Kanit', sans-serif;
 }
@@ -1160,35 +1212,7 @@ a:hover{
   height: 24px;
 }
 
-.item.size-1 {
-  width: 90px;
-  height: 90px;
-  font-size: 11px
-}
 
-.item.size-2 {
-  width: 110px;
-  height: 110px;
-  font-size: 12px
-}
-
-.item.size-3 {
-  width: 130px;
-  height: 130px;
-  font-size: 13px
-}
-
-.item.size-4 {
-  width: 180px;
-  height: 180px;
-  font-size: 14px
-}
-
-.item.size-5 {
-  width: 210px;
-  height: 210px;
-  font-size: 15px
-}
 .btn-asa{
 
     border: 1px solid #08B0ED;

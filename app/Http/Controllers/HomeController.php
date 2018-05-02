@@ -1485,23 +1485,24 @@ class HomeController extends Controller
             )
             ->leftjoin('categories', 'categories.id',  'quizzes.cat_id')
             ->leftjoin('users', 'users.id',  'quizzes.user_id')
+            ->orderBy(DB::raw('RAND()'))
             ->get();
 
       foreach ($cat as $obj) {
 
-      //  $ran=array(1, 2, 3, 4, 5);
-      //  $randomElement = $ran[array_rand($ran, 1)];
-      //  $obj->options = $randomElement;
-        $obj->length = strlen($obj->name_quiz);
+        $ran=array(1, 2, 3);
+        $randomElement = $ran[array_rand($ran, 1)];
+        $obj->options = $randomElement;
+
+
+      /*  $obj->length = strlen($obj->name_quiz);
         if($obj->length >= 170){
-          $obj->options = 4;
+          $obj->options_m = 3;
         }else if($obj->length >= 150){
-          $obj->options = 3;
-        }else if($obj->length >= 120){
-          $obj->options = 2;
+          $obj->options_m = 2;
         }else{
-          $obj->options = 1;
-        }
+          $obj->options_m = 1;
+        } */
 
       }
     //  dd($randomElement);

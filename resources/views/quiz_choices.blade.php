@@ -150,17 +150,31 @@ input:checked{
       {{ csrf_field() }}
       <input type="hidden" name="user_id" value="{{ Auth::user()->id }}" class="form-control">
 
-      <div class="masonry" style="padding-left:20px;">
+      <div class="masonry hidden-sm hidden-xs" style="padding-left:20px;">
 
         @if($objs)
            @foreach($objs as $u)
-        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="cursor: pointer; padding: 5px;">{{$u->name_quiz}}
+        <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 15px; cursor: pointer; padding: 5px;">{{$u->name_quiz}}
         <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
         </div>
         @endforeach
      @endif
 
     </div>
+
+
+
+    <div class="masonry visible-sm visible-xs" >
+
+      @if($objs)
+         @foreach($objs as $u)
+      <div class="item itemch-z size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 3px;cursor: pointer; padding: 5px;">{{$u->name_quiz}}
+      <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
+      </div>
+      @endforeach
+   @endif
+
+  </div>
 
 
       <button type="submit" class="send_q btn btn-primary btn-xl js-scroll-trigger visible-sm visible-xs" href="" style="padding: 0.7rem 2rem;font-weight: 500;"> ส่งข้อมูล</button>
