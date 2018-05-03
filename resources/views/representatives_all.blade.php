@@ -175,6 +175,9 @@ input:-webkit-autofill {
   <div class="container">
     <div class="row">
 
+      <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+        {{ csrf_field() }}
+
       <div class="col-md-3">
         <div class="form-group">
           <select name="cars" class="form-control" style="height: 49px;">
@@ -189,7 +192,7 @@ input:-webkit-autofill {
             <div class="col-md-8" style="padding-right: 30px; padding-left: 0px;">
               <div class="form-group">
 
-                <input type="text" class="form-control" id="firstname_booking" name="firstname_booking" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
+                <input type="text" class="form-control" id="hero-demo" name="field2" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
                 <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish-7 " style="position: absolute; right: 30px; top: 0px;" />
               </div>
 						</div>
@@ -202,7 +205,7 @@ input:-webkit-autofill {
               </div>
       						</div>
 
-
+                  </form>
     <!--  <div class="reps-map-search">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
             {{ csrf_field() }}
