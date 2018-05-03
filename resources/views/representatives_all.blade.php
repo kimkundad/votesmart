@@ -123,6 +123,20 @@ input:-webkit-autofill {
     padding: 15px 10px;
     float: right;
 }
+.stylish-7{
+  background-color: transparent;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #08B0ED;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: georgia, FontAwesome;
+    height: 48px;
+    margin-left: -57px;
+}
 </style>
 
 
@@ -176,6 +190,7 @@ input:-webkit-autofill {
               <div class="form-group">
 
                 <input type="text" class="form-control" id="firstname_booking" name="firstname_booking" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
+                <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish-7 " style="position: absolute; right: 30px; top: 0px;" />
               </div>
 						</div>
 
