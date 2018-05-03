@@ -706,6 +706,7 @@ class HomeController extends Controller
         ->get();
 
         $data['objs_pro'] = $objs_pro;
+        
         $data['cars'] = $cars;
 
       if($field2 == null && $cars != null){
