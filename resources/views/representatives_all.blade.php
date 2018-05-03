@@ -160,28 +160,58 @@ input:-webkit-autofill {
 <section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
-      <div class="reps-map-search">
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <select name="cars" class="form-control" style="height: 49px;">
+              <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
+              <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
+              <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
+              <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+          </select>
+        </div>
+						</div>
+
+            <div class="col-md-8" style="padding-right: 30px; padding-left: 0px;">
+              <div class="form-group">
+
+                <input type="text" class="form-control" id="firstname_booking" name="firstname_booking" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
+              </div>
+						</div>
+
+
+            <div class="col-md-1">
+              <div class="rectangle-copy-6">
+                  <a href="#" class=""><i class="fa fa-map"></i></a>
+                  <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+              </div>
+      						</div>
+
+
+    <!--  <div class="reps-map-search">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
             {{ csrf_field() }}
               <ul>
                   <li>
-                      <select name="cars" class="fieldf-select  align-right">
+                      <select name="cars" class="fieldf-select " style="float:left">
                           <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
                           <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
                           <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
                           <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
                       </select>
-                      <input id="hero-demo" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <div style="width:100%; float:left">
+                      <input id="hero-demo" style="min-width: 570px;" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
                       <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
-
                       <div class="rectangle-copy-6">
                           <a href="#" class=""><i class="fa fa-map"></i></a>
                           <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
                       </div>
+                    </div>
+
                   </li>
               </ul>
               </form>
-      </div>
+      </div>-->
     </div>
   </div>
 </section>
