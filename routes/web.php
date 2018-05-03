@@ -33,6 +33,7 @@ Route::get('reps_result/{id}', 'HomeController@reps_result');
 Route::post('demos/loaddata','HomeController@loadDataAjax' );
 Route::post('contact','HomeController@contact' );
 Route::post('contact_to_reps','HomeController@contact_to_reps' );
+//Route::get('representatives_provinces', 'HomeController@representatives_provinces');
 
 
 

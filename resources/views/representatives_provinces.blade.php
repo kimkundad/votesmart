@@ -441,7 +441,7 @@ document.getElementById('form2').submit();
 }
 
 
-	var map = L.map('map').setView([13.7464779, 100.5325729], 10);
+	var map = L.map('map').setView([{{$objs_pro_lo->latitude}}, {{$objs_pro_lo->longitude}}], 10);
 
 /*	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
