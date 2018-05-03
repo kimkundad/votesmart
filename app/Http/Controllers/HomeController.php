@@ -505,7 +505,48 @@ class HomeController extends Controller
 
       $field2= $request['field3'];
 
+      $cars= $request['cars'];
+
+
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
+
+        $data['objs_pro'] = $objs_pro;
+
+        //dd($objs_pro);
+
+        $data['cars'] = $cars;
+
+        if($field2 == ""){
+          $data['objs'] = null;
+          $data['search'] = $field2;
+          return view('reps_list', $data);
+        }
+
     //  $admin = [];
+
+
+    if($field2 == null && $cars != null){
+
+    }else{
+
+
 
 
       $get_user_count = DB::table('users')
@@ -643,6 +684,9 @@ class HomeController extends Controller
 
 
                           }else{
+                            $data['objs'] = null;
+                            $data['search'] = $field2;
+                            return view('reps_list', $data);
 
                           }
 
@@ -671,6 +715,12 @@ class HomeController extends Controller
 
 
         }
+      }
+
+    }
+
+
+    public function representatives_provinces(Request $request){
 
     }
 
@@ -678,6 +728,100 @@ class HomeController extends Controller
 
 
       $field2= $request['field2'];
+      $cars= $request['cars'];
+      $sort= $request['sort'];
+
+
+
+      //dd($sort);
+
+
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
+
+        $data['objs_pro'] = $objs_pro;
+
+        //dd($objs_pro);
+
+        $data['cars'] = $cars;
+
+
+        if($field2 == ""){
+          $data['objs'] = null;
+          $data['search'] = $field2;
+          return view('reps_list', $data);
+        }
+
+      if($field2 == null && $cars != null && $sort == null){
+
+
+
+
+
+          $objs_pro_lo = DB::table('provinces')
+            ->select(
+            'provinces.*',
+            'subdistricts.*',
+            'districts.*',
+            'provinces.name_in_thai as name_in_thai1',
+            'provinces.id as id_p'
+            )
+            ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+            ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+            ->where('provinces.id', $cars)
+            ->first();
+
+
+
+        $objs = DB::table('users')
+          ->select(
+          'users.*'
+          )
+          ->where('user_lock', 1)
+          ->where('reps_con', 1)
+          ->where('is_admin', 0)
+          ->get();
+
+        //  dd($objs);
+          //dd($objs); ->where('province_id', 1)
+
+
+        $data['objs_pro_lo'] = $objs_pro_lo;
+        $data['cars'] = $cars;
+
+        //dd($objs_pro);
+        $data['objs'] = $objs;
+        $data['datahead'] = "รายชื่อสมาชิก";
+      //  dd(55555555);
+        return view('representatives_provinces', $data);
+
+
+
+      //  return view('representatives_provinces');
+
+      }else{
+
+        if($sort == null){
+          $sort = 1;
+        }
+
+
 
     //  $admin = [];
 
@@ -700,11 +844,12 @@ class HomeController extends Controller
               ->where('users.user_lock', 1)
               ->where('users.is_admin', 0)
               ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->orderBy('users.name', 'DESC')
               ->get();
 
               $data['objs'] = $get_user;
               $data['search'] = $field2;
-
+              //dd(55555555);
               return view('reps_list', $data);
 
         }else{
@@ -735,11 +880,12 @@ class HomeController extends Controller
                       ->where('users.user_lock', 1)
                       ->where('users.is_admin', 0)
                       ->where('users.province_id', $get_provinces->id)
+                      ->orderBy('users.name')
                       ->get();
 
                       $data['objs'] = $get_user;
                       $data['search'] = $field2;
-
+                      //dd(55555555);
                       return view('reps_list', $data);
 
 
@@ -772,11 +918,12 @@ class HomeController extends Controller
                             ->where('users.user_lock', 1)
                             ->where('users.is_admin', 0)
                             ->where('users.amphur_id', $get_districts->id)
+                            ->orderBy('users.name')
                             ->get();
 
                             $data['objs'] = $get_user;
                             $data['search'] = $field2;
-
+                          //  dd(55555555);
                             return view('reps_list', $data);
 
 
@@ -808,43 +955,33 @@ class HomeController extends Controller
                                   ->where('users.user_lock', 1)
                                   ->where('users.is_admin', 0)
                                   ->where('users.district_id', $get_subdistricts->id)
+                                  ->orderBy('users.name')
                                   ->get();
 
                                   $data['objs'] = $get_user;
                                   $data['search'] = $field2;
-
+                                  //dd(55555555);
                                   return view('reps_list', $data);
 
 
                           }else{
 
+                            $data['objs'] = null;
+                            $data['search'] = $field2;
+                            return view('reps_list', $data);
+
                           }
-
-
-
 
                     }
 
-
-
-
-
-
-
               }
 
-
-
-
-
-
-
-
-
-
-
-
         }
+
+
+
+}
+
 
     }
 
@@ -955,6 +1092,24 @@ class HomeController extends Controller
 
 
 
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
 
 
 
@@ -967,6 +1122,9 @@ class HomeController extends Controller
         ->where('is_admin', 0)
         ->get();
         //dd($objs); ->where('province_id', 1)
+
+      $data['objs_pro'] = $objs_pro;
+      //dd($objs_pro);
       $data['objs'] = $objs;
       $data['datahead'] = "รายชื่อสมาชิก";
 

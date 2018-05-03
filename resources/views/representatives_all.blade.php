@@ -148,11 +148,12 @@ input:-webkit-autofill {
             {{ csrf_field() }}
               <ul>
                   <li style="margin-bottom: 5px;">
-                      <select name="cars" class="fieldf-select2  align-right" style="width:73%">
-                          <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
-                          <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
-                          <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
-                          <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+                      <select name="cars" class="fieldf-select2  align-right" style="width:73%" onchange="this.form.submit()">
+                        @if($objs_pro)
+                           @foreach($objs_pro as $pro)
+                          <option value="{{$pro->id_p}}">ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+                          @endforeach
+                      @endif
                       </select>
                       <div class="rectangle-copy-6" style="width: 24%; padding: 15px 10px; margin-right: 6px;    height: 47px;">
                           <a href="#" class=""><i class="fa fa-map"></i></a>
@@ -173,7 +174,7 @@ input:-webkit-autofill {
 
 <section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
-    <form class="form-style-9 pure-form" id="form2" name="form2" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+    <form class="" id="form2" name="form2" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
       {{ csrf_field() }}
     <div class="row">
 
@@ -181,11 +182,12 @@ input:-webkit-autofill {
 
       <div class="col-md-3">
         <div class="form-group">
-          <select name="cars" class="form-control" style="height: 49px;">
-              <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
-              <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
-              <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
-              <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+          <select name="cars" class="form-control" style="height: 49px;" onchange="this.form.submit()">
+            @if($objs_pro)
+               @foreach($objs_pro as $pro)
+              <option value="{{$pro->id_p}}">ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+              @endforeach
+          @endif
           </select>
         </div>
 						</div>
