@@ -217,7 +217,7 @@ input:-webkit-autofill {
 
             <div class="col-md-2" style="padding-right: 25px; padding-left: 0px;">
               <div class="form-group">
-                <select name="cars2" class="form-control" style="height: 49px; color:#666;  background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;" onchange="this.form.submit()">
+                <select name="sort" class="form-control" style="height: 49px; color:#666;  background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;" onchange="this.form.submit()">
                   <option value="1" >เรียง ก - ฮ</option>
                   <option value="2" >เรียง ฮ - ก</option>
                 </select>

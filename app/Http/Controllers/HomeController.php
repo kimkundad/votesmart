@@ -533,7 +533,11 @@ class HomeController extends Controller
 
         $data['cars'] = $cars;
 
-
+        if($field2 == ""){
+          $data['objs'] = null;
+          $data['search'] = $field2;
+          return view('reps_list', $data);
+        }
 
     //  $admin = [];
 
@@ -725,6 +729,11 @@ class HomeController extends Controller
 
       $field2= $request['field2'];
       $cars= $request['cars'];
+      $sort= $request['sort'];
+
+
+
+      //dd($sort);
 
 
       $objs_pro = DB::table('users')
@@ -752,7 +761,14 @@ class HomeController extends Controller
 
         $data['cars'] = $cars;
 
-      if($field2 == null && $cars != null){
+
+        if($field2 == ""){
+          $data['objs'] = null;
+          $data['search'] = $field2;
+          return view('reps_list', $data);
+        }
+
+      if($field2 == null && $cars != null && $sort == null){
 
 
 
@@ -781,6 +797,8 @@ class HomeController extends Controller
           ->where('reps_con', 1)
           ->where('is_admin', 0)
           ->get();
+
+        //  dd($objs);
           //dd($objs); ->where('province_id', 1)
 
 
@@ -790,7 +808,7 @@ class HomeController extends Controller
         //dd($objs_pro);
         $data['objs'] = $objs;
         $data['datahead'] = "รายชื่อสมาชิก";
-
+      //  dd(55555555);
         return view('representatives_provinces', $data);
 
 
@@ -798,6 +816,10 @@ class HomeController extends Controller
       //  return view('representatives_provinces');
 
       }else{
+
+        if($sort == null){
+          $sort = 1;
+        }
 
 
 
@@ -822,12 +844,12 @@ class HomeController extends Controller
               ->where('users.user_lock', 1)
               ->where('users.is_admin', 0)
               ->where('users.name', 'LIKE', '%'.$field2.'%')
-              ->orderBy('users.name')
+              ->orderBy('users.name', 'DESC')
               ->get();
 
               $data['objs'] = $get_user;
               $data['search'] = $field2;
-
+              //dd(55555555);
               return view('reps_list', $data);
 
         }else{
@@ -863,7 +885,7 @@ class HomeController extends Controller
 
                       $data['objs'] = $get_user;
                       $data['search'] = $field2;
-
+                      //dd(55555555);
                       return view('reps_list', $data);
 
 
@@ -901,7 +923,7 @@ class HomeController extends Controller
 
                             $data['objs'] = $get_user;
                             $data['search'] = $field2;
-
+                          //  dd(55555555);
                             return view('reps_list', $data);
 
 
@@ -938,11 +960,12 @@ class HomeController extends Controller
 
                                   $data['objs'] = $get_user;
                                   $data['search'] = $field2;
-
+                                  //dd(55555555);
                                   return view('reps_list', $data);
 
 
                           }else{
+
                             $data['objs'] = null;
                             $data['search'] = $field2;
                             return view('reps_list', $data);
