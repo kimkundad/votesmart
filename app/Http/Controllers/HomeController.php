@@ -681,6 +681,8 @@ class HomeController extends Controller
 
                           }else{
 
+                            return view('reps_list', $data);
+
                           }
 
 
@@ -936,6 +938,8 @@ class HomeController extends Controller
 
 
                           }else{
+
+                            return view('reps_list', $data);
 
                           }
 
