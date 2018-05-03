@@ -822,6 +822,7 @@ class HomeController extends Controller
               ->where('users.user_lock', 1)
               ->where('users.is_admin', 0)
               ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->orderBy('users.name')
               ->get();
 
               $data['objs'] = $get_user;
@@ -857,6 +858,7 @@ class HomeController extends Controller
                       ->where('users.user_lock', 1)
                       ->where('users.is_admin', 0)
                       ->where('users.province_id', $get_provinces->id)
+                      ->orderBy('users.name')
                       ->get();
 
                       $data['objs'] = $get_user;
@@ -894,6 +896,7 @@ class HomeController extends Controller
                             ->where('users.user_lock', 1)
                             ->where('users.is_admin', 0)
                             ->where('users.amphur_id', $get_districts->id)
+                            ->orderBy('users.name')
                             ->get();
 
                             $data['objs'] = $get_user;
@@ -930,6 +933,7 @@ class HomeController extends Controller
                                   ->where('users.user_lock', 1)
                                   ->where('users.is_admin', 0)
                                   ->where('users.district_id', $get_subdistricts->id)
+                                  ->orderBy('users.name')
                                   ->get();
 
                                   $data['objs'] = $get_user;
