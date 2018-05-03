@@ -505,7 +505,44 @@ class HomeController extends Controller
 
       $field2= $request['field3'];
 
+      $cars= $request['cars'];
+
+
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
+
+        $data['objs_pro'] = $objs_pro;
+
+        //dd($objs_pro);
+
+        $data['cars'] = $cars;
+
+
+
     //  $admin = [];
+
+
+    if($field2 == null && $cars != null){
+
+    }else{
+
+
 
 
       $get_user_count = DB::table('users')
@@ -671,6 +708,7 @@ class HomeController extends Controller
 
 
         }
+      }
 
     }
 
@@ -686,7 +724,30 @@ class HomeController extends Controller
       $cars= $request['cars'];
 
 
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
 
+        $data['objs_pro'] = $objs_pro;
+
+        //dd($objs_pro);
+
+        $data['cars'] = $cars;
 
       if($field2 == null && $cars != null){
 
@@ -751,30 +812,6 @@ class HomeController extends Controller
 
         if($get_user_count > 0){
 
-
-          $objs_pro = DB::table('users')
-            ->select(
-            'users.*',
-            'users.id as id_u',
-            'provinces.*',
-            'subdistricts.*',
-            'districts.*',
-            'provinces.name_in_thai as name_in_thai1',
-            'provinces.id as id_p'
-            )
-            ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-            ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-            ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-            ->where('users.user_lock', 1)
-            ->where('users.reps_con', 1)
-            ->where('users.is_admin', 0)
-            ->groupBy('provinces.id')
-            ->get();
-
-            $data['objs_pro'] = $objs_pro;
-
-            $data['cars'] = $cars;
-
           $get_user = DB::table('users')
               ->select(
               'users.*'
@@ -790,30 +827,6 @@ class HomeController extends Controller
               return view('reps_list', $data);
 
         }else{
-
-
-          $objs_pro = DB::table('users')
-            ->select(
-            'users.*',
-            'users.id as id_u',
-            'provinces.*',
-            'subdistricts.*',
-            'districts.*',
-            'provinces.name_in_thai as name_in_thai1',
-            'provinces.id as id_p'
-            )
-            ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-            ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-            ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-            ->where('users.user_lock', 1)
-            ->where('users.reps_con', 1)
-            ->where('users.is_admin', 0)
-            ->groupBy('provinces.id')
-            ->get();
-
-            $data['objs_pro'] = $objs_pro;
-
-            $data['cars'] = $cars;
 
 
 
@@ -852,30 +865,6 @@ class HomeController extends Controller
               }else{
 
 
-                $objs_pro = DB::table('users')
-                  ->select(
-                  'users.*',
-                  'users.id as id_u',
-                  'provinces.*',
-                  'subdistricts.*',
-                  'districts.*',
-                  'provinces.name_in_thai as name_in_thai1',
-                  'provinces.id as id_p'
-                  )
-                  ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-                  ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-                  ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-                  ->where('users.user_lock', 1)
-                  ->where('users.reps_con', 1)
-                  ->where('users.is_admin', 0)
-                  ->groupBy('provinces.id')
-                  ->get();
-
-                  $data['objs_pro'] = $objs_pro;
-
-                  $data['cars'] = $cars;
-
-
 
                 $get_count_districts = DB::table('districts')
                     ->select(
@@ -886,30 +875,6 @@ class HomeController extends Controller
 
 
                     if($get_count_districts > 0){
-
-
-                      $objs_pro = DB::table('users')
-                        ->select(
-                        'users.*',
-                        'users.id as id_u',
-                        'provinces.*',
-                        'subdistricts.*',
-                        'districts.*',
-                        'provinces.name_in_thai as name_in_thai1',
-                        'provinces.id as id_p'
-                        )
-                        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-                        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-                        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-                        ->where('users.user_lock', 1)
-                        ->where('users.reps_con', 1)
-                        ->where('users.is_admin', 0)
-                        ->groupBy('provinces.id')
-                        ->get();
-
-                        $data['objs_pro'] = $objs_pro;
-
-                        $data['cars'] = $cars;
 
                       $get_districts = DB::table('districts')
                           ->select(
@@ -936,29 +901,6 @@ class HomeController extends Controller
 
                     }else{
 
-                      $objs_pro = DB::table('users')
-                        ->select(
-                        'users.*',
-                        'users.id as id_u',
-                        'provinces.*',
-                        'subdistricts.*',
-                        'districts.*',
-                        'provinces.name_in_thai as name_in_thai1',
-                        'provinces.id as id_p'
-                        )
-                        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-                        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-                        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-                        ->where('users.user_lock', 1)
-                        ->where('users.reps_con', 1)
-                        ->where('users.is_admin', 0)
-                        ->groupBy('provinces.id')
-                        ->get();
-
-                        $data['objs_pro'] = $objs_pro;
-
-                        $data['cars'] = $cars;
-
 
                       $get_count_subdistricts = DB::table('subdistricts')
                           ->select(
@@ -969,29 +911,6 @@ class HomeController extends Controller
 
 
                           if($get_count_subdistricts > 0){
-
-                            $objs_pro = DB::table('users')
-                              ->select(
-                              'users.*',
-                              'users.id as id_u',
-                              'provinces.*',
-                              'subdistricts.*',
-                              'districts.*',
-                              'provinces.name_in_thai as name_in_thai1',
-                              'provinces.id as id_p'
-                              )
-                              ->leftjoin('provinces', 'provinces.id',  'users.province_id')
-                              ->leftjoin('districts', 'districts.province_id',  'provinces.id')
-                              ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
-                              ->where('users.user_lock', 1)
-                              ->where('users.reps_con', 1)
-                              ->where('users.is_admin', 0)
-                              ->groupBy('provinces.id')
-                              ->get();
-
-                              $data['objs_pro'] = $objs_pro;
-
-                              $data['cars'] = $cars;
 
                             $get_subdistricts = DB::table('subdistricts')
                                 ->select(
@@ -1017,9 +936,6 @@ class HomeController extends Controller
 
 
                           }else{
-
-
-                            
 
                           }
 
