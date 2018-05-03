@@ -666,7 +666,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
                                           @else
 
-                                          <img class="img-in-chart" src="//{{Auth::user()->avatar}}">
+                                          <img class="img-in-chart" src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4">
 
                                           @endif
 
@@ -679,6 +679,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
                                     </div>
+
+
                                     <div class="col-md-6">
                                         <div class="candidate-profile-2 ">
                                           <br><br>
@@ -747,7 +749,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
         <div id="canvas" class="canvass">
 
           <img src="{{url('assets/image/cross-icon.png')}}" style="float:left; width:90px; height:90px; left: 10px;top: 10px;"/>
-          <img src="{{url('get_avatar')}}" />
+          <img src="{{url('assets/image/avatar/'.$user->url_image)}}" />
           <div>
 
                   <h2 class="avatar-heading text-left"  style="text-align: left">
@@ -837,7 +839,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-<script src="{{url('front/js/Chart.bundle.js?v1')}}"></script>
+<script src="{{url('front/js/Chart.bundlev2.js?v0')}}"></script>
 
 
 
@@ -869,7 +871,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
                                        $.ajax({
                                          type: "POST",
-                                         url: '{{url('save_image')}}',
+                                         url: '{{secure_url('save_image')}}',
                                          data:{
                                             image: imgString
                                           },
@@ -882,8 +884,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
                                               };
 
 
-                                              window.open('https://www.facebook.com/sharer/sharer.php?u={{url('shared_quiz/'.Auth::user()->id)}}', '_blank');
-
+                                              window.open('https://www.facebook.com/sharer/sharer.php?u={{secure_url('shared_quiz/'.Auth::user()->id)}}', '_blank');
+                                              win.focus();
 
                                            } else {
 

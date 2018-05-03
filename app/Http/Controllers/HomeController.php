@@ -8,9 +8,13 @@ use Auth;
 use App\User;
 use App\votesmart;
 use App\voteresult;
+use App\contact;
+use App\contacttoreps;
 use App\Http\Requests;
 use Response;
 use File;
+use Helper;
+use App\gallery;
 use Illuminate\Support\Facades\DB;
 use Storage;
 
@@ -71,10 +75,222 @@ class HomeController extends Controller
 
       //  dd($objs);
 
+      $cat = DB::table('categories')->select(
+            'categories.*'
+            )
+            ->get();
 
+    $data['cat'] = $cat;
       $data['objs'] = $objs;
 
         return view('home', $data);
+    }
+
+
+
+    public function search_data2(Request $request){
+
+      $this->validate($request, [
+       'field3' => 'required'
+      ]);
+
+      $field2= $request['field3'];
+
+    //  $admin = [];
+
+
+      $get_user_count = DB::table('users')
+          ->select(
+          'users.name'
+          )
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->where('users.name', 'LIKE', '%'.$field2.'%')
+          ->count();
+
+        if($get_user_count > 0){
+
+          $get_user = DB::table('users')
+              ->select(
+              'users.name'
+              )
+              ->where('users.user_lock', 1)
+              ->where('users.is_admin', 0)
+              ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->get();
+
+              foreach($get_user as $x){
+                $admin[] =
+                    $x->name
+                ;
+              }
+
+        } else{
+
+
+
+          $get_count_provinces = DB::table('provinces')
+              ->select(
+              'provinces.name_in_thai'
+              )
+              ->Where('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+              ->count();
+
+              if($get_count_provinces > 0){
+
+                $get_provinces = DB::table('provinces')
+                    ->select(
+                    'provinces.name_in_thai'
+                    )
+                    ->Where('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+                    ->get();
+                  //  dd($get_provinces);
+                    foreach($get_provinces as $x){
+                      $admin[] =
+                          $x->name_in_thai
+                      ;
+                    }
+
+              }else{
+
+
+
+                $get_count_districts = DB::table('districts')
+                    ->select(
+                    'districts.name_in_thai'
+                    )
+                    ->Where('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                    ->count();
+
+
+                    if($get_count_districts > 0){
+
+                      $get_districts = DB::table('districts')
+                          ->select(
+                          'districts.name_in_thai'
+                          )
+                          ->Where('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                          ->get();
+                        //  dd($get_provinces);
+                          foreach($get_districts as $x){
+                            $admin[] =
+                                $x->name_in_thai
+                            ;
+                          }
+
+                    }else{
+
+
+                      $get_count_subdistricts = DB::table('subdistricts')
+                          ->select(
+                          'subdistricts.name_in_thai'
+                          )
+                          ->Where('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                          ->count();
+
+
+                          if($get_count_subdistricts > 0){
+
+                            $get_subdistricts = DB::table('subdistricts')
+                                ->select(
+                                'subdistricts.name_in_thai'
+                                )
+                                ->Where('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+                                ->get();
+                              //  dd($get_provinces);
+                                foreach($get_subdistricts as $x){
+                                  $admin[] =
+                                      $x->name_in_thai
+                                  ;
+                                }
+
+                          }else{
+
+                            $admin = null;
+
+                          }
+
+
+
+                    }
+
+                //$admin = null;
+
+              }
+
+
+
+
+
+
+        }
+
+
+    /*  $get_count = DB::table('users')
+        ->select(
+        'users.name',
+        'districts.name_in_thai as name_in_thai_d',
+        'subdistricts.name_in_thai as name_in_thai_s',
+        'provinces.name_in_thai as name_in_thai_p'
+        )
+        ->leftjoin('districts', 'districts.id', '=', 'users.amphur_id')
+        ->leftjoin('subdistricts', 'subdistricts.id', '=', 'users.district_id')
+        ->leftjoin('provinces', 'provinces.id', '=', 'users.province_id')
+        ->where('users.user_lock', 1)
+        ->where('users.is_admin', 0)
+        ->orwhere('users.name', 'LIKE', '%'.$field2.'%')
+        ->orWhere('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->orWhere('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->orWhere('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+        ->count();
+
+
+        if($get_count > 0){
+
+          $objs = DB::table('users')
+          ->select(
+          'users.name',
+          'districts.name_in_thai as name_in_thai_d',
+          'subdistricts.name_in_thai as name_in_thai_s',
+          'provinces.name_in_thai as name_in_thai_p'
+          )
+          ->leftjoin('districts', 'districts.id', '=', 'users.amphur_id')
+          ->leftjoin('subdistricts', 'subdistricts.id', '=', 'users.district_id')
+          ->leftjoin('provinces', 'provinces.id', '=', 'users.province_id')
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->orwhere('users.name', 'LIKE', '%'.$field2.'%')
+          ->orWhere('districts.name_in_thai', 'LIKE', '%'.$field2.'%')
+          ->orWhere('subdistricts.name_in_thai', 'LIKE', '%'.$field2.'%')
+          ->orWhere('provinces.name_in_thai', 'LIKE', '%'.$field2.'%')
+            ->get();
+
+          //  $admin = ['ActionScript', 'AppleScript', 'Asp', 'Assembly', 'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL', 'ColdFusion', 'Erlang', 'Fortran', 'Groovy', 'Haskell', 'HTML', 'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'PowerShell', 'Python', 'Ruby', 'Scala', 'Scheme', 'SQL', 'TeX', 'XML'];
+
+
+            foreach($objs as $x){
+
+
+
+            //  echo "Key=" . $x . ", Value=" . $x_value;
+
+              $admin = [
+                  $x->name,
+              ];
+            }
+
+        }else{
+          $admin = null;
+        }
+
+        */
+
+
+
+
+
+        return Response::json(['data' => $admin]);
+
     }
 
 
@@ -283,6 +499,181 @@ class HomeController extends Controller
 
     }
 
+
+    public function reps_list2(Request $request){
+
+
+      $field2= $request['field3'];
+
+    //  $admin = [];
+
+
+      $get_user_count = DB::table('users')
+          ->select(
+          'users.name'
+          )
+          ->where('users.user_lock', 1)
+          ->where('users.is_admin', 0)
+          ->where('users.name', 'LIKE', '%'.$field2.'%')
+          ->count();
+
+        if($get_user_count > 0){
+
+          $get_user = DB::table('users')
+              ->select(
+              'users.*'
+              )
+              ->where('users.user_lock', 1)
+              ->where('users.is_admin', 0)
+              ->where('users.name', 'LIKE', '%'.$field2.'%')
+              ->get();
+
+              $data['objs'] = $get_user;
+              $data['search'] = $field2;
+
+              return view('reps_list', $data);
+
+        }else{
+
+
+
+          $get_count_provinces = DB::table('provinces')
+              ->select(
+              'provinces.name_in_thai'
+              )
+              ->Where('provinces.name_in_thai', $field2)
+              ->count();
+
+              if($get_count_provinces > 0){
+
+                $get_provinces = DB::table('provinces')
+                    ->select(
+                    'provinces.*'
+                    )
+                    ->Where('provinces.name_in_thai', $field2)
+                    ->first();
+                  //  dd($get_provinces);
+
+                  $get_user = DB::table('users')
+                      ->select(
+                      'users.*'
+                      )
+                      ->where('users.user_lock', 1)
+                      ->where('users.is_admin', 0)
+                      ->where('users.province_id', $get_provinces->id)
+                      ->get();
+
+                      $data['objs'] = $get_user;
+                      $data['search'] = $field2;
+
+                      return view('reps_list', $data);
+
+
+              }else{
+
+
+
+                $get_count_districts = DB::table('districts')
+                    ->select(
+                    'districts.name_in_thai'
+                    )
+                    ->Where('districts.name_in_thai',$field2)
+                    ->count();
+
+
+                    if($get_count_districts > 0){
+
+                      $get_districts = DB::table('districts')
+                          ->select(
+                          'districts.*'
+                          )
+                          ->Where('districts.name_in_thai', $field2)
+                          ->first();
+                        //  dd($get_provinces);
+
+                        $get_user = DB::table('users')
+                            ->select(
+                            'users.*'
+                            )
+                            ->where('users.user_lock', 1)
+                            ->where('users.is_admin', 0)
+                            ->where('users.amphur_id', $get_districts->id)
+                            ->get();
+
+                            $data['objs'] = $get_user;
+                            $data['search'] = $field2;
+
+                            return view('reps_list', $data);
+
+
+                    }else{
+
+
+                      $get_count_subdistricts = DB::table('subdistricts')
+                          ->select(
+                          'subdistricts.*'
+                          )
+                          ->Where('subdistricts.name_in_thai', $field2)
+                          ->count();
+
+
+                          if($get_count_subdistricts > 0){
+
+                            $get_subdistricts = DB::table('subdistricts')
+                                ->select(
+                                'subdistricts.*'
+                                )
+                                ->Where('subdistricts.name_in_thai', $field2)
+                                ->first();
+                              //  dd($get_provinces);
+
+                              $get_user = DB::table('users')
+                                  ->select(
+                                  'users.*'
+                                  )
+                                  ->where('users.user_lock', 1)
+                                  ->where('users.is_admin', 0)
+                                  ->where('users.district_id', $get_subdistricts->id)
+                                  ->get();
+
+                                  $data['objs'] = $get_user;
+                                  $data['search'] = $field2;
+
+                                  return view('reps_list', $data);
+
+
+                          }else{
+
+                          }
+
+
+
+
+                    }
+
+
+
+
+
+
+
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+
     public function reps_list(Request $request){
 
 
@@ -457,17 +848,125 @@ class HomeController extends Controller
 
     }
 
+
+
+    public function contact(Request $request){
+
+    $resp = array();
+    $name = $request->name;
+    $surname = $request->surname;
+    $email = $request->email;
+    $year_old = $request->year_old;
+    $detail = $request->detail;
+    $radio = $request->radio;
+
+    if($name == null && $surname == null && $email == null && $year_old == null && $detail == null && $radio == null){
+      $resp["status"] = 1001;
+    }else{
+
+
+      function getUserIpAddr(){
+          if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+              //ip from share internet
+              $ip = $_SERVER['HTTP_CLIENT_IP'];
+          }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+              //ip pass from proxy
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+          }else{
+              $ip = $_SERVER['REMOTE_ADDR'];
+          }
+          return $ip;
+      }
+
+
+
+
+      $package = new contact();
+      $package->name = $name;
+      $package->surname = $surname;
+      $package->email = $email;
+      $package->year_old = $year_old;
+      $package->radio = $radio;
+      $package->detail = $detail;
+      $package->ip_address = getUserIpAddr();
+      $package->save();
+      $resp["status"] = 1000;
+    }
+
+
+    return Response::json($resp);
+
+    }
+
+
+    public function contact_to_reps(Request $request){
+
+    $resp = array();
+    $name = $request->name;
+    $surname = $request->surname;
+    $email = $request->email;
+    $detail = $request->detail;
+    $id_reps = $request->id_reps;
+
+    if($name == null && $surname == null && $email == null && $detail == null ){
+      $resp["status"] = 1001;
+    }else{
+
+
+      function getUserIpAddr(){
+          if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+              //ip from share internet
+              $ip = $_SERVER['HTTP_CLIENT_IP'];
+          }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+              //ip pass from proxy
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+          }else{
+              $ip = $_SERVER['REMOTE_ADDR'];
+          }
+          return $ip;
+      }
+
+
+
+
+      $package = new contacttoreps();
+      $package->id_reps = $id_reps;
+      $package->name = $name;
+      $package->surname = $surname;
+      $package->email = $email;
+      $package->detail = $detail;
+      $package->ip_address = getUserIpAddr();
+      $package->save();
+      $resp["status"] = 1000;
+    }
+
+
+    return Response::json($resp);
+
+    }
+
+
+
+
+
+
+
     public function representatives_all(){
+
+
+
+
+
 
       $objs = DB::table('users')
         ->select(
         'users.*'
         )
         ->where('user_lock', 1)
+        ->where('reps_con', 1)
         ->where('is_admin', 0)
-        ->where('province_id', 1)
         ->get();
-        //dd($objs);
+        //dd($objs); ->where('province_id', 1)
       $data['objs'] = $objs;
       $data['datahead'] = "รายชื่อสมาชิก";
 
@@ -573,6 +1072,8 @@ class HomeController extends Controller
 
 
 
+
+
     if($user->provider == 'facebook'){
 
 
@@ -586,7 +1087,7 @@ class HomeController extends Controller
       $height="300";
 
       /*This is the actual url of the Facebook users image*/
-      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height";
+      $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4";
 
       $image_file = $fid.'.jpg';
 
@@ -781,15 +1282,103 @@ class HomeController extends Controller
 
       //  dd($labels);
 
+      $abouts = DB::table('abouts')->select(
+            'abouts.*'
+            )
+        ->where('user_id', $id)
+        ->get();
+
+        $exper = DB::table('experiences')->select(
+              'experiences.*'
+              )
+          ->where('user_id', $id)
+          ->get();
+
+          $exper_count = DB::table('experiences')->select(
+                'experiences.*'
+                )
+            ->where('user_id', $id)
+            ->count();
+
+
+          $education = DB::table('education')->select(
+                'education.*'
+                )
+            ->where('user_id', $id)
+            ->get();
+
+            $timelines = DB::table('timelines')->select(
+                  'timelines.*'
+                  )
+              ->where('user_id', $id)
+              ->get();
+
+              $galleries = DB::table('galleries')->select(
+                    'galleries.*'
+                    )
+                ->where('user_id', $id)
+                ->orderBy('id','DESC')
+                ->limit(6)
+                ->get();
+
+                $galleries_count = DB::table('galleries')->select(
+                      'galleries.*'
+                      )
+                  ->where('user_id', $id)
+                  ->count();
+      $s = 0;
+      $data['s'] = $s;
+      $data['galleries_count'] = $galleries_count;
+      $data['galleries'] = $galleries;
+      $data['timelines'] = $timelines;
+      $data['education'] = $education;
+      $data['exper'] = $exper;
+      $data['exper_count'] = $exper_count;
+
       $data['user'] = $objs;
       $data['objs'] = $labels;
-      $data['datahead'] = "จัดการ Quiz";
+      $data['abouts'] = $abouts;
 
 
       return view('reps_detail', $data);
 
 
 
+    }
+
+
+
+    public function loadDataAjax(Request $request)
+    {
+        $output = '';
+        $url = url('assets/images/all_image');
+        $id = $request->id;
+        $id_reps = $request->user_id;
+
+        $posts = gallery::where('id','<',$id)->where('user_id', $id_reps)->orderBy('id','DESC')->limit(6)->get();
+        //echo $id_reps;
+        if(!$posts->isEmpty())
+        {
+            foreach($posts as $post)
+            {
+
+              $output .= '<div class="col-md-4 col-sm-4 gallery" data-ids="'.$post->id.'">
+                <div class="img_container" style="max-height: 225px; height: 225px; min-height: 225px; overflow: hidden; position: relative; margin-bottom:10px;">
+                  <a class="example-image-link" href="'.$url.'/'.$post->image.'">
+                  <img class=" img-responsive" src="'.$url.'/'.$post->image.'" >
+                </a>
+                </div>
+              </div>';
+
+
+            }
+
+            $output .= '<div class="col-md-12 text-center" id="remove-row">
+                            <button class="btn btn-readmore " id="btn-more" data-id="'.$post->id.'" data-user_id="'.$post->user_id.'">เเสดงเพิ่ม</button>
+                        </div>';
+
+            echo $output;
+        }
     }
 
 
@@ -898,27 +1487,30 @@ class HomeController extends Controller
             )
             ->leftjoin('categories', 'categories.id',  'quizzes.cat_id')
             ->leftjoin('users', 'users.id',  'quizzes.user_id')
+            ->orderBy(DB::raw('RAND()'))
             ->get();
 
       foreach ($cat as $obj) {
 
-      //  $ran=array(1, 2, 3, 4, 5);
-      //  $randomElement = $ran[array_rand($ran, 1)];
-      //  $obj->options = $randomElement;
-        $obj->length = strlen($obj->name_quiz);
+        $ran=array(1, 2, 3);
+        $randomElement = $ran[array_rand($ran, 1)];
+        $obj->options = $randomElement;
+
+
+      /*  $obj->length = strlen($obj->name_quiz);
         if($obj->length >= 170){
-          $obj->options = 4;
+          $obj->options_m = 3;
         }else if($obj->length >= 150){
-          $obj->options = 3;
-        }else if($obj->length >= 120){
-          $obj->options = 2;
+          $obj->options_m = 2;
         }else{
-          $obj->options = 1;
-        }
+          $obj->options_m = 1;
+        } */
 
       }
     //  dd($randomElement);
     //  dd($cat);
+              $s = 1;
+              $data['s'] = $s;
               $data['objs'] = $cat;
               $data['datahead'] = "จัดการ Quiz";
 

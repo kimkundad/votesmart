@@ -16,7 +16,7 @@ class SocialAccountService
             ->first();
 
         if ($account) {
-        //  dd($account);
+          //dd($account);
             return $account->user;
         } else {
 

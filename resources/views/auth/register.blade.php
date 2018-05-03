@@ -108,7 +108,7 @@
           								<span>หรือ</span>
           							</span>
 
-                        <p class="text-center" style="color: #777;">มีบัญชีแล้วหรือยัง? <a href="pages-signin.html">เข้าสู่ระบบ!</a></p>
+                        <p class="text-center" style="color: #777;">มีบัญชีแล้วหรือยัง? <a href="{{url('login')}}">เข้าสู่ระบบ!</a></p>
                     </form>
                 </div>
                 </div>

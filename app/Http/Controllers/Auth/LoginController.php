@@ -29,7 +29,7 @@ class LoginController extends Controller
         if ($request->user()->is_admin == 1 && $request->user()->user_lock == 0) {
           return redirect('admin/dashboard');
         }else if($request->user()->is_admin == 0 && $request->user()->user_lock == 1){
-          return redirect('representatives/dashboard');
+          return redirect('representatives/profile');
         }else{
           return redirect('/');
         }

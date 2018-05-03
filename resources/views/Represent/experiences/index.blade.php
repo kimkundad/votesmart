@@ -73,6 +73,11 @@
                                   </div>
 
                                   <div class="form-group">
+                                    <label>หัวข้อรอง</label>
+                                    <input type="text" class="form-control" name="sub_headname" value="" placeholder="ใส่หัวข้อรอง..">
+                                  </div>
+
+                                  <div class="form-group">
                                     <label>รายละเอียด</label>
                                     <textarea class="form-control"  name="detail" rows="4"  placeholder="รายละเอียด.."></textarea>
                                   </div>
@@ -87,19 +92,7 @@
                                      <input type="number" class="form-control"  name="end_year" placeholder="2560">
                                   </div>
 
-
-
-
-
-
-
                                   </div>
-
-
-
-
-
-
 
 
                     </div>
@@ -114,6 +107,14 @@
                     </form>
                   </section>
 									</div>
+
+
+
+
+
+
+
+
 
 
                 <br>
@@ -139,7 +140,8 @@
                       <td>{{$u->start_year}} - {{$u->end_year}}</td>
 
                       <td>
-                        <a style="float:left; margin-right:8px;" title="แก้ไขหมวดหมู่" class="btn btn-primary btn-xs" href="{{url('representatives/exper/'.$u->id.'/edit')}}" role="button"><i class="fa fa-cog "></i> </a>
+
+                        <a style="float:left; margin-right:8px;" title="แก้ไขหมวดหมู่" class="btn btn-primary btn-xs modal-basic" href="#modalSuccess-{{$u->id}}" role="button"><i class="fa fa-cog "></i> </a>
 
                           <form  action="{{url('representatives/exper/'.$u->id)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
                             <input type="hidden" name="_method" value="DELETE">
@@ -151,6 +153,71 @@
 
 
                     </tr id="{{$s++}}">
+
+
+
+
+                    <div id="modalSuccess-{{$u->id}}" class="modal-block modal-block-success mfp-hide">
+                      <section class="panel">
+                        <form  method="POST" action="{{ url('representatives/exper/'.$u->id) }}">
+                        <header class="panel-heading">
+                          <h2 class="panel-title">แก้ไขข้อมูล ประสบการณ์ ?</h2>
+                        </header>
+                        <div class="panel-body">
+
+
+                                    {{ method_field($method) }}
+                                    {{ csrf_field() }}
+
+
+
+
+                                      <div class="panel-body" >
+
+
+
+                                      <div class="form-group">
+                                        <label>หัวข้อเรื่อง</label>
+                                        <input type="text" class="form-control" name="headname" value="{{$u->head}}" placeholder="ใส่หัวข้อ..">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label>หัวข้อรอง</label>
+                                        <input type="text" class="form-control" name="sub_headname" value="{{$u->sub_head}}" placeholder="ใส่หัวข้อรอง..">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label>รายละเอียด</label>
+                                        <textarea class="form-control"  name="detail" rows="4"  placeholder="รายละเอียด..">{{$u->detail}}</textarea>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label>ปีที่เริ่ม</label>
+                                          <input type="number" class="form-control" name="start_year" value="{{$u->start_year}}" placeholder="2559">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label>ปีที่สิ้นสุด</label>
+                                         <input type="number" class="form-control"  name="end_year" value="{{$u->end_year}}" placeholder="2560">
+                                      </div>
+
+                                      </div>
+
+
+                        </div>
+                        <footer class="panel-footer">
+                          <div class="row">
+                            <div class="col-md-12 text-right">
+                              <button class="btn btn-primary " type="submit">เพิ่มข้อมูล</button>
+                              <button class="btn btn-default modal-dismiss">ยกเลิก</button>
+                            </div>
+                          </div>
+                        </footer>
+                        </form>
+                      </section>
+    									</div>
+
+
                        @endforeach
               @endif
 

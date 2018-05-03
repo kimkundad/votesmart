@@ -17,6 +17,18 @@ class CategoryController extends Controller
      */
     public function index()
     {
+      $count_contact = DB::table('contacts')->select(
+            'contacts.*'
+            )
+            ->where('status', 0)
+            ->count();
+      $data['count_contact'] = $count_contact;
+
+      $count_users = DB::table('users')
+        ->where('user_lock', 1)
+        ->where('reps_con', 0)
+        ->count();
+      $data['count_users'] = $count_users;
 
       $cat = DB::table('categories')->select(
             'categories.*',
@@ -55,6 +67,19 @@ class CategoryController extends Controller
      */
     public function create()
     {
+      $count_contact = DB::table('contacts')->select(
+            'contacts.*'
+            )
+            ->where('status', 0)
+            ->count();
+      $data['count_contact'] = $count_contact;
+
+      $count_users = DB::table('users')
+        ->where('user_lock', 1)
+        ->where('reps_con', 0)
+        ->count();
+      $data['count_users'] = $count_users;
+
       $data['method'] = "post";
       $data['url'] = url('admin/category');
       $data['datahead'] = "สร้างหมวดหมู่ ";
@@ -89,6 +114,18 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
+      $count_contact = DB::table('contacts')->select(
+            'contacts.*'
+            )
+            ->where('status', 0)
+            ->count();
+      $data['count_contact'] = $count_contact;
+
+      $count_users = DB::table('users')
+        ->where('user_lock', 1)
+        ->where('reps_con', 0)
+        ->count();
+      $data['count_users'] = $count_users;
         //
         $obj = category::find($id);
 
@@ -120,6 +157,19 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
+      $count_contact = DB::table('contacts')->select(
+            'contacts.*'
+            )
+            ->where('status', 0)
+            ->count();
+      $data['count_contact'] = $count_contact;
+
+      $count_users = DB::table('users')
+        ->where('user_lock', 1)
+        ->where('reps_con', 0)
+        ->count();
+      $data['count_users'] = $count_users;
+      
       $obj = category::find($id);
       $data['url'] = url('admin/category/'.$id);
       $data['datahead'] = "แก้ไขหมวดหมู่";

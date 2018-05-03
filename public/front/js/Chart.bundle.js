@@ -7025,7 +7025,8 @@ module.exports = function(Chart) {
 				return this;
 
 			canvas.width = this.chart.width = newWidth;
-			canvas.height = this.chart.height = newHeight;
+			canvas.height = this.chart.height = 179;
+    //  canvas.height = this.chart.height = newHeight;
 
 			helpers.retinaScale(this.chart);
 

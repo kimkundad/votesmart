@@ -299,7 +299,7 @@
                                                 <label>คำแนะนำ</label>
 
 
-                                                  <textarea class="form-control" name="bio" placeholder="( อดีตรัฐมนตรีกระทรวงศึกษาธิการ, รัฐมนตรีว่าการกระทรวงธรรมการ (พ.ศ. 2475 - พ.ศ. 2485))" rows="4"  id="textareaAutosize" data-plugin-textarea-autosize >{{old('bio', $objs->bio)}}</textarea>
+                                                  <textarea class="form-control" name="bio" placeholder="( อดีตรัฐมนตรีกระทรวงศึกษาธิการ, รัฐมนตรีว่าการกระทรวงธรรมการ (พ.ศ. 2475 - พ.ศ. 2485))" rows="6"  id="textareaAutosize" data-plugin-textarea-autosize >{{old('bio', $objs->bio)}}</textarea>
 
                                                     @if ($errors->has('bio'))
                                                         <span class="help-block">
@@ -477,7 +477,7 @@
         $(document).on('change','#province',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{url('amphoe/')}}',
+                'url':'{{secure_url('amphoe/')}}',
                 'cache':false,
                 'data':{province:jQuery(this).val()},
                 'success':function(html){
@@ -489,7 +489,7 @@
          $(document).on('change','#amphoe',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{url('district/')}}',
+                'url':'{{secure_url('district/')}}',
                 'cache':false,
                 'data':{amphoe:jQuery(this).val()},
                 'success':function(html){
@@ -541,7 +541,7 @@ headers: {
 });
 
 $uploadCrop = $('#upload-demo').croppie({
-    url: '{{url('./assets/images/avatar/'.Auth::user()->avatar)}}',
+    url: '{{secure_url('./assets/images/avatar/'.Auth::user()->avatar)}}',
     enableExif: true,
     viewport: {
         width: 250,
@@ -577,7 +577,7 @@ $('.upload-result').on('click', function (ev) {
 		size: 'viewport'
 	}).then(function (resp) {
 		$.ajax({
-			url: "{{url('image-crop')}}",
+			url: "{{secure_url('image-crop')}}",
 			type: "POST",
 			data: {"image":resp},
 			success: function (data) {

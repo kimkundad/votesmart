@@ -39,7 +39,7 @@
         <script src="{{asset('/assets/vendor/modernizr/modernizr.js')}}"></script>
         <style type="text/css">
         body{
-                background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url({{asset('./assets/image/Fonds.jpeg')}}) no-repeat center bottom;
+                background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url({{secure_url('./assets/image/Fonds.jpeg')}}) no-repeat center bottom;
                 background-size: cover;
                 color: #ffffff;
             }

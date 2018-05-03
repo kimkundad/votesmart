@@ -82,10 +82,10 @@ return "$strDay $strMonthThai $strYear";
                 <table class="table table-responsive-lg table-striped table-sm mb-0" id="datatable-default">
                   <thead>
                     <tr>
-                      <th>#ID</th>
                       <th>ชื่อผู้ใช้งาน</th>
+                      <th>จังหวัด</th>
                       <th>อีเมล</th>
-                      <th>ผ่านทาง</th>
+                      <th>สถานะ</th>
                       <th>วันที่สมัคร</th>
                       <th></th>
                     </tr>
@@ -93,8 +93,7 @@ return "$strDay $strMonthThai $strYear";
                   <tbody>
              @if($objs)
                 @foreach($objs as $u)
-                    <tr>
-                      <td>{{$u->id}}</td>
+                    <tr id="{{$u->idu}}">
                       <td>
                         @if($u->provider == 'email')
                         <img src="{{url('assets/images/avatar/'.$u->avatar)}}" alt="{{$u->name}}" style="height:32px;" class="img-circle">
@@ -103,15 +102,25 @@ return "$strDay $strMonthThai $strYear";
                         @endif
 
                         {{$u->name}}</td>
+                        <td>{{$u->name_in_thai}}</td>
+
                       <td>{{$u->email}}</td>
-                      <td>{{$u->provider}}</td>
+                      <td>
+                        <div class="switch switch-sm switch-success">
+                          <input type="checkbox" name="switch" data-plugin-ios-switch
+                          @if($u->reps_con == 1)
+                          checked="checked"
+                          @endif
+                          />
+                        </div>
+                      </td>
                       <td><?php echo DateThai($u->created_at); ?></td>
                       <td>
 
                         <div class="btn-group flex-wrap">
   												<button type="button" class="mb-1 mt-1 mr-1 btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">จัดการ <span class="caret"></span></button>
   												<div class="dropdown-menu" role="menu">
-  													<a class="dropdown-item text-1" href="{{url('admin/user/'.$u->id)}}">ดูข้อมูล</a>
+  													<a class="dropdown-item text-1" href="{{url('admin/representatives/'.$u->idu.'/edit')}}">ดูข้อมูล</a>
                             @if($u->is_admin != 1)
                             <a class="dropdown-item text-1 text-danger" href="">ลบ</a>
                             @else
@@ -141,6 +150,37 @@ return "$strDay $strMonthThai $strYear";
 
 @section('scripts')
 <script src="{{asset('/assets/javascripts/tables/examples.datatables.default.js')}}"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input:checkbox").change(function() {
+    var user_id = $(this).closest('tr').attr('id');
+
+    $.ajax({
+            type:'POST',
+            url:'{{secure_url('api/post_status')}}',
+            headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+            data: { "user_id" : user_id },
+            success: function(data){
+              if(data.data.success){
+
+
+                PNotify.prototype.options.styling = "fontawesome";
+                new PNotify({
+                      title: 'ยินดีด้วยค่ะ',
+                      text: 'คุณได้ทำการเลือกข้อมูลสำเร็จแล้ว',
+                      type: 'success'
+                    });
+
+
+
+              }
+            }
+        });
+    });
+});
+</script>
 
 @if ($message = Session::get('success'))
 <script type="text/javascript">
