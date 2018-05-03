@@ -45,6 +45,19 @@ input:-webkit-autofill {
     margin-right: 10px;
     padding: 0 16px;
 }
+.form-style-9 ul li .fieldf-select2 {
+    border-radius: 2px;
+    background-color: #5EC8F2;
+    height: 48px;
+    width: 218px !important;
+    color: #FFFFFF;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    border: 0;
+    margin-right: 10px;
+    padding: 0 16px;
+}
 .form-style-9 ul li .field-style {
     width: 570px;
     box-sizing: border-box;
