@@ -173,7 +173,7 @@ input:-webkit-autofill {
 
 <section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
-    <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+    <form class="form-style-9 pure-form" id="form2" name="form2" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
       {{ csrf_field() }}
     <div class="row">
 
@@ -194,7 +194,7 @@ input:-webkit-autofill {
               <div class="form-group">
 
                 <input type="text" class="form-control" id="hero-demo" name="field2" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
-                <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish-7 " style="position: absolute; right: 30px; top: 0px;" />
+                <input type="submit" value="&#xf002;" onclick="eatFood2();" class="stylish-7 " style="position: absolute; right: 30px; top: 0px;" />
               </div>
 						</div>
 
@@ -432,6 +432,10 @@ input:-webkit-autofill {
 
 function eatFood() {
 document.getElementById('form1').submit();
+}
+
+function eatFood2() {
+document.getElementById('form2').submit();
 }
 
 
