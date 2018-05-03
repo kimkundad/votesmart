@@ -151,7 +151,7 @@ input:-webkit-autofill {
                       <select name="cars" class="fieldf-select2  align-right" style="width:73%" onchange="this.form.submit()">
                         @if($objs_pro)
                            @foreach($objs_pro as $pro)
-                          <option value="{{$pro->id_p}}">ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+                          <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?> >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
                           @endforeach
                       @endif
                       </select>
@@ -185,7 +185,7 @@ input:-webkit-autofill {
           <select name="cars" class="form-control" style="height: 49px;" onchange="this.form.submit()">
             @if($objs_pro)
                @foreach($objs_pro as $pro)
-              <option value="{{$pro->id_p}}">ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+              <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?>>ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
               @endforeach
           @endif
           </select>

@@ -125,42 +125,134 @@ input:-webkit-autofill {
     text-shadow: 1px 1px 0 #F2F8FA;
     margin: 0;
 }
+.stylish-7{
+  background-color: transparent;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #08B0ED;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: georgia, FontAwesome;
+    height: 48px;
+    margin-left: -57px;
+}
 </style>
 
 
-<section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
+<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 70px 0 8px 0; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
-      <div class="reps-map-search">
-        <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
-          {{ csrf_field() }}
-            <ul>
-                <li>
-                    <select name="cars" class="fieldf-select  align-right">
-                        <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
-                        <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
-                        <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
-                        <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
-                    </select>
-                    <input id="hero-demo" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
-                    <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
+      <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
+          <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
+            {{ csrf_field() }}
+              <ul>
+                  <li style="margin-bottom: 5px;">
+                      <select name="cars" class="fieldf-select2  align-right" style="width:73%" onchange="this.form.submit()">
+                        @if($objs_pro)
+                           @foreach($objs_pro as $pro)
+                          <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?> >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+                          @endforeach
+                      @endif
+                      </select>
+                      <div class="rectangle-copy-6" style="width: 24%; padding: 15px 10px; margin-right: 6px;    height: 47px;">
+                          <a href="#" class=""><i class="fa fa-map"></i></a>
+                          <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                      </div>
+                      <input id="hero-demo2" autofocus type="text" value="{{$search}}" name="field3" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
 
-                    <div class="rectangle-copy-6">
-                        <a href="#" class=""><i class="fa fa-map"></i></a>
-                        <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
-                    </div>
-                </li>
-            </ul>
-            </form>
+
+                  </li>
+              </ul>
+              </form>
       </div>
     </div>
   </div>
 </section>
 
 
+<section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
+  <div class="container">
+    <form class="" id="form2" name="form2" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+      {{ csrf_field() }}
+    <div class="row">
 
 
-<section id="services" style="background: #f2f8fa; padding: 0px 10px 10px 10px; ">
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <select name="cars" class="form-control" style="height: 49px;" onchange="this.form.submit()">
+            @if($objs_pro)
+               @foreach($objs_pro as $pro)
+              <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?>>ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+              @endforeach
+          @endif
+          </select>
+        </div>
+						</div>
+
+            <div class="col-md-6" style="padding-right: 10px; padding-left: 0px;">
+              <div class="form-group">
+
+                <input type="text" class="form-control" value="{{$search}}" id="hero-demo" name="field2" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" style="background-color: #FFFFFF; color:#666; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;">
+                <input type="submit" value="&#xf002;" onclick="eatFood2();" class="stylish-7 " style="position: absolute; right: 30px; top: 0px;" />
+              </div>
+						</div>
+
+            <div class="col-md-2" style="padding-right: 25px; padding-left: 0px;">
+              <div class="form-group">
+                <select name="cars2" class="form-control" style="height: 49px; color:#666;  background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;" onchange="this.form.submit()">
+                  <option value="1" >เรียง ก - ฮ</option>
+                  <option value="2" >เรียง ฮ - ก</option>
+                </select>
+              </div>
+      						</div>
+
+
+            <div class="col-md-1">
+              <div class="rectangle-copy-6">
+                  <a href="#" class=""><i class="fa fa-map"></i></a>
+                  <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+              </div>
+      						</div>
+
+
+    <!--  <div class="reps-map-search">
+          <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+            {{ csrf_field() }}
+              <ul>
+                  <li>
+                      <select name="cars" class="fieldf-select " style="float:left">
+                          <option value="volvo">ผู้สมัคร ส.ส. กรุงเทพฯ</option>
+                          <option value="saab">ผู้สมัคร ส.ส. ขอนแก่น</option>
+                          <option value="fiat">ผู้สมัคร ส.ส. สมุทรสาคร</option>
+                          <option value="audi">ผู้สมัคร ส.ส. อยุธยา</option>
+                      </select>
+                      <div style="width:100%; float:left">
+                      <input id="hero-demo" style="min-width: 570px;" autofocus type="text" name="field2" class="field-style" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
+                      <div class="rectangle-copy-6">
+                          <a href="#" class=""><i class="fa fa-map"></i></a>
+                          <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                      </div>
+                    </div>
+
+                  </li>
+              </ul>
+              </form>
+      </div>-->
+    </div>
+      </form>
+  </div>
+</section>
+
+
+
+
+<section id="services" style="background: #f2f8fa; padding: 180px 10px 10px 10px; ">
 
   <div class="container">
     <div class="row">
@@ -186,7 +278,7 @@ input:-webkit-autofill {
                 </div>
                 <div class="candidate-info">
                     <h3>{{$u->name}}</h3>
-                    <p style="font-size: 13px;">{{$u->sub_title}}</p>
+                    <p style="font-size: 13px;color: #666;">{{$u->sub_title}}</p>
                 </div>
             </div>
           </a>
@@ -228,9 +320,15 @@ input:-webkit-autofill {
 
 
 <script>
+
 function eatFood() {
 document.getElementById('form1').submit();
 }
+
+function eatFood2() {
+document.getElementById('form2').submit();
+}
+
 
     var xhr;
     new autoComplete({
@@ -238,8 +336,28 @@ document.getElementById('form1').submit();
         minChars: 1,
         source: function(term, response){
 
-            xhr = $.getJSON('{{url('/search/data/')}}', { field2: term }, function(data){
+            xhr = $.getJSON('{{secure_url('/search/data/')}}', { field2: term }, function(data){
+              //secure_url
+              response(data.data);
+            });
+        }
+    });
 
+
+</script>
+
+
+<script>
+
+
+    var xhr3;
+    new autoComplete({
+        selector: 'input[name="field3"]',
+        minChars: 1,
+        source: function(term, response){
+
+            xhr3 = $.getJSON('{{secure_url('/search/data2/')}}', { field3: term }, function(data){
+              //secure_url
               response(data.data);
             });
         }

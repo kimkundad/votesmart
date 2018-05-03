@@ -937,6 +937,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .candidate-box{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   .item.size-1 {
     width: 210px;
     height: 210px;
