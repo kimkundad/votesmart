@@ -680,7 +680,8 @@ class HomeController extends Controller
 
 
                           }else{
-
+                            $data['objs'] = null;
+                            $data['search'] = $field2;
                             return view('reps_list', $data);
 
                           }
@@ -938,7 +939,8 @@ class HomeController extends Controller
 
 
                           }else{
-
+                            $data['objs'] = null;
+                            $data['search'] = $field2;
                             return view('reps_list', $data);
 
                           }
