@@ -173,10 +173,11 @@ input:-webkit-autofill {
 
 <section class="bg-whites page-header-sub hidden-sm hidden-xs" id="about" style="padding: 90px 0 8px 0;  width: 100%; z-index: 9998; position: fixed;">
   <div class="container">
+    <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+      {{ csrf_field() }}
     <div class="row">
 
-      <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
-        {{ csrf_field() }}
+
 
       <div class="col-md-3">
         <div class="form-group">
@@ -205,7 +206,7 @@ input:-webkit-autofill {
               </div>
       						</div>
 
-                  </form>
+
     <!--  <div class="reps-map-search">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
             {{ csrf_field() }}
@@ -231,6 +232,7 @@ input:-webkit-autofill {
               </form>
       </div>-->
     </div>
+      </form>
   </div>
 </section>
 
