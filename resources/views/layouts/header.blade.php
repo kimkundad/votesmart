@@ -37,7 +37,7 @@
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light page-header" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1); padding-top:5px; padding-bottom:5px;">
-  <div class="container">
+  <div class="container-fluid">
 
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
