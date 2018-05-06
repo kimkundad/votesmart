@@ -1214,6 +1214,7 @@ class HomeController extends Controller
 
     $users = DB::table('votesmarts')
     ->where('category_id', $x)
+    ->where('user_id', Auth::user()->id)
     ->count();
 
   //  echo "Key=" . $x . ", Value=" . $x_value;
