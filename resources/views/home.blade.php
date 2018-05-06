@@ -3,19 +3,154 @@
 <link href="{{url('swiper-4.2.2/dist/css/swiper.css')}}" rel="stylesheet">
 @section('content')
 
+<style>
+  @media (min-width: 1200px){
+    .mask-content {
+      padding-top: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+    }
+    .modal-open .modal {
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: rgba(0,0,0,0.7);
+    }
+    .welcome-footer .btn{
+      border-radius: 24px;
+      background-color: #08B0ED;
+      border: none;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+      color: #FFFFFF;
+      font-family: Prompt;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(35,31,32,0.24);
+      height: 48px;
+      width: 232px;
+    }
+    .welcome-footer .btn:hover{
+      background-color: #5EC8F2;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+    .welcome-footer .btn:focus{
+      background-color: #0479BD;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+    }
+    .welcome-footer .btn .fa{
+      color:#fff;
+    }
+    .welcome-footer .btn span{
+      color:#ffffff;
+    }
+    #front-page h3{
+      font-weight: 600;
+      margin-bottom:40px;
+    }
+    .text-asking{
+      font-size:20px;
+      font-weight: 500;
+    }
+    ul.navbar-nav.ml-auto{
+      float:none;
+      margin:auto;
+      margin-left: 30% !important;
+    }
+    #navbarResponsive{
+      position: relative;
+    }
+    li.nav-item.hidden-sm.hidden-xs{
+      position: absolute;
+      right: 0;
+    }
+    .swiper-button-prev.swiper-button-disabled{
+      opacity:0;
+    }
+    .quiz-title{
+      padding:0;
+      font-size:24px;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
+    }
+    .btn-primary{
+      float:right;
+    }
+    .btn-primary:hover{
+      background-color: #5EC8F2 !important;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12) !important;
+    }
+    .btn-primary:focus,
+    .btn-primary:active{
+      background-color: #0479BD !important;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12) !important;
+    }
+    .btn-asa:hover{
+      color:  #5EC8F2 !important;
+      background: #FFFFFF;
+      border: 1px solid #5EC8F2;
+    }
+    .btn-asa:focus,
+    .btn-asa:active{
+      color:  #0479BD !important;
+      background: #F5F5F5;
+      border: 1px solid #0479BD !important;
+    }
+    .parent-chart{
+      border-radius: 8px;
+    }
+    .parent-chart:hover{
+      background-color: #fafafa;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+    }
+    .panel-content-set {
+      width: 100%;
+    }
+    .real-content{
+      max-width: 100%;
+    }
+    .modal.show .modal-dialog .modal-content1{
+      border:0 !important;
+      box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
+      border-radius:8px !important;
+    }
+    .zoom-menu{
+      top: -1500% !important;
+      border-radius:20px !important;
+    }
+    .zoom-menu li{
+      border-bottom: none !important;
+    }
+    .zoom-menu li a{
+      height: 25px;
+    }
+    .zoom-menu i{
+      width: 10px !important;
+      height: 10px !important;
+    }
+    .zoom-menu  .fa-user:before{
+      content:none;
+    }
+  }
+
+
+</style>
 
 
 
 
 <section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3 text-center">
+      <div class="col-md-3">
         <a class="quiz-title" style="color:#0479bd;">จะเลือกอะไรได้?</a>
         <br><br>
       </div>
 
-      <div class="col-md-6 text-center hidden-sm hidden-xs">
+      <div class="col-md-6 hidden-sm hidden-xs">
         <p class="text-muted" style="font-size:14px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
       </div>
 
@@ -24,7 +159,7 @@
       </div>
 
 
-      <div class="col-md-3 text-center">
+      <div class="col-md-3">
 
 
         @if (Auth::guest())
@@ -118,14 +253,14 @@
 
 <section id="services" style="background: #f2f8fa; padding: 1.5rem 0;">
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
 
       @if($objs)
          @foreach($objs as $u => $j)
 
 
-      <div class="col-6 col-md-3 text-center padding-fix" >
+      <div class="col-6 col-md-2 text-center padding-fix" >
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
@@ -144,7 +279,7 @@
 
           </div>
           <div class="user-name">
-            <p style="margin-bottom: 0px; font-size:9px;">{{$j->name}}</p>
+            <p style="margin-bottom: 0px; font-size:12px; color:#9e9e9e;">{{$j->name}}</p>
           </div>
         </div>
       </a>
@@ -160,7 +295,7 @@
               <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
 
               <br><br>
-              <div class="parent-chart" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0);">
+              <div class="parent-chart" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0); border-radius: 8px;">
                 <canvas id="users-{{$j->id}}" style="width: 150px; height: 86px;"></canvas>
                 <div class="overlay-chart">
 
@@ -180,7 +315,7 @@
 
               </div>
 
-              <h5 class="text-center" style="color: #0479bd; font-weight: 700;">{{$j->name}}</h5>
+              <h5 class="text-center" style="color: #0479bd; font-weight: 700; font-size:20px;">{{$j->name}}</h5>
               <p class="p-pop">เลือกประเด็นสำคัญดังนี้</p>
 
               @if(isset($j->labels))
@@ -319,7 +454,7 @@
               <div class="welcome-footer">
                 <a class="scroll-down btn hometo1" style="    color: #08c1f4;">
                   <i class="fa fa-angle-double-down"></i>
-                  <span>เลื่อนลง</span>
+                  <span>เข้าร่วม</span>
                 </a>
               </div>
               <div class="padding-bottom-footer"></div>

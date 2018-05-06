@@ -37,7 +37,7 @@
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light page-header" id="mainNav" style="border-bottom: 1px solid rgba(33, 37, 41, 0.1); padding-top:5px; padding-bottom:5px;">
-  <div class="container">
+  <div class="container-fluid">
 
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -264,7 +264,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " href="#" data-toggle="modal" data-target="#myModal"
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 8px;" href="#" data-toggle="modal" data-target="#myModal"
           style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
           <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
@@ -382,7 +382,7 @@ figure {
         @if (Auth::guest())
 
         @else
-        <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="padding: 0px;">
+        <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: -25px; padding: 0px;">
 
                         @if(Auth::user()->provider == 'email')
 
