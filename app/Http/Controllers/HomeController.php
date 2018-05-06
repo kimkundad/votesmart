@@ -48,7 +48,19 @@ class HomeController extends Controller
                 )
             ->leftjoin('categories', 'categories.id',  'voteresults.result_id')
             ->where('voteresults.user_id', $obj->id)
+            ->orderBy('voteresults.sort_result','desc')
             ->get();
+
+            $name = $obj->name;
+
+            if (strlen($name) >= 12) {
+                $obj->name = substr($name, 0, 12). "... ";
+            }
+            else {
+                $obj->name = $name;
+            }
+
+            //print_r($labels);
 
 
             foreach ($labels as $obj1) {
