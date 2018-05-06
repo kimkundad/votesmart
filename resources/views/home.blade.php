@@ -12,7 +12,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.9);
       width: 100%;
     }
     .modal-open .modal {
@@ -150,7 +150,7 @@
         <br><br>
       </div>
 
-      <div class="col-md-6 hidden-sm hidden-xs">
+      <div class="col-md-6 hidden-sm hidden-xs" style="    text-align: center;">
         <p class="text-muted" style="font-size:14px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
       </div>
 
@@ -260,7 +260,7 @@
          @foreach($objs as $u => $j)
 
 
-      <div class="col-6 col-md-2 text-center padding-fix" >
+      <div class="col-6 col-md-2 text-center" >
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
