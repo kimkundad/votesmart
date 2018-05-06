@@ -36,9 +36,9 @@ return [
     ],
 
     'facebook' => [
-    'client_id' => '812207955571269',
-    'client_secret' => '7b024358ac126926363f83e05dc31c83',
-    'redirect' => 'http://thevotesmart.herokuapp.com/callback',
+    'client_id' => '148045139197033',
+    'client_secret' => '9700abf8c7597c486b232d39d7d4ee55',
+    'redirect' => 'https://votesmart.me/callback',
     ],
 
 ];
