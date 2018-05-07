@@ -453,10 +453,7 @@
               </div>
               <div class="welcome-footer">
 
-                <a class="scroll-down btn hometo1" style="    color: #08c1f4;">
-                  <i class="fa fa-angle-double-down"></i>
-                  <span>เข้าร่วม</span>
-                </a>
+                
 
                 @if (Auth::guest())
 
