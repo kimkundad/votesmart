@@ -642,9 +642,13 @@ line-height: 1.5em;
 }
 </style>
 <style>
+    .btn-asa:hover {
+        background:#08B0ED;
+        color:#fff;
+    }
 .navbar-expand-lg a{
   font-size: 18px;
-  color:#ACACAC;
+  //color:#ACACAC;
 }
 .actives {
   color:#666!important;
@@ -924,6 +928,9 @@ blockquote {
 <section style="padding: 200px 0 50px 0; margin: 0 auto;width:95%" >
 
 <style>
+    blockquote {
+        display:none;
+    }
 .candidate-profile {
     margin-top: 10px;
 }
@@ -934,7 +941,7 @@ blockquote {
     line-height: 64px;
     text-align: center;
     font-family: 'Kanit', sans-serif;
-    max-width: 249px;
+    /* max-width: 249px; */
     margin: auto auto 24px;
     text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
 }
@@ -963,10 +970,12 @@ blockquote {
 
     top: 170px;
     position: fixed;
+    background:none !important;
 }
 .set-rotate2{
     position: absolute;
     top: 620px;
+    background:none !important;
 }
 .img-in-chart-in2{
   margin-top: -3px;
@@ -980,8 +989,9 @@ blockquote {
 
         <div class="col-md-6" style="padding-left: 100px;">
 
-          <div class="parent-chart set-rotate" id="btn_home2" style="background-color: #f2f8fa; box-shadow: none">
-            <div style="margin: 20px auto; width:250px; height:250px;" >
+          <div class="parent-chart set-rotate" id="btn_home2" style="transparent !important; box-shadow: none">
+            <div style="margin: 20px auto; width:250px; height:250px;border-radius: 50%;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);" >
               <canvas id="user-1" class="icon-rotate"></canvas>
             </div>
 
@@ -1009,7 +1019,7 @@ blockquote {
                   <br>
                   <hr style="margin: 0 auto;">
                   <br>
-                  <p class="position">{{$user->bio}}</p>
+                  
               </div>
           </div>
       </div>
@@ -1048,7 +1058,7 @@ blockquote {
             </div>
 
           </div>
-          <p class="position text-center">{{$user->bio}}</p>
+          <p class="position text-center" style="display:none;">{{$user->bio}}</p>
 
         </div>
         </div>
@@ -1139,8 +1149,8 @@ background-color: #FFFFFF;
 
 
                                   <div class="col-md-6 hidden-sm hidden-xs">
-                                    <blockquote class="primary" style="height:64px;margin-left: -40px;">
-
+                                    <blockquote class="primary" style="height:64px;margin-left: -40px;" style="display:none">
+                                    <p class="position">{{$user->bio}}</p>
                 										</blockquote>
                                   </div>
 
@@ -1155,7 +1165,7 @@ background-color: #FFFFFF;
                                     <div class="col-md-6">
                                       <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
                                         <div class="candidate-profile-2 read-more-wrap" >
-                                          <h2 class="hidden-sm hidden-xs">{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
+                                        <h2 class="hidden-sm hidden-xs">{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
                                           <h2 class="text-center visible-sm visible-xs" style="font-size: 28px;">ประเด็นสำคัญ</h2>
                                           <br><br>
 
@@ -1221,11 +1231,12 @@ background-color: #FFFFFF;
 h3.candidate-title {
     color: #0479BD;
     font-family: 'Kanit', sans-serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 56px;
     margin-bottom: 26px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
+    
 }
 .list-circle {
     padding-left: 0px;
@@ -1911,6 +1922,17 @@ return "$strDay $strMonthThai";
 <script src="{{url('social-feed-gh-pages/js/moment.min.js')}}"></script>
 <script src="{{url('social-feed-gh-pages/js/jquery.socialfeed.js')}}"></script>
 
+<!-- <script src="//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+
+<style>
+.social-feed-container {
+    column-gap: 0 !important;
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+}
+</style>
+
 <script>
 
 
@@ -1919,6 +1941,8 @@ return "$strDay $strMonthThai";
 
 
 $(document).ready(function(){
+
+
    $(document).on('click','#btn-more',function(){
        var id = $(this).data('id');
        var user_id = $(this).data('user_id');
@@ -1959,32 +1983,32 @@ $(document).ready(function(){
                 // FACEBOOK
                 facebook: {
                     accounts: queryTags,
-                    limit: 10,
+                    limit: 12,
                     access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c',
                 },
 
 
                 // Twitter
-             twitter: {
-                    accounts: queryTags,
-                    limit: 10,
-                    consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
-                    consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
-                },
+            //  twitter: {
+            //         accounts: queryTags,
+            //         limit: 10,
+            //         consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
+            //         consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
+            //     },
 
-                 instagram: {
-                    accounts: queryTags,
-                    limit: 10,
-                    client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
-                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
-                },
+                //  instagram: {
+                //     accounts: queryTags,
+                //     limit: 10,
+                //     client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
+                //     access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
+                // },
 
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
 
                 length: 200,
                 show_media: true,
-                template : "{{secure_url('social-feed-gh-pages/template.html')}}",
+                template : "{{url('social-feed-gh-pages/template.html')}}",
                 // Moderation function - if returns false, template will have class hidden
                 moderation: function(content) {
                     return (content.text) ? content.text.indexOf('porn') == -1 : true;

@@ -477,7 +477,7 @@
         $(document).on('change','#province',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{secure_url('amphoe/')}}',
+                'url':'{{url('amphoe/')}}',
                 'cache':false,
                 'data':{province:jQuery(this).val()},
                 'success':function(html){
@@ -489,7 +489,7 @@
          $(document).on('change','#amphoe',function(){
             $.ajax({
                 'type':'POST',
-                'url':'{{secure_url('district/')}}',
+                'url':'{{url('district/')}}',
                 'cache':false,
                 'data':{amphoe:jQuery(this).val()},
                 'success':function(html){
@@ -541,7 +541,7 @@ headers: {
 });
 
 $uploadCrop = $('#upload-demo').croppie({
-    url: '{{secure_url('./assets/images/avatar/'.Auth::user()->avatar)}}',
+    url: '{{url('./assets/images/avatar/'.Auth::user()->avatar)}}',
     enableExif: true,
     viewport: {
         width: 250,
@@ -577,7 +577,7 @@ $('.upload-result').on('click', function (ev) {
 		size: 'viewport'
 	}).then(function (resp) {
 		$.ajax({
-			url: "{{secure_url('image-crop')}}",
+			url: "{{url('image-crop')}}",
 			type: "POST",
 			data: {"image":resp},
 			success: function (data) {

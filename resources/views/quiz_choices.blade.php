@@ -3,7 +3,11 @@
 @section('content')
 
 <style>
-
+.masonry .item:hover,.masonry .item.select {
+  -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
 
 </style>
 
@@ -12,7 +16,7 @@
   <section class="bg-whites page-header-sub quiz_choices " id="about" style=" z-index: 1000; ">
 
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row quiz-choices ">
 
 
@@ -147,7 +151,7 @@ input:checked{
 </style>
 <section id="services" style="background: #f2f8fa; padding: 3rem 0; padding-top:230px;">
 
-  <div class="container">
+  <div class="container-fluid">
 
     <form  method="POST" id="cutproduct" action="{{url('add_vote')}}">
       {{ csrf_field() }}
@@ -190,13 +194,13 @@ input:checked{
 
 
 
-<div class="panel-content-set" style="top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 1001;">
+<div class="panel-content-set" style="width:100% !important; top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 1001;">
 <div class=" content_leena panel-content" >
   <div class="swiper-container">
   <div class="swiper-wrapper">
 
   <div id="content-home1" style="display:block" class="content-home swiper-slide">
-    <div class="real-content" style="padding-top: 70px;">
+    <div class="container-fluid" style="padding-top: 70px;">
       <div class="mask-content">
         <!-- First Container -->
         <div class="welcome-section text-center">

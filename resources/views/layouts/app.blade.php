@@ -25,9 +25,6 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <style>
 
-.quiz-title {
-font-size:24px;
-}
 
 .education ul li {
 font-size:14px !important;
@@ -262,8 +259,9 @@ input[type="radio"]:disabled + .label-text:before{
     line-height: 35px;
     margin: 0;
     padding: 0px 15px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
-}
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 
+    5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
+  }
 .overlay-chart {
     position: absolute;
     top: 0;
@@ -421,7 +419,7 @@ input[type="radio"]:disabled + .label-text:before{
           top: 50%;
   }
   .text-asking{
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: 700;
     color:#666;
   }
@@ -529,7 +527,7 @@ input[type="radio"]:disabled + .label-text:before{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
+      /* background-color: rgba(255, 255, 255, 0.7); */
   }
   .welcome-section {
       height: 100%;
@@ -551,7 +549,9 @@ input[type="radio"]:disabled + .label-text:before{
       font-weight: 500;
       line-height: 80px;
       text-align: center;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 
+      5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2; 
+     
       margin: 0;
   }
   .front-content .panel-fa.panel-fa-right {
@@ -577,7 +577,7 @@ input[type="radio"]:disabled + .label-text:before{
           top: 50%;
   }
   .text-asking{
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: 700;
     color:#666;
   }
@@ -1241,7 +1241,8 @@ margin: 0 5px 10px 0px;
     font-size: 20px;
     font-weight: 700;
     line-height: 35px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 
+    4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
 }
 .quiz-choices p {
     /* max-width: 345px; */

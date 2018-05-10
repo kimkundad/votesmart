@@ -1257,14 +1257,20 @@ class HomeController extends Controller
       /*Facebook user image height*/
       $height="300";
 
+      if(isset($fid)) {
+        $fid = '17171146143';
+      }
+
       /*This is the actual url of the Facebook users image*/
       $fb_url  = "https://graph.facebook.com/$fid/picture?width=$width&height=$height&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4";
 
       $image_file = $fid.'.jpg';
 
-	$_SERVER['DOCUMENT_ROOT'] = "/var/www/votesmart/public";
+	    //$_SERVER['DOCUMENT_ROOT'] = "/var/www/votesmart/public";
 
       $img_save_location = $_SERVER['DOCUMENT_ROOT'].'/assets/image/avatar/'.$image_file;
+
+      echo $fb_url;
 
       /*Path to the location to save the image on your server*/
 
@@ -1354,11 +1360,13 @@ class HomeController extends Controller
         ->where('users.id', Auth::user()->id)
         ->first();
 
-      if($user->image_shared != null){
+      if(isset($user->image_shared)){
 
         $destinationPath = '/assets/image/shared/'.$user->image_shared;
         File::delete($destinationPath);
 
+      } else {
+        $destinationPath = '/assets/image/shared/shared.png';
       }
 
 
