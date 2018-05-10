@@ -974,7 +974,7 @@ blockquote {
 }
 .set-rotate2{
     position: absolute;
-    top: 620px;
+    top: 400px;
     background:none !important;
 }
 .img-in-chart-in2{
@@ -2053,9 +2053,9 @@ if (iconRotate.length != 0) {
     var set_num = (360 * scroll/maxScroll);
 
 
+        console.log(set_num);
 
-
-    if(set_num > 90){
+    if(set_num > 60){
     //  alert('555555'); myavatar
 
       $('#btn_home2').removeClass('set-rotate');

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="60px" viewBox="0 0 62 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>pie-chart - FontAwesome</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.0-Landing---Desktop" transform="translate(-156.000000, -928.000000)" fill="#0479BD">
+            <g id="Group-4" transform="translate(48.000000, 888.000000)">
+                <path d="M135.68618,71.9285439 L155.186203,91.4285672 C150.221911,96.4642875 143.293332,99.571434 135.68618,99.571434 C120.543305,99.571434 108.257576,87.2857051 108.257576,72.1428299 C108.257576,56.9999547 120.543305,44.7142258 135.68618,44.7142258 L135.68618,71.9285439 Z M142.364759,72.1428299 L169.971935,72.1428299 C169.971935,79.7499818 166.864788,86.6785615 161.829068,91.6428531 L142.364759,72.1428299 Z M167.686218,67.5713959 L140.257614,67.5713959 L140.257614,40.1427917 C155.400489,40.1427917 167.686218,52.4285207 167.686218,67.5713959 Z" id="pie-chart---FontAwesome"></path>
+            </g>
+        </g>
+    </g>
+</svg>

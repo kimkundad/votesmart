@@ -95,7 +95,13 @@ class HomeController extends Controller
     $data['cat'] = $cat;
       $data['objs'] = $objs;
 
+      if(Auth::guest()) {
+        return redirect('/landingpage.html');
+      } else {
         return view('home', $data);
+      }
+
+       
     }
 
 

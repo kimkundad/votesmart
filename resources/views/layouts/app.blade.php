@@ -371,7 +371,7 @@ input[type="radio"]:disabled + .label-text:before{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.9);
   }
   .welcome-section {
       height: 100%;
@@ -456,8 +456,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .item.size-2 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 12px
   }
 
@@ -613,8 +613,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .item.size-2 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 12px
   }
 
@@ -656,8 +656,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .item.size-2 {
-    width: 110px;
-    height: 110px;
+    width: 133px;
+    height: 133px;
     font-size: 12px
   }
 
@@ -692,8 +692,8 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 375px) {
   .item.size-1 {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     margin-top: 10px;
     font-size: 16px
   }
@@ -702,8 +702,8 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .item.size-2 {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
     font-size: 12px
   }
 
@@ -1242,7 +1242,7 @@ margin: 0 5px 10px 0px;
     font-weight: 700;
     line-height: 35px;
     text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 
-    4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
+    4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2;;
 }
 .quiz-choices p {
     /* max-width: 345px; */

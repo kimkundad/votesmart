@@ -813,7 +813,7 @@
 
         <div id="canvas" class="canvass">
 
-          <img src="{{url('assets/korr/VOTE_result-04.png')}}" class="the-bg"/> 
+          <img src="{{url('assets/korr/VOTE_result-03.png')}}" class="the-bg"/> 
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" class="the-avatar" />
           <div>
 
