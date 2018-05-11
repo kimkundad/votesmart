@@ -401,7 +401,7 @@
                                             ว่าอะไรที่ดีสำหรับคุณ
                                             และประเทศของเรา </p>
                                     </h1>
-                                    <a href="/redirect" class="btn-lp">เข้าร่วม</a>
+                                    <a href="{{url('redirect')}}" class="btn-lp">เข้าร่วม</a>
                                 </div>
                             </div>
                             <div class="col-md-8">
