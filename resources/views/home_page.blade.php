@@ -406,7 +406,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="text-p">
-                                    <img style="width: auto; height: 600px;float: right;position: absolute;right: 0;" src="{{url('assets/image/vote-by-desktop@2x.png')}}">
+                                    <img style="width: auto; height: 600px;float: right;position: absolute;right: 0;" src="{{url('assets/image/vote-by-desktop@2x.png?v2')}}">
                                 </div>
                             </div>
                             </div>
