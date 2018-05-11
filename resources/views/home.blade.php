@@ -4,30 +4,34 @@
 @section('content')
 
 <style>
-  @media (min-width: 1200px){
-    .mask-content {
-      padding-top: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.9);
-      width: 100%;
-    }
-    .modal-open .modal {
-      overflow-x: hidden;
-      overflow-y: auto;
-      background: rgba(0,0,0,0.7);
-    }
-    .welcome-footer .btn{
+  .zoom-menu li {
+    border:none !important;
+  }
+  .img-in-chart2,.img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+  .wrapper-dropdown-3 {
+    display:none;
+  }
+.swiper-wrapper #content-home1 {
+  width:100% !important;
+}
+
+  .the-join {
+    font-size:24px;
+    font-family:Kanit;
+  }
+
+ .welcome-footer .btn{
       border-radius: 24px;
       background-color: #08B0ED;
       border: none;
       box-shadow: 0 6px 12px rgba(0,0,0,0.12);
       color: #FFFFFF;
-      font-family: Prompt;
-      font-size: 14px;
+      font-family: Kanit;
+      font-size: 24px;
       line-height: 40px;
       text-align: center;
       text-shadow: 0 1px 2px rgba(35,31,32,0.24);
@@ -48,18 +52,36 @@
     .welcome-footer .btn span{
       color:#ffffff;
     }
+
+  @media (min-width: 1200px){
+    .mask-content {
+      padding-top: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 100%;
+    }
+    .modal-open .modal {
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: rgba(0,0,0,0.7);
+    }
+
     #front-page h3{
       font-weight: 600;
       margin-bottom:40px;
     }
     .text-asking{
-      font-size:20px;
+      font-size:16px;
       font-weight: 500;
     }
     ul.navbar-nav.ml-auto{
       float:none;
       margin:auto;
-      margin-left: 30% !important;
+      //margin-left: 30% !important;
     }
     #navbarResponsive{
       position: relative;
@@ -74,7 +96,6 @@
     .quiz-title{
       padding:0;
       font-size:24px;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
     }
     .btn-primary{
       float:right;
@@ -139,27 +160,25 @@
 
 </style>
 
-
-
-
+        @if (Auth::guest())
 <section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 text-center">
         <a class="quiz-title" style="color:#0479bd;">จะเลือกอะไรได้?</a>
         <br><br>
       </div>
 
-      <div class="col-md-6 hidden-sm hidden-xs" style="    text-align: center;">
+      <div class="col-md-6 hidden-sm hidden-xs" style="text-align: center;">
         <p class="text-muted" style="font-size:14px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
       </div>
 
       <div class="col-md-6 text-center visible-sm visible-xs">
-        <p class="text-muted" style="font-size:11px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
+        <p class="text-muted" style="font-size:14px;">มาดูกันว่าแต่ละคนได้เลือกเรื่องอะไร ถ้าต้องมาบริหารประเทศ <br>หรือเลือกเข้าร่วมด้วย Facebook เพื่อบอกว่าคุณจะเลือกอะไร? </p>
       </div>
 
 
-      <div class="col-md-3">
+      <div class="col-md-3 text-center">
 
 
         @if (Auth::guest())
@@ -174,7 +193,9 @@
   </div>
 </section>
 
-<div class="toggle toggle-primary toggle-sm" style="position: absolute; z-index: 1000;">
+        @endif
+
+<div class="toggle toggle-primary toggle-sm" style="position: absolute;z-index:9">
   <div class="toggle active zoom">
     <label id="zoomBtn" class="zoom-fab zoom-btn-large"
     style="border-radius: 5px 5px 5px 5px; padding: 10px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
@@ -250,8 +271,60 @@
 
 </div>
 
+<style>
+    .the-margin-top {
+      margin-top:70px;
+    }
+    .the-choose-quiz {
+      margin-bottom: 0px; font-size:22px; color:#fff;
+    }
 
-<section id="services" style="background: #f2f8fa; padding: 1.5rem 0;">
+.choose-quiz {
+  min-height: 228px;
+}
+
+
+
+    @media (max-width: 480px) {
+      .parent-chart {
+        margin: auto auto 15px;
+      }
+      .choose-quiz {
+  min-height: 200px;
+}
+      .user-name {
+        margin-top: -10px;
+      }
+      .parent-chart {
+      //padding: 10px 0 10px 0;
+      height: 200px;
+    }
+    .parent-chart canvas {
+
+       margin-top: -15px;
+    }
+      .col-md-2 {
+        padding: 0px 10px !important;
+      }
+      .the-margin-top {
+      margin-top:50px;
+    }
+    .the-choose-quiz {
+      font-size:18px !important;
+    }
+
+
+    }
+  </style>
+
+    @if (!Auth::guest())
+
+
+
+       @endif
+
+
+<section id="services" class="the-margin-top" style="background: #f2f8fa; padding: 1.5rem 0;">
 
   <div class="container-fluid">
     <div class="row">
@@ -260,18 +333,18 @@
          @foreach($objs as $u => $j)
 
 
-      <div class="col-6 col-md-2 text-center" >
+      <div class="col-6 col-md-3 col-lg-2 text-center" >
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
           <div class="overlay-chart">
 
             @if($j->provider == 'email')
-            <img class="img-in-chart" src="{{url('assets/images/avatar/'.$j->avatar)}}">
+            <img class="img-in-chart2" src="{{url('assets/images/avatar/'.$j->avatar)}}">
 
             @else
 
-            <img class="img-in-chart" src="//{{$j->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4">
+            <img class="img-in-chart2" src="//{{$j->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4">
 
             @endif
 
@@ -300,11 +373,11 @@
                 <div class="overlay-chart">
 
                   @if($j->provider == 'email')
-                  <img class="img-in-chart-in" src="{{url('assets/images/avatar/'.$j->avatar)}}">
+                  <img class="img-in-chart-in2" src="{{url('assets/images/avatar/'.$j->avatar)}}">
 
                   @else
 
-                  <img class="img-in-chart-in" src="//{{$j->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4">
+                  <img class="img-in-chart-in2" src="//{{$j->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4">
 
                   @endif
 
@@ -457,15 +530,15 @@
 
                 @if (Auth::guest())
 
-                <a class="scroll-down btn " href="{{url('/redirect')}}" style="    color: #08c1f4;">
-                  <i class="fa fa-angle-double-down"></i>
+                <a class="scroll-down btn the-join" href="{{url('/redirect')}}" style="    color: #08c1f4;">
+                 <!-- <i class="fa fa-angle-double-down"></i> -->
                   <span>เข้าร่วม</span>
                 </a>
 
 
                 @else
-                <a class="scroll-down btn " href="{{url('/quiz_choices')}}" style="    color: #08c1f4;">
-                  <i class="fa fa-angle-double-down"></i>
+                <a class="scroll-down btn the-join" href="{{url('/quiz_choices')}}" style="    color: #08c1f4;">
+                 <!--  <i class="fa fa-angle-double-down"></i> -->
                   <span>เข้าร่วม</span>
                 </a>
 
@@ -598,7 +671,7 @@
     right: 142px;
     left: auto;
         top: -1380%;
-    transform: translateY(-50%);
+    //transform: translateY(-50%);
     height: 100%;
     width: 0px;
     list-style: none;
@@ -683,8 +756,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script type="text/javascript">
 
+  var the_add_quiz = '<div class="col-6 col-md-3 col-lg-2 text-center">\
+    <a href="{{url('/quiz_choices')}}">\
+        <div class="parent-chart choose-quiz" style="background:#08B0ED;">\
+            <div class="user-name" style="">\
+                <p style="height: 100px;">\
+                    <span class="plus" style="color:#fff;font-size: 60px;font-weight: 100;    line-height: 160px;">+</span>\
+                </p>\
+                <p  class="the-choose-quiz" style="">เลือกเรื่องสำคัญสำหรับคุณ</p>\
+            </div>\
+        </div>\
+    </a>\
+</div>';
 
 $(document).ready(function () {
+
+  $("#services .row").prepend(the_add_quiz);
 
   $('#zoomBtn').click(function() {
 
