@@ -31,6 +31,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function first_page()
+     {
+       return view('home_page');
+     }
     public function index()
     {
 

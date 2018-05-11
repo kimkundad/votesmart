@@ -20,7 +20,9 @@ Route::get('/callback', 'FacebookAuthController@callback');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@first_page');
+
+Route::get('/home', 'HomeController@index');
 
 
 Route::get('shared_quiz/{id}', 'HomeController@shared_quiz');
