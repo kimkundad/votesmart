@@ -86,7 +86,7 @@
 
                   @if($img_all)
                   @foreach($img_all as $img_u)
-                    <div class="isotope-item  col-sm-6 col-md-4 col-lg-3" style="height:257px;">
+                    <div class="isotope-item  col-sm-6 col-md-4 col-lg-3" style="min-height: 350px;">
                       <div class="thumbnail">
                         <div class="">
                           <a class="thumb-image" >
