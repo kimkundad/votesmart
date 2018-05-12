@@ -664,10 +664,10 @@
       <div class="col-md-6">
 
         <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
-          <div style="margin: 20px auto; width:250px; height:250px;">
-            <div style="padding-top: 40px; text-align: center; margin: 0 auto;">
+          <div style="margin: 20px auto; width:300px; height:300px;">
+
             <canvas id="user-1"></canvas>
-          </div>
+
           </div>
 
           <div class="overlay-chart">
