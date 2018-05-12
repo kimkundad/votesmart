@@ -750,7 +750,7 @@
 
       <div class="col-md-6">
         <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
-        <div class="candidate-profile-2 ">
+        <div class="candidate-profile-2 read-more-wrap">
           <br>
           <br> @if(isset($objs))
           @foreach($objs as $u)
