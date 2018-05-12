@@ -484,7 +484,7 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .img-in-chart {
-    position: absolute;
+
     top: 90px;
     width: 80px;
     height: 80px;
@@ -634,7 +634,7 @@ input[type="radio"]:disabled + .label-text:before{
     padding-left: 6px;
   }
   .img-in-chart {
-    position: absolute;
+
     top: 90px;
     width: 80px;
     height: 80px;
@@ -678,7 +678,7 @@ input[type="radio"]:disabled + .label-text:before{
   }
 
   .img-in-chart {
-    position: absolute;
+
     top: 90px;
     width: 80px;
     height: 80px;
@@ -733,7 +733,7 @@ input[type="radio"]:disabled + .label-text:before{
 
 
   .img-in-chart {
-    position: absolute;
+
     top: 90px;
     width: 95px;
     height: 95px;
@@ -783,7 +783,7 @@ input[type="radio"]:disabled + .label-text:before{
     width: 425px;
   }
   .img-in-chart {
-    position: absolute;
+
     top: 85px;
     width: 100px;
     height: 100px;
@@ -879,7 +879,7 @@ input[type="radio"]:disabled + .label-text:before{
     width: 768px;
   }
   .img-in-chart {
-    position: absolute;
+
     top: 85px;
     width: 75px;
     height: 75px;
@@ -928,7 +928,7 @@ input[type="radio"]:disabled + .label-text:before{
     width: 950px;
   }
   .img-in-chart {
-    position: absolute;
+
     top: 85px;
     width: 84px;
     height: 85px;
@@ -993,7 +993,7 @@ input[type="radio"]:disabled + .label-text:before{
         padding: 180px 10px 10px 10px;
   }
   .img-in-chart {
-    position: absolute;
+
     top: 85px;
     width: 95px;
     height: 95px;
