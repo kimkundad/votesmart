@@ -687,23 +687,93 @@
       </div>
 
 
+
+      <style>
+      .candidate-profile-2 h2 {
+
+          color: #0479BD;
+          font-family: 'Kanit', sans-serif;
+          font-size: 36px;
+          font-weight: 500;
+          line-height: 56px;
+          text-align: left;
+          margin-bottom: 24px;
+          text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
+      }
+      .read-more-state {
+        display: none;
+      }
+
+      .read-more-target {
+        opacity: 0;
+        max-height: 0;
+        font-size: 0;
+        transition: .25s ease;
+      }
+
+      .read-more-state:checked ~ .read-more-wrap .read-more-target {
+        opacity: 1;
+        font-size: inherit;
+        max-height: 999em;
+      }
+
+      .read-more-state ~ .read-more-trigger:before {
+        content: 'แสดงเพิ่ม';
+      }
+
+      .read-more-state:checked ~ .read-more-trigger:before {
+        content: 'แสดงลดลง';
+      }
+
+      .read-more-trigger {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 .5em;
+        color: #666;
+        font-size: .9em;
+        line-height: 2;
+        border: 1px solid #ddd;
+        border-radius: .25em;
+      }
+      .btn-readmore{
+        padding: 7px 15px;
+      color: #495057;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      border: 1px solid #6c757d;
+      border-radius: 16px;
+      background-color: #FFFFFF;
+      }
+      </style>
+
+
       <div class="col-md-6">
+        <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
         <div class="candidate-profile-2 ">
           <br>
-          <br> @if(isset($objs)) @foreach($objs as $u)
+          <br> @if(isset($objs))
+          @foreach($objs as $u)
 
 
 
-          <div class="education">
-            <p>
-              <span style="background-color: {{$u->color_bg}};">{{$u->num_s}}</span>{{$u->name_cat}}</p>
-            <ul>
-              @if(isset($u->options)) @foreach($u->options as $u1)
-              <li style="background: {{$u->color_bg}};">{{$u1->name_quiz}}</li>
+          <div class="education
+           @if($u->num_s > 3)
+            read-more-target
+            @endif">
+              <p>
+                  <span style="background-color: {{$u->color_bg}};">{{$u->num_s}}</span>{{$u->name_cat}}</p>
+              <ul >
+                @if(isset($u->options))
+                    @foreach($u->options as $u1)
 
-              @endforeach @endif
 
-            </ul>
+                  <li style="background: {{$u->color_bg}};">{{$u1->name_quiz}}</li>
+
+                  @endforeach
+                @endif
+
+              </ul>
           </div>
 
 
@@ -713,9 +783,13 @@
 
           <!-- <button class="btn btn-readmore">แสดงเพิ่ม</button> -->
         </div>
+        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
       </div>
     </div>
   </div>
+
+
+
   <div class="container show-vision" style="display:none">
     <div class="row">
       <div class="col-lg-12 text-center">
