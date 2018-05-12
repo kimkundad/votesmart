@@ -664,7 +664,7 @@
       <div class="col-md-6">
 
         <div class="parent-chart" style="background-color: #f2f8fa; box-shadow: none">
-          <div style="margin: 20px auto; width:300px; height:300px;">
+          <div style="margin: 20px auto; width:280px; height:280px;">
 
             <canvas id="user-1"></canvas>
 
