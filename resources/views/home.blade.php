@@ -12,9 +12,7 @@
     border-radius: 50%;
     margin-top:-30px;
   }
-  .wrapper-dropdown-3 {
-    display:none;
-  }
+
 .swiper-wrapper #content-home1 {
   width:100% !important;
 }
