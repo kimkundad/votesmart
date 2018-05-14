@@ -66,14 +66,13 @@ return "$strDay $strMonthThai $strYear";
               <div class="col-xs-12">
 
             <section class="panel">
-              <header class="panel-heading">
-                <div class="panel-actions">
-                  <a href="#"  class="panel-action panel-action-toggle" data-panel-toggle></a>
+              <div class="col-md-12 " style="padding-left: 1px;">
 
-                </div>
+                <a class="btn btn-primary " href="{{url('admin/representatives/create')}}" >
+                    <i class="fa fa-plus"></i> เพิ่มสมาชิกใหม่</a>
+              </div>
+              <br><br>
 
-                <h2 class="panel-title">{{$datahead}}</h2>
-              </header>
               <div class="panel-body">
 
 
@@ -187,32 +186,33 @@ $(document).ready(function(){
 });
 </script>
 
+
+
 @if ($message = Session::get('success'))
 <script type="text/javascript">
-var stack_bar_top = {"dir1": "down", "dir2": "right", "push": "top", "spacing1": 0, "spacing2": 0};
-var notice = new PNotify({
-      title: 'ยินดีด้วยค่ะ',
-      text: '{{$message}}',
-      type: 'success',
-      addclass: 'stack-bar-top',
-      stack: stack_bar_top,
-      width: "100%"
-    });
+
+  var stack_topleft = {"dir1": "down", "dir2": "right", "push": "top"};
+      var notice = new PNotify({
+            title: 'ทำรายการสำเร็จ',
+            text: 'ยินดีด้วย ได้ทำการเพิ่มข้อมูล สำเร็จเรียบร้อยแล้วค่ะ',
+            type: 'success',
+            addclass: 'stack-topright'
+          });
 </script>
 @endif
 
 
 @if ($message = Session::get('delete'))
 <script type="text/javascript">
-var stack_bar_top = {"dir1": "down", "dir2": "right", "push": "top", "spacing1": 0, "spacing2": 0};
-var notice = new PNotify({
-      title: 'ยินดีด้วยค่ะ',
-      text: '{{$message}}',
-      type: 'success',
-      addclass: 'stack-bar-top',
-      stack: stack_bar_top,
-      width: "100%"
-    });
+
+
+    var stack_topleft = {"dir1": "down", "dir2": "right", "push": "top"};
+        var notice = new PNotify({
+              title: 'ทำรายการสำเร็จ',
+              text: 'ยินดีด้วย ได้ทำการลบข้อมูล สำเร็จเรียบร้อยแล้วค่ะ',
+              type: 'success',
+              addclass: 'stack-topright'
+            });
 </script>
 @endif
 
