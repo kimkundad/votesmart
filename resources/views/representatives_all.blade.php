@@ -137,6 +137,110 @@ input:-webkit-autofill {
     height: 48px;
     margin-left: -57px;
 }
+@media (min-width: 1200px){
+  .mask-content {
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.7);
+  }
+
+  #front-page h3{
+    font-weight: 600;
+    margin-bottom:40px;
+  }
+  .text-asking{
+    font-size:16px;
+    font-weight: 500;
+  }
+  ul.navbar-nav.ml-auto{
+    float:none;
+    margin:auto;
+    //margin-left: 30% !important;
+  }
+  #navbarResponsive{
+    position: relative;
+  }
+  li.nav-item.hidden-sm.hidden-xs{
+    position: absolute;
+    right: 0;
+  }
+  .swiper-button-prev.swiper-button-disabled{
+    opacity:0;
+  }
+  .quiz-title{
+    padding:0;
+    font-size:24px;
+  }
+  .btn-primary{
+    float:right;
+  }
+  .btn-primary:hover{
+    background-color: #5EC8F2 !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12) !important;
+  }
+  .btn-primary:focus,
+  .btn-primary:active{
+    background-color: #0479BD !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12) !important;
+  }
+  .btn-asa:hover{
+    color:  #5EC8F2 !important;
+    background: #FFFFFF;
+    border: 1px solid #5EC8F2;
+  }
+  .btn-asa:focus,
+  .btn-asa:active{
+    color:  #0479BD !important;
+    background: #F5F5F5;
+    border: 1px solid #0479BD !important;
+  }
+  .parent-chart{
+    border-radius: 8px;
+  }
+  .parent-chart:hover{
+    background-color: #fafafa;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+  }
+  .panel-content-set {
+    width: 100%;
+  }
+  .real-content{
+    max-width: 100%;
+  }
+  .modal.show .modal-dialog .modal-content1{
+    border:0 !important;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
+    border-radius:8px !important;
+  }
+  .zoom-menu{
+    top: -1500% !important;
+    border-radius:20px !important;
+  }
+  .zoom-menu li{
+    border-bottom: none !important;
+  }
+  .zoom-menu li a{
+    height: 25px;
+  }
+  .zoom-menu i{
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .zoom-menu  .fa-user:before{
+    content:none;
+  }
+}
+
 </style>
 
 
