@@ -239,9 +239,9 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item {{ (Request::is('/') ? 'action-nav' : '') }}">
-          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }} {{ (Request::is('quiz_choices') ? 'a-head' : '') }} {{ (Request::is('result') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('/') ? 'id="a-head-set"' : '') }}  style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/')}}">เลือกอะไรได้?</a>
+          <a class="nav-link {{ (Request::is('/') ? 'a-head' : '') }} {{ (Request::is('quiz_choices') ? 'a-head' : '') }} {{ (Request::is('result') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('/') ? 'id="a-head-set"' : '') }}  style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/home')}}">เลือกอะไรได้?</a>
 
-          <a href="{{url('/')}}">
+          <a href="{{url('/home')}}">
           <div class="service-box mt-nav mx-auto text-center visible-sm visible-xs">
              <h5 class="mb-3" style="font-weight: 700;">เลือกอะไรได้?</h5>
               <p class="text-muted mb-0">ถ้าต้องเป็นนายกรัฐมนตรี คุณจะเลือกอะไร? อะไรที่เราควรให้ความสำคัญ?</p>
@@ -264,7 +264,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 8px;" href="#" data-toggle="modal" data-target="#myModal"
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 4px;" href="#" data-toggle="modal" data-target="#myModal"
           style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
           <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
