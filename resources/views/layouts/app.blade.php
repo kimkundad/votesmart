@@ -1386,7 +1386,7 @@ a:hover{
 
     border: 1px solid #08B0ED;
     border-radius: 24px;
-    padding: 12px 34px;
+    padding: 10px 30px;
     font-weight: 400;
     color: #08B0ED;
     font-family: 'Kanit', sans-serif;
