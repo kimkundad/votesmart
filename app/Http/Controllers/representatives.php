@@ -107,7 +107,23 @@ class representatives extends Controller
      */
     public function create()
     {
+      $count_contact = DB::table('contacts')->select(
+            'contacts.*'
+            )
+            ->where('status', 0)
+            ->count();
+      $data['count_contact'] = $count_contact;
+
+      $count_users = DB::table('users')
+        ->where('user_lock', 1)
+        ->where('reps_con', 0)
+        ->count();
+      $data['count_users'] = $count_users;
         //
+        $data['method'] = "post";
+        $data['url'] = url('admin/representatives');
+        $data['datahead'] = "เพิ่มสภาผู้แทนราษฎร";
+        return view('admin.representatives.create', $data);
     }
 
     /**
@@ -119,6 +135,30 @@ class representatives extends Controller
     public function store(Request $request)
     {
         //
+
+        $this->validate($request, [
+       'name' => 'required|unique:users|max:255',
+       'email' => 'required|email|max:255|unique:users',
+       'password' => 'required|min:6|confirmed'
+
+     ]);
+        //
+        $package = new User();
+        $package->name = $request['name'];
+        $package->first_name = $request['first_name'];
+        $package->last_name = $request['last_name'];
+        $package->email = $request['email'];
+        $package->password = bcrypt($request['password']);
+        $package->phone = $request['phone'];
+        $package->provider = 'email';
+        $package->user_lock = 1;
+        $package->reps_con = 1;
+        $package->save();
+
+        $the_id = $package->id;
+
+
+        return redirect(url('admin/representatives/'.$the_id.'/edit'))->with('add_success','เพิ่มบัญชีผู้ใช้งาน '.$request['name'].' เสร็จเรียบร้อยแล้ว');
     }
 
     /**
