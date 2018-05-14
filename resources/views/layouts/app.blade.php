@@ -922,7 +922,7 @@ input[type="radio"]:disabled + .label-text:before{
     padding-left: 6px;
   }
   .representatives_all{
-        padding: 120px 10px 10px 10px;
+        padding: 150px 10px 10px 10px;
   }
   .panel-content-set{
     width: 950px;
@@ -990,7 +990,7 @@ input[type="radio"]:disabled + .label-text:before{
     padding-left: 25px;
   }
   .representatives_all{
-        padding: 180px 10px 10px 10px;
+        padding: 150px 10px 10px 10px;
   }
   .img-in-chart {
 
