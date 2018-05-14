@@ -271,6 +271,49 @@ class representatives extends Controller
      */
     public function destroy($id)
     {
-        //
+        $objs = DB::table('users')
+      ->where('users.id', $id)
+      ->first();
+
+
+      $image_count =   $objs = DB::table('galleries')
+            ->select(
+               'galleries.*'
+               )
+            ->where('user_id', $id)
+            ->count();
+
+      if($image_count > 0){
+
+        $image_all =   $objs = DB::table('galleries')
+              ->select(
+                 'galleries.*'
+                 )
+              ->where('user_id', $id)
+              ->get();
+
+          foreach ($image_all as $user) {
+          $file_path = 'assets/images/all_image/'.$user->image;
+          unlink($file_path);
+        }
+
+      }
+
+
+
+
+      $obj1 = DB::table('voteresults')
+      ->where('voteresults.user_id', $id)
+      ->delete();
+
+      $obj2 = DB::table('votesmarts')
+      ->where('votesmarts.user_id', $id)
+      ->delete();
+
+      $obj = DB::table('users')
+      ->where('users.id', $id)
+      ->delete();
+
+      return redirect(url('admin/representatives/'))->with('delete','ลบข้อมูล สำเร็จ');
     }
 }
