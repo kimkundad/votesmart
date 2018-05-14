@@ -124,7 +124,7 @@ return "$strDay $strMonthThai $strYear";
   												<div class="dropdown-menu" role="menu">
   													<a class="dropdown-item text-1" href="{{url('admin/representatives/'.$u->idu.'/edit')}}">ดูข้อมูล</a>
                             @if($u->is_admin != 1)
-                            <form  action="{{url('representatives/'.$u->idu)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                            <form  action="{{url('admin/representatives/'.$u->idu)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
                                             <input type="hidden" name="_method" value="DELETE">
                                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                              <button type="submit" class="dropdown-item text-1 text-danger">ลบ</button>
