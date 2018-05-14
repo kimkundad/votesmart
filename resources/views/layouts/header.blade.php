@@ -374,7 +374,7 @@ figure {
             @if (Auth::guest())
 
             @else
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: -25px; padding: 0px;">
+            <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
 
                             @if(Auth::user()->provider == 'email')
 
