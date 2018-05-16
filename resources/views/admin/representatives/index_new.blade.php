@@ -66,14 +66,12 @@ return "$strDay $strMonthThai $strYear";
               <div class="col-xs-12">
 
             <section class="panel">
-              <header class="panel-heading">
-                <div class="panel-actions">
-                  <a href="#"  class="panel-action panel-action-toggle" data-panel-toggle></a>
+              <div class="col-md-12 " style="padding-left: 1px;">
 
-                </div>
-
-                <h2 class="panel-title">{{$datahead}}</h2>
-              </header>
+                <a class="btn btn-primary " href="{{url('admin/representatives/create')}}" >
+                    <i class="fa fa-plus"></i> เพิ่มสมาชิกใหม่</a>
+              </div>
+              <br><br>
               <div class="panel-body">
 
 
