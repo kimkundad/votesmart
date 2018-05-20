@@ -912,6 +912,12 @@
     line-height: 21px;
     text-align: right;
 }
+.panel-body {
+    background: #fdfdfd;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
 </style>
 
 <section id="result" class="bg-dark">
@@ -1002,17 +1008,24 @@
   </div>
 </section>
 
+
+
 <section id="contact">
   <div class="container candidate-link">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ
-          <br/> แต่เรื่องสำคัญที่คุณเลือก
-          </br>
-          จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
-        <a class="btn btn-light btn-xl js-scroll-trigger" href="{{url('/representatives_all')}}">จะเลือกใครดี
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        </a>
+        <div class="panel-body">
+
+          <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ
+            <br/> แต่เรื่องสำคัญที่คุณเลือก
+            </br>
+            จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="{{url('/representatives_all')}}">จะเลือกใครดี
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          </a>
+
+        </div>
+
       </div>
     </div>
   </div>
