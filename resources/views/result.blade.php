@@ -916,7 +916,7 @@
     background: #fdfdfd;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
 }
 </style>
@@ -1022,7 +1022,7 @@
           </div>
 
 
-            <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px; font-size:24px;" href="{{url('/representatives_all')}}">
+            <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px; font-size:20px; color: #fff;" href="{{url('/representatives_all')}}">
        ค้นหาผู้สมัคร <i class="fa fa-chevron-right"></i></a>
 
 
