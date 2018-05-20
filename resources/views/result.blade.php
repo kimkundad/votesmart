@@ -747,7 +747,7 @@
       border-radius: 16px;
       background-color: #FFFFFF;
       }
-      .show-vision h3 {
+      h3.show-vision {
     color: #0479BD;
     font-weight: 400;
     font-size: 20px;
@@ -796,8 +796,8 @@
 
 
       <div class="col-md-12">
-        <div class="text-center">
-          <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:28px; font-weight: 700;"></i></h3>
+        <div class="text-center" style="margin-top: 80px;">
+          <h3 class="show-vision"><a href="#show-image">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
         </div>
       </div>
 
@@ -887,7 +887,7 @@
     <h2 class="mb-4 section-heading">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
     <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
 
-    <div class="row">
+    <div class="row" id="show-image">
       <div class="col-lg-8 mx-auto text-center">
         <div id="bg-selector">
           <div class="color white" data-value="#fff"></div>
