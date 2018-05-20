@@ -747,7 +747,7 @@
       border-radius: 16px;
       background-color: #FFFFFF;
       }
-      .share-vision h3 {
+      .show-vision h3 {
     color: #0479BD;
     font-weight: 400;
     font-size: 20px;
@@ -795,9 +795,9 @@
       </div>
 
 
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="text-center">
-          <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:28px"></i></h3>
+          <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:28px; font-weight: 700;"></i></h3>
         </div>
       </div>
 
