@@ -747,6 +747,12 @@
       border-radius: 16px;
       background-color: #FFFFFF;
       }
+      .share-vision h3 {
+    color: #0479BD;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 30px auto;
+}
       </style>
 
 
@@ -787,6 +793,15 @@
         </div>
         <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
       </div>
+
+
+      <div class="col-md-6">
+        <div class="text-center">
+          <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:28px"></i></h3>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
