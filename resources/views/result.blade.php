@@ -842,6 +842,21 @@
 }
 }
 
+@media (max-width: 320px) {
+
+
+  #canvas>.the-avatar {
+    position: relative;
+    text-align: left;
+    width: 75px !important;
+    height: 75px !important;
+    float: left;
+    margin-top: 10px !important;
+}
+
+
+}
+
 
   #canvas {
 
@@ -905,6 +920,7 @@
         <div id="canvas" class="canvass">
 
           <img src="{{url('assets/korr/VOTE_result-03.png')}}" class="the-bg"/>
+          <h3 class="name-user">{{$user->name}}</h3>
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" class="the-avatar" />
           <div>
 

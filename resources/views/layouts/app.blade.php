@@ -306,6 +306,11 @@ input[type="radio"]:disabled + .label-text:before{
     padding-left:5px;
   }
 
+
+  .name-user{
+
+  }
+
   .item.size-2 {
     width: 110px;
     height: 110px;
@@ -937,6 +942,13 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+  .name-user{
+    color: #fff;
+    font-size: 24px;
+    margin-left: 235px;
+    position: absolute;
+    z-index: 1000;
+  }
   .candidate-box{
     margin-left: 15px;
     margin-right: 15px;
