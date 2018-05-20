@@ -895,6 +895,23 @@
     top: 260px;
     right: 50px;
   }
+  .section-footer {
+    padding: 45px 100px;
+}
+.text-p {
+    color: #4A4A4A;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.15px;
+    line-height: 30px;
+}
+.section-footer p {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.11px;
+    line-height: 21px;
+    text-align: right;
+}
 </style>
 
 <section id="result" class="bg-dark">
@@ -1000,6 +1017,24 @@
     </div>
   </div>
 </section>
+
+
+<div class="section-footer col-md-12" style="background: #08B0ED;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-h2">
+                            <a style="color:#fff;" class="navbar-brand " href="{{url('home')}}">
+                                <img src="{{url('assets/image/votesmart-logo.svg')}}" class="img-fluid the-logo" style="width: 180px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-p">
+                            <p>© 2018 VOTESMART</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
 @endsection @section('scripts')
 
 
