@@ -943,6 +943,7 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 1200px) {
   .name-user{
+    padding-top: 20px;
     color: #fff;
     font-size: 24px;
     margin-left: 235px;
