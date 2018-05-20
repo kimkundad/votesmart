@@ -915,8 +915,9 @@
 .panel-body {
     background: #fdfdfd;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
 }
 </style>
 
@@ -1015,14 +1016,17 @@
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
         <div class="panel-body">
+          <div class="share-vision">
+            <h2 class="mb-4 section-heading">จะต้องบอกใครดี?</h2>
+            <h3 class="show-vision">ค้นหาผู้สมัครในพื้นที่ เพื่อผลักดันเรื่องที่คุณสนใจ</h3>
+          </div>
 
-          <h2 id="heading_b" class="section-heading">แม้วันนี้คุณอาจยังไม่ได้เป็นนายกฯ
-            <br/> แต่เรื่องสำคัญที่คุณเลือก
-            </br>
-            จะต้องบอกใคร เพื่อให้เกิดขึ้นจริง?</h2>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="{{url('/representatives_all')}}">จะเลือกใครดี
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          </a>
+
+            <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px; font-size:24px;" href="{{url('/representatives_all')}}">
+       ค้นหาผู้สมัคร <i class="fa fa-chevron-right"></i></a>
+
+
+
 
         </div>
 
