@@ -313,6 +313,9 @@
 
 
     }
+    .jscroll-inner{
+      width:100%;
+    }
   </style>
 
     @if (!Auth::guest())
@@ -326,7 +329,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="infinite-scroll">
+      <div class="infinite-scroll" style="width:100%">
       @if($objs)
 
          @foreach($objs as $u => $j)
@@ -773,7 +776,7 @@
         });
     </script>
 
-    
+
 <script type="text/javascript">
 
   var the_add_quiz = '<div class="col-6 col-md-3 col-lg-2 text-center">\
