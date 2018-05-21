@@ -330,8 +330,8 @@
       @if($objs)
          @foreach($objs as $u => $j)
 
-
-      <div class="col-6 col-md-3 col-lg-2 text-center" >
+         <!-- /* col-md-3 col-lg-2 */ -->
+      <div class="col-6  text-center" >
         <a data-toggle="modal" data-target="#myModal-{{$j->id}}" href="#">
         <div class="parent-chart">
           <canvas id="user-{{$j->id}}" ></canvas>
@@ -889,7 +889,7 @@ $(document).ready(function () {
 
 
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
 <script src="{{url('swiper-4.2.2/dist/js/swiper.js')}}"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
