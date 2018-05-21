@@ -431,10 +431,11 @@
 
 
       @endforeach
+      {{ $objs->links() }}
+
     </div>
       @endif
 
-{{ $objs->links() }}
 
 
 
