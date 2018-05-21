@@ -105,6 +105,28 @@ class HomeController extends Controller
 
 
 
+    public function preview_public(){
+        return view('preview_public');
+    }
+
+    public function add_public(Request $request){
+      $confirm= $request['confirm'];
+
+      if($confirm == null){
+        $confirm = 0;
+      }
+      $id = Auth::user()->id;
+
+      $package = User::find($id);
+      $package->add_public = $confirm;
+      $package->save();
+
+     return redirect(url('result'))->with('edit_success','คุณทำการแก้ไขอสังหา สำเร็จ');
+
+    }
+
+
+
     public function search_data2(Request $request){
 
       $this->validate($request, [
@@ -1317,7 +1339,7 @@ class HomeController extends Controller
 
 
 
-  return redirect(url('/result'));
+  return redirect(url('/preview_public'));
     }
 
 
