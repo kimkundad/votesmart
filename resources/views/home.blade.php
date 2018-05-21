@@ -413,7 +413,7 @@
                   @endforeach
               @endif
 
-              {{ $objs->links() }}
+
 
 
             </div>
@@ -432,7 +432,7 @@
       @endforeach
       @endif
 
-
+{{ $objs->links() }}
 
 
 
