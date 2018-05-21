@@ -328,6 +328,7 @@
     <div class="row">
 
       @if($objs)
+      <div class="infinite-scroll">
          @foreach($objs as $u => $j)
 
          <!-- /* col-md-3 col-lg-2 */ -->
@@ -430,6 +431,7 @@
 
 
       @endforeach
+    </div>
       @endif
 
 {{ $objs->links() }}
