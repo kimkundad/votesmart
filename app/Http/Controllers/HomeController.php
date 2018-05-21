@@ -41,7 +41,7 @@ class HomeController extends Controller
 
       $objs = DB::table('users')
         ->where('vote_status', 1)
-        ->where('add_public', 1)
+        ->where('add_public', 0)
         ->paginate(7);
 
         $s =1;
