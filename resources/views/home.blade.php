@@ -755,6 +755,25 @@
 <script src="{{url('front/js/Chart.bundle.js?v2')}}"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script type="text/javascript">
+        $('ul.pagination').hide();
+        $(function() {
+            $('.infinite-scroll').jscroll({
+                autoTrigger: true,
+                loadingHtml: '<img class="center-block" src="{{secure_url('assets/image/ajax-loading-gif-3.gif')}}" alt="Loading..." />', // MAKE SURE THAT YOU PUT THE CORRECT IMG PATH
+                padding: 0,
+                nextSelector: '.pagination li.active + li a',
+                contentSelector: 'div.infinite-scroll',
+                callback: function() {
+                    $('ul.pagination').remove();
+                }
+            });
+        });
+    </script>
+
+    
 <script type="text/javascript">
 
   var the_add_quiz = '<div class="col-6 col-md-3 col-lg-2 text-center">\
@@ -894,22 +913,7 @@ $(document).ready(function () {
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
-<script type="text/javascript">
-        $('ul.pagination').hide();
-        $(function() {
-            $('.infinite-scroll').jscroll({
-                autoTrigger: true,
-                loadingHtml: '<img class="center-block" src="{{secure_url('assets/image/ajax-loading-gif-3.gif')}}" alt="Loading..." />', // MAKE SURE THAT YOU PUT THE CORRECT IMG PATH
-                padding: 0,
-                nextSelector: '.pagination li.active + li a',
-                contentSelector: 'div.infinite-scroll',
-                callback: function() {
-                    $('ul.pagination').remove();
-                }
-            });
-        });
-    </script>
+
 
 
 
