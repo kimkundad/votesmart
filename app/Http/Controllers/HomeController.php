@@ -41,7 +41,8 @@ class HomeController extends Controller
 
       $objs = DB::table('users')
         ->where('vote_status', 1)
-        ->get();
+        ->where('add_public', 1)
+        ->paginate(7);
 
         $s =1;
         $optionsRes = [];
@@ -97,10 +98,15 @@ class HomeController extends Controller
             )
             ->get();
 
-    $data['cat'] = $cat;
-      $data['objs'] = $objs;
+  //  $data['cat'] = $cat;
+  //    $data['objs'] = $objs;
 
-        return view('home', $data);
+  //      return view('home', $data);
+
+        return view('home')->with([
+         'cat' => $cat,
+         compact('objs')
+       ]);
     }
 
 
