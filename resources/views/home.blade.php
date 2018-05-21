@@ -326,9 +326,9 @@
 
   <div class="container-fluid">
     <div class="row">
-
-      @if($objs)
       <div class="infinite-scroll">
+      @if($objs)
+
          @foreach($objs as $u => $j)
 
          <!-- /* col-md-3 col-lg-2 */ -->
@@ -431,13 +431,13 @@
 
 
       @endforeach
-      {{ $objs->links() }}
 
-    </div>
+
+
       @endif
 
-
-
+{{ $objs->links() }}
+</div> <!-- end scoll -->
 
 
 <style>
