@@ -24,6 +24,9 @@ Route::get('/', 'HomeController@first_page');
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/preview_public', 'HomeController@preview_public');
+
+
 
 Route::get('shared_quiz/{id}', 'HomeController@shared_quiz');
 Route::get('representatives_all', 'HomeController@representatives_all');
@@ -40,7 +43,7 @@ Route::post('contact_to_reps','HomeController@contact_to_reps' );
 
 
 Route::group(['middleware' => 'auth'], function () {
-
+  Route::post('add_public', 'HomeController@add_public');
   Route::post('add_vote', 'HomeController@add_vote');
   Route::get('quiz_choices', 'HomeController@quiz_choices');
   Route::get('result', 'HomeController@result');
