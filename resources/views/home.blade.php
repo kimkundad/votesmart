@@ -779,7 +779,7 @@
 
 <script type="text/javascript">
 
-  var the_add_quiz = '<div class="col-6 col-md-3 col-lg-2 text-center">\
+  var the_add_quiz = '<div class="col-6 col-md-3 col-lg-2 text-center" style="height:256px;">\
     <a href="{{url('/quiz_choices')}}">\
         <div class="parent-chart choose-quiz" style="background:#08B0ED;">\
             <div class="user-name" style="">\
