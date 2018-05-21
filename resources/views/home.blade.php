@@ -772,7 +772,7 @@
 
 $(document).ready(function () {
 
-  $("#services .row").prepend(the_add_quiz);
+  $(".jscroll-inner").prepend(the_add_quiz);
 
   $('#zoomBtn').click(function() {
 
