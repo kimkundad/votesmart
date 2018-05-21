@@ -105,7 +105,7 @@ class HomeController extends Controller
 
         return view('home')->with([
          'cat' => $cat,
-         compact('objs')
+         'objs' => compact('objs')
        ]);
     }
 
