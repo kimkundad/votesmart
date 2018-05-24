@@ -329,10 +329,8 @@
 
   <div class="container-fluid">
     <div class="row">
-
+    <!--  <div class="infinite-scroll" style="width:100%"> -->
       @if($objs)
-
-
 
          @foreach($objs as $u => $j)
 
@@ -422,7 +420,7 @@
 
 
 
-
+            </div>
 
           </div>
         </div>
@@ -441,8 +439,6 @@
 
       @endif
 
-
-      </div>
 
  <!-- </div> end scoll -->
 
