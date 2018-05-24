@@ -329,8 +329,11 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="add_btn" >
+
       @if($objs)
+
+      <div class="add_btn" >
+      </div>
 
          @foreach($objs as $u => $j)
 
@@ -420,7 +423,7 @@
 
 
 
-            </div>
+
 
           </div>
         </div>
