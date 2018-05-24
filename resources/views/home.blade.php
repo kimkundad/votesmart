@@ -329,7 +329,7 @@
 
   <div class="container-fluid">
     <div class="row">
-    <!--  <div class="infinite-scroll" style="width:100%"> -->
+      <div class="add_btn" >
       @if($objs)
 
          @foreach($objs as $u => $j)
@@ -439,6 +439,8 @@
 
       @endif
 
+
+      </div>
 
  <!-- </div> end scoll -->
 
@@ -779,7 +781,7 @@
 
 $(document).ready(function () {
 
-  $(".jscroll-inner").prepend(the_add_quiz);
+  $(".add_btn").prepend(the_add_quiz);
 
   $('#zoomBtn').click(function() {
 
