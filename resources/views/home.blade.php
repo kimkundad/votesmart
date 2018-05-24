@@ -332,8 +332,7 @@
 
       @if($objs)
 
-      <div class="add_btn" >
-      </div>
+
 
          @foreach($objs as $u => $j)
 
@@ -784,7 +783,7 @@
 
 $(document).ready(function () {
 
-  $(".add_btn").prepend(the_add_quiz);
+  $("#services .row").prepend(the_add_quiz);
 
   $('#zoomBtn').click(function() {
 
