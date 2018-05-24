@@ -329,7 +329,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="infinite-scroll" style="width:100%">
+    <!--  <div class="infinite-scroll" style="width:100%"> -->
       @if($objs)
 
          @foreach($objs as $u => $j)
@@ -439,8 +439,8 @@
 
       @endif
 
-{{ $objs->links() }}
-</div> <!-- end scoll -->
+
+ <!-- </div> end scoll -->
 
 
 <style>
