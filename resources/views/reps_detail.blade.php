@@ -1983,25 +1983,25 @@ $(document).ready(function(){
                 // FACEBOOK
                 facebook: {
                     accounts: queryTags,
-                    limit: 12,
+                    limit: 10,
                     access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c',
                 },
 
 
                 // Twitter
-            //  twitter: {
-            //         accounts: queryTags,
-            //         limit: 10,
-            //         consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
-            //         consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
-            //     },
+             twitter: {
+                    accounts: queryTags,
+                    limit: 10,
+                    consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
+                    consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
+                },
 
-                //  instagram: {
-                //     accounts: queryTags,
-                //     limit: 10,
-                //     client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
-                //     access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
-                // },
+                 instagram: {
+                    accounts: queryTags,
+                    limit: 10,
+                    client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
+                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
+                },
 
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
