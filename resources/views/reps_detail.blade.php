@@ -999,7 +999,7 @@ blockquote {
 
 
 
-              <img class="img-in-chart" src="{{url('assets/images/avatar/'.$user->avatar)}}" id="myavatar" style="max-width:220px; max-height:220px; width:220px; height:220px; margin-top: -40px;">
+              <img class="img-in-chart" src="{{url('assets/images/avatar/'.$user->avatar)}}" id="myavatar" style="max-width:220px; max-height:220px; width:220px; height:220px; margin-top: 0px;">
 
 
 
