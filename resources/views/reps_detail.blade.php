@@ -974,7 +974,7 @@ blockquote {
 }
 .set-rotate2{
     position: absolute;
-    top: 400px;
+    top: 270px;
     background:none !important;
 }
 .img-in-chart-in2{
