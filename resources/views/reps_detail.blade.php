@@ -1863,6 +1863,7 @@ return "$strDay $strMonthThai";
 
                                         <section class="feed visible-sm visible-xs" style="    padding: 2rem 0;">
 
+
                                           <style>
 
                                           .social-feed-element .media-body div {
