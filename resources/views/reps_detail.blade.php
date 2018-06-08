@@ -2055,7 +2055,7 @@ if (iconRotate.length != 0) {
 
         console.log(set_num);
 
-    if(set_num > 55){
+    if(set_num > 51){
     //  alert('555555'); myavatar
 
       $('#btn_home2').removeClass('set-rotate');
