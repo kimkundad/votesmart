@@ -318,7 +318,7 @@
     }
     .candidate-profile h2 {
     color: #0479BD;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 500;
     line-height: 64px;
     text-align: center;
