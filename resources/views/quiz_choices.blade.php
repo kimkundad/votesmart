@@ -307,8 +307,13 @@ function myFunction1() {
     document.getElementById("cutproduct").submit();
 }
 
+
+$('.quiz_choices').hide();
+
+
 $(".hometo1").click(function(){
     $(".content_leena").slideUp();
+    $('.quiz_choices').show();
 });
 </script>
 

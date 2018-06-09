@@ -1109,7 +1109,7 @@ input[type="radio"]:disabled + .label-text:before{
       max-width: 1140px;
   }
   .mask-content {
-    padding-top: 100px;
+    padding-top: 200px;
       position: absolute;
       top: 0;
       left: 0;
