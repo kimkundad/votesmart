@@ -178,9 +178,7 @@ input:checked{
   .bubble-container {
   margin-top:120px;
 }
-.text-muted {
-  display:none;
-}
+
 }
 </style>
 <section id="services" class="" style="background: #f2f8fa; padding: 3rem 0;">
