@@ -738,7 +738,7 @@
         border-radius: .25em;
       }
       .btn-readmore{
-        margin-top: -40px;
+
         padding: 7px 15px;
       color: #495057;
       font-size: 12px;
@@ -796,8 +796,8 @@
       </div>
 
 
-      <div class="col-md-12">
-        <br><br><br><br><br>
+      <div class="col-md-12" style="margin-top: 40px;">
+        <br><br>
         <div class="text-center" >
           <h3 class="show-vision"><a href="#show-image">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
         </div>
