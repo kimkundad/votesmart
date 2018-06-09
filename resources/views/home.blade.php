@@ -316,6 +316,17 @@
     .jscroll-inner{
       width:100%;
     }
+    .candidate-profile h2 {
+    color: #0479BD;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 64px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    /* max-width: 249px; */
+    margin: auto auto 24px;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
   </style>
 
     @if (!Auth::guest())
@@ -329,6 +340,16 @@
 
   <div class="container-fluid">
     <div class="row">
+
+
+      <div class="candidate-profile">
+                  <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
+
+                  <br>
+
+              </div>
+
+
     <!--  <div class="infinite-scroll" style="width:100%"> -->
       @if($objs)
 
