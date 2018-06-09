@@ -421,7 +421,7 @@ input[type="radio"]:disabled + .label-text:before{
       cursor: pointer;
   }
   .welcome-footer {
-      padding-top: 50px;
+    /*  padding-top: 50px; */
       height: 58px;
   }
   .padding-bottom-footer {
@@ -583,7 +583,7 @@ input[type="radio"]:disabled + .label-text:before{
       cursor: pointer;
   }
   .welcome-footer {
-      padding-top: 50px;
+      /*  padding-top: 50px; */
       height: 58px;
   }
   .padding-bottom-footer {
@@ -1152,7 +1152,7 @@ input[type="radio"]:disabled + .label-text:before{
       cursor: pointer;
   }
   .welcome-footer {
-      padding-top: 50px;
+    /*  padding-top: 50px; */
       height: 58px;
   }
   .padding-bottom-footer {
