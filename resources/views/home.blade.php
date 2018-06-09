@@ -341,13 +341,15 @@
   <div class="container-fluid">
     <div class="row">
 
+      <div class="col-md-12">
+        <div class="candidate-profile">
+                    <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
 
-      <div class="candidate-profile">
-                  <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
+                    <br>
 
-                  <br>
+                </div>
+      </div>
 
-              </div>
 
 
     <!--  <div class="infinite-scroll" style="width:100%"> -->
