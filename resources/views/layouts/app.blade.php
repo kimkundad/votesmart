@@ -314,7 +314,12 @@ input[type="radio"]:disabled + .label-text:before{
 
 
   .name-user{
-
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
   }
 
   .item.size-2 {
@@ -457,6 +462,15 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
 
   .img-in-chart-in2 {
     max-width: 92px;
@@ -618,6 +632,15 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
   .img-in-chart-in2 {
     max-width: 92px;
     border-radius: 50%;
@@ -668,6 +691,15 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
 
   .img-in-chart-in2 {
     max-width: 92px;
@@ -721,6 +753,15 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
 
   .img-in-chart-in2 {
     max-width: 92px;
@@ -782,6 +823,16 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 425px) {
 
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
+
   .img-in-chart-in2 {
     max-width: 92px;
     border-radius: 50%;
@@ -839,6 +890,16 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 576px) {
 
+
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
+
   .img-in-chart-in2 {
     max-width: 92px;
     border-radius: 50%;
@@ -894,6 +955,15 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 768px) {
 
+  .name-user{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 120px;
+    position: absolute;
+    z-index: 1000;
+  }
+
   .img-in-chart-in2 {
     max-width: 92px;
     border-radius: 50%;
@@ -946,6 +1016,18 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+
+
+  .name-user{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 24px;
+    margin-left: 235px;
+    position: absolute;
+    z-index: 1000;
+  }
+
+
 
   .img-in-chart-in2 {
     max-width: 92px;
