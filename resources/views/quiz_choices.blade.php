@@ -633,7 +633,7 @@ $.fn.easyPieChart = function(options) {
 
 }));
 
-var chartSize = '120';
+var chartSize = '135';
 
 $('#easy-pie-chart').easyPieChart({
     animate: 500,
