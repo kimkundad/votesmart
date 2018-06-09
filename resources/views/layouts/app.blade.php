@@ -296,6 +296,19 @@ input[type="radio"]:disabled + .label-text:before{
 }
 @media (min-width: 280px) {
 
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -462,6 +475,19 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
 
   .name-user{
     padding-top: 10px;
@@ -633,6 +659,19 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 350px) {
 
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+
   .name-user{
     padding-top: 10px;
     color: #fff;
@@ -691,6 +730,19 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
 
   .name-user{
     padding-top: 10px;
@@ -753,6 +805,19 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
 
   .name-user{
     padding-top: 10px;
@@ -824,6 +889,19 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 425px) {
 
 
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+
+
   .name-user{
     padding-top: 10px;
     color: #fff;
@@ -891,6 +969,19 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 576px) {
 
 
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+
+
   .name-user{
     padding-top: 10px;
     color: #fff;
@@ -955,6 +1046,19 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 768px) {
 
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
+
   .name-user{
     padding-top: 10px;
     color: #fff;
@@ -1016,6 +1120,19 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
 
 
   .name-user{
@@ -1082,6 +1199,18 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+
+  .candidate-profile2 h2 {
+  color: #0479BD;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  /* max-width: 249px; */
+  margin: auto auto 24px;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+}
 
   .img-in-chart-in2 {
     max-width: 92px;
