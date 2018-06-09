@@ -34,7 +34,7 @@ font-size:14px !important;
 }
 
 .user-name p {
-font-size:18px !important;
+font-size:16px !important;
 }
 
     body,
