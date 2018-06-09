@@ -63,17 +63,18 @@
 
       <style>
       .zoom-btn-large {
-            margin-top: -15px;
+        left: 90px;
+        margin-top: -15px;
         position: absolute;
-    padding: 10px;
-    width: 130px;
-    height: 130px;
-          line-height: 60px;
-          box-shadow: 0px 2px 10px #ccc;
-          background: #fff;
-              color: #08B0ED;
-              border-radius: 50%;
-                  display: inline-block;
+        padding: 10px;
+        width: 150px;
+        height: 150px;
+        line-height: 60px;
+        box-shadow: 0px 2px 10px #ccc;
+        background: #fff;
+        color: #08B0ED;
+        border-radius: 50%;
+        display: inline-block;
       }
       .number-set{
         top: 60px;
@@ -95,8 +96,8 @@
           position: absolute;
           width: 120px;
           height: 120px;
-          left: 5px;
-          top:5px;
+          left: 12px;
+          top: 10px;
           text-align: center;
       }
       .chart canvas {
@@ -644,8 +645,8 @@ $('#easy-pie-chart').easyPieChart({
     barColor: '#3da0ea'
 });
 $('#easy-pie-chart').css({
-   width : 120 + 'px',
-   height : 120 + 'px'
+   width : 135 + 'px',
+   height : 135 + 'px'
 });
 $('#easy-pie-chart .percent').css({
   "line-height": chartSize + 'px'
