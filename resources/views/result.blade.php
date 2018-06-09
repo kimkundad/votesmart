@@ -1089,7 +1089,7 @@
 
           $.ajax({
             type: "POST",
-            url: '{{url('save_image')}}',
+            url: '{{secure_url('save_image')}}',
             data: {
               image: imgString
             },
@@ -1100,7 +1100,7 @@
                 var time = Date.now || function () {
                   return +new Date;
                 };
-                var the_share_url = '{{url('shared_quiz/'.Auth::user()->id)}}';
+                var the_share_url = '{{secure_url('shared_quiz/'.Auth::user()->id)}}';
                 console.log(the_share_url);
                 // window.open(the_share_url, '_blank');
                 FB.ui({
