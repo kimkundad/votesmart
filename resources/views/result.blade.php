@@ -794,9 +794,9 @@
         <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
       </div>
 
-
+      <br><br><br><br><br>
       <div class="col-md-12">
-        <div class="text-center" style="margin-top: 80px;">
+        <div class="text-center" >
           <h3 class="show-vision"><a href="#show-image">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
         </div>
       </div>

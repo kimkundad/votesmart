@@ -264,7 +264,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 8px;" href="#" data-toggle="modal" data-target="#myModal"
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
           style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
           <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
@@ -282,7 +282,7 @@
 
               <p class="text-muted mb-0">ด้วยการเปลี่ยนแปลงเกิดขึ้นไม่ได้<br> ด้วยคนๆเดียว</p>
               <br>
-              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="font-weight: 400;padding: 10px 40px; color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+              <a class="btn btn-light js-scroll-trigger" data-toggle="modal" data-target="#myModal" href="#" style="font-weight: 400;padding: 10px 40px; background-color: #fff; color: #08B0ED; border: 1px solid #08B0ED; font-size: 15px; color:#08B0ED"><i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
             </div>
         </li>
 
