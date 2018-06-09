@@ -171,11 +171,9 @@ input:checked{
 .delz-3, .delz-7, .delz-11, .delz-15, .delz-19, .delz-23, .delz-27, .delz-31, .delz-35, .delz-39, .delz-43{
   margin-left: 35px !important;
 }
-.bubble-container {
-  margin-top:230px;
-}
+
 @media (max-width: 480px) {
-  
+
 
 }
 </style>

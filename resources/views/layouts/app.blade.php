@@ -1240,6 +1240,11 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 1200px) {
 
+
+  .bubble-container {
+    margin-top:230px;
+  }
+
   .candidate-profile2 h2 {
   color: #0479BD;
   font-size: 45px;
