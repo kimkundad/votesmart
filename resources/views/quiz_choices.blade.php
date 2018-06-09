@@ -3,7 +3,29 @@
 @section('content')
 
 <style>
+.masonry .item:hover,.masonry .item.select {
+  -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
 
+.the-container {
+  padding:0px !important;
+}
+.set-ma {
+  padding:0px;
+}
+
+.the-container2 {
+  padding: 0px 25px;
+}
+.page-header-sub {
+  box-shadow: 0px 2px 10px #ccc;
+}
+.sub-title {
+  padding: 0px;
+  min-height: 45px;
+}
 
 </style>
 
@@ -12,12 +34,12 @@
   <section class="bg-whites page-header-sub quiz_choices " id="about" style=" z-index: 1000; ">
 
 
-  <div class="container">
+  <div class="container-fluid the-container2">
     <div class="row quiz-choices ">
 
 
 
-      <div class="col-md-8 visible-sm visible-xs">
+      <div class="col-md-8 visible-sm visible-xs sub-title">
         <h3 class="margin">เลือก 10 ประเด็นที่สำคัญ
         สำหรับประเทศไทย</h3>
         <br>
@@ -83,10 +105,14 @@
           left: 0;
       }
       .percent {
-            font-size: 20px;
-          display: inline-block;
-          line-height: 110px;
-          z-index: 2;
+        display: inline-block;
+    z-index: 2;
+    font-size: 48px;
+    height: 48px;
+    padding: 0px;
+    margin-top: -5px;
+    width: 46px;
+    text-align: center;
       }
       .percent:after {
 
@@ -144,10 +170,21 @@ input:checked{
 .delz-3, .delz-7, .delz-11, .delz-15, .delz-19, .delz-23, .delz-27, .delz-31, .delz-35, .delz-39, .delz-43{
   margin-left: 35px !important;
 }
+.bubble-container {
+  margin-top:230px;
+}
+@media (max-width: 480px) {
+  .bubble-container {
+  margin-top:120px;
+}
+.text-muted {
+  display:none;
+}
+}
 </style>
-<section id="services" style="background: #f2f8fa; padding: 3rem 0; padding-top:230px;">
+<section id="services" class="bubble-container" style="background: #f2f8fa; padding: 3rem 0;">
 
-  <div class="container">
+  <div class="container-fluid">
 
     <form  method="POST" id="cutproduct" action="{{url('add_vote')}}">
       {{ csrf_field() }}
@@ -190,13 +227,13 @@ input:checked{
 
 
 
-<div class="panel-content-set" style="top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 1001;">
+<div class="panel-content-set" style="width:100% !important; top: 0;  position: fixed;     margin-right: -15px; margin-left: -15px; z-index: 1001;">
 <div class=" content_leena panel-content" >
   <div class="swiper-container">
   <div class="swiper-wrapper">
 
   <div id="content-home1" style="display:block" class="content-home swiper-slide">
-    <div class="real-content" style="padding-top: 70px;">
+    <div class="container-fluid the-container" style="padding-top: 70px;">
       <div class="mask-content">
         <!-- First Container -->
         <div class="welcome-section text-center">
