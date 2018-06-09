@@ -338,17 +338,21 @@
 
 <section id="services" class="the-margin-top" style="background: #f2f8fa; padding: 1.5rem 0;">
 
+  <div class="row">
+  <div class="col-md-12">
+    <div class="candidate-profile">
+                <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
+
+                <br>
+
+            </div>
+  </div>
+  </div>
+
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-md-12">
-        <div class="candidate-profile">
-                    <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
 
-                    <br>
-
-                </div>
-      </div>
 
 
 
