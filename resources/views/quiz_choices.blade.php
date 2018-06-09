@@ -175,9 +175,7 @@ input:checked{
   margin-top:230px;
 }
 @media (max-width: 480px) {
-  .bubble-container {
-  margin-top:120px;
-}
+  
 
 }
 </style>

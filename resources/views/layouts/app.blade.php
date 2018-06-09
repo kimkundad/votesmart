@@ -297,6 +297,11 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 280px) {
 
 
+  .bubble-container {
+  margin-top:170px;
+}
+
+
   .candidate-profile2 h2 {
   color: #0479BD;
   font-size: 28px;
@@ -475,6 +480,11 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+
+
+  .bubble-container {
+  margin-top:170px;
+}
 
 
   .candidate-profile2 h2 {
@@ -659,6 +669,10 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 350px) {
 
+  .bubble-container {
+  margin-top:170px;
+}
+
 
   .candidate-profile2 h2 {
   color: #0479BD;
@@ -731,6 +745,9 @@ input[type="radio"]:disabled + .label-text:before{
 }
 @media (min-width: 360px) {
 
+  .bubble-container {
+  margin-top:170px;
+  }
 
   .candidate-profile2 h2 {
   color: #0479BD;
@@ -806,6 +823,9 @@ input[type="radio"]:disabled + .label-text:before{
 
 @media (min-width: 375px) {
 
+  .bubble-container {
+  margin-top:170px;
+  }
 
   .candidate-profile2 h2 {
   color: #0479BD;
@@ -889,6 +909,11 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 425px) {
 
 
+  .bubble-container {
+  margin-top:170px;
+  }
+
+
   .candidate-profile2 h2 {
   color: #0479BD;
   font-size: 28px;
@@ -969,6 +994,11 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 576px) {
 
 
+  .bubble-container {
+  margin-top:170px;
+}
+
+
   .candidate-profile2 h2 {
   color: #0479BD;
   font-size: 28px;
@@ -1047,6 +1077,11 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 768px) {
 
 
+  .bubble-container {
+  margin-top:170px;
+}
+
+
   .candidate-profile2 h2 {
   color: #0479BD;
   font-size: 28px;
@@ -1120,6 +1155,11 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+
+
+  .bubble-container {
+  margin-top:170px;
+}
 
 
   .candidate-profile2 h2 {
