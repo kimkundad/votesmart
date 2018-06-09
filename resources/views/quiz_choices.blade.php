@@ -182,7 +182,7 @@ input:checked{
 }
 }
 </style>
-<section id="services" class="bubble-container" style="background: #f2f8fa; padding: 3rem 0;">
+<section id="services" class="" style="background: #f2f8fa; padding: 3rem 0;">
 
   <div class="container-fluid">
 
@@ -314,6 +314,9 @@ $('.quiz_choices').hide();
 $(".hometo1").click(function(){
     $(".content_leena").slideUp();
     $('.quiz_choices').show();
+
+    var d = document.getElementById("services");
+d.className += "bubble-container";
 });
 </script>
 
