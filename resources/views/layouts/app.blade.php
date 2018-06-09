@@ -306,6 +306,12 @@ input[type="radio"]:disabled + .label-text:before{
     padding-left:5px;
   }
 
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+
 
   .name-user{
 
@@ -451,6 +457,12 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 320px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
 
   .item.size-1 {
     width: 110px;
@@ -606,6 +618,12 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 350px) {
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -650,6 +668,13 @@ input[type="radio"]:disabled + .label-text:before{
   }
 }
 @media (min-width: 360px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -696,6 +721,13 @@ input[type="radio"]:disabled + .label-text:before{
 
 
 @media (min-width: 375px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -749,6 +781,13 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 425px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -799,6 +838,12 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 576px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -848,6 +893,12 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 768px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-30px;
+  }
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -895,6 +946,13 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 992px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-0px;
+  }
+
   .item.size-1 {
     width: 110px;
     height: 110px;
@@ -942,6 +1000,14 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+
+  .img-in-chart-in2 {
+    max-width: 90px;
+    border-radius: 50%;
+    margin-top:-0px;
+  }
+
+  
   .name-user{
     padding-top: 20px;
     color: #fff;
