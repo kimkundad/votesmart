@@ -96,8 +96,8 @@
           position: absolute;
           width: 120px;
           height: 120px;
-          left: 12px;
-          top: 10px;
+          left: 7px;
+          top: 7px;
           text-align: center;
       }
       .chart canvas {
