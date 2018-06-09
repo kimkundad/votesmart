@@ -738,6 +738,7 @@
         border-radius: .25em;
       }
       .btn-readmore{
+        margin-top: -40px;
         padding: 7px 15px;
       color: #495057;
       font-size: 12px;
