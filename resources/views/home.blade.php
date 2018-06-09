@@ -336,10 +336,10 @@
        @endif
 
 
-       <div class="row">
+       <div class="row" style="    margin-top: 100px;">
        <div class="col-md-12">
          <div class="candidate-profile">
-                     <h2 class="text-center">จะเลืเลือกอะไรได้</h2>
+                     <h2 class="text-center">จะเลือกอะไรได้</h2>
 
                      <br>
 
@@ -348,7 +348,7 @@
        </div>
 
 
-<section id="services" class="the-margin-top" style="background: #f2f8fa; padding: 1.5rem 0;">
+<section id="services" class="" style="background: #f2f8fa; padding: 1.5rem 0;">
 
 
 
