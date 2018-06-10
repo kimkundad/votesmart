@@ -676,7 +676,7 @@
           @if (Auth::guest())
 
           @else
-
+          <li class="nav-item dropdown open visible-sm visible-xs" style="border-top: 1px solid #ddd;">
           <style>
 
           .userbox {
@@ -724,61 +724,32 @@
 
           </style>
 
+          <div id="userbox" class="userbox">
+  						<a href="#" data-toggle="dropdown">
+  							<figure class="profile-picture">
+                  @if(Auth::user()->provider == 'email')
+                  <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{url('Auth::user()->name')}}" class="img-circle">
+                  @else
+                  <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{url('Auth::user()->name')}}" class="img-circle">
+                  @endif
+
+  							</figure>
+  							<div class="profile-info" style="text-align:left; margin: 15px 17px 10px 10px;">
+  								<span class="name" style="color: #0591c3; padding-bottom:8px;">{{Auth::user()->name}}</span><div style="height:10px;"></div>
+  								<a href="{{url('result')}}" class="info" style="font-size: 13px; color:#999" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a>
+                  <a href="{{url('logout')}}" class="info" style="font-size: 13px; color:#999" id="SHOW_HELP"><i class="fa fa-sign-out"></i> ออกจากระบบ</a>
+
+  							</div>
+
+
+  						</a>
 
 
 
-            <li class="nav-item hidden-sm hidden-xs">
-
-
-
-
-
-
-
-
-              @if (Auth::guest())
-
-              @else
-              <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
-
-                              @if(Auth::user()->provider == 'email')
-
-                              <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                              style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                              class="img-circle">
-
-
-                              <ul class="dropdown" style="width: 200px;">
-                                <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                                  <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                                  style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                                  class="img-circle"> {{Auth::user()->name}}
-                                </a></li>
-                                <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                                <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                              </ul>
-
-                              @else
-
-                              <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
-
-                              <ul class="dropdown" style="width: 200px;">
-                                <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                                  <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
-                                  style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                                  class="img-circle"> {{Auth::user()->name}}
-                                </a></li>
-                                <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                                <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                              </ul>
-
-                              @endif
-            @endif
-
-
-
-                                </div>
+  					</div>
             </li>
+
+
           @endif
 
         </ul>
