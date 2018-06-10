@@ -366,7 +366,7 @@
       </button>
       <a class="navbar-brand " href="{{url('/')}}" style="font-size: 1.8rem; padding-top: 10px; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
 
-      <div class="btn-varunteer visible-sm visible-xs" style="padding: 12px 6px 12px 26px;  padding-left: 8px; border-left: 1px solid #e6e1e1;">
+      <div class="btn-varunteer visible-sm visible-xs" style="padding: 12px 6px 12px 26px;  padding-left: 8px; border-left: 1px solid #b0e7f9;">
         <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; color: #fff; ">
                 <i class="fa fa-hand-paper-o"></i>
                 <span>อาสา</span>
