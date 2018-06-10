@@ -102,32 +102,32 @@
                       </div>
                     </div>
 
-                    <div class="col-2 " style="padding-right: 10px; padding-left: 0px;float: left; margin-right: 10px;">
+                    <div class="col-3 " style="padding-right: 10px; padding-left: 0px;float: left; margin-right: 10px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อายุ</label>
-                        <input type="number" name="year_old" id="year_old" class="form-control" >
+                        <input type="text" name="year_old" id="year_old" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-9 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-8 " style="padding-right: 0px; float: left; padding-left: 0px;">
                       <div class="form-group" style="height:55px;">
 
                         <label for="exampleInputEmail1">เพศ</label>
                         <br><br>
-                    				<div class="form-check">
+                    				<div class="form-check" style="padding-left: 0rem;">
                     					<label>
-                    						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
+                    						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 7px;">ชาย</span>
                     					</label>
                     				</div>
 
                     				<div class="form-check">
                     					<label>
-                    						<input type="radio" name="radio" id="radio" value="หญิง"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
+                    						<input type="radio" name="radio" id="radio" value="หญิง"> <span class="label-text" style="margin-right: 7px;">หญิง</span>
                     					</label>
                     				</div>
                     				<div class="form-check">
                     					<label>
-                    						<input type="radio" name="radio" id="radio" value="ไม่ระบุ"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
+                    						<input type="radio" name="radio" id="radio" value="ไม่ระบุ"> <span class="label-text" style="margin-right: 0px;">ไม่ระบุ</span>
                     					</label>
                     				</div>
 
@@ -135,7 +135,7 @@
                     </div>
 
                     <br><br>
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">ความสนใจ</label>
                         <textarea class="form-control" name="detail" rows="3" id="detail"></textarea>
