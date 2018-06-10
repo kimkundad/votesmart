@@ -95,7 +95,7 @@
                       </div>
                     </div>
 
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
                         <input type="email" name="email" id="email" class="form-control" >
