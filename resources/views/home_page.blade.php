@@ -265,7 +265,7 @@
         }
         .section-one .col-md-8 img{
           width: 130%;
-            height: 350px !important;
+            height: 340px !important;
         }
     }
 
