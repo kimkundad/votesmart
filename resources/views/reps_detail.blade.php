@@ -982,6 +982,11 @@ blockquote {
   width: 220px;
   height: 220px;
 }
+.img-in-chart-in3 {
+    margin-top: -3px;
+    width: 220px;
+    height: 220px;
+}
 </style>
 
   <div class="candidate-details container hidden-sm hidden-xs">
@@ -1048,7 +1053,7 @@ blockquote {
 
 
 
-              <img class="img-in-chart-in2" src="{{url('assets/images/avatar/'.$user->avatar)}}">
+              <img class="img-in-chart-in3" src="{{url('assets/images/avatar/'.$user->avatar)}}">
 
 
 
