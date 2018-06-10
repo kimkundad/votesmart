@@ -1178,6 +1178,52 @@ class HomeController extends Controller
     }
 
 
+
+
+    public function representatives_grid(){
+
+
+
+      $objs_pro = DB::table('users')
+        ->select(
+        'users.*',
+        'users.id as id_u',
+        'provinces.*',
+        'subdistricts.*',
+        'districts.*',
+        'provinces.name_in_thai as name_in_thai1',
+        'provinces.id as id_p'
+        )
+        ->leftjoin('provinces', 'provinces.id',  'users.province_id')
+        ->leftjoin('districts', 'districts.province_id',  'provinces.id')
+        ->leftjoin('subdistricts', 'subdistricts.district_id',  'districts.id')
+        ->where('users.user_lock', 1)
+        ->where('users.reps_con', 1)
+        ->where('users.is_admin', 0)
+        ->groupBy('provinces.id')
+        ->get();
+
+
+
+      $objs = DB::table('users')
+        ->select(
+        'users.*'
+        )
+        ->where('user_lock', 1)
+        ->where('reps_con', 1)
+        ->where('is_admin', 0)
+        ->get();
+        //dd($objs); ->where('province_id', 1)
+
+      $data['objs_pro'] = $objs_pro;
+      //dd($objs_pro);
+      $data['objs'] = $objs;
+      $data['datahead'] = "รายชื่อสมาชิก";
+
+      return view('representatives_grid', $data);
+
+    }
+
     public function add_vote(Request $request){
       $this->validate($request, [
        'quiz' => 'required'

@@ -30,6 +30,7 @@ Route::get('/preview_public', 'HomeController@preview_public');
 
 Route::get('shared_quiz/{id}', 'HomeController@shared_quiz');
 Route::get('representatives_all', 'HomeController@representatives_all');
+Route::get('representatives_grid', 'HomeController@representatives_grid');
 Route::post('reps_list', 'HomeController@reps_list');
 Route::post('reps_list2', 'HomeController@reps_list2');
 Route::get('search/data', 'HomeController@search_data');
