@@ -80,7 +80,7 @@
 
                     <form action="{{url('/contact')}}" id="form" method="post" enctype="multipart/form-data">
                       {{ csrf_field() }}
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-6 " style="padding-right: 5px; float:left; padding-left: 0px;">
 
                           <div class="form-group">
                             <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
@@ -88,7 +88,7 @@
                           </div>
 
                         </div>
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-6 " style="padding-right: 0px; float:left; padding-left: 5px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
                         <input type="text" name="surname" id="surname" class="form-control" >
@@ -102,18 +102,18 @@
                       </div>
                     </div>
 
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-2 " style="padding-right: 10px; padding-left: 0px;float: left; margin-right: 10px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อายุ</label>
                         <input type="number" name="year_old" id="year_old" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-9 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group" style="height:55px;">
 
                         <label for="exampleInputEmail1">เพศ</label>
-                        <br>
+                        <br><br>
                     				<div class="form-check">
                     					<label>
                     						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
@@ -134,7 +134,7 @@
                       </div>
                     </div>
 
-
+                    <br><br>
                     <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">ความสนใจ</label>
@@ -143,7 +143,7 @@
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
+                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px;     padding: 10px; color: #08B0ED;">ยืนยัน</button>
                     </div>
                   </form>
 
