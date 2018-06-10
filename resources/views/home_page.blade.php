@@ -234,7 +234,7 @@
     margin-bottom: 50px;
 }
         .section-one{
-                min-height: 510px;
+                min-height: 480px;
         }
         .cta{
             margin-bottom: 30px;
@@ -265,7 +265,7 @@
         }
         .section-one .col-md-8 img{
           width: 130%;
-            height: 340px !important;
+            height: 350px !important;
         }
     }
 
