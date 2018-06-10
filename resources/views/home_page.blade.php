@@ -234,7 +234,7 @@
     margin-bottom: 50px;
 }
         .section-one{
-                min-height: 480px;
+                min-height: 490px;
         }
         .cta{
             margin-bottom: 30px;
