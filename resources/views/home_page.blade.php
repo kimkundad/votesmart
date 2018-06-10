@@ -75,15 +75,7 @@
         text-align: center;
         text-shadow: 0 1px 2px rgba(35,31,32,0.24);
     }
-    .section-one h1{
-        font-size: 24px;
-        letter-spacing: 0.18px;
-        line-height: 35px;
-        color: #fff;
-        /* max-width: 241px; */
-       margin-bottom: 50px;
 
-    }
     .section-one-left{
         height: 500px;
         vertical-align: middle;
@@ -158,16 +150,17 @@
     .btn-lp:hover {
         color:#fff;
     }
-    .btn-lp{
-        color: #FFFFFF;
-        font-size: 24px;
-        line-height: 35px;
-        text-align: center;
-        padding: 10px 75px;
-        border-radius: 32px;
-        background-color: #08B0ED;
-    }
+
     @media only screen and (max-width: 1024px) {
+      .btn-lp{
+          color: #FFFFFF;
+          font-size: 24px;
+          line-height: 35px;
+          text-align: center;
+          padding: 10px 75px;
+          border-radius: 32px;
+          background-color: #08B0ED;
+      }
         .section-one-left{
             padding-left: 25%;
 
@@ -219,8 +212,29 @@
         }
     }
     @media only screen and (max-width:767px){
+
+
+      .btn-lp {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 32px;
+    background-color: #08B0ED;
+}
+
+
+      .section-one h1 {
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    line-height: 35px;
+    color: #fff;
+    /* max-width: 241px; */
+    margin-bottom: 50px;
+}
         .section-one{
-            min-height: 480px;
+                min-height: 510px;
         }
         .cta{
             margin-bottom: 30px;
@@ -250,6 +264,7 @@
             font-size: 18px;
         }
         .section-one .col-md-8 img{
+          width: 130%;
             height: 350px !important;
         }
     }
@@ -257,6 +272,26 @@
 
     @media (max-width: 767px)
     {
+
+
+      .btn-lp {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 32px;
+    background-color: #08B0ED;
+}
+
+      .section-one h1 {
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    line-height: 35px;
+    color: #fff;
+    /* max-width: 241px; */
+    margin-bottom: 50px;
+}
       .nav-mo-golf{
 
         padding-top: 1px;
@@ -274,6 +309,25 @@
 
     @media (min-width: 992px) {
 
+      .btn-lp{
+          color: #FFFFFF;
+          font-size: 24px;
+          line-height: 35px;
+          text-align: center;
+          padding: 10px 75px;
+          border-radius: 32px;
+          background-color: #08B0ED;
+      }
+
+      .section-one h1 {
+    font-size: 24px;
+    letter-spacing: 0.18px;
+    line-height: 35px;
+    color: #fff;
+    /* max-width: 241px; */
+    margin-bottom: 50px;
+}
+
       .nav-mo-golf{
 
         padding-top: 1px;
@@ -288,6 +342,25 @@
 
     }
     @media (min-width: 1200px) {
+
+      .btn-lp{
+          color: #FFFFFF;
+          font-size: 24px;
+          line-height: 35px;
+          text-align: center;
+          padding: 10px 75px;
+          border-radius: 32px;
+          background-color: #08B0ED;
+      }
+
+      .section-one h1 {
+    font-size: 24px;
+    letter-spacing: 0.18px;
+    line-height: 35px;
+    color: #fff;
+    /* max-width: 241px; */
+    margin-bottom: 50px;
+}
 
       .nav-mo-golf{
         padding-top:12px; padding-bottom:5px;
@@ -767,7 +840,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="text-p">
-                                    <img style="width: auto; height: 600px;float: right;position: absolute;right: 0;" src="{{url('assets/image/vote-by-desktop@2x.png?v2')}}">
+                                    <img style=" /*width: auto; */height: 600px;float: right;position: absolute;right: 0;" src="{{url('assets/image/vote-by-desktop@2x.png?v2')}}">
                                 </div>
                             </div>
                             </div>
