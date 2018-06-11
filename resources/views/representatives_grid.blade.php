@@ -152,12 +152,55 @@ input:-webkit-autofill {
     height: 48px;
     margin-left: -57px;
 }
+.fieldf-select2{
+  display: block;
+
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #5ec8f2;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control{
+    background-color: #fff;
+}
 </style>
 
 
-<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 70px 0 8px 0; z-index: 9998; position: fixed;">
+<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 60px 0 8px 0; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
+
+      <form class=" search-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
+      <div class="col-5" style="float:left; padding-right: 4px;">
+
+        <select name="cars" class="fieldf-select2  align-right" onchange="this.form.submit()" style="width: 100%;">
+          <option value="1" >เขตกรุงเทพ</option>
+          @if($objs_pro)
+             @foreach($objs_pro as $pro)
+            <option value="{{$pro->id_p}}" >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+            @endforeach
+        @endif
+        </select>
+
+      </div>
+      <div class="col-7" style="float:left; padding-left: 4px;">
+        <div class="input-group" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);s">
+              <input id="hero-demo2" autofocus type="text"  name="field3" class="form-control" placeholder="ค้นหา" >
+              <div class="input-group-btn" style="    padding: 5px;">
+                  <button class="btn btn-default" type="submit" style="background: #fff; font-size: 18px;" onclick="eatFood();"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+        </div>
+
+
+
+      </form>
+      <!--
       <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
             {{ csrf_field() }}
@@ -182,6 +225,11 @@ input:-webkit-autofill {
               </ul>
               </form>
       </div>
+
+    -->
+
+
+
     </div>
   </div>
 </section>
@@ -197,7 +245,7 @@ input:-webkit-autofill {
 
       <div class="col-md-3">
         <div class="form-group">
-          <select name="cars" class="form-control" style="height: 49px;" onchange="this.form.submit()">
+          <select name="cars" class="form-control" style="height: 49px; background-color: #5ec8f2;" onchange="this.form.submit()">
             @if($objs_pro)
                @foreach($objs_pro as $pro)
               <option value="{{$pro->id_p}}" >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
