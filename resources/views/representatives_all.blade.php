@@ -256,6 +256,23 @@ input:-webkit-autofill {
 .form-control{
     background-color: #fff;
 }
+.scroll-to-top {
+    border: 1px solid #f0f0f0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    /* transition: all 0.3s; */
+    background: #ffffff;
+    bottom: 10px;
+    /* color: #FFF; */
+    height: 9px;
+    padding: 13px 18px 28px 0px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 49px;
+    z-index: 1040;
+}
 </style>
 
 
@@ -288,6 +305,13 @@ input:-webkit-autofill {
 
 
       </form>
+
+
+      <div class="rectangle-copy-6 scroll-to-top">
+        <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
+        <a href="{{url('representatives_grid')}}" class="btn-list active"><i class="fa fa-th-list"></i></a>
+      </div>
+
       <!--
       <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
