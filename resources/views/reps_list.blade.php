@@ -355,7 +355,7 @@ input:-webkit-autofill {
   <h4 style="color: #0591c3;">ผลการค้นหาของคุณ " {{$search}} "</h4>
  <br>
 
-  <div class="candidate-container text-center">
+  <div class="candidate-container text-center hidden-sm hidden-xs">
       <div class="row">
 
         @if($objs)
@@ -379,6 +379,91 @@ input:-webkit-autofill {
 
       </div>
   </div>
+
+
+
+
+
+  <style>
+  ul.simple-user-list {
+      list-style: none;
+      padding: 0;
+  }
+  ul.simple-user-list li {
+    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+  padding-bottom: 30px;
+  padding-top: 0px;
+  margin: 0px 0 20px;
+  }
+  ul.simple-user-list {
+      list-style: none;
+      padding: 0;
+  }
+  ul.simple-user-list li .image {
+
+      float: left;
+      margin: 0 10px 0 0;
+  }
+  .rounded {
+      border-radius: 5px;
+  }
+  .img-circle {
+      border-radius: 50%;
+  }
+  ul.simple-user-list li .title {
+    color: #0479BD;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #F2F8FA;
+    margin: 0;
+  }
+  ul.simple-user-list li .message {
+      display: block;
+      font-size: 13px;
+      color: #666;
+  }
+  .panel-heading + .panel-body {
+      border-radius: 5px 5px 5px 5px;
+  }
+  .panel-body {
+      background: #fdfdfd;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+  }
+  .panel-body {
+      padding: 15px;
+  }
+  </style>
+
+  <div class="panel-body visible-sm visible-xs">
+    <div class="content">
+  										<ul class="simple-user-list">
+                        @if($objs)
+                           @foreach($objs as $u)
+  											<li>
+                          <a href="{{url('reps_result/'.$u->id)}}">
+  												<figure class="image rounded">
+  													<img src="{{url('assets/images/avatar/'.$u->avatar)}}" alt="{{$u->name}}" style="width: 60px;" class="img-circle">
+  												</figure>
+  												<span class="title">{{$u->name}}</span>
+  												<span class="message truncate">{{$u->sub_title}}</span>
+                          </a>
+  											</li>
+
+                        @endforeach
+                    @endif
+
+
+  										</ul>
+
+
+  									</div>
+
+                    </div>
 
 </div>
 
