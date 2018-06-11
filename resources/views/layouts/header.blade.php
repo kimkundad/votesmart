@@ -84,28 +84,28 @@
 
                           <div class="form-group">
                             <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
-                            <input type="text" name="name" id="name" class="form-control" >
+                            <input type="text" name="name" id="name" class="form-control" style="background-color: #5ec8f2;" >
                           </div>
 
                         </div>
                     <div class="col-6 " style="padding-right: 0px; float:left; padding-left: 5px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
-                        <input type="text" name="surname" id="surname" class="form-control" >
+                        <input type="text" name="surname" id="surname" class="form-control" style="background-color: #5ec8f2;">
                       </div>
                     </div>
 
                     <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
-                        <input type="email" name="email" id="email" class="form-control" >
+                        <input type="email" name="email" id="email" class="form-control" style="background-color: #5ec8f2;">
                       </div>
                     </div>
 
                     <div class="col-3 " style="padding-right: 10px; padding-left: 0px;float: left; margin-right: 10px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อายุ</label>
-                        <input type="text" name="year_old" id="year_old" class="form-control" >
+                        <input type="text" name="year_old" id="year_old" class="form-control" style="background-color: #5ec8f2;">
                       </div>
                     </div>
 
@@ -138,7 +138,7 @@
                     <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">ความสนใจ</label>
-                        <textarea class="form-control" name="detail" rows="3" id="detail"></textarea>
+                        <textarea class="form-control" name="detail" rows="3" id="detail" style="background-color: #5ec8f2;"></textarea>
                       </div>
                     </div>
 

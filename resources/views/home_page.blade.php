@@ -423,12 +423,112 @@
  .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+/*Radio box*/
+
+
+input[type="radio"] + .label-text:before{
+  font-size: 18px;
+	content: "\f10c";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+  font-size: 17px;
+	content: "\f192";
+	color: #ffffff;
+	animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+	color: #ffffff;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+	content: "\f111";
+	color: #ffffff;
+}
+.close {
+    float: right;
+    font-size: 1.2rem;
+    /* font-weight: 700; */
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    /* opacity: .5; */
+}
+/*Radio Toggle*/
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #f8f9fa;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.toggle input[type="radio"] + .label-text:before{
+	content: "\f204";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 2;
+	-webkit-font-smoothing:antialiased;
+	width: 2em;
+	display: inline-block;
+	margin-right: 10px;
+}
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    right: 9000px;
+}
+.toggle input[type="radio"]:checked + .label-text:before{
+  font-size: 18px;
+    content: "\f192";
+    color: #ffffff;
+	animation: effect 250ms ease-in;
+}
+
+.toggle input[type="radio"]:disabled + .label-text{
+	color: #aaa;
+}
+
+.toggle input[type="radio"]:disabled + .label-text:before{
+	content: "\f204";
+	color: #ffffff;
+}
 .mt-nav {
     border-top: 1px solid #ddd;
     padding: 25px 12px;
 }
-
-
+.modal-content {
+    color: #fff;
+    background-color: #5ec8f2;
+}
+label {
+    float: left;
+    font-size: 14px;
+    margin-bottom: .3rem;
+}
+.p-pop {
+    font-size: 13px;
+}
   </style>
 <nav class="navbar navbar-expand-lg nav-mo-golf navbar-dark page-header" id="mainNav" style="background-color: transparent;">
     <div class="container-fluid">
@@ -455,7 +555,7 @@
                   <div class="modal-content">
 
                     <div class="modal-body text-center">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
 
                       <br><br>
                       <h3 class="text-center">อาสา</h3>
@@ -474,70 +574,70 @@
 
                       <form action="{{url('/contact')}}" id="form" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="col-6 " style="padding-right: 5px; float:left; padding-left: 0px;">
 
                             <div class="form-group">
                               <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
-                              <input type="text" name="name" id="name" class="form-control" >
+                              <input type="text" name="name" id="name" class="form-control" style="background-color: #5ec8f2;" >
                             </div>
 
                           </div>
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="col-6 " style="padding-right: 0px; float:left; padding-left: 5px;">
                         <div class="form-group">
                           <label for="exampleInputEmail1">สกุล</label>
-                          <input type="text" name="surname" id="surname" class="form-control" >
+                          <input type="text" name="surname" id="surname" class="form-control" style="background-color: #5ec8f2;">
                         </div>
                       </div>
 
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                         <div class="form-group">
                           <label for="exampleInputEmail1">อีเมล</label>
-                          <input type="email" name="email" id="email" class="form-control" >
+                          <input type="email" name="email" id="email" class="form-control" style="background-color: #5ec8f2;">
                         </div>
                       </div>
 
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="col-3 " style="padding-right: 10px; padding-left: 0px;float: left; margin-right: 10px;">
                         <div class="form-group">
                           <label for="exampleInputEmail1">อายุ</label>
-                          <input type="number" name="year_old" id="year_old" class="form-control" >
+                          <input type="text" name="year_old" id="year_old" class="form-control" style="background-color: #5ec8f2;">
                         </div>
                       </div>
 
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <div class="col-8 " style="padding-right: 0px; float: left; padding-left: 0px;">
                         <div class="form-group" style="height:55px;">
 
                           <label for="exampleInputEmail1">เพศ</label>
-                          <br>
-                      				<div class="form-check">
+                          <br><br>
+                      				<div class="form-check" style="padding-left: 0rem;">
                       					<label>
-                      						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 15px;">ชาย</span>
+                      						<input type="radio" name="radio" id="radio" value="ชาย"> <span class="label-text" style="margin-right: 7px;">ชาย</span>
                       					</label>
                       				</div>
 
                       				<div class="form-check">
                       					<label>
-                      						<input type="radio" name="radio" id="radio" value="หญิง"> <span class="label-text" style="margin-right: 15px;">หญิง</span>
+                      						<input type="radio" name="radio" id="radio" value="หญิง"> <span class="label-text" style="margin-right: 7px;">หญิง</span>
                       					</label>
                       				</div>
                       				<div class="form-check">
                       					<label>
-                      						<input type="radio" name="radio" id="radio" value="ไม่ระบุ"> <span class="label-text" style="margin-right: 15px;">ไม่ระบุ</span>
+                      						<input type="radio" name="radio" id="radio" value="ไม่ระบุ"> <span class="label-text" style="margin-right: 0px;">ไม่ระบุ</span>
                       					</label>
                       				</div>
 
                         </div>
                       </div>
 
-
-                      <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                      <br><br>
+                      <div class="col-md-12 " style="padding-right: 0px; float: left; padding-left: 0px;">
                         <div class="form-group">
                           <label for="exampleInputEmail1">ความสนใจ</label>
-                          <textarea class="form-control" name="detail" rows="3" id="detail"></textarea>
+                          <textarea class="form-control" name="detail" rows="3" id="detail" style="background-color: #5ec8f2;"></textarea>
                         </div>
                       </div>
 
                       <div class="text-center">
-                        <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED;">ยืนยัน</button>
+                        <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px;     padding: 10px; color: #08B0ED;">ยืนยัน</button>
                       </div>
                     </form>
 
