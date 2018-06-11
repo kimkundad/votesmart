@@ -262,7 +262,7 @@ input:-webkit-autofill {
     -moz-transition: all 0.3s;
     /* transition: all 0.3s; */
     background: #ffffff;
-    bottom: 10px;
+    bottom: 15px;
     /* color: #FFF; */
     height: 9px;
     padding: 13px 18px 28px 0px;
@@ -308,8 +308,8 @@ input:-webkit-autofill {
 
 
       <div class="rectangle-copy-6 scroll-to-top">
-        <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
-        <a href="{{url('representatives_grid')}}" class="btn-list active"><i class="fa fa-th-list"></i></a>
+        <a href="{{url('representatives_all')}}" class="btn-list active"><i class="fa fa-map"></i></a>
+        <a href="{{url('representatives_grid')}}" class=""><i class="fa fa-th-list"></i></a>
       </div>
 
       <!--

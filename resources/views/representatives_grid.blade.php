@@ -174,7 +174,7 @@ input:-webkit-autofill {
     -moz-transition: all 0.3s;
     /* transition: all 0.3s; */
     background: #ffffff;
-    bottom: 10px;
+    bottom: 15px;
     /* color: #FFF; */
     height: 9px;
     padding: 13px 18px 28px 0px;
