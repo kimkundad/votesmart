@@ -251,7 +251,7 @@
         </li>
         <li class="nav-item {{ (Request::is('representatives_all*') ? 'action-nav' : '') }} {{ (Request::is('reps_list*') ? 'action-nav' : '') }}" style="margin-right: 30px;">
 
-          <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
+          <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_grid') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
           {{ (Request::is('reps_list') ? 'id="a-head-set"' : '') }} style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/representatives_all')}}">เลือกใครดี?</a>
 
           <a href="{{url('/representatives_all')}}">
