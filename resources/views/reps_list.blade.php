@@ -227,8 +227,8 @@ input:-webkit-autofill {
 
             <div class="col-md-1">
               <div class="rectangle-copy-6">
-                  <a href="#" class=""><i class="fa fa-map"></i></a>
-                  <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
+                <a href="{{url('representatives_grid')}}" class="btn-list active"><i class="fa fa-th-list"></i></a>
               </div>
       						</div>
 
