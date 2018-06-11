@@ -278,7 +278,7 @@ input:-webkit-autofill {
       </div>
       <div class="col-7" style="float:left; padding-left: 4px;">
         <div class="input-group" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);s">
-              <input id="hero-demo2" autofocus type="text"  name="field3" class="form-control" placeholder="ค้นหา" >
+              <input id="hero-demo2" type="text"  name="field3" class="form-control" placeholder="ค้นหา" >
               <div class="input-group-btn" style="    padding: 5px;">
                   <button class="btn btn-default" type="submit" style="background: #fff; font-size: 18px;" onclick="eatFood();"><i class="fa fa-search"></i></button>
               </div>
