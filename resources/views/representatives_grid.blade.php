@@ -192,7 +192,8 @@ input:-webkit-autofill {
   <div class="container">
     <div class="row">
 
-      <form class=" search-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
+      <form class=" search-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+          {{ csrf_field() }}
       <div class="col-5" style="float:left; padding-right: 4px;">
 
         <select name="cars" class="fieldf-select2  align-right" onchange="this.form.submit()" style="width: 100%;">

@@ -152,12 +152,84 @@ input:-webkit-autofill {
     height: 48px;
     margin-left: -57px;
 }
+.fieldf-select2{
+  display: block;
+
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #5ec8f2;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control{
+    background-color: #fff;
+}
+.scroll-to-top {
+    border: 1px solid #f0f0f0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    /* transition: all 0.3s; */
+    background: #ffffff;
+    bottom: 15px;
+    /* color: #FFF; */
+    height: 9px;
+    padding: 13px 18px 28px 0px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 49px;
+    z-index: 1040;
+}
 </style>
 
 
-<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 70px 0 8px 0; z-index: 9998; position: fixed;">
+
+
+
+
+
+<section class="bg-whites page-header-sub visible-sm visible-xs" id="about" style="padding: 60px 0 8px 0; z-index: 9998; position: fixed;">
   <div class="container">
     <div class="row">
+
+      <form class=" search-form" id="form1" name="form1" method="POST" action="{{ url('reps_list') }}" onsubmit="return false;">
+        {{ csrf_field() }}
+      <div class="col-5" style="float:left; padding-right: 4px;">
+
+        <select name="cars" class="fieldf-select2  align-right" onchange="this.form.submit()" style="width: 100%;">
+
+          @if($objs_pro)
+             @foreach($objs_pro as $pro)
+            <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?> >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+            @endforeach
+        @endif
+        </select>
+
+      </div>
+      <div class="col-7" style="float:left; padding-left: 4px;">
+        <div class="input-group" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);s">
+              <input id="hero-demo2" type="text" value="{{$search}}" name="field3" class="form-control" placeholder="ค้นหา" >
+              <div class="input-group-btn" style="    padding: 5px;">
+                  <button class="btn btn-default" type="submit" style="background: #fff; font-size: 18px;" onclick="eatFood();"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+        </div>
+
+
+
+      </form>
+
+
+      <div class="rectangle-copy-6 scroll-to-top">
+        <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
+        <a href="{{url('representatives_grid')}}" class="btn-list active"><i class="fa fa-th-list"></i></a>
+      </div>
+      <!--
       <div class="reps-map-search" style="padding: 0px 20px 0px 20px;">
           <form class="form-style-9 pure-form" id="form1" name="form1" method="POST" action="{{ url('reps_list2') }}" onsubmit="return false;">
             {{ csrf_field() }}
@@ -166,7 +238,7 @@ input:-webkit-autofill {
                       <select name="cars" class="fieldf-select2  align-right" style="width:73%" onchange="this.form.submit()">
                         @if($objs_pro)
                            @foreach($objs_pro as $pro)
-                          <option value="{{$pro->id_p}}" <?php if ($pro->id_p == $cars ) echo 'selected' ; ?> >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
+                          <option value="{{$pro->id_p}}" >ผู้สมัคร ส.ส. {{$pro->name_in_thai1}}</option>
                           @endforeach
                       @endif
                       </select>
@@ -174,7 +246,7 @@ input:-webkit-autofill {
                           <a href="#" class=""><i class="fa fa-map"></i></a>
                           <a href="#" class="btn-list active"><i class="fa fa-th-list"></i></a>
                       </div>
-                      <input id="hero-demo2" autofocus type="text" value="{{$search}}" name="field3" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
+                      <input id="hero-demo2" autofocus type="text"  name="field3" class="field-style" style="width: 98%;" placeholder="ค้นหาจาก แขวง , เขต หรือ ชื่อผู้แทน" />
                       <input type="submit" value="&#xf002;" onclick="eatFood();" class="stylish " />
 
 
@@ -182,6 +254,11 @@ input:-webkit-autofill {
               </ul>
               </form>
       </div>
+
+    -->
+
+
+
     </div>
   </div>
 </section>
