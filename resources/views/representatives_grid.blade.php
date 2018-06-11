@@ -336,7 +336,7 @@ input:-webkit-autofill {
 
 
 
-<section id="services" style="background: #f2f8fa; padding: 180px 10px 10px 10px; ">
+<section id="services" style="background: #f2f8fa; padding: 125px 10px 10px 10px; ">
 
   <div class="container">
     <div class="row">
@@ -347,7 +347,7 @@ input:-webkit-autofill {
 <div class="col-md-12">
 
 
-  <div class="candidate-container text-center hidden-sm hidden-xs">
+  <div class="candidate-container text-center hidden-sm hidden-xs" style="margin-top:30px;">
       <div class="row">
 
         @if($objs)
