@@ -222,7 +222,7 @@ input:-webkit-autofill {
 
       <style>
       .scroll-to-top_1{
-        .scroll-to-top {
+
     border: 1px solid #f0f0f0;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -238,7 +238,7 @@ input:-webkit-autofill {
     text-decoration: none;
     min-width: 49px;
     z-index: 1040;
-}
+
 
       }
       </style>
