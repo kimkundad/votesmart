@@ -523,6 +523,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
   @media (min-width: 1200px){
+    ul.navbar-nav.ml-auto {
+    float: none;
+    margin: auto;
+}
     .img-in-chart {
       margin-top: -1px;
       width: 140px;
