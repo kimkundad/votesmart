@@ -528,6 +528,11 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
       width: 140px;
       height: 140px;
     }
+    ul.navbar-nav.ml-auto{
+      float:none;
+      margin:auto;
+      //margin-left: 30% !important;
+    }
     #canvas {
       max-width: 90%;
       width: 500px;
