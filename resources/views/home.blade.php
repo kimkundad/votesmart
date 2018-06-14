@@ -159,7 +159,7 @@
 </style>
 
         @if (Auth::guest())
-<section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
+<!--<section class="bg-whites " id="about" style="padding: 90px 0 8px 0;">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3 text-center">
@@ -189,7 +189,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
         @endif
 
@@ -316,7 +316,7 @@
     .jscroll-inner{
       width:100%;
     }
-    
+
   </style>
 
     @if (!Auth::guest())
