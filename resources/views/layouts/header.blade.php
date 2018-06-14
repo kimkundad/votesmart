@@ -249,7 +249,7 @@
           </a>
 
         </li>
-        <li class="nav-item {{ (Request::is('representatives_all*') ? 'action-nav' : '') }} {{ (Request::is('reps_list*') ? 'action-nav' : '') }}" style="margin-right: 220px;">
+        <li class="nav-item {{ (Request::is('representatives_all*') ? 'action-nav' : '') }} {{ (Request::is('reps_list*') ? 'action-nav' : '') }}" style="margin-right: 300px;">
 
           <a class="nav-link {{ (Request::is('reps_result*') ? 'a-head' : '') }} {{ (Request::is('representatives_grid') ? 'a-head' : '') }} {{ (Request::is('representatives_all') ? 'a-head' : '') }} {{ (Request::is('reps_list') ? 'a-head' : '') }} js-scroll-trigger hidden-sm hidden-xs" {{ (Request::is('representatives_all') ? 'id="a-head-set"' : '') }}
           {{ (Request::is('reps_list') ? 'id="a-head-set"' : '') }} style="font-size: 16px; padding: 16px 25px 10px; " href="{{url('/representatives_all')}}">เลือกใครดี?</a>
@@ -264,7 +264,7 @@
         </li>
 
         <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 10px; margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
+          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 180px; margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
           style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
           <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
         </li>
