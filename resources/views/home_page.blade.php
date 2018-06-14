@@ -534,7 +534,8 @@ label {
     <div class="container-fluid">
 
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button"
+      data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-dark navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand " href="{{url('/')}}" style="font-size: 1.8rem; padding-top: 10px; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
@@ -555,7 +556,8 @@ label {
                   <div class="modal-content">
 
                     <div class="modal-body text-center">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"
+style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
 
                       <br><br>
                       <h3 class="text-center">อาสา</h3>
@@ -884,7 +886,20 @@ label {
                                             ว่าอะไรที่ดีสำหรับคุณ
                                             และประเทศของเรา </p>
                                     </h1>
+
+                                    @if (Auth::guest())
+
                                     <a href="{{url('redirect')}}" class="btn-lp">เข้าร่วม</a>
+
+
+                                    @else
+
+                                    <a href="{{url('quiz_choices')}}" class="btn-lp">เข้าร่วม</a>
+
+                                    @endif
+
+
+                                  
                                 </div>
                             </div>
                             <div class="col-md-8">

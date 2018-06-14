@@ -36,9 +36,9 @@ return [
     ],
 
     'facebook' => [
-    'client_id' => '148045139197033',
-    'client_secret' => '9700abf8c7597c486b232d39d7d4ee55',
-    'redirect' => 'https://votesmart.me/callback',
+    'client_id' => env('FACEBOOK_CLIENT_ID'),
+    'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+    'redirect' => env('FACEBOOK_REDIRECT_URI')
     ],
 
 ];
