@@ -402,47 +402,50 @@ figure {
         <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style=" margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
         style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
         <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+
+
+        @if (Auth::guest())
+
+        @else
+        <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
+
+                        @if(Auth::user()->provider == 'email')
+
+                        <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                        style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                        class="img-circle">
+
+
+                        <ul class="dropdown" style="width: 200px;">
+                          <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
+                            <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                            style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                            class="img-circle"> {{Auth::user()->name}}
+                          </a></li>
+                          <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
+                          <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+                        </ul>
+
+                        @else
+
+                        <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
+
+                        <ul class="dropdown" style="width: 200px;">
+                          <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
+                            <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
+                            style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                            class="img-circle"> {{Auth::user()->name}}
+                          </a></li>
+                          <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
+                          <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+                        </ul>
+
+                        @endif
+                        </div>
+      @endif
       </div>
 
-      @if (Auth::guest())
 
-      @else
-      <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
-
-                      @if(Auth::user()->provider == 'email')
-
-                      <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                      style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                      class="img-circle">
-
-
-                      <ul class="dropdown" style="width: 200px;">
-                        <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                          <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                          style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                          class="img-circle"> {{Auth::user()->name}}
-                        </a></li>
-                        <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                        <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                      </ul>
-
-                      @else
-
-                      <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
-
-                      <ul class="dropdown" style="width: 200px;">
-                        <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                          <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
-                          style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                          class="img-circle"> {{Auth::user()->name}}
-                        </a></li>
-                        <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                        <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                      </ul>
-
-                      @endif
-                      </div>
-    @endif
 
 
 
