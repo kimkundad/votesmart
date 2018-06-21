@@ -43,7 +43,11 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <div class="header-column justify-content-start">
     <a class="navbar-brand " href="{{url('/')}}" style="font-size: 1.8rem; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
+    </div>
+
 
     <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
       <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; color: #08B0ED; ">
@@ -235,7 +239,7 @@
             @endif
 
 
-
+            <div class="header-column justify-content-start">
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item {{ (Request::is('/') ? 'action-nav' : '') }}">
@@ -263,11 +267,7 @@
 
         </li>
 
-        <li class="nav-item hidden-sm hidden-xs">
-          <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 180px; margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
-          style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
-          <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
-        </li>
+
 
 
 
@@ -334,7 +334,10 @@ figure {
   border-radius: 50%;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
-
+.justify-content-start {
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+}
         </style>
 
         <div id="userbox" class="userbox">
@@ -371,48 +374,7 @@ figure {
 
 
 
-            @if (Auth::guest())
 
-            @else
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
-
-                            @if(Auth::user()->provider == 'email')
-
-                            <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                            style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                            class="img-circle">
-
-
-                            <ul class="dropdown" style="width: 200px;">
-                              <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                                <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
-                                style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                                class="img-circle"> {{Auth::user()->name}}
-                              </a></li>
-                              <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                              <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                            </ul>
-
-                            @else
-
-                            <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
-
-                            <ul class="dropdown" style="width: 200px;">
-                              <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
-                                <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
-                                style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
-                                class="img-circle"> {{Auth::user()->name}}
-                              </a></li>
-                              <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
-                              <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
-                            </ul>
-
-                            @endif
-          @endif
-
-
-
-                              </div>
           </li>
         @endif
 
@@ -431,5 +393,66 @@ figure {
 
 
     </div>
+    </div>
+
+
+    <div class="header-column justify-content-start">
+
+      <div class="hidden-sm hidden-xs">
+        <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style=" margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
+        style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
+        <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+      </div>
+
+      @if (Auth::guest())
+
+      @else
+      <div id="dd" class="wrapper-dropdown-3" tabindex="1" style="    top: 0px; padding: 0px;">
+
+                      @if(Auth::user()->provider == 'email')
+
+                      <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                      style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                      class="img-circle">
+
+
+                      <ul class="dropdown" style="width: 200px;">
+                        <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
+                          <img src="{{url('assets/images/avatar/'.Auth::user()->avatar)}}" alt="{{Auth::user()->name}}"
+                          style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                          class="img-circle"> {{Auth::user()->name}}
+                        </a></li>
+                        <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
+                        <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+                      </ul>
+
+                      @else
+
+                      <img src="//{{Auth::user()->avatar}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}" style="margin-left: 10px; height:45px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;" class="img-circle">
+
+                      <ul class="dropdown" style="width: 200px;">
+                        <li><a href="{{url('/')}}" class="info2" id="SHOW_HELP2" style="font-size: 12px;">
+                          <img src="{{url('//'.Auth::user()->avatar)}}&access_token=EAACGpXHuvGkBABN7vIs8c5azBUrZBnwKwW0BbkF3kQSbCfK4W0Guwgv6ZCaqOsq5adhZB07zZA25BMZCOYwulLDoHAcFeNtGLA63rx6D6BG0wtPxywRaBjn4Afkr4tHwQTHC7mGvH1RFAxZB9ysqpcb9wsmYvzd5ZAcQKWjfO9MzZBBanKrISGz4" alt="{{Auth::user()->name}}"
+                          style="margin-left: 10px; height:25px; vertical-align: middle; margin-right:7px; border-radius: 50%; margin-top: 5px;"
+                          class="img-circle"> {{Auth::user()->name}}
+                        </a></li>
+                        <li><a href="{{url('result')}}" class="info" id="SHOW_HELP"><i class="fa fa-pie-chart"></i> ดูหน้าผลลัพท์</a></li>
+                        <li><a href="{{url('logout')}}" class="info-3" id="SHOW_HELP-3"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+                      </ul>
+
+                      @endif
+                      </div>
+    @endif
+
+
+
+
+
+    </div>
+
+
+
+
+
   </div>
 </nav>
