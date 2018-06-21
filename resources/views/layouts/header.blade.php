@@ -49,12 +49,6 @@
     </div>
 
 
-    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1;">
-      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; color: #08B0ED; ">
-              <i class="fa fa-hand-paper-o"></i>
-              <span>อาสา</span>
-      </a>
-            </div>
 
 
 
@@ -239,7 +233,7 @@
             @endif
 
 
-            <div class="header-column justify-content-start">
+    <div class="header-column justify-content-start">
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item {{ (Request::is('/') ? 'action-nav' : '') }}">
@@ -395,10 +389,10 @@ figure {
     </div>
     </div>
 
-
+    <div class="hidden-sm hidden-xs">
     <div class="header-column justify-content-start">
 
-      <div class="hidden-sm hidden-xs">
+
         <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style=" margin-top: 8px; background-color: #fff;" href="#" data-toggle="modal" data-target="#myModal"
         style="background-color: #ffffff; font-size: 14px; margin-top: 5px; color:#08B0ED">
         <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
@@ -453,9 +447,18 @@ figure {
 
     </div>
 
-
+    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1; height: 42px;">
+      <div class="header-column justify-content-start" style="padding-top: 10px;">
+      <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 16px; color: #08B0ED; ">
+              <i class="fa fa-hand-paper-o"></i>
+              <span>อาสา</span>
+      </a>
+            </div>
+            </div>
 
 
 
   </div>
+
+
 </nav>
