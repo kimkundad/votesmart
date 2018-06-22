@@ -8,9 +8,9 @@
     border:none !important;
   }
   .img-in-chart2 {
-    max-width: 90px;
+    max-width: 92px;
     border-radius: 50%;
-    margin-top:-30px;
+    margin-top:-28px;
   }
 
 .swiper-wrapper #content-home1 {
