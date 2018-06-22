@@ -10,7 +10,7 @@
   .img-in-chart2 {
     max-width: 92px;
     border-radius: 50%;
-    margin-top:-28px;
+    margin-top:-25px;
   }
 
 .swiper-wrapper #content-home1 {
