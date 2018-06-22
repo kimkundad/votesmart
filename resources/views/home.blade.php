@@ -326,7 +326,7 @@
        @endif
 
 
-       <div class="row" style="    margin-top: 100px;">
+       <div class="" style="    margin-top: 100px;">
        <div class="col-md-12">
          <div class="candidate-profile2">
                      <h2 class="text-center">จะเลือกอะไรได้?</h2>
