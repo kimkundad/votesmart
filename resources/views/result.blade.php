@@ -991,8 +991,12 @@
 
 <section id="result" class="bg-dark line-sector" style="">
   <div class="container share-vision text-center">
-    <h2 class="mb-4 section-heading">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
-    <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
+
+    <h2 class="mb-4 section-heading visible-sm visible-xs">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
+    <h3 class="show-vision visible-sm visible-xs">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
+
+    <h2 class="mb-4 section-heading hidden-sm hidden-xs">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
+    <h3 class="show-vision hidden-sm hidden-xs">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
 
     <div class="row" id="show-image">
       <div class="col-lg-8 mx-auto text-center">
