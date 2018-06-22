@@ -366,8 +366,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
 
@@ -575,8 +575,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
 
@@ -787,8 +787,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -887,8 +887,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -990,8 +990,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -1105,8 +1105,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -1214,8 +1214,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -1318,8 +1318,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
@@ -1428,8 +1428,8 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 
   .item.size-3 {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     font-size: 13px
   }
   .action-nav{
