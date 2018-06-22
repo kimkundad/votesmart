@@ -112,7 +112,7 @@
     height: 48px;
     padding: 0px;
     margin-top: -5px;
-    width: 46px;
+    width: 49px;
     text-align: center;
       }
       .percent:after {
