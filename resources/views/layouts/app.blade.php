@@ -1354,7 +1354,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
   .line-sector{
     padding-top: 65px; padding-bottom: 65px;
-    
+
   }
 
   h3.show-vision {
