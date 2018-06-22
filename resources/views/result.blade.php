@@ -196,6 +196,10 @@
 
   @media (max-width: 280px) {
 
+    .on-shard{
+      margin-top: 25px;
+    }
+
 
     h2.section-heading {
       color: #0479BD;
@@ -264,6 +268,10 @@
 
   @media (min-width: 320px) {
 
+    .on-shard{
+      margin-top: 25px;
+    }
+
 
     h2.section-heading {
       color: #0479BD;
@@ -331,6 +339,10 @@
 
   @media (min-width: 375px) {
 
+    .on-shard{
+      margin-top: 25px;
+    }
+
     h2.section-heading {
       color: #0479BD;
       font-family: 'Kanit', sans-serif;
@@ -396,6 +408,10 @@
 
 
   @media (min-width: 425px) {
+
+    .on-shard{
+      margin-top: 25px;
+    }
 
 
     h2.section-heading {
@@ -464,6 +480,10 @@
 
   @media (min-width: 576px) {
 
+    .on-shard{
+      margin-top: 25px;
+    }
+
     h2.section-heading {
       color: #0479BD;
       font-family: 'Kanit', sans-serif;
@@ -528,6 +548,10 @@
 
 
   @media (min-width: 768px) {
+
+    .on-shard{
+      margin-top: 25px;
+    }
 
     h2.section-heading {
       color: #0479BD;
@@ -595,6 +619,10 @@
 
   @media (min-width: 992px) {
 
+    .on-shard{
+      margin-top: 40px;
+    }
+
     .img-in-chart {
       margin-top: -1px;
       width: 140px;
@@ -650,6 +678,10 @@
 
 
   @media (min-width: 1200px) {
+
+    .on-shard{
+      margin-top: 40px;
+    }
     .img-in-chart {
       margin-top: -1px;
       width: 140px;
@@ -992,8 +1024,8 @@
 <section id="result" class="bg-dark line-sector" style="">
   <div class="container share-vision text-center">
 
-    <h2 class="mb-4 section-heading visible-sm visible-xs">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
-    <h3 class="show-vision visible-sm visible-xs">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
+    <h2 class="section-heading visible-sm visible-xs" style="margin-bottom: 0px;">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
+    <h3 class="show-vision visible-sm visible-xs" style="font-size: 18px; margin: 0px auto;">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
 
     <h2 class="mb-4 section-heading hidden-sm hidden-xs">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
     <h3 class="show-vision hidden-sm hidden-xs">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
@@ -1068,7 +1100,7 @@
 
   </div>
 
-  <div class="container  text-center" style="margin-top: 40px;">
+  <div class="container  text-center on-shard" >
 
     <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; background: transparent; color: #08B0ED; margin-bottom: 10px;">
       <i class="fa fa-download"></i> เซฟรูปนี้
