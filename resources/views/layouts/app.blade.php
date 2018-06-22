@@ -308,7 +308,7 @@ input[type="radio"]:disabled + .label-text:before{
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .rep_detail2{
@@ -508,7 +508,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
 
@@ -721,7 +721,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .btn-res{
@@ -823,7 +823,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .btn-res{
@@ -926,7 +926,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
 
@@ -1036,7 +1036,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
 
@@ -1147,7 +1147,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
 
@@ -1255,7 +1255,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 18px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .btn-res{
@@ -1360,7 +1360,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 20px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .btn-res{
@@ -1470,7 +1470,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 color: #0479BD;
 font-weight: 400;
 font-size: 20px;
-margin: 30px auto;
+margin: 30px auto 0px auto;
 }
 
   .btn-res{
