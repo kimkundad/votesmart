@@ -49,7 +49,7 @@
     </div>
 
 
-    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1; height: 42px;">
+    <div class="btn-varunteer visible-sm visible-xs" style="padding-left: 8px; border-left: 1px solid #e6e1e1; height: 42px; margin-right: -25px;">
       <div class="header-column justify-content-start" style="padding-top: 10px;">
       <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 16px; color: #08B0ED; ">
               <i class="fa fa-hand-paper-o"></i>
