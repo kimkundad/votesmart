@@ -471,6 +471,17 @@
 
   @media (min-width: 768px) {
 
+    h2.section-heading {
+      color: #0479BD;
+      font-family: 'Kanit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 56px;
+      text-align: center;
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2,;
+    }
+
     .img-in-chart {
       margin-top: -1px;
       width: 140px;
