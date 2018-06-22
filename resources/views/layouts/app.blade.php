@@ -1198,6 +1198,13 @@ input[type="radio"]:disabled + .label-text:before{
 @media (min-width: 992px) {
 
 
+  .img-in-chart2 {
+    max-width: 92px;
+    border-radius: 50%;
+    margin-top:-25px;
+  }
+
+
   .bubble-container {
   margin-top:170px;
 }
@@ -1280,6 +1287,13 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width: 1200px) {
+
+
+  .img-in-chart2 {
+    max-width: 92px;
+    border-radius: 50%;
+    margin-top:-25px;
+  }
 
 
   .bubble-container {

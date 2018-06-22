@@ -7,11 +7,7 @@
   .zoom-menu li {
     border:none !important;
   }
-  .img-in-chart2 {
-    max-width: 92px;
-    border-radius: 50%;
-    margin-top:-25px;
-  }
+  
 
 .swiper-wrapper #content-home1 {
   width:100% !important;
