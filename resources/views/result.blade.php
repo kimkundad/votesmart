@@ -230,7 +230,7 @@
       line-height: 25px;
       text-align: left;
       /* margin-bottom: 24px; */
-      text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD, 9px 9px 0 #0479BD, 10px 10px 0 #0479BD;
+      text-shadow: 1px 1px 0 #0479BD, 2px 2px 0 #0479BD, 3px 3px 0 #0479BD, 4px 4px 0 #0479BD, 5px 5px 0 #0479BD, 6px 6px 0 #0479BD, 7px 7px 0 #0479BD, 8px 8px 0 #0479BD;
     }
     #heading-t {
 
@@ -241,7 +241,7 @@
       line-height: 26px;
       text-align: center;
       margin-bottom: 24px;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
 
 
     }
@@ -757,7 +757,7 @@
       </style>
 
 
-      <div class="col-md-6">
+      <div class="col-md-6 rep_detail2">
         <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
         <div class="candidate-profile-2 read-more-wrap">
           <br>
@@ -792,7 +792,9 @@
 
           <!-- <button class="btn btn-readmore">แสดงเพิ่ม</button> -->
         </div>
-        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
+
+        <label for="post-1" class="read-more-trigger btn-readmore btn-res" style="position: absolute;"></label>
+
       </div>
 
 
