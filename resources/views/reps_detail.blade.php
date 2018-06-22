@@ -947,7 +947,7 @@ blockquote {
     font-family: 'Kanit', sans-serif;
     /* max-width: 249px; */
     margin: auto auto 24px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2;
 }
 .candidate-profile p {
     font-family: 'Kanit', sans-serif;
@@ -988,8 +988,8 @@ blockquote {
 }
 .img-in-chart-in3 {
     margin-top: -3px;
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
 }
 </style>
 
@@ -1107,11 +1107,11 @@ blockquote {
   max-height: 999em;
 }
 
-.read-more-state ~ .read-more-trigger:before {
+.read-more-state ~ div.read-more-trigger:before {
   content: 'แสดงเพิ่ม';
 }
 
-.read-more-state:checked ~ .read-more-trigger:before {
+.read-more-state:checked ~ div.read-more-trigger:before {
   content: 'แสดงลดลง';
 }
 
@@ -1219,7 +1219,10 @@ background-color: #FFFFFF;
 
 
                                         </div>
-                                        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
+                                        <div class="col-md-12 text-center" >
+                                            <button for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></button>
+                                          </div>
+
                                     </div>
 
 
