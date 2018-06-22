@@ -748,7 +748,7 @@
       border-radius: 16px;
       background-color: #FFFFFF;
       }
-      
+
       </style>
 
 
@@ -1010,7 +1010,7 @@
 
 
 
-<section id="contact">
+<section id="contact" class="line-sector">
   <div class="container candidate-link">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
