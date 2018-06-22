@@ -203,7 +203,7 @@ input:checked{
 
       @if($objs)
          @foreach($objs as $u)
-      <div class="item itemch-z delz-{{$s}} size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 3px;cursor: pointer; padding: 5px;">{{$u->name_quiz}}
+      <div class="item itemch-z delz-{{$s}} size-{{$u->options}}" onclick="javascript:check('itemch-{{$u->id_q}}');" style="margin: 3px 3px 3px 10px;cursor: pointer; padding: 5px;">{{$u->name_quiz}}
       <input type="checkbox" class="checkbox1" name="quiz[]" id="itemch-{{$u->id_q}}" value="{{$u->id_q}}" >
     </div id="{{$s++}}">
       @endforeach
