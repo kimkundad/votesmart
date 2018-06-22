@@ -359,17 +359,7 @@ figure {
 					</div>
           </li>
 
-          <li class="nav-item hidden-sm hidden-xs">
 
-
-
-
-
-
-
-
-
-          </li>
         @endif
 
       </ul>
@@ -377,11 +367,6 @@ figure {
 
 
 
-      <ul class="nav navbar-nav navbar-right hidden-xs">
-
-
-
-      </ul>
 
 
 

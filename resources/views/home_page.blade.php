@@ -93,7 +93,7 @@
         border-radius: 8px;
         background-color: #FFFFFF;
         box-shadow: 0 2px 12px  rgba(0,0,0,0.06);
-        padding: 25px;
+        padding: 28px;
     }
     .cta h3{
         color: #0479BD;
@@ -114,7 +114,7 @@
         text-align: center;
         max-width: 185px;
         margin: auto;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .cta a{
         color: #08B0ED;
@@ -202,14 +202,25 @@
             font-size: 14px;
         }
         .text-h2 h2{
-            font-size: 40px;
-            line-height: 60px;
-            margin-bottom: 20px;
+            font-size: 22px;
+          /*  line-height: 60px;
+            margin-bottom: 20px; */
         }
         .text-p{
             font-size: 16px;
             line-height: 24px;
         }
+        .text-h2 h2 {
+    color: #0479BD;
+
+    font-weight: 500;
+    letter-spacing: 0.42px;
+    line-height: 28px;
+  /*  text-shadow:4px 4px 2px #5EC8F2; */
+
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2;
+
+}
     }
     @media only screen and (max-width:767px){
 
@@ -249,8 +260,8 @@
             max-width: 245px
         }
         .section-one-left{
-          padding-left: 30px;
-    padding-right: 30px;
+          padding-left: 40px;
+    padding-right: 40px;
             height: 300px;
         }
         .section-footer p{
@@ -258,7 +269,7 @@
         }
         .text-h2{
             text-align: center;
-            margin-bottom: 30p;
+            margin-bottom: 30px;
         }
         .cta p{
             font-size: 18px;
@@ -272,6 +283,10 @@
 
     @media (max-width: 767px)
     {
+
+      .section-two {
+    padding: 35px 35px;
+}
 
 
       .btn-lp {
@@ -290,7 +305,7 @@
     line-height: 35px;
     color: #fff;
     /* max-width: 241px; */
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
       .nav-mo-golf{
 
@@ -529,6 +544,10 @@ label {
 .p-pop {
     font-size: 13px;
 }
+.justify-content-start {
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+}
   </style>
 <nav class="navbar navbar-expand-lg nav-mo-golf navbar-dark page-header" id="mainNav" style="background-color: transparent;">
     <div class="container-fluid">
@@ -538,7 +557,11 @@ label {
       data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-dark navbar-toggler-icon"></span>
       </button>
+
+      <div class="header-column justify-content-start">
       <a class="navbar-brand " href="{{url('/')}}" style="font-size: 1.8rem; padding-top: 10px; font-weight: 700;"><I>เลือกได้...เลือกดี</I></a>
+      </div>
+
 
       <div class="btn-varunteer visible-sm visible-xs" style="padding: 12px 6px 12px 26px;  padding-left: 8px; border-left: 1px solid #b0e7f9;">
         <a data-toggle="modal" data-target="#myModal" href="#" style="font-size: 14px; color: #fff; ">
@@ -557,7 +580,7 @@ label {
 
                     <div class="modal-body text-center">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
+style="color:#fff; font-weight: 500; text-shadow: 0 0px 0 #fff; opacity: 1;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
 
                       <br><br>
                       <h3 class="text-center">อาสา</h3>
@@ -761,8 +784,7 @@ style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="
           </li>
 
           <li class="nav-item nav-item-3 hidden-sm hidden-xs">
-            <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style="margin-right: 120px; margin-top: 8px;" href="#" data-toggle="modal" data-target="#myModal">
-            <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+
             </li>
 
 
@@ -865,6 +887,56 @@ style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="
 
 
       </div>
+
+
+
+
+
+
+      <style>
+      a.btn-asa{
+
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(35,31,32,0.24);
+}
+a:hover.btn-asa{
+
+background-color: #5ec8f2;
+border: 1px solid #FFFFFF;
+border-radius: 24px;
+color: #fff;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+text-shadow: 0 1px 2px rgba(35,31,32,0.24);
+}
+      </style>
+
+
+      <div class="hidden-sm hidden-xs">
+        <div class="justify-content-start">
+      <a class="btn btn-light btn-asa btn-xl js-scroll-trigger " style=" margin-top: 8px;" href="#" data-toggle="modal" data-target="#myModal">
+      <i class="fa fa-hand-paper-o"></i> อาสาช่วยงาน</a>
+    </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </nav>
 
@@ -899,7 +971,7 @@ style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="
                                     @endif
 
 
-                                  
+
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -916,7 +988,7 @@ style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="
                                 <img src="{{url('assets/image/pie.svg')}}" class="the-icon">
                                 <h3>เลือกได้</h3>
                                 <p>ร่วมกันแสดงออกว่า เราเลือกอะไร</p>
-                                <a href="/redirect">เข้าร่วม  &gt;</a>
+                                <a href="{{url('redirect')}}"><span style="font-size: 18px;">เข้าร่วม</span>  <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -925,16 +997,16 @@ style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true" style="
                                 <h3>เลือกดี</h3>
                                 <p>จะเลือกใคร..เลือกให้ดี?
                                         รู้จักเค้าคนนั้นดีหรือยัง</p>
-                                <a href="/representatives_all">ดูข้อมูลผู้สมัคร &gt;</a>
+                                <a href="{{url('representatives_all')}}"><span style="font-size: 18px;">ดูข้อมูลผู้สมัคร</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="cta text-center">
+                            <div class="cta text-center" style="    margin-bottom: 0px;">
                                     <img src="{{url('assets/image/paper.svg')}}" class="the-icon">
-                                <h3>อาสา</h3>
+                                <h3 style="    margin-bottom: 15px;     margin-top: 17px;">อาสา</h3>
                                 <p>ยินดีเสมอถ้าจะมีคน
                                         มาช่วยกันเปลี่ยนแปลง</p>
-                                <a href="#">อาสาช่วยงาน &gt;</a>
+                                <a data-toggle="modal" data-target="#myModal" href="#"><span style="font-size: 18px;">อาสาช่วยงาน</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                      </div>
