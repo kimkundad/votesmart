@@ -1219,10 +1219,7 @@ background-color: #FFFFFF;
 
 
                                         </div>
-                                        <div class="col-md-12 text-center" >
-                                            <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
-                                          </div>
-
+                                        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
                                     </div>
 
 
