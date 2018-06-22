@@ -1254,7 +1254,7 @@ input[type="radio"]:disabled + .label-text:before{
   font-family: 'Kanit', sans-serif;
   /* max-width: 249px; */
   margin: auto auto 24px;
-  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2;
+  text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2;
 }
 
   .img-in-chart-in2 {
