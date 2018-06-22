@@ -1077,8 +1077,8 @@
   </div>
 
 
-  <div class="col-md-12" style="margin-top: 40px;">
-    <br><br>
+  <div class="col-md-12" >
+
     <div class="text-center" >
       <h3 class="show-vision"><a href="#link-to-rep">ค้นหาผู้สมัครในพื้นที่ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
     </div>
