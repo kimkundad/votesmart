@@ -373,7 +373,7 @@
 
 
           </div>
-          <div class="user-name">
+          <div class="user-name 12">
             <p style="margin-bottom: 0px; font-size:12px; color:#9e9e9e;">{{$j->name}}</p>
           </div>
         </div>
