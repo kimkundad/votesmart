@@ -920,7 +920,7 @@
 }
 </style>
 
-<section id="result" class="bg-dark">
+<section id="result" class="bg-dark line-sector">
   <div class="container share-vision text-center">
     <h2 class="mb-4 section-heading">แชร์วิสัยทัศน์ของคุณให้เพื่อนรู้</h2>
     <h3 class="show-vision">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ</h3>
@@ -997,13 +997,13 @@
 
   <div class="container  text-center" style="margin-top: 40px;">
 
-    <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; color: #08B0ED; margin-bottom: 10px;">
+    <a class="colormycanvas btn btn-light btn-xl save-result" id="colormycanvas" style="border: 1px solid #08B0ED; background: transparent; color: #08B0ED; margin-bottom: 10px;">
       <i class="fa fa-download"></i> เซฟรูปนี้
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     </a>
 
     <a class="btn btn-xl btn-primary " id="shared" style="margin-bottom: 10px;" href="#">
-      <i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
+      <i class="fa fa-facebook-square"></i> แชร์บน facebook</a>
 
   </div>
 
