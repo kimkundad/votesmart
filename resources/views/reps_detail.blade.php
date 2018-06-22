@@ -1171,9 +1171,9 @@ background-color: #FFFFFF;
 
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" style="text-align: center;">
                                       <input type="checkbox" class="read-more-state btn-readmore" id="post-1" />
-                                        <div class="candidate-profile-2 read-more-wrap" >
+                                        <div class="candidate-profile-2 read-more-wrap" style="text-align: left;">
                                         <h2 class="hidden-sm hidden-xs">{{$user->name}} อยากจะผลักดัน เรื่องเหล่านี้ (เป็นพิเศษ)</h2>
                                           <h2 class="text-center visible-sm visible-xs" style="font-size: 28px;">ประเด็นสำคัญ</h2>
                                           <br><br>
@@ -1219,7 +1219,7 @@ background-color: #FFFFFF;
 
 
                                         </div>
-                                        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
+                                        <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute; margin-left: -35px;"></label>
                                     </div>
 
 
