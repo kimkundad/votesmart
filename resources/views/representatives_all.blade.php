@@ -486,7 +486,7 @@ input:-webkit-autofill {
 
 <div class="col-md-12">
 
-<div id="map" style="display: inline-table;"></div>
+<div id="map" style="display: inline-table; position: absolute; top: 0px; bottom: 0px;"></div>
 </div>
 
 
