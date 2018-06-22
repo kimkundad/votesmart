@@ -1107,11 +1107,11 @@ blockquote {
   max-height: 999em;
 }
 
-.read-more-state ~ label.read-more-trigger:before {
+.read-more-state ~ .read-more-trigger:before {
   content: 'แสดงเพิ่ม';
 }
 
-.read-more-state:checked ~ label.read-more-trigger:before {
+.read-more-state:checked ~ .read-more-trigger:before {
   content: 'แสดงลดลง';
 }
 
