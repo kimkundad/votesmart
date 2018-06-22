@@ -796,7 +796,7 @@
       <div class="col-md-12" style="margin-top: 40px;">
         <br><br>
         <div class="text-center" >
-          <h3 class="show-vision"><a href="#show-image">หรือจะเซฟไว้ใช้ ลงเลือกตั้งในอนาคตก็ได้นะ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
+          <h3 class="show-vision" ><a href="#show-image" style="color: #0479BD;">วิสัยทัศน์ดีแบบนี้ <br>เราเลยสร้างโปสเตอร์หาเสียงให้คุณแล้วล่ะ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
         </div>
       </div>
 
@@ -1006,6 +1006,14 @@
       <i class="fa fa-facebook-f"></i> แชร์บน facebook</a>
 
   </div>
+
+
+  <div class="col-md-12" style="margin-top: 40px;">
+    <br><br>
+    <div class="text-center" >
+      <h3 class="show-vision"><a href="#link-to-rep">ค้นหาผู้สมัครในพื้นที่ <br><i class="fa fa-angle-down" style="font-size:38px; font-weight: 700;"></i></a></h3>
+    </div>
+  </div>
 </section>
 
 
@@ -1016,7 +1024,7 @@
       <div class="col-lg-8 mx-auto text-center">
         <div class="panel-body">
           <div class="share-vision">
-            <h2 class="mb-4 section-heading">จะต้องบอกใครดี?</h2>
+            <h2 class="mb-4 section-heading" id="link-to-rep">จะต้องบอกใครดี?</h2>
             <h3 class="show-vision">ค้นหาผู้สมัครในพื้นที่ เพื่อผลักดันเรื่องที่คุณสนใจ</h3>
           </div>
 
