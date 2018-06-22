@@ -748,12 +748,7 @@
       border-radius: 16px;
       background-color: #FFFFFF;
       }
-      h3.show-vision {
-    color: #0479BD;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 30px auto;
-}
+      
       </style>
 
 
