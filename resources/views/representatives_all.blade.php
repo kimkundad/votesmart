@@ -444,10 +444,10 @@ input:-webkit-autofill {
 
 
 
-<section id="services" class="representatives_all" style="background: #f2f8fa; ">
+<section id="services" class="representatives_all" style="background: #f2f8fa; height: 100%;">
 
-  <div class="">
-    <div class="row">
+  <div class="" style="height: 100%;>
+    <div class="row" style="height: 100%;>
 
 
       <style>
@@ -484,9 +484,9 @@ input:-webkit-autofill {
     }
       </style>
 
-<div class="col-md-12">
+<div class="col-md-12" style="height: 100%;">
 
-<div id="map" style="display: inline-table; height: calc(100% - 4em);"></div>
+<div id="map" style="height: 100%;"></div>
 </div>
 
 
