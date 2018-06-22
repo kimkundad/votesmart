@@ -1247,7 +1247,7 @@ input[type="radio"]:disabled + .label-text:before{
 
   .candidate-profile2 h2 {
   color: #0479BD;
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 500;
   line-height: 64px;
   text-align: center;
