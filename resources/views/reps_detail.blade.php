@@ -978,7 +978,7 @@ blockquote {
 }
 .set-rotate2{
     position: absolute;
-    top: 270px;
+    top: 360px;
     background:none !important;
 }
 .img-in-chart-in2{
@@ -1600,8 +1600,12 @@ height: 90%;
                             <div class="candidate-gallery container hidden-sm hidden-xs">
                                 <div class="row">
                                     <div class="col-md-12">
+                                      <div class="text-center">
+                                        <h3 class="candidate-title">รูปภาพ</h3>
+                                      </div>
                                         <div class="row">
-                                            <h3 class="candidate-title">รูปภาพ</h3>
+
+
                                             <div class="gallery-image">
                                                 <div class="row magnific-gallery" id="load-data">
 
@@ -1657,7 +1661,7 @@ height: 90%;
 
 <style>
 .candidate-schedule {
-    padding: 70px 0;
+    padding: 40px 0;
 }
 .candidate-schedule .candidate-title {
     text-align: center;
@@ -1865,7 +1869,7 @@ return "$strDay $strMonthThai";
                             <div class="candidate-social-feed container">
                             <div class="row">
                               <div class="col-md-12">
-                                <h3 class="candidate-title text-center hidden-sm hidden-xs">Social Feed</h3>
+                                <h3 class="candidate-title text-center hidden-sm hidden-xs" style="margin-bottom: 10px;">Social Feed</h3>
                                 <h3 class="candidate-title text-center visible-sm visible-xs" style="font-size: 22px;">Social Feed</h3>
                                 </div>
 
@@ -1873,7 +1877,7 @@ return "$strDay $strMonthThai";
                                 <div class="col-md-12">
                                     <div class="row">
 
-                                        <section class="feed hidden-sm hidden-xs" style="    padding: 2rem 0;">
+                                        <section class="feed hidden-sm hidden-xs" style="    padding: 0rem 0;">
                                             <div class="container" id="container">
                                                 <div class="social-feed-container col-md-12" id="images">
 
