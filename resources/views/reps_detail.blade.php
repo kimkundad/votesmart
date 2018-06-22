@@ -1107,11 +1107,11 @@ blockquote {
   max-height: 999em;
 }
 
-.read-more-state ~ div.read-more-trigger:before {
+.read-more-state ~ label.read-more-trigger:before {
   content: 'แสดงเพิ่ม';
 }
 
-.read-more-state:checked ~ div.read-more-trigger:before {
+.read-more-state:checked ~ label.read-more-trigger:before {
   content: 'แสดงลดลง';
 }
 
@@ -1220,7 +1220,7 @@ background-color: #FFFFFF;
 
                                         </div>
                                         <div class="col-md-12 text-center" >
-                                            <button for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></button>
+                                            <label for="post-1" class="read-more-trigger btn-readmore" style="position: absolute;"></label>
                                           </div>
 
                                     </div>
