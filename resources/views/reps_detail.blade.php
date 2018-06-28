@@ -1898,9 +1898,7 @@ return "$strDay $strMonthThai";
 
                                           </style>
                                             <div class="container" id="container" >
-                                                <div class="social-feed-container col-md-12" id="images" style="width: 100%; padding-right: 1px; padding-left: 1px;">
-
-                                                </div>
+                                                <ul class="juicer-feed" data-feed-id="teeneejj"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
                                             </div>
                                         </section>
 
@@ -1929,15 +1927,16 @@ return "$strDay $strMonthThai";
 <script src="{{url('social-feed-gh-pages/js/jquery.min.js')}}"></script>
 <script src="{{url('front/js/Chart.bundlev2.js?v1')}}"></script>
 
+<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
 
-<script src="{{url('social-feed-gh-pages/js/codebird.js')}}"></script>
-<script src="{{url('social-feed-gh-pages/js/doT.min.js')}}"></script>
-<script src="{{url('social-feed-gh-pages/js/moment.min.js')}}"></script>
-<script src="{{url('social-feed-gh-pages/js/jquery.socialfeed.js')}}"></script>
 
 <!-- <script src="//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
 
 <style>
+.juicer-feed h1.referral{
+  display: none !important;
+}
 .social-feed-container {
     column-gap: 0 !important;
     column-count: 1;
@@ -1983,62 +1982,7 @@ $(document).ready(function(){
 </script>
 
 
-<script>
 
-    $(document).ready(function() {
-
-            var updateFeed = function() {
-            var initialQuery = '{{$user->fb}}, {{$user->tw}}';
-            console.log(initialQuery)
-            initialQuery = initialQuery.replace(" ", "");
-            var queryTags = initialQuery.split(",");
-            $('.social-feed-container').socialfeed({
-                // FACEBOOK
-                facebook: {
-                    accounts: queryTags,
-                    limit: 10,
-                    access_token: '148045139197033|9700abf8c7597c486b232d39d7d4ee55',
-                },
-
-
-                // Twitter
-             twitter: {
-                    accounts: queryTags,
-                    limit: 10,
-                    consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
-                    consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
-                },
-
-                 instagram: {
-                    accounts: queryTags,
-                    limit: 10,
-                    client_id: '	2ddfdc0d93fc41f29a7a7c9fda0bf926',
-                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
-                },
-
-                // GENERAL SETTINGS
-                //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
-
-                length: 200,
-                show_media: true,
-                template : "{{secure_url('social-feed-gh-pages/template.html')}}",
-                // Moderation function - if returns false, template will have class hidden
-                moderation: function(content) {
-                    return (content.text) ? content.text.indexOf('porn') == -1 : true;
-                },
-                //update_period: 5000,
-                // When all the posts are collected and displayed - this function is evoked
-                callback: function() {
-                    console.log('all posts are collected');
-                }
-            });
-        };
-
-        updateFeed();
-
-
-    });
-    </script>
 
 
 
