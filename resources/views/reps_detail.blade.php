@@ -1870,7 +1870,7 @@ return "$strDay $strMonthThai";
                             <div class="row">
                               <div class="col-md-12">
                                 <h3 class="candidate-title text-center hidden-sm hidden-xs" style="margin-bottom: 30px;">Social Feed</h3>
-                                <h3 class="candidate-title text-center visible-sm visible-xs" style="font-size: 22px; margin-bottom: -15px;    margin-top: -19px;">Social Feed</h3>
+                                <h3 class="candidate-title text-center visible-sm visible-xs" style="font-size: 22px; margin-bottom:20px;    margin-top: -19px;">Social Feed</h3>
                                 </div>
 
 
