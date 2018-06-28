@@ -1879,9 +1879,7 @@ return "$strDay $strMonthThai";
 
                                         <section class="feed hidden-sm hidden-xs" style="    padding: 0rem 0;">
                                             <div class="container" id="container">
-                                                <div class="social-feed-container col-md-12" id="images">
-
-                                                </div>
+                                              <ul class="juicer-feed" data-feed-id="teeneejj"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
                                             </div>
                                         </section>
 
@@ -1898,7 +1896,7 @@ return "$strDay $strMonthThai";
 
                                           </style>
                                             <div class="container" id="container" >
-                                                <ul class="juicer-feed" data-feed-id="teeneejj"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
+
                                             </div>
                                         </section>
 
