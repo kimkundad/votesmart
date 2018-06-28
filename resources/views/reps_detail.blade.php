@@ -1997,7 +1997,7 @@ $(document).ready(function(){
                 facebook: {
                     accounts: queryTags,
                     limit: 10,
-                    access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c',
+                    access_token: '148045139197033|9700abf8c7597c486b232d39d7d4ee55',
                 },
 
 
