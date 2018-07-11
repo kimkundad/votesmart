@@ -303,6 +303,10 @@ input[type="radio"]:disabled + .label-text:before{
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   h3.show-vision {
 color: #0479BD;
@@ -515,6 +519,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   .rep_detail2{
     text-align: center;
@@ -727,6 +735,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
 
   .rep_detail2{
@@ -829,6 +841,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   .rep_detail2{
     text-align: center;
@@ -933,6 +949,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   .rep_detail2{
     text-align: center;
@@ -1043,6 +1063,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
 
   .rep_detail2{
@@ -1154,6 +1178,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   .rep_detail2{
     text-align: center;
@@ -1261,6 +1289,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: -35px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
 
   .rep_detail2{
@@ -1367,6 +1399,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: 0px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
   .rep_detail2{
     text-align: left;
@@ -1478,6 +1514,10 @@ margin: 30px auto 0px auto;
   .btn-res{
     margin-left: 0px;
   }
+  .btn-res1 {
+    bottom: 0px;
+    margin-left: -35px;
+}
 
 
   .rep_detail2{

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\User;
 use App\about;
+use App\localreps;
+use App\constituency;
 use App\Http\Requests;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +23,136 @@ class RepresentProController extends Controller
      {
        $this->middleware('auth');
      }
+
+     public function constituency_edit(Request $request, $id){
+       $request->user()->authorizeRoles(['manager']);
+
+       $data['datahead'] = "แก้ไขเขตเลือกตั้ง";
+       $data['method'] = "put";
+
+       $obj_z = DB::table('provinces')->select(
+             'provinces.*'
+             )
+             ->where('id', $id)
+             ->first();
+           //  dd($obj);
+       $districts = DB::table('districts')->select(
+             'districts.*',
+             'districts.id as id_dd',
+             'constituencies.dis_id'
+             )
+             ->leftjoin('constituencies', 'constituencies.dis_id',  'districts.id')
+             ->where('districts.province_id', $obj_z->id)
+             ->where('districts.id', '!=' , 'constituencies.dis_id')
+             ->get();
+
+
+
+             $message = DB::table('constituencies')
+              ->select(
+              DB::raw('constituencies.*')
+              )
+              ->where('prov_id', $id)
+              ->groupBy('con_id')
+              ->get();
+
+
+
+             //  dd($message);
+
+
+
+              foreach ($message as $obj_get_1) {
+
+
+
+                $message2 = DB::table('constituencies')
+                 ->select(
+                 'constituencies.*',
+                 'constituencies.id as id_del'
+                 )
+                 ->where('con_id', $obj_get_1->con_id)
+                 ->get();
+
+
+                 $obj_get_1->option = $message2;
+
+                 foreach ($obj_get_1->option as $obj_get_2) {
+
+                   $get_dis = DB::table('districts')
+                    ->select(
+                    'districts.*'
+                    )
+                    ->where('id', $obj_get_2->dis_id)
+                    ->first();
+
+                    $obj_get_2->name_dis = $get_dis->name_in_thai;
+
+                 }
+
+
+
+
+
+
+              }
+
+             // dd($districts);
+
+       $data['message'] = $message;
+       $data['districts'] = $districts;
+       $data['objs'] = $obj_z;
+
+
+
+
+
+
+
+
+
+       return view('Represent.constituency.edit', $data);
+     }
+
+     public function get_constituency(Request $request){
+
+       $request->user()->authorizeRoles(['manager']);
+
+
+
+
+       $cat = DB::table('provinces')->select(
+             'provinces.*',
+             'provinces.id as id_p'
+             )
+             ->orderBy('id', 'desc')
+             ->get();
+
+             foreach ($cat as $obj) {
+
+               $count_constituencies = DB::table('constituencies')
+                 ->where('prov_id', $obj->id)
+                 ->groupBy('con_id')
+                 ->count();
+
+                 $obj->count_constituencies = $count_constituencies;
+
+
+                 $count_con = DB::table('constituencies')
+                   ->where('prov_id', $obj->id)
+                   ->count();
+
+                   $obj->count_con = $count_con;
+
+             }
+
+
+               $data['objs'] = $cat;
+         //
+         $data['datahead'] = "เขตเลือกตั้ง";
+         return view('Represent.constituency.index', $data);
+
+     }
      public function index(Request $request)
      {
        $request->user()->authorizeRoles(['manager']);
@@ -31,6 +163,17 @@ class RepresentProController extends Controller
          )
          ->where('user_id', Auth::user()->id)
          ->get();
+
+
+
+         $localreps = DB::table('localreps')
+           ->select(
+           'localreps.*'
+           )
+           ->where('reps_id', Auth::user()->id)
+           ->get();
+
+           $data['localreps'] = $localreps;
 
          $count = DB::table('abouts')
            ->select(
@@ -193,6 +336,30 @@ class RepresentProController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function add_localreps(Request $request){
+
+      $con_id = $request['con_id'];
+      date_default_timezone_set("Asia/Bangkok");
+      $data_toview = date("Y-m-d H:i:s");
+
+      for ($i = 0; $i < sizeof($con_id); $i++) {
+
+        $id = $con_id[$i];
+
+
+     //   $gallary[$i]
+        $admins[] = [
+            'reps_id' => Auth::user()->id,
+            'con_id' => $con_id[$i],
+            'created_at' => $data_toview,
+        ];
+
+      }
+      localreps::insert($admins);
+      return redirect(url('representatives/profile'))->with('add_localrep_success','คุณทำการแก้ไขอสังหา สำเร็จ');
+
+    }
     public function add_about(Request $request)
     {
         //
@@ -215,6 +382,17 @@ class RepresentProController extends Controller
         }
         about::insert($admins);
         return redirect(url('representatives/profile'))->with('add_about_success','คุณทำการแก้ไขอสังหา สำเร็จ');
+    }
+
+
+    public function del_localreps(Request $request)
+    {
+
+      $id = $request['id'];
+      $obj = localreps::find($id);
+      $obj->delete();
+      return redirect(url('representatives/profile'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
+
     }
 
     public function del_about(Request $request)

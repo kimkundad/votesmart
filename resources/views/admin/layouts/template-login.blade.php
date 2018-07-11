@@ -7,7 +7,7 @@
         <title>Administrators Login</title>
         <meta name="keywords" content="Teeneejj Login" />
         <meta name="description" content="Teeneejj Login">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

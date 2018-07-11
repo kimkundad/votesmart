@@ -81,6 +81,13 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 										</a>
 									</li>
 
+                  <li {{ (Request::is('representatives/constituency*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('representatives/constituency/')}}"  >
+											<i class="fa fa-bug" aria-hidden="true"></i>
+											<span>เขตเลือกตั้ง</span>
+										</a>
+									</li>
+
 
 
 

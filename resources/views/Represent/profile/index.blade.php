@@ -444,6 +444,110 @@
 
 
 
+                    <div class="col-md-4">
+                   </div>
+
+<style>
+.entry1{
+    margin-bottom: 10px;
+}
+
+</style>
+
+
+                   <div class="col-md-8">
+
+
+                     <div class="tabs">
+
+                       <div class="tab-content">
+
+                         <div id="edit" class="tab-pane active">
+                             <h2 class="panel-title">เขตพื้นที่ ผู้สมัคร ส.ส. บัญชีรายชื่อ</h2>
+                             @if($count > 0)
+                             <br>
+
+                             <table class="table mb-none">
+                     <thead>
+                       <tr>
+                         <th>#</th>
+                         <th>เขตพื้นที่</th>
+
+                         <th style="width: 20px;">จัดการ</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       @if($localreps)
+                   @foreach($localreps as $u)
+                       <tr>
+                         <td>{{$s}}</td>
+                         <td>เขตพื้นที่ : {{$u->con_id}}</td>
+
+                         <td>
+                           <form  action="{{url('del_localreps')}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                             <input type="hidden" name="id" value="{{$u->id}}">
+                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                             <button type="submit" title="ลบเขตพื้นที่" class="btn btn-danger btn-xs"><i class="fa fa-times "></i></button>
+                           </form>
+                         </td>
+                       </tr id="{{$s++}}">
+                       @endforeach
+                   @endif
+                     </tbody>
+                   </table>
+                   @endif
+                             <br>
+                             <form  method="POST" action="{{ url('add_localreps') }}">
+
+                                       {{ csrf_field() }}
+
+
+                                       <div class="control-group" id="fields">
+                                         <label class="control-label" for="field1">คุณสามารถเพิ่มเขตพื้นที่เลือกตั้งได้มากกว่า 1 ข้อมูลจะเชื่อมกับ จังหวัดที่ท่านเลือกไว้ด้านบน **
+                                         <a href="{{url('representatives/constituency')}}">ดูรายละเอียดของเขตพื้นที่เลือกตั้ง</a></label>
+                                         <div class="controls1">
+
+                                               <div class="ssl">
+                                                 <div class="entry1 input-group ">
+
+                                                     <select class="form-control " name="con_id[]">
+                                                       <?php
+                                                         $i = 33;
+                                                         for($j = 1; $j <= $i; $j++){
+                                                           echo "<option value=".$j.">เขตเลือกตั้งที่ ".$j."</option>";
+                                                         }
+                                                         ?>
+
+
+                           													</select>
+                                                   <span class="input-group-btn">
+                                                         <button class="btn btn-success btn-add1" type="button">
+                                                             <span class="glyphicon glyphicon-plus"></span>
+                                                         </button>
+                                                     </span>
+                                                 </div>
+                                                 </div>
+
+                                         <br>
+                                         <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>
+                                         </div>
+                                     </div>
+
+
+                          <legend class="section"></legend>
+                           <div class="text-center">
+                           <button type="submit" class="btn btn-primary" onclick="clicksound.playclip()"><i class="fa fa-save"></i> อัพเดทข้อมูล</button>
+                           <button type="reset" class="btn btn-default" onclick="showhide('#show','#add');"><i class="fa fa-eraser"></i> ยกเลิก</button>
+                           </div>
+                         </form>
+
+                           </div>
+                           </div>
+                           </div>
+
+
+                   </div>
+
 
 
 
@@ -522,6 +626,29 @@ $(document).on('click', '.btn-add', function(e)
       newEntry.find('input').val('');
       controlForm.find('.entry:not(:last) .btn-add')
           .removeClass('btn-add').addClass('btn-remove')
+          .removeClass('btn-success').addClass('btn-danger')
+          .html('<span class="glyphicon glyphicon-minus"></span>');
+  }).on('click', '.btn-remove', function(e)
+  {
+  $(this).parents('.entry:first').remove();
+
+  e.preventDefault();
+  return false;
+});
+
+
+
+$(document).on('click', '.btn-add1', function(e)
+  {
+      e.preventDefault();
+
+      var controlForm = $('.controls1 .ssl:first'),
+          currentEntry = $(this).parents('.entry1:first'),
+          newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+      newEntry.find('input').val('');
+      controlForm.find('.entry:not(:last) .btn-add1')
+          .removeClass('btn-add1').addClass('btn-remove')
           .removeClass('btn-success').addClass('btn-danger')
           .html('<span class="glyphicon glyphicon-minus"></span>');
   }).on('click', '.btn-remove', function(e)
@@ -710,6 +837,21 @@ var myOptions = {
           });
 </script>
 @endif
+
+@if ($message = Session::get('add_localrep_success'))
+<script type="text/javascript">
+
+  var stack_topleft = {"dir1": "down", "dir2": "right", "push": "top"};
+      var notice = new PNotify({
+            title: 'ทำรายการสำเร็จ',
+            text: 'ยินดีด้วย ได้ทำการเพิ่มข้อมูล สำเร็จเรียบร้อยแล้วค่ะ',
+            type: 'success',
+            addclass: 'stack-topright'
+          });
+</script>
+@endif
+
+
 
 @if ($message = Session::get('del_success'))
 <script type="text/javascript">

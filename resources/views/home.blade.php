@@ -7,7 +7,7 @@
   .zoom-menu li {
     border:none !important;
   }
-  
+
 
 .swiper-wrapper #content-home1 {
   width:100% !important;
@@ -151,6 +151,67 @@
     }
   }
 
+
+</style>
+
+<style>
+.candidate-profile-2 h2 {
+
+    color: #0479BD;
+    font-family: 'Kanit', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 56px;
+    text-align: left;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2;
+}
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'แสดงเพิ่ม';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'แสดงลดลง';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+.btn-readmore{
+
+  padding: 7px 15px;
+color: #495057;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+border: 1px solid #6c757d;
+border-radius: 16px;
+background-color: #FFFFFF;
+}
 
 </style>
 
@@ -312,6 +373,9 @@
     .jscroll-inner{
       width:100%;
     }
+    .mo-content{
+      background-color: #ffffff;
+    }
 
   </style>
 
@@ -375,15 +439,28 @@
         </div>
       </a>
 
+
+
+
+
+
+
+      </div>
+
+
+
+
+
       <!-- Modal -->
-      <div class="modal fade" id="myModal-{{$j->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 10000;">
+
+        <div class="modal fade" id="myModal-{{$j->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 10000;">
         <div class="modal-dialog" role="document" style="border: 1px solid rgba(33, 37, 41, 0.1);">
-          <div class="modal-content1">
+          <div class="modal-content mo-content">
 
             <div class="modal-body text-center">
 
 
-              <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove"></i></span></a>
+              <a data-dismiss="modal" aria-label="Close" class="view-more"><span aria-hidden="true" class="plus-sign"><i class="fa fa-remove" style="color: #666;"></i></span></a>
 
               <br><br>
               <div class="parent-chart" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0); border-radius: 8px;">
@@ -408,31 +485,35 @@
 
               <h5 class="text-center" style="color: #0479bd; font-weight: 700; font-size:20px;">{{$j->name}}</h5>
               <p class="p-pop">เลือกประเด็นสำคัญดังนี้</p>
+              <?php
+              $k = 1;
+               ?>
+
+
+               <input type="checkbox" class="read-more-state btn-readmore" id="post-{{$j->id}}" />
+               <div class="candidate-profile-2 read-more-wrap">
 
               @if(isset($j->labels))
                   @foreach($j->labels as $u)
-
-
-
-                  <div class="education">
+                  <div class="education @if($k > 3)
+                   read-more-target
+                   @endif">
                       <p>
-                          <span style="background-color: {{$u->color_bg}};">1</span>{{$u->name_cat}}</p>
+                          <span style="background-color: {{$u->color_bg}};">{{$k}}</span>{{$u->name_cat}}</p>
                       <ul>
                         @if(isset($u->options))
                             @foreach($u->options as $u1)
                           <li style="background: {{$u->color_bg}};">{{$u1->name_quiz}}</li>
-
                           @endforeach
                         @endif
-
-                      </ul>
+                      </ul {{$k++}}>
                   </div>
-
-
-
                   @endforeach
               @endif
 
+            </div>
+
+            <label for="post-{{$j->id}}" class="read-more-trigger btn-readmore btn-res1" style="position: absolute;"></label>
 
 
 
@@ -440,12 +521,6 @@
 
           </div>
         </div>
-      </div>
-
-
-
-
-
       </div>
 
 
@@ -695,6 +770,8 @@
 </div>';
 
 $(document).ready(function () {
+
+
 
   $("#services .row").prepend(the_add_quiz);
 

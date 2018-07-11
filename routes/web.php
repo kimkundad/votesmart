@@ -54,13 +54,19 @@ Route::group(['middleware' => 'auth'], function () {
   Route::post('save_image', 'HomeController@save_image');
   Route::get('get_avatar', 'HomeController@get_avatar');
   Route::get('representatives/dashboard', 'RepresentDashController@index');
+
   Route::resource('representatives/profile', 'RepresentProController');
   Route::post('image-crop', 'RepresentProController@imageCropPost');
   Route::post('add_about', 'RepresentProController@add_about');
+  Route::post('add_localreps', 'RepresentProController@add_localreps');
+
+  Route::post('del_localreps', 'RepresentProController@del_localreps');
   Route::post('del_about', 'RepresentProController@del_about');
   Route::resource('representatives/exper', 'ExperController');
   Route::resource('representatives/education', 'EducationController');
   Route::resource('representatives/timeline', 'TimelineController');
+  Route::get('representatives/constituency', 'RepresentProController@get_constituency');
+  Route::get('representatives/constituency_edit/{id}', 'RepresentProController@constituency_edit');
   Route::resource('representatives/gallery', 'GalleryController');
   Route::post('representatives/gallery', 'GalleryController@add_gallery');
   Route::post('representatives/property_image_del', 'GalleryController@property_image_del');

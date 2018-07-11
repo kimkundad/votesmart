@@ -274,6 +274,7 @@ class VoteresultController extends Controller
               )
               ->leftjoin('quizzes', 'quizzes.id',  'votesmarts.quiz_id')
               ->where('votesmarts.category_id', $obj->result_id)
+              ->where('votesmarts.user_id', $objs->id)
               ->get();
 
         $optionsRes = $options;
