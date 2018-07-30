@@ -79,7 +79,7 @@ a:hover, a:focus {
                       <th>#</th>
                       <th>ชื่อหมวดหมู่</th>
                       <th>จำนวน Quiz</th>
-                      <th>ผู้สร้าง</th>
+                      <th>สีหมวดหมู่</th>
                       <th>วันที่สร้าง</th>
                       <th>จัดการ</th>
                     </tr>
@@ -91,7 +91,7 @@ a:hover, a:focus {
                       <td>{{$u->id_c}}</td>
                       <td>{{$u->name_cat}}</td>
                       <td>{{$u->options}}</td>
-                      <td>{{$u->name}}</td>
+                      <td style="background-color:{{$u->color_bg}}">&nbsp;</td>
                       <td>{{$u->created_ats}}</td>
                       <td>
 
@@ -106,7 +106,7 @@ a:hover, a:focus {
                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="dropdown-item text-1 text-danger">ลบ</button>
                           </form>
-  											
+
 
   												</div>
   											</div>
