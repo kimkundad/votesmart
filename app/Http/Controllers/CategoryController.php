@@ -95,12 +95,14 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, [
-       'name_cat' => 'required'
+       'name_cat' => 'required',
+       'color_bg' => 'required'
       ]);
 
 
       $package = new category();
       $package->name_cat = $request['name_cat'];
+      $package->color_bg = $request['color_bg'];
       $package->user_id = Auth::user()->id;
       $package->save();
       return redirect(url('admin/category'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
@@ -169,7 +171,7 @@ class CategoryController extends Controller
         ->where('reps_con', 0)
         ->count();
       $data['count_users'] = $count_users;
-      
+
       $obj = category::find($id);
       $data['url'] = url('admin/category/'.$id);
       $data['datahead'] = "แก้ไขหมวดหมู่";
@@ -188,11 +190,13 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
       $this->validate($request, [
-         'name_cat' => 'required'
+         'name_cat' => 'required',
+         'color_bg' => 'required'
      ]);
 
      $package = category::find($id);
       $package->name_cat = $request['name_cat'];
+      $package->color_bg = $request['color_bg'];
       $package->save();
 
     return redirect(url('admin/category/'.$id.'/edit'))->with('edit_success','แก้ไขหมวดหมู่ ');
@@ -207,5 +211,8 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //
+      $obj = category::find($id);
+      $obj->delete();
+      return redirect(url('admin/category/'))->with('delete','คุณทำการลบอสังหา สำเร็จ');
     }
 }

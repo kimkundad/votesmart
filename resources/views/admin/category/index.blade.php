@@ -100,7 +100,13 @@ a:hover, a:focus {
   												<div class="dropdown-menu" role="menu">
   													<a class="dropdown-item text-1" href="{{url('admin/category/'.$u->id_c)}}">ดูข้อมูล</a>
   													<a class="dropdown-item text-1" href="{{url('admin/category/'.$u->id_c.'/edit')}}">แก้ไข</a>
-  													<a class="dropdown-item text-1 text-danger" href="">ลบ</a>
+
+                            <form  action="{{url('admin/category/'.$u->id_c)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                            <input type="hidden" name="_method" value="DELETE">
+                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="dropdown-item text-1 text-danger">ลบ</button>
+                          </form>
+  											
 
   												</div>
   											</div>

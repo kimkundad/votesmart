@@ -69,9 +69,17 @@
                                   <div class="form-group">
           													<label class="col-md-3 control-label" for="profileFirstName">ชื่อหมวดหมู่*</label>
           													<div class="col-md-8">
-          														<input type="text" class="form-control" name="name_cat">
+          														<input type="text" class="form-control" name="name_cat" value="{{ old('name_cat') }}">
           														</div>
           												</div>
+
+                                  <div class="form-group">
+          													<label class="col-md-3 control-label" for="profileFirstName">สีหมวดหมู่*</label>
+          													<div class="col-md-8">
+          														<input type="text" class="form-control" name="color_bg" value="{{ old('color_bg') }}">
+          														</div>
+          												</div>
+
 
 
                                   <br>
