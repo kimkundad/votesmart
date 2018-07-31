@@ -7,6 +7,7 @@ use Auth;
 use App\result;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ResultController extends Controller
 {
@@ -87,16 +88,26 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
+      $image = $request->file('image');
       $this->validate($request, [
        'category_id' => 'required',
-       'name_result' => 'required'
+       'image' => 'required|max:8048'
       ]);
+
+
+      $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+
+        $destinationPath = asset('assets/result/');
+        $img = Image::make($image->getRealPath());
+        $img->resize(1052, 592, function ($constraint) {
+        $constraint->aspectRatio();
+      })->save('assets/result/'.$input['imagename']);
 
 
       $package = new result();
       $package->category_id = $request['category_id'];
       $package->user_id = Auth::user()->id;
-      $package->result_name = $request['name_result'];
+      $package->result_name = $input['imagename'];
       $package->save();
       return redirect(url('admin/result'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
     }
@@ -132,7 +143,7 @@ class ResultController extends Controller
         ->where('reps_con', 0)
         ->count();
       $data['count_users'] = $count_users;
-      
+
       $cat = DB::table('categories')
             ->get();
 
@@ -156,16 +167,63 @@ class ResultController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $this->validate($request, [
-       'category_id' => 'required',
-       'name_result' => 'required'
-      ]);
+
+      $image = $request->file('image');
+
+      if($image == NULL){
+
+        $this->validate($request, [
+         'category_id' => 'required'
+        ]);
 
 
-       $package = result::find($id);
-       $package->category_id = $request['category_id'];
-       $package->result_name = $request['name_result'];
-       $package->save();
+         $package = result::find($id);
+         $package->category_id = $request['category_id'];
+         $package->save();
+
+
+      }else{
+
+        $this->validate($request, [
+         'category_id' => 'required',
+         'image' => 'required|max:8048'
+        ]);
+
+        $objs = DB::table('results')
+          ->select(
+             'results.*'
+             )
+          ->where('id', $id)
+          ->first();
+
+          if($objs != null){
+            $file_path = 'assets/result/'.$objs->result_name;
+            unlink($file_path);
+          }
+
+
+
+
+
+        $image = $request->file('image');
+
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+
+          $destinationPath = asset('assets/result/');
+          $img = Image::make($image->getRealPath());
+          $img->resize(1052, 592, function ($constraint) {
+          $constraint->aspectRatio();
+        })->save('assets/result/'.$input['imagename']);
+
+
+         $package = result::find($id);
+         $package->category_id = $request['category_id'];
+         $package->result_name = $input['imagename'];
+         $package->save();
+
+
+      }
+
 
      return redirect(url('admin/result/'.$id.'/edit'))->with('edit_success','แก้ไขหมวดหมู่ ');
     }
@@ -179,5 +237,18 @@ class ResultController extends Controller
     public function destroy($id)
     {
         //
+        $objs = DB::table('results')
+          ->select(
+             'results.*'
+             )
+          ->where('id', $id)
+          ->first();
+
+      $file_path = 'assets/result/'.$objs->result_name;
+      unlink($file_path);
+
+      $obj = result::find($id);
+      $obj->delete();
+      return redirect(url('admin/result/'))->with('del_result','คุณทำการลบข้อมูล สำเร็จ');
     }
 }

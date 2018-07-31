@@ -90,9 +90,9 @@ return "$strDay $strMonthThai $strYear";
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Result</th>
+                      <th>Result image</th>
                       <th>หมวดหมู่</th>
-                      <th>ผู้สร้าง</th>
+                      <th>จำนวนที่มี</th>
 
                       <th>วันที่สร้าง</th>
                       <th>จัดการ</th>
@@ -103,9 +103,9 @@ return "$strDay $strMonthThai $strYear";
                 @foreach($objs as $u)
                     <tr id="{{$u->id_r}}">
                       <td>{{$u->id_r}}</td>
-                      <td>{{$u->result_name}}</td>
+                      <td><img src="{{url('assets/result/'.$u->result_name)}}" class="img-responsive" style="height:75px;" /></td>
                       <td>{{$u->name_cat}}</td>
-                      <td>{{$u->name}}</td>
+                      <td></td>
 
                       <td><?php echo DateThai($u->create); ?></td>
                       <td>
@@ -113,9 +113,15 @@ return "$strDay $strMonthThai $strYear";
                         <div class="btn-group flex-wrap">
   												<button type="button" class="mb-1 mt-1 mr-1 btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">จัดการ <span class="caret"></span></button>
   												<div class="dropdown-menu" role="menu">
-  													
+
   													<a class="dropdown-item text-1" href="{{url('admin/result/'.$u->id_r.'/edit')}}">แก้ไข</a>
-  													<a class="dropdown-item text-1 text-danger" href="">ลบ</a>
+
+                            <form  action="{{url('admin/result/'.$u->id_r)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                              <input type="hidden" name="_method" value="DELETE">
+                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                              <button type="submit" class="dropdown-item text-1 text-danger">ลบ</button>
+                            </form>
+  												
 
   												</div>
   											</div>
@@ -155,17 +161,15 @@ var stack_topleft = {"dir1": "down", "dir2": "right", "push": "top"};
 @endif
 
 
-@if ($message = Session::get('delete'))
+@if ($message = Session::get('del_result'))
 <script type="text/javascript">
-var stack_bar_top = {"dir1": "down", "dir2": "right", "push": "top", "spacing1": 0, "spacing2": 0};
-var notice = new PNotify({
-      title: 'ยินดีด้วยค่ะ',
-      text: '{{$message}}',
-      type: 'success',
-      addclass: 'stack-bar-top',
-      stack: stack_bar_top,
-      width: "100%"
-    });
+var stack_topleft = {"dir1": "down", "dir2": "right", "push": "top"};
+    var notice = new PNotify({
+          title: 'ทำรายการสำเร็จ',
+          text: 'ยินดีด้วย ได้ทำการลบ Result สำเร็จเรียบร้อยแล้วค่ะ',
+          type: 'success',
+          addclass: 'stack-topright'
+        });
 </script>
 @endif
 

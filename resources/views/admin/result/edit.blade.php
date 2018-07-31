@@ -59,6 +59,8 @@
           									<div id="edit" class="tab-pane active">
 
 
+
+
                               <form  method="POST" action="{{$url}}" enctype="multipart/form-data">
                                           {{ method_field($method) }}
                                           {{ csrf_field() }}
@@ -88,12 +90,31 @@
           												</div>
 
                                   <div class="form-group">
-          													<label class="col-md-3 control-label" for="profileFirstName">ตั้งหัวข้อ Result*</label>
-          													<div class="col-md-8">
+              					             <label class="col-md-3 control-label">รูป result</label>
+              												<div class="col-md-8">
+              													<img src="{{url('assets/result/'.$objs->result_name)}}" class="img-responsive img-thumbnail">
+              												</div>
+              											</div>
 
-                                      <textarea class="form-control" name="name_result" rows="3" id="textareaDefault">{{$objs->result_name}}</textarea>
-          														</div>
-          												</div>
+                                  <div class="form-group">
+                                      <label class="col-md-3 control-label" for="exampleInputEmail1">รูปหลักรถเช่า*</label>
+                                      <div class="col-md-8">
+                                      <div class="fileupload fileupload-new" data-provides="fileupload">
+                    														<div class="input-append">
+                    															<div class="uneditable-input">
+                    																<i class="fa fa-file fileupload-exists"></i>
+                    																<span class="fileupload-preview"></span>
+                    															</div>
+                    															<span class="btn btn-default btn-file">
+                    																<span class="fileupload-exists">Change</span>
+                    																<span class="fileupload-new">Select file</span>
+                    																<input type="file" name="image">
+                    															</span>
+                    															<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+                    														</div>
+                    													</div>
+                                              </div>
+                                    </div>
 
 
 
