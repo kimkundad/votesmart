@@ -262,7 +262,7 @@ background-color: #FFFFFF;
 <div class="toggle toggle-primary toggle-sm" style="position: absolute;z-index:9">
   <div class="toggle active zoom">
     <label id="zoomBtn" class="zoom-fab zoom-btn-large"
-    style="border-radius: 5px 5px 10px 10px; padding: 16px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
+    style="border-radius: 5px 5px 10px 10px; padding: 12px; margin-right: 2px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
     <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right; font-size: 18px; margin-top: 6px;"></i></label>
     <div class="toggle-content" >
 
@@ -312,7 +312,7 @@ background-color: #FFFFFF;
             @foreach($cat as $u)
 
         <li style="">
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 11px;">
             <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
           </a>
         </li>
