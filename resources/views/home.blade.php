@@ -312,7 +312,7 @@ background-color: #FFFFFF;
             @foreach($cat as $u)
 
         <li style="">
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; padding-top: 10px; padding-bottom: 10px; ">
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
             <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
           </a>
         </li>
