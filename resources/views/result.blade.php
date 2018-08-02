@@ -1047,15 +1047,26 @@
 
         <div id="canvas" class="canvass">
 
-          <img src="{{url('assets/korr/VOTE_result-03.png')}}" class="the-bg"/>
+          @if($result)
+          @foreach($result as $u)
+
+          @if($u->options != null)
+          <img src="{{url('assets/result/'.$u->options->result_name)}}" class="the-bg"/>
+          #{{$u->options->result_name}}
+          @else
+          <img src="{{url('assets/result/1533027088.png')}}" class="the-bg"/>
+          @endif
+
+          @endforeach
+          @endif
+
           <h4 class="name-user">{{$user->name}}</h4>
           <img src="{{url('assets/image/avatar/'.$user->url_image)}}" class="the-avatar" />
           <div>
 
             <h2 class="avatar-heading text-left" style="text-align: left">
 
-              @if($result) @foreach($result as $u) @if($u->options != null) #{{$u->options->result_name}}
-              <br> @endif @endforeach @endif
+
 
             </h2>
 

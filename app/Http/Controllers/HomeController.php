@@ -1681,7 +1681,8 @@ class HomeController extends Controller
 
           $result = DB::table('voteresults')
             ->where('user_id', Auth::user()->id)
-            ->take(3)
+            ->orderBy('sort_result', 'desc')
+            ->take(1)
             ->get();
 
 
