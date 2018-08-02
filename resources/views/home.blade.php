@@ -266,7 +266,7 @@ background-color: #FFFFFF;
     <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right; font-size: 18px; margin-top: 6px;"></i></label>
     <div class="toggle-content" >
 
-      <ul class="zoom-menu visible-sm visible-xs" style="">
+      <ul class="zoom-menu-dektop zoom-menu visible-sm visible-xs" style="">
 
       <!--  <li>
           <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
@@ -676,7 +676,7 @@ background-color: #FFFFFF;
     position: absolute;
     right: 142px;
     left: auto;
-        top: -1380%;
+        top: -1500%;
     //transform: translateY(-50%);
     height: 100%;
     width: 0px;
