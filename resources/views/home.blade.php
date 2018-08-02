@@ -509,7 +509,7 @@ background-color: #FFFFFF;
 
 
                <input type="checkbox" class="read-more-state btn-readmore" id="post-{{$j->id}}" />
-               <div class="candidate-profile-2 read-more-wrap" styyle="padding-bottom: 30px;">
+               <div class="candidate-profile-2 read-more-wrap" style="padding-bottom: 30px;">
 
               @if(isset($j->labels))
                   @foreach($j->labels as $u)
