@@ -257,6 +257,13 @@ background-color: #FFFFFF;
         .current-last{
           height: 40px !important;
         }
+        .current-m{
+          height: 30px !important;
+        }
+        .current-top-m{
+          height: 30px !important;
+          border-radius: 10px 10px 0px 0px;
+        }
         </style>
 
 <div class="toggle toggle-primary toggle-sm" style="position: absolute;z-index:9">
@@ -266,7 +273,7 @@ background-color: #FFFFFF;
     <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right; font-size: 18px; margin-top: 6px;"></i></label>
     <div class="toggle-content" >
 
-      <ul class="zoom-menu-dektop zoom-menu visible-sm visible-xs" style="">
+      <ul class="zoom-menu-dektop2 zoom-menu visible-sm visible-xs" style="">
 
       <!--  <li>
           <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
@@ -676,7 +683,7 @@ background-color: #FFFFFF;
     position: absolute;
     right: 142px;
     left: auto;
-        top: -1500%;
+        top: -1600%;
     //transform: translateY(-50%);
     height: 100%;
     width: 0px;
@@ -938,6 +945,8 @@ $(document).ready(function () {
 
 $('ul.zoom-menu-dektop li:first-child a').addClass('current');
 $('ul.zoom-menu-dektop li:last-child a').addClass('current-last');
+$('ul.zoom-menu-dektop2 li:first-child a').addClass('current-top-m');
+$('ul.zoom-menu-dektop2 li:last-child a').addClass('current-m');
 
 $(document).ready(function () {
   $('#content-home1').show();
