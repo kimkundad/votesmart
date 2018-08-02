@@ -261,6 +261,7 @@ background-color: #FFFFFF;
           height: 30px !important;
         }
         .current-top-m{
+          padding-top: 8px;
           height: 30px !important;
           border-radius: 10px 10px 0px 0px;
         }
