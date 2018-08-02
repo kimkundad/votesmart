@@ -171,6 +171,7 @@
 }
 
 .read-more-target {
+  display: none;
   opacity: 0;
   max-height: 0;
   font-size: 0;
@@ -178,6 +179,7 @@
 }
 
 .read-more-state:checked ~ .read-more-wrap .read-more-target {
+  display: block;
   opacity: 1;
   font-size: inherit;
   max-height: 999em;
@@ -531,7 +533,7 @@ background-color: #FFFFFF;
 
             </div>
 
-            <label for="post-{{$j->id}}" class="read-more-trigger btn-readmore btn-res1" style="position: absolute;"></label>
+            <label for="post-{{$j->id}}" class="read-more-trigger btn-readmore btn-res1" style="position: absolute; margin-bottom:20px;"></label>
 
 
 
