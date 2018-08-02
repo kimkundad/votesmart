@@ -548,6 +548,26 @@ label {
     -ms-flex-pack: start!important;
     justify-content: flex-start!important;
 }
+.view-more{
+  float: right;
+}
+
+.view-more .plus-sign {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    padding: 6px;
+    border: 1px solid #fff;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 15px;
+    text-align: center;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
   </style>
 <nav class="navbar navbar-expand-lg nav-mo-golf navbar-dark page-header" id="mainNav" style="background-color: transparent;">
     <div class="container-fluid">
@@ -579,8 +599,12 @@ label {
                   <div class="modal-content">
 
                     <div class="modal-body text-center">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"
-style="color:#fff; font-weight: 500; text-shadow: 0 0px 0 #fff; opacity: 1;"><span aria-hidden="true" style="font-size: 22px;">&times;</span> ปิด</button>
+
+                    <a data-dismiss="modal" aria-label="Close" class="view-more">
+                      <span aria-hidden="true" class="plus-sign">
+                        <i class="fa fa-remove" style="color: #fff;"></i>
+                      </span>
+                    </a>
 
                       <br><br>
                       <h3 class="text-center">อาสา</h3>

@@ -1526,7 +1526,7 @@ margin: 30px auto 0px auto;
 
 
   .img-in-chart2 {
-    max-width: 92px;
+    max-width: 95px;
     border-radius: 50%;
     margin-top:-25px;
   }
@@ -1745,7 +1745,7 @@ margin: 30px auto 0px auto;
     width: 25px;
     height: 25px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 6px;
     border: 1px solid #666;
     font-size: 12px;
     font-weight: 100;

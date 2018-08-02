@@ -69,7 +69,11 @@
                 <div class="modal-content">
 
                   <div class="modal-body text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px;"><span aria-hidden="true">&times;</span> ปิด</button>
+                    <a data-dismiss="modal" aria-label="Close" class="view-more">
+                      <span aria-hidden="true" class="plus-sign" style="border: 1px solid #fff;">
+                        <i class="fa fa-remove" style="color: #fff;"></i>
+                      </span>
+                    </a>
 
                     <br><br>
                     <h3 class="text-center">อาสา</h3>

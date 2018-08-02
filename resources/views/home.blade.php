@@ -133,7 +133,7 @@
       border-radius:8px !important;
     }
     .zoom-menu{
-      top: -1500% !important;
+      top: -1800% !important;
       border-radius:20px !important;
     }
     .zoom-menu li{
@@ -250,11 +250,20 @@ background-color: #FFFFFF;
 
         @endif
 
+        <style>
+        .current{
+              border-radius: 10px 10px 0px 0px;
+        }
+        .current-last{
+          height: 40px !important;
+        }
+        </style>
+
 <div class="toggle toggle-primary toggle-sm" style="position: absolute;z-index:9">
   <div class="toggle active zoom">
     <label id="zoomBtn" class="zoom-fab zoom-btn-large"
-    style="border-radius: 5px 5px 5px 5px; padding: 10px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
-    <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right;"></i></label>
+    style="border-radius: 5px 5px 10px 10px; padding: 16px; text-align: left; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);">
+    <i class="fa fa-info-circle"></i> หมวดหมู่ <i class="fa fa-angle-up" style="float: right; font-size: 18px; margin-top: 6px;"></i></label>
     <div class="toggle-content" >
 
       <ul class="zoom-menu visible-sm visible-xs" style="">
@@ -269,7 +278,7 @@ background-color: #FFFFFF;
             @foreach($cat as $u)
 
         <li >
-          <a class="zoom-fab zoom-btn-sm  scale-transition scale-out" style="background: #fff;">
+          <a class="zoom-fab zoom-btn-sm  scale-transition scale-out" style="background: #fff; ">
             <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
           </a>
         </li>
@@ -290,7 +299,8 @@ background-color: #FFFFFF;
 
 
 
-      <ul class="zoom-menu hidden-sm hidden-xs" style="">
+
+      <ul class="zoom-menu-dektop zoom-menu hidden-sm hidden-xs" style="">
 
       <!--  <li>
           <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; border-radius: 5px 5px 0px 0px;">
@@ -301,8 +311,8 @@ background-color: #FFFFFF;
         @if(isset($cat))
             @foreach($cat as $u)
 
-        <li >
-          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff;">
+        <li style="height: 30px;">
+          <a class="zoom-fab zoom-btn-sm  scale-transition " style="background: #fff; padding-top: 10px; padding-bottom: 10px; height: 30px;">
             <i class="fa fa-user" style="background-color: {{$u->color_bg}}; color:{{$u->color_bg}};"></i> {{$u->name_cat}}
           </a>
         </li>
@@ -635,11 +645,11 @@ background-color: #FFFFFF;
 
 
 .zoom-btn-large {
-    line-height: 20px;
+    line-height: 30px;
     background: #fff;
     color: #666;
     width: 140px;
-    height: 35px;
+    height: 50px;
 }
 
 .zoom-btn-person { background-color: #F44336; }
@@ -925,6 +935,9 @@ $(document).ready(function () {
 </script>
 <script>
 
+
+$('ul.zoom-menu-dektop li:first-child a').addClass('current');
+$('ul.zoom-menu-dektop li:last-child a').addClass('current-last');
 
 $(document).ready(function () {
   $('#content-home1').show();
