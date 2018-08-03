@@ -24,7 +24,9 @@
     <link href="{{url('front/css/css/style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <style>
-
+.btn{
+      letter-spacing: 0.1rem;
+}
 .quiz-title {
 font-size:24px;
 }
@@ -36,6 +38,8 @@ font-size:14px !important;
 .user-name p {
 font-size:14px !important;
 }
+
+
 
     body,
     html {
@@ -296,6 +300,10 @@ input[type="radio"]:disabled + .label-text:before{
 }
 @media (min-width: 280px) {
 
+  .modal-body {
+      padding: 1rem ;
+  }
+
   .line-sector{
     padding: 4rem 0;
   }
@@ -452,7 +460,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
       font-weight: 500;
       line-height: 80px;
       text-align: center;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2;
       margin: 0;
   }
   .front-content .panel-fa.panel-fa-right {
@@ -503,6 +511,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 }
 
 @media (min-width: 320px) {
+
+  .modal-body {
+      padding: 1rem ;
+  }
 
   .line-sector{
     padding: 4rem 0;
@@ -670,7 +682,7 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
       font-weight: 500;
       line-height: 80px;
       text-align: center;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2;
       margin: 0;
   }
   .front-content .panel-fa.panel-fa-right {
@@ -687,6 +699,15 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   .welcome-footer {
       /*  padding-top: 50px; */
       height: 58px;
+  }
+  .mar-b-20{
+    margin-bottom: 20px !important;
+  }
+  .mar-b-30{
+    margin-bottom: 30px !important;
+  }
+  .mar-b-12{
+    margin-bottom: 12px !important;
   }
   .padding-bottom-footer {
       height: 10%;
@@ -720,6 +741,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 }
 
 @media (min-width: 350px) {
+
+  .modal-body {
+      padding: 1rem ;
+  }
 
   .line-sector{
     padding: 4rem 0;
@@ -825,6 +850,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
   }
 }
 @media (min-width: 360px) {
+
+  .modal-body {
+      padding: 1rem ;
+  }
 
   .line-sector{
     padding: 4rem 0;
@@ -932,6 +961,9 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 
 @media (min-width: 375px) {
+  .modal-body {
+      padding: 1rem ;
+  }
 
   .line-sector{
     padding: 4rem 0;
@@ -1046,6 +1078,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 }
 
 @media (min-width: 425px) {
+
+  .modal-body {
+      padding: 1rem ;
+  }
 
   .line-sector{
     padding: 4rem 0;
@@ -1163,6 +1199,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 @media (min-width: 576px) {
 
+  .modal-body {
+      padding: 1rem ;
+  }
+
   .line-sector{
     padding: 4rem 0;
   }
@@ -1275,6 +1315,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 @media (min-width: 768px) {
 
+  .modal-body {
+      padding: 1rem ;
+  }
+
   .line-sector{
     padding: 4rem 0;
   }
@@ -1383,6 +1427,11 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 }
 
 @media (min-width: 992px) {
+
+  .modal-body {
+
+      padding: 1rem 3rem 3rem 3rem;
+  }
 
   .line-sector{
     padding-top: 65px; padding-bottom: 65px;
@@ -1498,6 +1547,10 @@ text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 
 
 @media (min-width: 1200px) {
 
+  .modal-body {
+
+      padding: 1rem 3rem 3rem 3rem;
+  }
 
   .line-sector{
     padding-top: 65px; padding-bottom: 65px;
@@ -1684,7 +1737,7 @@ margin: 30px auto 0px auto;
       font-weight: 500;
       line-height: 80px;
       text-align: center;
-      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+      text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2;
       margin: 0;
   }
   .front-content .panel-fa.panel-fa-right {
@@ -1867,7 +1920,7 @@ margin: 0 5px 10px 0px;
     font-size: 20px;
     font-weight: 700;
     line-height: 35px;
-    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2, 8px 8px 0 #5EC8F2, 9px 9px 0 #5EC8F2, 10px 10px 0 #5EC8F2, 11px 11px 0 #5EC8F2, 12px 12px 0 #5EC8F2, 13px 13px 0 #5EC8F2, 14px 14px 0 #5EC8F2, 15px 15px 0 #5EC8F2;
+    text-shadow: 1px 1px 0 #5EC8F2, 2px 2px 0 #5EC8F2, 3px 3px 0 #5EC8F2, 4px 4px 0 #5EC8F2, 5px 5px 0 #5EC8F2, 6px 6px 0 #5EC8F2, 7px 7px 0 #5EC8F2;
 }
 .quiz-choices p {
     /* max-width: 345px; */

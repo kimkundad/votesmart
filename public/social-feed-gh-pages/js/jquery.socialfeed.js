@@ -488,7 +488,7 @@ if (typeof Object.create !== 'function') {
                     switch (account[0]) {
                         case '@':
                             var username = account.substr(1);
-                            url = Feed.instagram.api + 'users/search/?q=' + username + '&' + authTokenParams + '&count=1' + '&callback=?';
+                            url = Feed.instagram.api + 'users/self/?q=' + username + '&' + authTokenParams + '&count=1' + '&callback=?';
                             Utility.request(url, Feed.instagram.utility.getUsers);
                             break;
                         case '#':
@@ -520,7 +520,7 @@ if (typeof Object.create !== 'function') {
 
                         if (!jQuery.isArray(json.data)) json.data = [json.data]
                         json.data.forEach(function(user) {
-                            var url = Feed.instagram.api + 'users/' + user.id + '/media/recent/?' + authTokenParams + '&' + 'count=' + options.instagram.limit + '&callback=?';
+                            var url = Feed.instagram.api + 'users/self/media/recent/?' + authTokenParams + '&' + 'count=' + options.instagram.limit + '&callback=?';
                             Utility.request(url, Feed.instagram.utility.getImages);
                         });
                     },

@@ -30,6 +30,9 @@
     <link href="{{url('front/css/css/style.css')}}" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 <style>
+.btn{
+      letter-spacing: 0.1rem;
+}
     .the-logo {
       margin-top: 15px;
         margin-bottom: 30px;
@@ -985,12 +988,12 @@ text-shadow: 0 1px 2px rgba(35,31,32,0.24);
 
                                     @if (Auth::guest())
 
-                                    <a href="{{url('redirect')}}" class="btn-lp">เข้าร่วม</a>
+                                    <a href="{{url('redirect')}}" class="btn-lp" style="letter-spacing: 0.1rem; min-width: 180px; text-decoration: none; padding: 1.2rem 3rem; font-weight: 500;">เข้าร่วม</a>
 
 
                                     @else
 
-                                    <a href="{{url('quiz_choices')}}" class="btn-lp">เข้าร่วม</a>
+                                    <a href="{{url('quiz_choices')}}" class="btn-lp" style="letter-spacing: 0.1rem; min-width: 180px; text-decoration: none; padding: 1.2rem 3rem; font-weight: 500;">เข้าร่วม</a>
 
                                     @endif
 

@@ -176,8 +176,12 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
 
-                  <div class="modal-body text-center" style="padding-right: 50px; padding-left: 50px;">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff; padding: 0px 0px 10px 10px; margin-right: -30px;"><span aria-hidden="true">&times;</span> ปิด</button>
+                  <div class="modal-body text-center" >
+                    <a data-dismiss="modal" aria-label="Close" class="view-more">
+                      <span aria-hidden="true" class="plus-sign" style="border: 1px solid #fff;">
+                        <i class="fa fa-remove" style="color: #fff;"></i>
+                      </span>
+                    </a>
 
                     <br><br>
                     <h3 class="text-center">พูดคุย</h3>
@@ -188,8 +192,25 @@
                     <p class="p-pop">มีเรื่องอยากคุย มีปัญหาให้ช่วยแก้</p>
                     <hr class="my-4" style="margin: 0 auto;">
                     <p class="p-pop">บอกให้ผู้สมัครของเราได้รู้ ให้เราได้เข้าใจและทำงาน<br>ได้ดีขึ้น อย่ารั้งรอ พูดคุยกับเราได้ทางช่องทางเหล่านี้</p>
+
+                    @if($user->line_id != null)
                     <button class="button-z" id="btn-line"><img src="{{url('assets/image/Line_icon-icons.com_66976.png')}}" style="height:20px;"> LINE to {{$user->line_id}}</button>
+                    @endif
+
+                    @if($user->fb != null)
+                    <button class="button-z" id="btn-line"><i class="fa fa-facebook" style="font-size:18px"></i> Faccebook {{substr($user->fb, 1)}}</button>
+                    @endif
+
+                    @if($user->tw != null)
+                    <button class="button-z" id="btn-line"><i class="fa fa-twitter" style="font-size:18px"></i> Twitter {{substr($user->tw, 1)}}</button>
+                    @endif
+
+                    @if($user->ig != null)
+                    <button class="button-z" id="btn-line"><i class="fa fa-instagram" style="font-size:18px"></i> Twitter {{substr($user->ig, 1)}}</button>
+                    @endif
+
                     <button class="button-z" id="btn-mail"><i class="fa fa-envelope" style="font-size:18px"></i> {{$user->email}}</button>
+
                     <p class="p-pop" id="textreps2">หรือส่งข้อความ</p>
 
 
@@ -198,7 +219,7 @@
 
                     <form action="{{url('/contact_to_reps')}}" id="contact-to-reps" method="post" enctype="multipart/form-data">
 
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-6 " style="padding-right: 5px; width: 50%; padding-left: 0px; float:left">
 
                           <div class="form-group">
                             <label for="exampleInputEmail1" style="pull-left">ชื่อ</label>
@@ -206,14 +227,14 @@
                           </div>
 
                         </div>
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-md-6 " style="padding-right: 0px; width: 50%; padding-left: 5px; float:left">
                       <div class="form-group">
                         <label for="exampleInputEmail1">สกุล</label>
                         <input type="text" name="surname" id="surnamereps" class="form-control" >
                       </div>
                     </div>
 
-                    <div class="col-md-12 " style="padding-right: 0px; padding-left: 0px;">
+                    <div  style="padding-right: 0px; padding-left: 0px;">
                       <div class="form-group">
                         <label for="exampleInputEmail1">อีเมล</label>
                         <input type="email" name="email" id="emailreps" class="form-control" >
@@ -231,7 +252,7 @@
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED; padding: 12px;">ส่งข้อความ</button>
+                      <button type="submit" class="btn btn-light btn-block" style="border-radius: 3px; color: #08B0ED; padding: 12px; margin-top:10px;">ส่งข้อความ</button>
                     </div>
                   </form>
 

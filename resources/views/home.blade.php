@@ -4,6 +4,9 @@
 @section('content')
 
 <style>
+.btn{
+      letter-spacing: 0.1rem;
+}
   .zoom-menu li {
     border:none !important;
   }

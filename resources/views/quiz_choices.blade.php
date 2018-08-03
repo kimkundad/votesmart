@@ -234,23 +234,25 @@ input:checked{
         <div class="welcome-section text-center">
           <div id="front-page" class="front-content">
             <div class="panel-text-asking">
-              <h3 class="margin">เลือก 10 ประเด็นสำคัญ</h3>
-              <br>
-              <div class="text-asking">
-                <p style="font-size:18px;">ทุกประเด็นก็ดูจะสำคัญเหมือนกันหมด<br>
+              <h3 class="margin mar-b-12">เลือก 10 ประเด็นสำคัญ</h3>
+
+              <div class="text-asking mar-b-30">
+                <p style="font-size:24px;font-weight: 300;">ทุกประเด็นก็ดูจะสำคัญเหมือนกันหมด<br>
                 แต่เรื่องไหนกันหล่ะ ที่คุณเลือกทำก่อน?<br>
                 ถ้าคุณเลือกได้แค่ 10 เรื่องเท่านั้น</p>
+              </div>
+
+              <div class="welcome-footer">
+
+
+                <a class="hometo1 btn btn-primary btn-xl js-scroll-trigger"
+                style="min-width: 180px; padding: 1.2rem 3rem; font-weight: 500; color:#fff; font-size:18px;">
+                 เริ่มเลือก</a>
               </div>
             </div>
 
           </div>
-          <div class="welcome-footer">
 
-
-            <a class="hometo1 btn btn-primary btn-xl js-scroll-trigger"
-            style="padding: 0.9rem 4rem;font-weight: 500; color:#fff; font-size:16px;">
-             เริ่มเลือก</a>
-          </div>
           <div class="padding-bottom-footer"></div>
         </div>
       </div>

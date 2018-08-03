@@ -406,8 +406,8 @@ input:-webkit-autofill {
 
             <div class="col-md-1">
               <div class="rectangle-copy-6">
-                <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
-                <a href="{{url('representatives_grid')}}" class="btn-list active"><i class="fa fa-th-list"></i></a>
+                <a href="{{url('representatives_all')}}" class="active"><i class="fa fa-map"></i></a>
+                <a href="{{url('representatives_grid')}}" class="btn-list "><i class="fa fa-th-list"></i></a>
               </div>
       						</div>
 
@@ -482,6 +482,9 @@ input:-webkit-autofill {
       width: 80px;
       height: 80px;
     }
+    .leaflet-popup-content p {
+    margin: 5px 0px;
+}
       </style>
 
 <div class="col-md-12" style="height: 100%;">
@@ -662,7 +665,7 @@ document.getElementById('form2').submit();
 
 	var LeafIcon = L.Icon.extend({
 		options: {
-			shadowUrl: '{{secure_url('front/img/pin-rep.svg')}}',
+			shadowUrl: '{{url('front/img/pin-rep.svg')}}',
 			iconSize:     [40, 40],
 			shadowSize:   [80, 108],
 			iconAnchor:   [-16, 40],
@@ -674,8 +677,8 @@ document.getElementById('form2').submit();
      @if(isset($objs))
         @foreach($objs as $u)
 
-        var  greenIcon{{$u->id}} = new LeafIcon({iconUrl: '{{secure_url("assets/images/avatar/".$u->avatar)}}'});
-        L.marker([{{$u->lat}}, {{$u->lng}}], {icon: greenIcon{{$u->id}}}).bindPopup('<div style="text-align: center;"><a href="{{url('reps_result/'.$u->id)}}"><img src="{{secure_url("assets/images/avatar/".$u->avatar)}}" style="width:80px"></a></div><div class="candidate-info"><a href="{{url('reps_result/'.$u->id)}}"><h3>{{$u->name}}</h3></a><p>{{$u->sub_title}}</p></div>').addTo(map);
+        var  greenIcon{{$u->id}} = new LeafIcon({iconUrl: '{{url("assets/images/avatar/".$u->avatar)}}'});
+        L.marker([{{$u->lat}}, {{$u->lng}}], {icon: greenIcon{{$u->id}}}).bindPopup('<div style="text-align: center; margin-bottom: 5px;"><a href="{{url('reps_result/'.$u->id)}}"><img src="{{url("assets/images/avatar/".$u->avatar)}}" style="width:80px"></a></div><div class="candidate-info text-center"><a href="{{url('reps_result/'.$u->id)}}"><h3 style="font-size: 1.2rem;">{{$u->name}}</h3></a><p style="margin: 5px 0px;">{{$u->sub_title}}</p></div>').addTo(map);
         @endforeach
     @endif
 

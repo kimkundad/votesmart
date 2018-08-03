@@ -210,7 +210,7 @@ input:-webkit-autofill {
         <div class="input-group" style="box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);s">
               <input id="hero-demo2" type="text"  name="field3" class="form-control" placeholder="ค้นหา" >
               <div class="input-group-btn" style="    padding: 5px;">
-                  <button class="btn btn-default" type="submit" style="background: #fff; font-size: 18px;" onclick="eatFood();"><i class="fa fa-search"></i></button>
+                  <button class="btn btn-default" type="submit" style="background: #fff; font-size: 18px; color: #5ec8f2;" onclick="eatFood();"><i class="fa fa-search"></i></button>
               </div>
           </div>
         </div>
@@ -245,8 +245,8 @@ input:-webkit-autofill {
 
 <div class="col-4 mx-auto">
 <div class="rectangle-copy-6 scroll-to-top_1">
-  <a href="{{url('representatives_all')}}" class="btn-list active"><i class="fa fa-map"></i></a>
-  <a href="{{url('representatives_grid')}}" class=""><i class="fa fa-th-list"></i></a>
+  <a href="{{url('representatives_all')}}" class=""><i class="fa fa-map"></i></a>
+  <a href="{{url('representatives_grid')}}" class="btn-list active "><i class="fa fa-th-list"></i></a>
       </div>
 </div>
       <!--
@@ -314,7 +314,7 @@ input:-webkit-autofill {
 
             <div class="col-md-2" style="padding-right: 25px; padding-left: 0px;">
               <div class="form-group">
-                <select name="sort" class="form-control" style="height: 49px; color:#666;  background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;" onchange="this.form.submit()">
+                <select name="sort" class="form-control" style="height: 49px; color:#08b0ed;  background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); height: 49px;" onchange="this.form.submit()">
                   <option value="1" >เรียง ก - ฮ</option>
                   <option value="2" >เรียง ฮ - ก</option>
                 </select>
@@ -404,10 +404,11 @@ ul.simple-user-list {
     padding: 0;
 }
 ul.simple-user-list li {
-  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+
 padding-bottom: 30px;
-padding-top: 0px;
-margin: 0px 0 20px;
+margin: 0px 0 0px;
+/* height: 80px; */
+padding-top: 20px;
 }
 ul.simple-user-list {
     list-style: none;
@@ -455,7 +456,7 @@ ul.simple-user-list li .message {
 
 <div class="panel-body visible-sm visible-xs">
   <div class="content">
-										<ul class="simple-user-list">
+										<ul class="simple-user-list" style="margin-bottom: 0rem;">
                       @if($objs)
                          @foreach($objs as $u)
 											<li>
@@ -505,10 +506,17 @@ ul.simple-user-list li .message {
 <script src="{{url('autoComplete/auto-complete.js')}}"></script>
 
 
+<style>
+.hr-bot{
+  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+}
+</style>
 
 
 
 <script>
+
+$('ul.simple-user-list li:first-child').addClass('hr-bot');
 
 function eatFood() {
 document.getElementById('form1').submit();

@@ -650,9 +650,8 @@ line-height: 1.5em;
         background:#08B0ED;
         color:#fff;
     }
-.navbar-expand-lg a{
-  font-size: 18px;
-  //color:#ACACAC;
+.view-more .plus-sign{
+  padding: 5px;
 }
 .actives {
   color:#666!important;
@@ -740,6 +739,18 @@ line-height: 20px;
     text-transform: uppercase;
     color: #ccc;
 }
+.btn-asa:hover {
+    border: 1px solid #5EC8F2;
+    border-radius: 24px;
+    padding: 10px 30px;
+    font-weight: 400;
+    color: #5EC8F2;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-shadow: 0 1px 2px 0 rgba(35,31,32,0.24);
+}
 </style>
 
 
@@ -766,7 +777,7 @@ line-height: 20px;
 					</div>
 
 
-          <button type="button" class="btn btn-primary center" style="height: 45px; float: right; margin-left:0px;  right: 8px; top: 8px; position: absolute;;  padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
+          <button type="button" class="btn btn-asa center" style="height: 45px; float: right; margin-left:0px;  right: 8px; top: 8px; background-color: #fff; position: absolute;;  padding: 2px 10px;" data-toggle="modal" data-target="#myModal-2">
               <i class="fa fa-comment-o"></i> พูดคุย</button>
 
 
@@ -802,21 +813,33 @@ line-height: 20px;
 
         <div class="row" style="padding-top: 5px;">
                                       <ul class="candidate-social" style="padding-top: 10px; right: 0;   position: absolute;">
+
+
+                                        @if($user->tw != null)
                                           <li class="twitter" style="padding-left: 0;">
-                                              <a href="#" style="font-size: 16px; line-height: 10px;">
+                                              <a href="https://www.twitter.com/{{substr($user->tw, 1)}}" target="_blank" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-twitter"></i>
                                               </a>
                                           </li>
-                                          <li class="facebook">
-                                              <a href="#" style="font-size: 16px; line-height: 10px;">
+                                        @endif
+
+                                        @if($user->fb != null)
+                                          <li class="facebook" >
+                                              <a href="https://www.facebook.com/{{substr($user->fb, 1)}}" target="_blank" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-facebook-official"></i>
                                               </a>
                                           </li>
+                                        @endif
+
+                                        @if($user->ig != null)
                                           <li class="instagram" >
-                                              <a href="#" style="font-size: 16px; line-height: 10px;">
+                                              <a href="https://www.instagram.com/{{substr($user->ig, 1)}}" target="_blank" style="font-size: 16px; line-height: 10px;">
                                                   <i class="fa fa-instagram"></i>
                                               </a>
                                           </li>
+                                        @endif
+
+
 
                                       </ul>
 
@@ -875,24 +898,32 @@ line-height: 20px;
 
         <div class="row" style="padding-top: 5px;">
                                       <ul class="candidate-social">
+
+                                        @if($user->tw != null)
                                           <li class="twitter" >
-                                              <a href="#">
+                                              <a href="https://www.twitter.com/{{substr($user->tw, 1)}}" target="_blank">
                                                   <i class="fa fa-twitter"></i>
                                               </a>
                                           </li>
+                                        @endif
+
+                                        @if($user->fb != null)
                                           <li class="facebook">
-                                              <a href="#">
+                                              <a href="https://www.facebook.com/{{substr($user->fb, 1)}}" target="_blank">
                                                   <i class="fa fa-facebook-official"></i>
                                               </a>
                                           </li>
+                                        @endif
+
+                                        @if($user->ig != null)
                                           <li class="instagram" >
-                                              <a href="#">
+                                              <a href="https://www.instagram.com/{{substr($user->ig, 1)}}" target="_blank">
                                                   <i class="fa fa-instagram"></i>
                                               </a>
                                           </li>
-
+                                        @endif
                                       </ul>
-                                      <button type="button" class="btn btn-primary center" style="height: 45px;margin-left:13px;padding: 2px 28px;" data-toggle="modal" data-target="#myModal-2">
+                                      <button type="button" class="btn btn-asa center" style="height: 45px;margin-left:13px;padding: 2px 28px;background-color: #fff;" data-toggle="modal" data-target="#myModal-2">
                                           <i class="fa fa-comment-o"></i> พูดคุย</button>
 
                                   </div>
@@ -1877,13 +1908,9 @@ return "$strDay $strMonthThai";
                                 <div class="col-md-12">
                                     <div class="row">
 
-                                        <section class="feed hidden-sm hidden-xs" style="    padding: 0rem 0;">
-                                            <div class="container" id="container">
-                                              <ul class="juicer-feed" data-feed-id="teeneejj"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
-                                            </div>
-                                        </section>
 
-                                        <section class="feed visible-sm visible-xs" style="    padding: 0rem 0;">
+
+                                        <section class="feed " style="    padding: 0rem 0;">
 
                                           <style>
 
@@ -1896,7 +1923,13 @@ return "$strDay $strMonthThai";
 
                                           </style>
                                             <div class="container" id="container" >
-                                              <ul class="juicer-feed" data-feed-id="teeneejj"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
+
+                                              <div class="social-feed-container col-md-12" id="images" style="width: 100%; padding-right: 1px; padding-left: 1px;">
+
+                                            </div>
+
+                                            <div id="instagram" class="show"></div>
+
                                             </div>
                                         </section>
 
@@ -1911,7 +1944,7 @@ return "$strDay $strMonthThai";
 
 
 
-<input type="hidden" class="input field-left" value="@{{$user->fb}}" id="query">
+
 
 @endsection
 
@@ -1925,11 +1958,41 @@ return "$strDay $strMonthThai";
 <script src="{{url('social-feed-gh-pages/js/jquery.min.js')}}"></script>
 <script src="{{url('front/js/Chart.bundlev2.js?v1')}}"></script>
 
-<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-
+<script src="{{url('social-feed-gh-pages/js/codebird.js')}}"></script>
+<script src="{{url('social-feed-gh-pages/js/doT.min.js')}}"></script>
+<script src="{{url('social-feed-gh-pages/js/moment.min.js')}}"></script>
+<script src="{{url('social-feed-gh-pages/js/jquery.socialfeed.js')}}"></script>
+<!--<script src="{{url('js/instafeed.min.js')}}"></script> -->
 
 <!-- <script src="//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+
+<!--
+<script type="text/javascript">
+
+
+var feed = new Instafeed({
+		get: 'user',
+		userId: 2024437698,
+    limit: 2,
+    clientId: '2ddfdc0d93fc41f29a7a7c9fda0bf926',
+		accessToken: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0',
+		target: 'instagram',
+		resolution: 'low_resolution',
+		after: function() {
+			var el = document.getElementById('instagram');
+			if (el.classList)
+				el.classList.add('show');
+			else
+				el.className += ' ' + 'show';
+        console.log(el.className);
+		}
+});
+
+feed.run();
+
+</script>
+
+-->
 
 <style>
 .juicer-feed h1.referral{
@@ -1942,6 +2005,48 @@ return "$strDay $strMonthThai";
     -moz-column-count: 1;
 }
 </style>
+
+<script>
+    $(document).ready(function() {
+            var updateFeed = function() {
+            var initialQuery = '{{$user->ig}}, {{$user->tw}}';
+            console.log(initialQuery)
+            initialQuery = initialQuery.replace(" ", "");
+            var queryTags = initialQuery.split(",");
+            $('.social-feed-container').socialfeed({
+
+                // Twitter
+             twitter: {
+                    accounts: queryTags,
+                    limit: 2,
+                    consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
+                    consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
+                },
+                instagram: {
+                   accounts: queryTags,
+                   limit: 2,
+                   user_id: 2024437698,
+                   access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
+               },
+                // GENERAL SETTINGS
+                //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
+                length: 200,
+                show_media: true,
+                template : "{{url('social-feed-gh-pages/template.html')}}",
+                // Moderation function - if returns false, template will have class hidden
+                moderation: function(content) {
+                    return (content.text) ? content.text.indexOf('porn') == -1 : true;
+                },
+                //update_period: 5000,
+                // When all the posts are collected and displayed - this function is evoked
+                callback: function() {
+                    console.log('all posts are collected');
+                }
+            });
+        };
+        updateFeed();
+    });
+    </script>
 
 <script>
 
@@ -1958,7 +2063,7 @@ $(document).ready(function(){
        var user_id = $(this).data('user_id');
        $("#btn-more").html("Loading....");
        $.ajax({
-           url : '{{ secure_url("demos/loaddata") }}',
+           url : '{{ url("demos/loaddata") }}',
            method : "POST",
            data : {id:id, user_id:user_id, _token:"{{csrf_token()}}"},
            dataType : "text",
@@ -2197,7 +2302,7 @@ $(document).ready(function(){
 
         $.ajax({
             type : 'POST',
-            url : '{{secure_url('contact_to_reps')}}',
+            url : '{{url('contact_to_reps')}}',
             data : {
                 id_reps: {{$user->id}},
                 name: $("input#namereps").val(),
