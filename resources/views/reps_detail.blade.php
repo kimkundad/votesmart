@@ -2021,11 +2021,12 @@ feed.run();
                     consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
                 },
                 instagram: {
-                   accounts: queryTags,
-                   limit: 3,
-                   user_id: '{{$user->ig_id}}',
-                   access_token: '2024437698.2ddfdc0.9be89791141d4f019ae09dc64d60adc2'
-               },
+                    accounts: queryTags,
+                    limit: 2,
+                    client_id: '2ddfdc0d93fc41f29a7a7c9fda0bf926',
+                    access_token: ''
+                },
+                
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
                 length: 200,
