@@ -1929,6 +1929,8 @@ return "$strDay $strMonthThai";
                                             </div>
 
 
+
+
                                         </section>
 
                                     </div>
@@ -2016,17 +2018,17 @@ feed.run();
                 // Twitter
              twitter: {
                     accounts: queryTags,
-                    limit: 3,
+                    limit: 9,
                     consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
                     consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
                 },
                 instagram: {
-                    accounts: queryTags,
-                    limit: 2,
-                    client_id: '2ddfdc0d93fc41f29a7a7c9fda0bf926',
-                    access_token: ''
-                },
-                
+                   accounts: queryTags,
+                   limit: 3,
+                   user_id: '{{$user->ig_id}}',
+                   client_id: '2ddfdc0d93fc41f29a7a7c9fda0bf926',
+                   access_token: ''
+               },
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
                 length: 200,
