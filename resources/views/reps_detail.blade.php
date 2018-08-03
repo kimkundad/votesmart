@@ -2025,7 +2025,7 @@ feed.run();
                 instagram: {
                    accounts: queryTags,
                    limit: 2,
-                   user_id: 2024437698,
+                   user_id: '{{$user->ig_id}}',
                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
                },
                 // GENERAL SETTINGS
