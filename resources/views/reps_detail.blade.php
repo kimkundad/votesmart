@@ -2024,7 +2024,7 @@ feed.run();
                    accounts: queryTags,
                    limit: 3,
                    user_id: '{{$user->ig_id}}',
-                   access_token: '1677ed0.76679983b46549af8b1ce7f9645108c0'
+                   access_token: '2024437698.2ddfdc0.9be89791141d4f019ae09dc64d60adc2'
                },
                 // GENERAL SETTINGS
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
