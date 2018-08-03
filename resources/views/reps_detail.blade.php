@@ -1928,9 +1928,7 @@ return "$strDay $strMonthThai";
 
                                             </div>
 
-                                            <div id="instagram" class="show"></div>
 
-                                            </div>
                                         </section>
 
                                     </div>
@@ -2018,13 +2016,13 @@ feed.run();
                 // Twitter
              twitter: {
                     accounts: queryTags,
-                    limit: 2,
+                    limit: 3,
                     consumer_key: 'E4KItZqMqlgycbZL4WGCme3Ih',
                     consumer_secret: '1UT8lDUyOpWtgGcfkmcxfs7L7RIr6PFHIpZhZRGWI6tpVm00IX',
                 },
                 instagram: {
                    accounts: queryTags,
-                   limit: 2,
+                   limit: 3,
                    user_id: '{{$user->ig_id}}',
                    access_token: '2024437698.1677ed0.76679983b46549af8b1ce7f9645108c0'
                },
