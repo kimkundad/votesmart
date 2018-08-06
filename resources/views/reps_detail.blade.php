@@ -2027,9 +2027,9 @@ feed.run();
                    limit: 3,
                    user_id: '{{$user->ig_id}}',
                    client_id: '2ddfdc0d93fc41f29a7a7c9fda0bf926',
-                   access_token: ''
+                   access_token: '8359759051.1677ed0.2f90ddf27cc34044bc23b5a424b91312'
                },
-                // GENERAL SETTINGS
+                // GENERAL SETTINGS http://instagram.pixelunion.net/
                 //        return "https://access.line.me/oauth2/v2.1/authorize?response_type" . "&client_id=" . getenv('LINE_CHANNEL_ID') . "&redirect_uri=" . $encodedCallbackUrl . "&state=" . $state . "&scope=Email%20profile";
                 length: 200,
                 show_media: true,
